@@ -4,6 +4,7 @@ import com.lanou.entity.Shop;
 import com.lanou.service.ShopService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -16,9 +17,10 @@ public class ShopController {
 
     //    查找所有用户
     @RequestMapping("/findFenlei.do")
-    public void finds() {
-        List<Shop> shops = shopService.findFenlei();
-        System.out.print(shops);
+    @ResponseBody
+    public List<Shop> finds(int parentId) {
+        List<Shop> shops = shopService.findFenlei(parentId);
+        return shops;
     }
 
 }

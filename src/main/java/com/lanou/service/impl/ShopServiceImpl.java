@@ -13,7 +13,7 @@ public class ShopServiceImpl implements ShopService {
 	@Resource
 	private ShopMapper shopMapper;
 
-	public List<Shop> findFenlei() {
-		return shopMapper.findFenlei();
+	public List<Shop> findFenlei(int parentId) {
+		return shopMapper.findFenlei(parentId);
 	}
 }

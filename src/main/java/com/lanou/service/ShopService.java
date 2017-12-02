@@ -5,5 +5,5 @@ import com.lanou.entity.Shop;
 import java.util.List;
 
 public interface ShopService {
-    public List<Shop> findFenlei();
+    public List<Shop> findFenlei(int parentId);
 }

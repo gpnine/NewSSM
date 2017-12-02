@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface WineMapper {
     public List<Wine> findWines();
+
 }
