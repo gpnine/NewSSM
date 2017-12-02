@@ -1,6 +1,7 @@
 package com.lanou.service.impl;
 
 import com.lanou.dao.UserMapper;
+import com.lanou.dao.WineMapper;
 import com.lanou.entity.User;
 import com.lanou.entity.Wine;
 import com.lanou.service.UserService;
@@ -13,9 +14,9 @@ import java.util.List;
 @Service("wineService")
 public class WineServiceImpl implements WineService {
 	@Resource
-	private UserMapper userMapper;
+	private WineMapper wineMapper;
 
 	public List<Wine> findWines() {
-		return null;
+		return wineMapper.findWines();
 	}
 }
