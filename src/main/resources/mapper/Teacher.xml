@@ -2,14 +2,13 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!-- 两种命名TeacherMapper或ITeachernDao -->
 <mapper namespace="com.lanou.dao.TeacherMapper">
-
 	<resultMap type="Teacher" id="teacherResult">
-		<id column="teacher_id" property="tId" javaType="int" />
-		<result column="teacher_name" property="teacherName" jdbcType="VARCHAR" />
+		<id column="teacher_id" property="tId" javaType="int"/>
+		<result column="teacher_name" property="teacherName" jdbcType="VARCHAR"/>
 	</resultMap>
-	<select id="findTeachers" resultMap="teacherResult" >
+	<select id="findTeachers" resultMap="teacherResult">
 		select * from teacher
 	</select>
-  
 </mapper>

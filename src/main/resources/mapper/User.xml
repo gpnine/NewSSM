@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.UserMapper">
+	<resultMap type="User" id="userResult">
+		<id column="userId" property="uId" jdbcType="INTEGER"/>
+		<result column="userPhone" property="userPhone" jdbcType="VARCHAR"/>
+		<result column="userPassword" property="password" jdbcType="VARCHAR"/>
+		<result column="userMoney" property="money" jdbcType="DOUBLE"/>
+		<result column="userVIP" property="userVip" jdbcType="INTEGER"/>
+	</resultMap>
+	<select id="findUsers" resultMap="userResult">
+		select * from zhongjiu_user
+	</select>
+	<select id="findUserPhone" resultMap="userResult" parameterType="User">
+		select * from zhongjiu_user where userPhone = #{userPhone}
+	</select>
+	<insert id="insertUser" parameterType="User" keyProperty="uId" useGeneratedKeys="true" >
+		insert into zhongjiu_user (userPhone,userPassword) values (#{userPhone},#{password})
+	</insert>
+	<select id="login" resultMap="userResult" parameterType="User">
+		select * from zhongjiu_user where userPhone = #{userPhone} and userPassword = #{password}
+	</select>
+</mapper>
