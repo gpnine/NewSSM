@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ShopService {
     public List<Shop> findFenlei(Integer parentId);
+    public List<Shop> findFuji(Integer shopId);
 }

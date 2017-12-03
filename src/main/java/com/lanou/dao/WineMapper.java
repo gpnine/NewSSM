@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface WineMapper {
     public List<Wine> findWines();
+    public List<Wine> findLike(String likeName);
 
 }

@@ -6,13 +6,15 @@
 	<resultMap type="Wine" id="wineResult">
 		<id column="WineId" property="WId" jdbcType="INTEGER"/>
 		<result column="WineName" property="WineName" jdbcType="VARCHAR"/>
-		<result column="WineBrandId" property="WineBrandId" jdbcType="INTEGER"/>
 		<result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
 		<result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
-		<result column="WineDegreeId" property="WineDegreeId" jdbcType="INTEGER"/>
-		<result column="WineAdressId" property="WineAdressId" jdbcType="INTEGER"/>
 		<result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
 		<result column="WineSales" property="WineSales" jdbcType="VARCHAR"/>
+		<result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
+		<result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
+		<result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
+		<result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
+		<result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
 		<result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
 		<result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
 		<result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
@@ -24,4 +26,8 @@
 	<select id="findWines" resultMap="wineResult">
 		select * from zhongjiu_wine
 	</select>
+	<select id="findLike" parameterType="String" resultMap="wineResult">
+		select * from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
+	</select>
+
 </mapper>

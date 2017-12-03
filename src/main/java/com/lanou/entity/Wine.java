@@ -6,13 +6,15 @@ package com.lanou.entity;
 public class Wine {
     private Integer WId;
     private String WineName;
-    private Integer WineBrandId;
     private String WineLiter;
     private double WinePrice;
-    private Integer WineDegreeId;
-    private Integer WineAdressId;
     private String WineCompany;
     private String WineSales;
+    private String WineScent;
+    private String WineBrand;
+    private String WineDegree;
+    private String WineAdress;
+    private String WineShiyong;
     private Integer WineCount;
     private String WineImg1;
     private String WineImg2;
@@ -24,49 +26,6 @@ public class Wine {
 
     public Wine() {
         super();
-    }
-
-    public Wine(Integer WId, String wineName, Integer wineBrandId, double winePrice, String wineLiter, Integer wineDegreeId, Integer wineAdressId, String wineCompany, String wineSales, Integer wineCount, String wineImg1, String wineImg2, String wineImg3, String wineImg4, String wineImg5, String wineImg6, Integer deleteId) {
-        this.WId = WId;
-        WineName = wineName;
-        WineBrandId = wineBrandId;
-        WinePrice = winePrice;
-        WineLiter = wineLiter;
-        WineDegreeId = wineDegreeId;
-        WineAdressId = wineAdressId;
-        WineCompany = wineCompany;
-        WineSales = wineSales;
-        WineCount = wineCount;
-        WineImg1 = wineImg1;
-        WineImg2 = wineImg2;
-        WineImg3 = wineImg3;
-        WineImg4 = wineImg4;
-        WineImg5 = wineImg5;
-        WineImg6 = wineImg6;
-        this.deleteId = deleteId;
-    }
-
-    @Override
-    public String toString() {
-        return "Wine{" +
-                "WId=" + WId +
-                ", WineName='" + WineName + '\'' +
-                ", WineBrandId=" + WineBrandId +
-                ", WinePrice=" + WinePrice +
-                ", WineLiter='" + WineLiter + '\'' +
-                ", WineDegreeId=" + WineDegreeId +
-                ", WineAdressId=" + WineAdressId +
-                ", WineCompany='" + WineCompany + '\'' +
-                ", WineSales='" + WineSales + '\'' +
-                ", WineCount=" + WineCount +
-                ", WineImg1='" + WineImg1 + '\'' +
-                ", WineImg2='" + WineImg2 + '\'' +
-                ", WineImg3='" + WineImg3 + '\'' +
-                ", WineImg4='" + WineImg4 + '\'' +
-                ", WineImg5='" + WineImg5 + '\'' +
-                ", WineImg6='" + WineImg6 + '\'' +
-                ", deleteId=" + deleteId +
-                '}';
     }
 
     public Integer getWId() {
@@ -85,22 +44,6 @@ public class Wine {
         WineName = wineName;
     }
 
-    public Integer getWineBrandId() {
-        return WineBrandId;
-    }
-
-    public void setWineBrandId(Integer wineBrandId) {
-        WineBrandId = wineBrandId;
-    }
-
-    public double getWinePrice() {
-        return WinePrice;
-    }
-
-    public void setWinePrice(double winePrice) {
-        WinePrice = winePrice;
-    }
-
     public String getWineLiter() {
         return WineLiter;
     }
@@ -109,20 +52,12 @@ public class Wine {
         WineLiter = wineLiter;
     }
 
-    public Integer getWineDegreeId() {
-        return WineDegreeId;
+    public double getWinePrice() {
+        return WinePrice;
     }
 
-    public void setWineDegreeId(Integer wineDegreeId) {
-        WineDegreeId = wineDegreeId;
-    }
-
-    public Integer getWineAdressId() {
-        return WineAdressId;
-    }
-
-    public void setWineAdressId(Integer wineAdressId) {
-        WineAdressId = wineAdressId;
+    public void setWinePrice(double winePrice) {
+        WinePrice = winePrice;
     }
 
     public String getWineCompany() {
@@ -139,6 +74,46 @@ public class Wine {
 
     public void setWineSales(String wineSales) {
         WineSales = wineSales;
+    }
+
+    public String getWineScent() {
+        return WineScent;
+    }
+
+    public void setWineScent(String wineScent) {
+        WineScent = wineScent;
+    }
+
+    public String getWineBrand() {
+        return WineBrand;
+    }
+
+    public void setWineBrand(String wineBrand) {
+        WineBrand = wineBrand;
+    }
+
+    public String getWineDegree() {
+        return WineDegree;
+    }
+
+    public void setWineDegree(String wineDegree) {
+        WineDegree = wineDegree;
+    }
+
+    public String getWineAdress() {
+        return WineAdress;
+    }
+
+    public void setWineAdress(String wineAdress) {
+        WineAdress = wineAdress;
+    }
+
+    public String getWineShiyong() {
+        return WineShiyong;
+    }
+
+    public void setWineShiyong(String wineShiyong) {
+        WineShiyong = wineShiyong;
     }
 
     public Integer getWineCount() {
@@ -202,6 +177,53 @@ public class Wine {
     }
 
     public void setDeleteId(Integer deleteId) {
+        this.deleteId = deleteId;
+    }
+
+    @Override
+    public String toString() {
+        return "Wine{" +
+                "WId=" + WId +
+                ", WineName='" + WineName + '\'' +
+                ", WineLiter='" + WineLiter + '\'' +
+                ", WinePrice=" + WinePrice +
+                ", WineCompany='" + WineCompany + '\'' +
+                ", WineSales='" + WineSales + '\'' +
+                ", WineScent='" + WineScent + '\'' +
+                ", WineBrand='" + WineBrand + '\'' +
+                ", WineDegree='" + WineDegree + '\'' +
+                ", WineAdress='" + WineAdress + '\'' +
+                ", WineShiyong='" + WineShiyong + '\'' +
+                ", WineCount=" + WineCount +
+                ", WineImg1='" + WineImg1 + '\'' +
+                ", WineImg2='" + WineImg2 + '\'' +
+                ", WineImg3='" + WineImg3 + '\'' +
+                ", WineImg4='" + WineImg4 + '\'' +
+                ", WineImg5='" + WineImg5 + '\'' +
+                ", WineImg6='" + WineImg6 + '\'' +
+                ", deleteId=" + deleteId +
+                '}';
+    }
+
+    public Wine(Integer WId, String wineName, String wineLiter, double winePrice, String wineCompany, String wineSales, String wineScent, String wineBrand, String wineDegree, String wineAdress, String wineShiyong, Integer wineCount, String wineImg1, String wineImg2, String wineImg3, String wineImg4, String wineImg5, String wineImg6, Integer deleteId) {
+        this.WId = WId;
+        WineName = wineName;
+        WineLiter = wineLiter;
+        WinePrice = winePrice;
+        WineCompany = wineCompany;
+        WineSales = wineSales;
+        WineScent = wineScent;
+        WineBrand = wineBrand;
+        WineDegree = wineDegree;
+        WineAdress = wineAdress;
+        WineShiyong = wineShiyong;
+        WineCount = wineCount;
+        WineImg1 = wineImg1;
+        WineImg2 = wineImg2;
+        WineImg3 = wineImg3;
+        WineImg4 = wineImg4;
+        WineImg5 = wineImg5;
+        WineImg6 = wineImg6;
         this.deleteId = deleteId;
     }
 }

@@ -16,4 +16,8 @@ public class ShopServiceImpl implements ShopService {
 	public List<Shop> findFenlei(Integer parentId) {
 		return shopMapper.findFenlei(parentId);
 	}
+
+	public List<Shop> findFuji(Integer shopId) {
+		return shopMapper.findFuji(shopId);
+	}
 }
