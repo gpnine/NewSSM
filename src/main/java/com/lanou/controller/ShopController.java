@@ -18,9 +18,18 @@ public class ShopController {
     //    查找所有用户
     @RequestMapping("/findFenlei.do")
     @ResponseBody
-    public List<Shop> finds(int parentId) {
+    public List<Shop> finds(Integer parentId) {
         List<Shop> shops = shopService.findFenlei(parentId);
         return shops;
     }
-
+    //    查找所有用户
+    @RequestMapping("/findFenlei1.do")
+    @ResponseBody
+    public List<Shop> finds(Shop shop1,Integer parentId) {
+        List<Shop> shops = shopService.findFenlei(parentId);
+        for (Shop shop:shops) {
+            shop.setShopList(finds(shop1,shop.getShopId()));
+        }
+        return shops;
+    }
 }

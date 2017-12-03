@@ -7,5 +7,5 @@ import com.lanou.entity.Wine;
 import java.util.List;
 
 public interface ShopMapper {
-    public List<Shop> findFenlei(int parentId);
+    public List<Shop> findFenlei(Integer parentId);
 }
