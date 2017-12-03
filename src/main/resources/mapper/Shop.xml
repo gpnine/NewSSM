@@ -10,7 +10,7 @@
 		<result column="ShopImg" property="shopImg" jdbcType="VARCHAR"/>
 		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
 	</resultMap>
-	<select id="findFenlei" parameterType="int" resultMap="shopResult">
+	 <select id="findFenlei" parameterType="int" resultMap="shopResult">
 		select * from zhongjiu_shop where parentId = #{parentId}
 	</select>
 </mapper>
