@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.CarMapper">
+	<resultMap type="Car" id="carResult">
+		<id column="CarId" property="CarId" jdbcType="INTEGER"/>
+		<result column="User_id" property="UserId" jdbcType="INTEGER"/>
+		<result column="Wine_id" property="WineId" jdbcType="INTEGER"/>
+		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+		<result column="counts" property="counts" jdbcType="INTEGER"/>
+	</resultMap>
+	<select id="findCars" parameterType="int" resultMap="carResult">
+		select * from zhongjiu_car where User_id = #{UserId}
+	</select>
+	<insert id="insertShop" parameterType="Car" >
+		insert into zhongjiu_car (User_id,Wine_id,counts) values (#{UserId},#{WineId},#{counts})
+	</insert>
+
+</mapper>

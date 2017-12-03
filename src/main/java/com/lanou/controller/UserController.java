@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -58,10 +59,11 @@ public class UserController {
     }
 
     //   登录
-    @RequestMapping(value = "/login.do", method = RequestMethod.POST)
+    @RequestMapping(value = "/login.do")
     @ResponseBody
-    public String login(User user) throws IOException {
+    public String login(HttpSession session,User user) throws IOException {
         User user1 = userService.findUser(user);
+        session.setAttribute("user1",user1);
         System.out.print(user1);
         if (user1 != null) {
             return "true";
