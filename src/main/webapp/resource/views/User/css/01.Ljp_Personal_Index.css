@@ -1,0 +1,398 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	text-decoration: none;
+}
+a{
+	color: black;
+	font-weight: bolder;
+}
+.per_line{
+	position: relative;
+	top: 50px;
+	border-top: 1px solid red;
+}
+/*个人中心页面容器*/
+#per_container{
+	width: 1200px;
+	height: 1500px;
+	position: relative;
+	top: 70px;
+	margin: 0px auto;
+}
+/*左边部分*/
+#per_left{
+	width: 170px;
+	height: 740px;
+	border-left: 1px solid #EDEEED;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.per_redt img{
+	width: 24px;
+	height: 24px;
+}
+.per_redt{
+	position: absolute;
+	top: -8px;
+	left: -13px;
+	display: inline-block;
+}
+.point1{
+	width: 92px;
+	height: 25px;
+	position: absolute;
+	left: 20px;
+	font-weight: bolder;
+	line-height: 25px;
+}
+.point{
+	position: absolute;
+	left: -4px;
+	font-size: 25px;
+}
+.point2{
+	top: 50px;
+}
+.point3{
+	top: 180px;
+}
+.point4{
+	top: 340px;
+}
+.point5{
+	top: 440px;
+}
+.point6{
+	top: 510px;
+}
+.point7{
+	top: 610px;
+}
+.manyWord{
+	width: 130px;
+	height: 700px;
+	position: absolute;
+	top: 60px;
+	left: 15px;
+}
+.manyWord ul{
+	margin-bottom: 10px;
+}
+.manyWord ul li{
+	line-height: 30px;
+}
+.manyWord ul .li a:hover{
+	color: red;
+}
+.firstLi{
+	color: #ACADAC;
+}
+.sgg{
+	position: absolute;
+	left: -16px;
+	font-size: 10px;
+	display: none;
+	color: red;
+	font-weight: bolder;
+}
+.sgg1{
+	top: 40px;
+}
+.sgg2{
+	top: 70px;
+}
+.sgg3{
+	top: 100px;
+}
+.sgg4{
+	top: 170px;
+}
+.sgg5{
+	top: 200px;
+}
+.sgg6{
+	top: 230px;
+}
+.sgg7{
+	top: 260px;
+}
+.sgg8{
+	top: 330px;
+}
+.sgg9{
+	top: 360px;
+}
+.sgg10{
+	top: 430px;
+}
+.sgg11{
+	top: 500px;
+}
+.sgg12{
+	top: 530px;
+}
+.sgg13{
+	top: 600px;
+}
+.sgg14{
+	top: 630px;
+}
+.sgg15{
+	top: 660px;
+}
+
+/*右头部*/
+#rigHead{
+	width: 1018px;
+	height: 305px;
+	border: 1px solid #EDEEED;
+	position: relative;
+	top: 0px;
+	left: 170px;
+}
+.rigHead_h1{
+	width: inherit;
+	height: 161px;
+	background-color: #F8F9F8;
+	border-bottom: 1px solid #EDEEED;
+}
+.h1_tx{
+	width: 135px;
+	height: 135px;
+	display: inline-block;
+	position: absolute;
+	top: 12px;
+	left: 20px;
+}
+.h1_xx{
+	width: 257px;
+	height: 140px;
+	box-sizing: border-box;
+	padding: 20px;
+	position: absolute;
+	top: 12px;
+	left: 150px;
+}
+.h1_info1{
+	font-size: 18px;
+}
+.pthy{
+	font-size: 12px;
+}
+.h1_zhaq{
+	position: relative;
+	top: 3px;
+	font-size: 12px;
+}
+.aqd{
+	width: 114px;
+	height: 8px;
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	border: 2px solid #DBDCDB;
+}
+.h1_span{
+	width: 80px;
+	display: inline-block;
+	height: inherit;
+	position: relative;
+	top: -5px;
+	background-color: #FBCB04;
+}
+.h1_fg{
+	font-size: 12px;
+	color: #DBDCE2;
+}
+.h1_thr img{
+	position: relative;
+	top: 5px;
+}
+
+.h1_part2{
+	width: 550px;
+	height: 125px;
+	position: relative;
+	top: 37px;
+	left: 450px;
+	
+}
+.dcl{
+	width: 46px;
+	height: 80px;
+	float: left;
+	margin-right: 50px;
+}
+.h1_xxdd{
+	margin: 0;
+}
+.dcl div{
+	width:50px;
+	font-size: 12px;
+	position: relative;
+	top: 16px;
+}
+.dcl div span{
+	color: red;
+}
+.xxdd2{
+	width: 65px !important;
+	position: relative;
+	left: -5px;
+}
+
+
+.rigHead_h2{
+	width: inherit;
+	height: 72px;
+	position: absolute;
+	top: 200px;
+	left: 0;
+}
+.jf{
+	float: left;
+	display: inline-block;
+	width: 200px;
+	height: 72px;
+	border-right: 1px solid #D1D2D1;
+	text-align: center;
+}
+.h2_hy{
+	border-right-color: transparent;
+}
+.jf p{
+	position: relative;
+	top: 8px;
+	color: red;
+}
+
+/*右商品推荐*/
+#rig_goods{
+	width: 848px;
+	position: relative;
+	top: 20px;
+	left: 170px;
+}
+#rig_goods h4{
+	margin-bottom: 8px;
+}
+.goods_ul{
+	overflow: hidden;
+}
+.box{
+	width: 182px;
+	height: 222px;
+	/*border: 2px solid purple;*/
+	float: left;
+	margin-right: 24px;
+	margin-bottom: 24px;
+}
+.mother{
+	width: 184px;
+	height: 182px;
+	float: left;
+	
+	position: relative;
+	overflow: hidden;
+}
+.goods_hover{
+	width: 182px;
+	height: 182px;
+	background-color: rgba(255,0,0,0.5);
+	text-align: center;
+	line-height: 182px;
+	position: absolute;
+	top: -182px;
+}
+.jiu_kind{
+	width: 182px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+.jiu_kind a:hover{
+	color: red;
+}
+
+
+/*右浏览记录*/
+#rig_recode{
+	width: 170px;
+	border: 1px solid #EDEEED;
+	position: relative;
+	top: -505px;
+	left: 1020px;
+	overflow: hidden;
+}
+.rec_head{
+	width:170px;
+	height: 37px;
+	background-color: #F8F9F8;
+	text-align: center;
+}
+.rec_hea{
+	display: inline-block;
+	margin: 10px;
+	font-size: 14px;
+}
+.rec_gg1,.rec_gg2{
+	font-size: 12px;
+	color: #E4E5E4;
+}
+.rec_li{
+	width: 120px;
+	height: 160px;
+	margin-bottom: 5px;
+	float: left;
+	margin-left: 25px;
+}
+.jiu_name{
+	font-size: 13px;
+	text-align: center;
+	margin: 5px;
+}
+
+/*收藏的商品*/
+#save_goods,#save_store{
+	width: 800px;
+	height: 260px;
+	border: 1px solid #F0F1F0;
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+	left: 170px;
+}
+#save_goods{
+	top: -840px;
+}
+#save_store{
+	top: -810px;
+}
+.goods1,.store1{
+	position: absolute;
+	top: -14px;
+	left: 30px;
+}
+.goods_word2,.store_word2{
+	font-size: 12px;
+	color: #CCCDCC;
+}
+.goods_word2:hover{
+	color: cornflowerblue;
+}
+.store_word2:hover{
+	color: cornflowerblue;
+}
+.goods_word3,.store_word3{
+	width: 800px;
+	height: 260px;
+	text-align: center;
+	line-height: 260px;
+}
+
+
+

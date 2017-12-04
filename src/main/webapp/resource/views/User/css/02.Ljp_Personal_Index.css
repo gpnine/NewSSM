@@ -1,0 +1,838 @@
+/*【我的订单】*/
+/*右边部分*/
+#per_container{
+	height: 800px;
+}
+#rig_order{
+	width: 1018px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	left: 170px;
+}
+.g_word span:nth-child(1){
+	color: darkgray;
+}
+.g_word span:nth-child(2){
+	font-weight: bolder;
+}
+#thr_input{
+	width: 1018px;
+	height: 60px;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 60px;
+}
+#thr_input input{
+	width: 200px;
+	height: 30px;
+	font-size: 14px;
+	border: 1px solid lightgray;
+	margin-right: 20px;
+	border-radius: 5px;
+}
+#thr_input .button{
+	width: 58px;
+	height: 30px;
+	font-size: 15px;
+	border-radius: 5px;
+}
+
+
+.table_name{
+	width: 1018px;
+	height: 32px;
+	line-height: 32px;
+	background-color: #F7F8F7;
+	position: relative;
+	top: 10px;
+	font-size: 14px;
+}
+.ddxx{
+	width: 380px;
+}
+.zzsp{
+	width: ;
+}
+.ddqxz select{
+	font-size: 14px;
+	border-color:transparent;
+}
+.jfqxz select{
+	font-size: 14px;
+	border-color:transparent;
+}
+.spmc{
+	width: 350px;
+}
+.zxhf{
+	width: 570px;
+}
+.no_have{
+	font-size: 16px;
+	color: #9E9F9E;
+}
+
+
+/*【咨询管理】*/
+.table_box{
+	width: 1018px;
+	position: relative;
+	top: 20px;
+	/*border: 1px solid red;*/
+}
+.page_info,.page_info1{
+	width: 1018px;
+	height: 30px;
+	/*border: 1px solid black;*/
+	text-align: right;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+
+/*【评价管理】*/
+.ddbh{
+	width: 343px;
+}
+.zt{
+	width: 171px;
+}
+.pjsj{
+	width: 177px;
+}
+.pj{
+	width: 318px;
+}
+
+
+/*【我的优惠券】*/
+#syzk{
+	width: 600px;
+	height: 30px;
+	position: relative;
+	left: 8px;
+	line-height: 30px;
+	margin: 15px 0;
+}
+#syzk span{
+	width: 150px;
+	border-right: 3px solid #CBCCCB;
+	padding: 0px 20px;
+}
+/*#syzk span:nth-child(1) a{
+	color: red;
+}*/
+#syzk span:last-child{
+	border-color: transparent;
+}
+
+
+/*【我的购物卡】*/
+#rig_gwk{
+	width: 1018px;
+	height: 50px;
+	position: relative;
+	left: 170px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	color: red;
+	font-weight: bold;
+}
+#bdym{
+	width: 1018px;
+	height: 300px;
+	position: relative;
+	top: 10px;
+	left: 170px;
+	display: none;
+}
+
+#bdym input[type=text]{
+	width: 155px;
+	height: 30px;
+	margin-bottom: 15px;
+}
+#bdym input[type=text]:hover{
+	border: 1px solid black;
+}
+#bdym input[type=button]{
+	width: 150px;
+	height: ;
+}
+#bdym input[type=button]:hover{
+	border: 1px solid black;
+}
+#bdym button{
+	width: 60px;
+	height: 30px;
+	background-color: red;
+	color: white;
+	font-size: 16px;
+}
+
+/*【我的积分】*/
+.lpghgl a{
+	color: #949596;
+}
+.lyyt{
+	width: 164px;
+}
+.wdjf{
+	width: 164px;
+}
+.sj{
+	width: 274px;
+}
+.bz{
+	width: 407px;
+}
+#information{
+	width: 1000px;
+	height: 100px;
+	line-height: 33px;
+	position: relative;
+	left: 28px;
+	top: 10px;
+	bottom: 10px;
+	/*border: 1px solid black;*/
+}
+#information p{
+	color: #A4A6A6;
+}
+#information span{
+	color: #384750;
+}
+#information a{
+	color: #77A0C0;
+}
+/*积分兑换*/
+#thr_input1{
+	width: 1018px;
+	height: 60px;
+	margin-top: 30px;
+	line-height: 60px;
+}
+#thr_input1 input{
+	width: 200px;
+	height: 30px;
+	font-size: 14px;
+	border: 1px solid lightgray;
+	margin-right: 20px;
+	border-radius: 5px;
+}
+#thr_input1 button{
+	width: 58px;
+	height: 30px;
+	font-size: 15px;
+	border-radius: 5px;
+}
+
+/*积分规定*/
+#rig_tab{
+	width: 1018px;
+	height: 35px;
+	background-color: #F7F8F7;
+	position: relative;
+	left: 170px;
+	line-height: 35px;
+}
+#rig_tab span{
+	position: absolute;
+}
+#rig_tab span:nth-child(1){
+	left: 50px;
+}
+#rig_tab span:nth-child(2){
+	left: 180px;
+}
+#rig_tab span:nth-child(3){
+	left: 650px;
+}
+#table_box{
+	width: 1018px;
+	height: 300px;
+	position: relative;
+	left: 170px;
+	/*border: 1px solid black;*/
+}
+table{
+	border: 1px solid #E7E8E7;
+	font-size: 12px;
+	text-align: center;
+}
+table tr td:nth-child(1){
+	width: 130px;
+}
+table tr td:nth-child(2){
+	width: 180px;
+}
+
+/*【账户管理】*/
+.kyye{
+	width: 1018px;
+	height: 80px;
+	background-color: #F8F9F8;
+	color: #6B6C6E;
+	line-height: 80px;
+	text-indent: 40px;
+	margin-top: 30px;
+}
+.jia span:nth-child(1){
+	color: red;
+}
+.jia span{
+	cursor: pointer;
+}
+.kyye button{
+	width: 66px;
+	height: 28px;
+	border: 0.5px solid #E69B4C;
+	background-color: #F8B668;
+	color: white;
+	font-size: 14px;
+	position: relative;
+	left: 750px;
+}
+/*一*/
+.bz1{
+	width:412px;
+}
+
+/*二*/
+.lqsj1{
+	width: 505px;
+}
+.je{
+	width: 505px;
+}
+/*三*/
+
+/*四/五*/
+.xfsj,.tksj{
+	width: 336px;
+}
+.je2,.je3{
+	width: 280px;
+}
+.dh,.dh1{
+	width: 393px;
+}
+
+/*六*/
+.yjsj{
+	width: 275px;
+}
+.yjsr{
+	width: 229px;
+}
+.yjbz{
+	width: 505px;
+}
+#p2,#p3,#p4,#p5,#p6{
+	background-color: white;
+	display: none;
+}
+#p1{
+	display: block;
+}
+
+/*商品关注*/
+.gzsp{
+	width: 599px;
+}
+.qsy{
+	color: #77A3D2;
+}
+
+/*店铺关注*/
+.che{
+	position: relative;
+	left: 30px;
+}
+.gzsp{
+	position: relative;
+	left: 40px;
+}
+.eig{
+	position: relative;
+	left: 920px;
+	top: 3px;
+	cursor: pointer;
+}
+
+
+/*平台推广*/
+.suc_all{
+	width: 1018px;
+	height: 30px;
+	/*border: 1px solid black;*/
+	line-height: 30px;
+	position: relative;
+	margin: 20px 0px 20px 30px;
+}
+.suc span{
+	color: #699A38;
+}
+.all span{
+	color: #699A38;
+}
+.fg{
+	color: lightgray;
+	margin: 0px 20px;
+}
+.tips{
+	color: #484E51;
+	width: 1018px;
+	height: 20px;
+	position: relative;
+	left: 30px;
+	text-indent:10px;
+	font-size: 14px;
+	border: 1px dashed lightgray;
+}
+.ewm{
+	position: relative;
+	left: 30px;
+	top: 10px;
+}
+.ewm_pic{
+	position: relative;
+	left: 200px;
+	top: 10px;
+}
+#share li{
+	float: left;
+}
+#share{
+	position: relative;
+	left: 30px;
+}
+
+/*退换货*/
+.shzt select{
+	font-size: 14px;
+	border-color:transparent;
+}
+.sqsj select{
+	font-size: 14px;
+	border-color:transparent;
+}
+.spmc1{
+	width: 336px;
+}
+
+/*投诉维权*/
+.sqjl:hover{
+	color: red;
+}
+
+
+/*申请记录*/
+.tswq:hover{
+	color: red;
+}
+
+/*收货地址管理*/
+.save{
+	width: 1018px;
+	height: 30px;
+	/*border: 1px solid black;*/
+	position: relative;
+	left: 20px;
+	line-height: 30px;
+	margin: 30px 0 10px 0;
+}
+.saved{
+	font-size: 15px;
+}
+.saved_info{
+	font-size: 12px;
+	color: #ABB3BB;
+}
+.new_save{
+	font-size: 14px;
+	color: #6698B4;
+	position: absolute;
+	left: 860px;
+	cursor: pointer;
+}
+#add_address{
+	width: 480px;
+	height: 506px;
+	background-color: white;
+	border: 4px solid rgba(0,0,0,0.2);
+	position: fixed;
+	z-index: 3;
+	top: 80px;
+	left: 350px;
+	display: none;
+}
+.one{
+	width: 480px;
+	height: 30px;
+	background-color: #F4F5F4;
+	font-size: 15px;
+	text-indent: 10px;
+	line-height: 30px;
+}
+.close{
+	position: relative;
+	top: 3px;
+	left: 340px;
+	cursor: pointer;
+}
+.content{
+	width: 410px;
+	height: 427px;
+	margin: 50px auto;
+}
+.star{
+	color: red;
+}
+.name,.phone_num{
+	width: 234px;
+	height: 32px;
+}
+.adre{
+	width: 314px;
+	height: 32px;
+}
+.deco{
+	color: #CC0000;
+	font-size: 13px;
+}
+.bcshdz{
+	width: 114px;
+	height: 30px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+	position: relative;
+	top: 40px;
+}
+
+/*修改个人信息*/
+.userinfo{
+	width: 900px;
+	height: 1000px;
+	line-height: 50px;
+}
+.rig{
+	display: inline-block;
+	width: 140px;
+	height: 30px;
+	text-align: right;
+	margin-right: 20px;
+}
+.userinfo input[type=text]{
+	width: 195px;
+	height: 28px;
+}
+.change{
+	color: #E3393C;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.sup{
+	color: red;
+	font-size: 12px;
+	margin-left: 10px;
+}
+.bcxg{
+	width: 86px;
+	height: 30px;
+	border: 1px solid #B7BBBD;
+	color: #697C85;
+	position: relative;
+	left: 70px;
+}
+
+
+/*账户安全管理*/
+.zhaq{
+	font-size: 14px;
+	position: relative;
+	left: 30px;
+	margin: 20px 0 0 10px;
+}
+.h1_span1{
+	top: -5px;
+	height: 12px;
+}
+.zhong{
+	color: #F1B033;
+}
+.knew{
+	color: #B0B7C4;
+	margin: 0 0 0 20px;
+}
+.man{
+	width: 908px;
+	height: 334px;
+	border: 1px dashed #B0B7C4;
+	position: relative;
+	left: 30px;
+	top: 20px;
+	border-radius: 10px;
+	line-height: 32px;
+}
+.man p span:nth-child(1){
+	width: 12px;
+	height: 10px;
+	margin: 10px;
+}
+.man p span:nth-child(2){
+	width: 100px;
+	height: 10px;
+	margin: 10px;
+}
+
+.man p span:nth-child(3){
+	width: 120px;
+	height: 10px;
+	margin: 10px;
+}
+
+.man p span:nth-child(4){
+	width: 300px;
+	height: 10px;
+	color: #ABB3C0;
+	font-size: 14px;
+	margin: 10px 20px;
+}
+.man p span:nth-child(5) a{
+	width: 80px;
+	height: 10px;
+	color: #38B513;
+	margin: 10px 30px 10px 120px;
+}
+.man span{
+	display: inline-block;
+}
+
+
+/*验证信息*/
+.line{
+	width:1018px;
+	height: 100px;
+	/*border: 1px solid black;*/
+	text-align: center;
+	line-height: 100px;
+	position: relative;
+}
+.line span{
+	display: inline-block;
+}
+.part_one{
+	width: 255px;
+	height: 7px;
+	background-color: #F89203;
+}
+.part_two{
+	width: 255px;
+	height: 7px;
+	background-color: lightgray;
+}
+.yzyx,.wc{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+}
+.yzyx{
+	background-color: #F89203;
+}
+.wc{
+	background-color: #DCDDDC;
+}
+.one_yz{
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	left: 360px;
+	top: 0px;
+}
+.two_yz{
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	left: 620px;
+	top: 0px;
+}
+.text{
+	width: 195px;
+	height: 28px;
+}
+.huoqu{
+	width: 116px;
+	height: 28px;
+	background-color: red;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	line-height: 28px;
+	margin-left: 63px;
+}
+.yza{
+	width: 70px;
+	height: 34px;
+	color: white;
+	text-align: center;
+	line-height: 34px;
+	background-color: red;
+	font-size: 16px;
+	margin-left: 63px;
+}
+.yanz{
+	width: 300px;
+	height: 200px;
+	/*border: 1px solid black;*/
+	line-height: 50px;
+	position: relative;
+	left: 50px;
+}
+
+/*验证手机信息*/
+.line1{
+	width:1018px;
+	height: 100px;
+	/*border: 1px solid black;*/
+	text-align: center;
+	line-height: 100px;
+	position: relative;
+}
+.line1 span{
+	display: inline-block;
+}
+.part_one1{
+	width: 267px;
+	height: 7px;
+	background-color: #F89203;
+}
+.part_two1,.part_two11{
+	width: 267px;
+	height: 7px;
+	background-color: lightgray;
+}
+.yzyx1,.wc1,.wc11{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+}
+.yzyx1{
+	background-color: #F89203;
+}
+.wc1{
+	background-color: #DCDDDC;
+}
+.wc11{
+	background-color: #DCDDDC;
+}
+.one_yz1{
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	left: 220px;
+	top: 0px;
+}
+.two_yz1{
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	left: 500px;
+	top: 0px;
+}
+.two_yz11{
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	left: 700px;
+	top: 0px;
+}
+
+
+/*提现支付密码设置*/
+.set_up,.set_up1,.set_up2{
+	width: 800px;
+	height: 200px;
+	/*border: 1px solid black;*/
+	line-height: 50px;
+	font-size: 15px;
+	position: relative;
+	top: 20px;
+	left: 60px;
+}
+.set_up input[type=password]{
+	width: 195px;
+	height: 28px;
+}
+.set_up1 input[type=password]{
+	width: 195px;
+	height: 28px;
+}
+.set_up2 input[type=text]{
+	width: 195px;
+	height: 28px;
+}
+.set_up span{
+	color: #656665;
+	font-size: 12px;
+	margin-left: 20px;
+}
+.set_up1 span{
+	color: #656665;
+	font-size: 12px;
+	margin-left: 20px;
+}
+.set_up2 button{
+	width: 70px;
+	height: 34px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	line-height: 34px;
+	margin-left: 90px;
+	font-size: 14px;
+}
+.set_up1 button{
+	width: 70px;
+	height: 34px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	line-height: 34px;
+	margin-left: 90px;
+	font-size: 14px;
+}
+.set_up button{
+	width: 70px;
+	height: 34px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	line-height: 34px;
+	margin-left: 90px;
+	font-size: 14px;
+}
+.set_up2 button{
+	position: relative;
+	left: -15px;
+}
+.zhgl{
+	position: relative;
+	left: 80px;
+}
+.zhgl:hover a{
+	color: red;
+}
+
+
+

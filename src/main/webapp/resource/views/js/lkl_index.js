@@ -293,24 +293,19 @@ $(window).scroll(function(){
             			floor[i].index=i;
             			floor_setting_list[i].index=i;
             			floor_setting_list[i].onclick=function(){
-            				
             				var timer=setInterval(function(){
-            					
             				},10)
-            				
-            				
             			}
-            			
             		}
-            		
          	});
-//$.ajax({
-//	type:"get",
-//	url:"",
-//	async:true,
-//	data:{},
-//	dataType:"json",
-//	success:function(data){
-//		
-//	}
-//});
+
+$.ajax({
+	type:"get",
+	url:"http://localhost:8179/index/index.do",
+	async:true,
+	data:{},
+	dataType:"json",
+	success:function(data){
+		console.log(data)
+	}
+});

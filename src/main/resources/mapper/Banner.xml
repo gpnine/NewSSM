@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.IndexMapper">
+
+
+    <resultMap type="Banner" id="BannerResult">
+        <id column="bannerId" property="bannerId" jdbcType="INTEGER"/>
+        <result column="bannerSrc" property="bannerSrc" jdbcType="VARCHAR"/>
+        <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <select id="lunBoTu"  resultMap="BannerResult">
+		select * from zhongjiu_banner where delectId = 0
+	</select>
+
+
+</mapper>

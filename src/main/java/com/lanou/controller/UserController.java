@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -61,14 +62,14 @@ public class UserController {
 
     //   登录返回页面
     @RequestMapping(value = "/login.do", method = RequestMethod.POST)
-    public String login(HttpSession session,String userPhone,String password) throws IOException {
+    public String login(HttpSession session, HttpServletRequest request, String userPhone, String password) throws IOException {
         System.out.println(userPhone);
         System.out.println(password);
         User user1 = userService.findUser(userPhone,password);
         session.setAttribute("user1",user1);
         System.out.print(user1);
         if (user1 != null) {
-            return "html/lkl_index";
+            return "html/lkl_=index";
         } else {
             return "false";
         }

@@ -1130,7 +1130,7 @@
 			<div class="gouwuche_left">
 				<ol class="gouwuche_left_content">
 					<li class="gouwuche_left_content_first pr">
-						<a class="a" href=""><i  class="iconfont icon-gerentouxiang "></i></a>
+						<a class="a" href="http://10.80.13.35:8179/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i  class="iconfont icon-gerentouxiang "></i></a>
 						<div class="pa kefu_shuoming">
 							<span>个人中心</span>
 							<div class="sanjiaoxing pa"></div>
