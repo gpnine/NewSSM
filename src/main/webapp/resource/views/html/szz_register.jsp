@@ -1,6 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<%
+		String path = request.getContextPath();
+		String basePath = request.getScheme()+"://"+request.getServerName()+":"	+request.getServerPort()+path;
+	%>
 		<meta charset="UTF-8">
 		<title>注册页</title>
 		<link rel="stylesheet" type="text/css" href="../css/szz_register.css"/>
@@ -15,8 +21,8 @@
 				</div>
 				<div class="top_right">
 					<span>您好 ! 欢迎来到商城</span>
-					<a href="szz_login.html">[登录]</a>
-					<a href="szz_register.html">[免费注册]</a>
+					<a href="szz_login.jsp">[登录]</a>
+					<a href="szz_register.jsp">[免费注册]</a>
 				</div>
 			</div>	
 		</div>
@@ -25,9 +31,9 @@
 			<div>欢迎注册</div>
 		</div>
 		<div class="zhucedenglu">我已注册,现在就
-			<a href="szz_login.html" class="denglu">登录</a>
+			<a href="szz_login.jsp" class="denglu">登录</a>
 		</div>
-		<form action="http://10.80.13.161:8081/user/insertUser.do" method="post">
+		<form action="<%=basePath%>/user/insertUser.do" method="post">
 			&nbsp;&nbsp;&nbsp;<span>*</span>手机号码：<input type="text" name="userPhone" id="phone" class="inputs"/>
 			<br/>
 			&nbsp;&nbsp;&nbsp;<span>*</span>图形验证：<input type="text" name="yanzheng" id="yanzheng" class="inputs"/>

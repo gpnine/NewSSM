@@ -1,6 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<%
+		String path = request.getContextPath();
+		String basePath = request.getScheme()+"://"+request.getServerName()+":"	+request.getServerPort()+path;
+	%>
 		<meta charset="UTF-8">
 		<title>登录页</title>
 		<link rel="stylesheet" type="text/css" href="../css/szz_login.css"/>
@@ -29,7 +35,7 @@
 						<img src="http://zhongjiu.cn/Areas/Web/Images/sao_2.png"/>
 					</div>
 					<div class="hu">
-						<form action="http://10.80.13.161:8081/user/login.do" method="post">
+						<form action="<%=basePath%>/user/login.do" method="post">
 							<div class="zhanghudenglu">公共场所不建议自动登录，以防账号丢失</div>
 							<input type="text" name="userPhone" id="username" value="" placeholder="用户名"/>
 							<input type="password" name="password" id="password" value="" placeholder="密码"/>
