@@ -16,7 +16,7 @@ public class WineController {
     @Resource
     private WineService wineService;
 
-    //    查找所有用户
+    //    查找
     @RequestMapping("/findWines.do")
     public void findWines() {
         List<Wine> wines = wineService.findWines();
