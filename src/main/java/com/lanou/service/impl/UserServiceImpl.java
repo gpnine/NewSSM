@@ -24,7 +24,10 @@ public class UserServiceImpl implements UserService {
 		return userMapper.findUserPhone(iphone);
 	}
 
-	public int insertUser(User user) {
+	public int insertUser(String userPhone,String password) {
+		User user = new User();
+		user.setUserPhone(userPhone);
+		user.setPassword(password);
 		return userMapper.insertUser(user);
 	}
 

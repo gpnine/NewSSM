@@ -27,13 +27,13 @@
 		<div class="zhucedenglu">我已注册,现在就
 			<a href="szz_login.html" class="denglu">登录</a>
 		</div>
-		<form action="" method="post">
-			&nbsp;&nbsp;&nbsp;<span>*</span>手机号码：<input type="text" name="phone" id="phone" class="inputs"/>
+		<form action="10.80.13.161:8081/user/insertUser.do" method="post">
+			&nbsp;&nbsp;&nbsp;<span>*</span>手机号码：<input type="text" name="userPhone" id="phone" class="inputs"/>
 			<br/>
 			&nbsp;&nbsp;&nbsp;<span>*</span>图形验证：<input type="text" name="yanzheng" id="yanzheng" class="inputs"/>
 			<span class="txingyanzheng">1234</span>
 			<br/>
-			<span>*</span>请设置密码：<input type="password"  name="pass1" id="pass1" class="inputs"/>
+			<span>*</span>请设置密码：<input type="password"  name="password" id="pass1" class="inputs"/>
 			<br/>
 			<span>*</span>请确认密码：<input type="password" name="pass2" id="pass2" class="inputs"/>
 			<br/>
@@ -54,5 +54,6 @@
 		</form>
 		<div class="bottom">Copyright©2017   中酒网  版权所有</div>
 	</body>
+	<script src="../js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="../js/szz_register.js"></script>
 </html>

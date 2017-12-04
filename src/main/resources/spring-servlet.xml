@@ -15,7 +15,7 @@
 	    	<!-- prefix的value + return的字符串 + suffix的value -->
 	    	<!-- /resource/views/index.jsp -->
 	    <property name = "prefix" value="/resource/views/"></property><!--视图的路径 -->
-	    <property name = "suffix" value = ".html"></property><!-- 视图的格式 -->
+	    <property name = "suffix" value = ".jsp"></property><!-- 视图的格式 -->
     </bean>
     <mvc:annotation-driven></mvc:annotation-driven>
     <mvc:resources location="/resource/" mapping="/resource/**"></mvc:resources>

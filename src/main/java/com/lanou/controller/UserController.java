@@ -32,9 +32,10 @@ public class UserController {
     }
 
     //    查看手机号是否已存在
-    @RequestMapping(value = "/findUserPhone.do", method = RequestMethod.GET)
+    @RequestMapping(value = "/findUserPhone.do", method = RequestMethod.POST)
     @ResponseBody
     public String findUserPhone(String userPhone) throws IOException {
+        System.out.println(userPhone);
         User user = userService.findUserPhone(userPhone);
         System.out.print(user);
         if (user != null) {
@@ -42,19 +43,19 @@ public class UserController {
         } else {
             return "true";
         }
-
     }
 
     //    注册后插入用户
     @RequestMapping(value = "/insertUser.do", method = RequestMethod.POST)
-    @ResponseBody
-    public String insertUser(User user) throws IOException {
-        int result = userService.insertUser(user);
+    public String insertUser(String userPhone,String password) throws IOException {
+        System.out.println(userPhone);
+        System.out.println(password);
+        int result = userService.insertUser(userPhone,password);
         System.out.print(result);
         if (result == 0) {
             return "false";
         } else {
-            return "true";
+            return "index";
         }
     }
 
@@ -66,9 +67,9 @@ public class UserController {
         session.setAttribute("user1",user1);
         System.out.print(user1);
         if (user1 != null) {
-            return "true";
-        } else {
             return "false";
+        } else {
+            return "true";
         }
 
     }

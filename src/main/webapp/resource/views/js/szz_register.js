@@ -35,11 +35,11 @@ var phoneCode = document.getElementById("phoneCode");
 var checks = document.getElementById("checks");
 var txingyanzheng = document.getElementsByClassName("txingyanzheng")[0];
 
-//验证手机号是否重复
+// //验证手机号是否重复
 var xhr = new XMLHttpRequest();
 xhr.onload = function(){
 	console.log(this.responseText);
-	if(phone.value!=""  && this.responseText ==true){
+	if(document.getElementById("phone").value!="" && this.responseText =="true"){
 		tishi[0].style.visibility = "hidden";
 		tishi[0].innerHTML = "请输入手机号";
 	}else{
@@ -51,9 +51,22 @@ xhr.onload = function(){
 phone.onblur = function(){
 	var reg = /^1[13-9]\d{9}$/g;
 	var phoneNumber = this.value.match(reg);
-	if(phoneNumber){
-		xhr.open("POST","",true);
-		xhr.send("phoneNum",document.getElementById("phone").value);
+	if(phoneNumber!=null){
+		xhr.open("POST","10.80.13.161:8081/user/findUserPhone.do",true);
+		console.log(document.getElementById("phone").value);
+		var formData = new FormData();
+		formData.append("userPhone",document.getElementById("phone").value);
+		xhr.send(formData);
+        // $.ajax({
+        //     url:"http://10.80.13.161:8081/user/findUserPhone.do",
+        //     method:"get",
+        //     data:{
+        //         userPhone:document.getElementById("phone").value
+        //     },
+        //     success:function (data) {
+        //         console.log(data)
+        //     }
+        // })
 	}
 }
 
@@ -62,18 +75,15 @@ if(phone.value == "" || yanzheng.value == "" || pass1.value == "" || pass2.value
 	document.getElementById("submits").disabled = true;
 	document.getElementById("submits").style.background = "lightgrey";
 }
-
-
-//获取图形验证码
-//var xhr = new XMLHttpRequest();
-//xhr.onload = function(){
-//	console.log(this.responseText);
-//	document.getElementsByClassName("txingyanzheng")[0].innerHTML = this.responseText;
-//	document.getElementsByClassName("txingyanzheng")[0].style.fontSize = "22px";
-//}
-//xhr.open("POST","",true);
-//xhr.send();
 //验证码失焦事件
+var arr = [1,2,3,4,5,6,7,8,9,0,"A","B","C","D","E","F","G"];
+var arr1 = [];
+for(var i = 0; i<4;i++){
+	var index = parseInt(Math.random()*arr.length);
+	arr1.push(arr[index]);
+}
+txingyanzheng.innerHTML = arr1.join("");
+console.log(txingyanzheng.innerHTML);
 yanzheng.onblur = function(){
 	var ya_value = this.value;
 	if(ya_value != txingyanzheng.innerHTML ){
@@ -84,8 +94,6 @@ yanzheng.onblur = function(){
 		tishi[1].innerHTML = "请输入图片验证码";
 	}
 }
-
-
 //密码失焦事件
 pass1.onblur = function(){
 	var val = this.value;

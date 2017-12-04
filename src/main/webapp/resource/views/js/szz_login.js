@@ -18,17 +18,33 @@ var username = document.getElementById("username");
 var passwords = document.getElementById("password");
 var login_in = document.getElementsByClassName("login_in")[0];
 
+if(username.value =="" || passwords.value==""){
+	login_in.disabled = true;
+	login_in.style.background = "lightgrey";
+}
+username.oninput = function() {
+		//调用函数，判断是input.value否为空
+		isNull();
+	}
+passwords.oninput = function() {
+		//调用函数，判断是input.value否为空
+		isNull();
+	}
+
 login_in.onclick = function(){
 	var xhr = new XMLHttpRequest();
 	xhr.onload = function(){
 		console.log(this.responseText);
-//		if(this.responseText ==""){
-//			
-//		}
 	}
 	var formData = new FormData();
 	formData.append("username",document.getElementById("username").value);
 	formData.append("password",document.getElementById("password").value);
 	xhr.open("POST","",true);
 	xhr.send(formData);
+}
+function isNull() {
+	if(username.value != "" && passwords.value != "") {
+		login_in.disabled = false;
+		login_in.style.background = "red";
+	}
 }
