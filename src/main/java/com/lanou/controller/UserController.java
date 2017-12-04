@@ -69,7 +69,7 @@ public class UserController {
         session.setAttribute("user1",user1);
         System.out.print(user1);
         if (user1 != null) {
-            return "html/lkl_=index";
+            return "html/lkl_index";
         } else {
             return "false";
         }
