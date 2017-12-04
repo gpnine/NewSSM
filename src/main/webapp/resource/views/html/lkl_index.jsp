@@ -1248,12 +1248,12 @@
 		</div>-->
 	</body>
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>.
-	<script type="text/javascript" src="../js/lkl_index.js">
+	<script type="text/javascript" src="<%=basePath%>/resource/views/js/lkl_index.js">
 		
 	</script>
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="jqery2.js"></script>
-	<script type="text/javascript" src="frame.js"></script>
+	<script type="text/javascript" src="<%=basePath%>/resource/views/html/jquery.js"></script>
+	<script type="text/javascript" src="<%=basePath%>/resource/views/html/jqery2.js"></script>
+	<script type="text/javascript" src="<%=basePath%>/resource/views/html/frame.js"></script>
 	<script type="text/javascript" src="ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
 //	<script type="text/javascript">
 //		var jiaru=document.getElementById("jiaru");
@@ -1288,141 +1288,5 @@
 //		    }
 //
 //		});
-=======
-        <div>
-            <a href="###">
-                <img src="http://www.zhongjiu.cn/Images/authentication_01.png"/>
-            </a>
-            <a href="###">
-                <img src="http://v.trustutn.org/images/cert/brand_bottom_large.jpg"/>
-            </a>
-            <a href="###">
-                <img src="<%=basePath%>/resource/views/img/kexin.png"/>
-            </a>
-            <a href="###">
-                <img src="http://www.zhongjiu.cn/Images/authentication_05.png"/>
-            </a>
-            <a href="###">
-                <img src="http://www.zhongjiu.cn/Images/authentication_07.png"/>
-            </a>
-            <a href="###">
-                <img src="http://www.zhongjiu.cn/Images/authentication_09.png"/>
-            </a>
-        </div>
-    </div>
-</footer>
-<!--左侧边栏楼层结构-->
-<div class="floor_setting">
-
-</div>
-
-
-<!--右侧边栏购物详情-->
-<div class="gouwuche">
-    <div class="gouwuche_left">
-        <ol class="gouwuche_left_content">
-            <li class="gouwuche_left_content_first pr">
-                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i class="iconfont icon-gerentouxiang "></i></a>
-                <div class="pa kefu_shuoming">
-                    <span>个人中心</span>
-                    <div class="sanjiaoxing pa"></div>
-                </div>
-            </li>
-            <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i id="rr" class="iconfont icon-gouwuche "></i></a>
-                <span style="width:22px;display: block;margin-left:9px;">购物车</span>
-                <span>0</span>
-            </li>
-            <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-hongbao "></i></a>
-                <div class="pa kefu_shuoming">
-                    <span>资产中心</span>
-                    <div class="sanjiaoxing pa"></div>
-                </div>
-            </li>
-            <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-xiangqu "></i></a>
-                <div class="pa kefu_shuoming">
-                    <span>收藏商品</span>
-                    <div class="sanjiaoxing pa"></div>
-                </div>
-            </li>
-            <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <div class="pa kefu_shuoming">
-                    <span>浏览历史</span>
-                    <div class="sanjiaoxing pa"></div>
-                </div>
-                <a class="a" href="###"><i class="iconfont icon-shizhong "></i></a>
-            </li>
-            <li>
-                <div class="kefu pr">
-                    <span>客服</span>
-                    <div class="kefu_shuoming pa">
-                        <span>妮妮</span>
-                        <span>佳佳</span>
-                        <div class="sanjiaoxing pa"></div>
-                    </div>
-                </div>
-            </li>
-        </ol>
-    </div>
-    <div class="gouwuche_right">
-
-    </div>
-</div>
-</body>
-
-
-<!--<div id="jiaru" style="width:100px;height:100px;background: green;position: absolute;bottom:300px;
-    left:300px;">
-
-</div>-->
-</body>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-.
-<script type="text/javascript" src="<%=basePath%>/resource/views/js/lkl_index.js">
-
-</script>
-<script type="text/javascript" src="<%=basePath%>/resource/views/html/jquery.js"></script>
-<script type="text/javascript" src="<%=basePath%>/resource/views/html/jqery2.js"></script>
-<script type="text/javascript" src="<%=basePath%>/resource/views/html/frame.js"></script>
-<script type="text/javascript" src="ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
->>>>>>> f455a39367aa71e8a554b2a07bb3a387a1c19d9f
-//
-<script type="text/javascript">
-    //		var jiaru=document.getElementById("jiaru");
-    //		jiaru.onclick=function(index){
-    //			console.log(index);
-    //			addProduct(event);
-    //		}
-    //		function addProduct(event) {
-    //
-    //		var offset = $('#rr').offset(), flyer = $("<div class='divs' style='background:#436eee; position:absolute; left:100px; top:40px;'></div>");
-    //
-    //		flyer.fly({
-    //		// 初始位置
-    //		    start: {
-    //
-    //		        left: event.pageX-100,
-    //
-    //		        top: event.pageY-20
-    //
-    //		    },
-    //		// 结束位置
-    //		    end: {
-    //
-    //		        left: offset.left-40,
-    //
-    //		        top: offset.top,
-    //
-    //		        width: 5,
-    //
-    //		        height: 5
-    //
-    //		    }
-    //
-    //		});
-    //
-    //	}
 </script>
 </html>
