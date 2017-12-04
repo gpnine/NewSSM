@@ -25,7 +25,7 @@ pageEncoding="UTF-8"%>
 							<p class="h1_info1">${user1.userPhone}<span class="pthy">(普通会员)</span></p>
 							<p class="h1_zhaq"><a href="16.Ljp_Personal_Index.html">账户安全：<span class="aqd"><span class="h1_span"></span></span>&nbsp;&nbsp;&nbsp;中</p></a>
 							<p class="h1_thr">
-								<a href="15.Ljp_Personal_Index.html"><img class="h1_phone" src="../img/ljp_3.png"/></a>
+								<a href="15.Ljp_Personal_Index.jsp"><img class="h1_phone" src="../img/ljp_3.png"/></a>
 								<span class="h1_fg">|</span>
 								<a href="151.Ljp_Personal_Index.html"><img class="h1_email" src="../img/ljp_4.png"/></a>
 							</p>
@@ -77,7 +77,7 @@ pageEncoding="UTF-8"%>
 							<a href="07.Ljp_Personal_Index.html">
 								<img class="h2_img1" src="../img/ljp_11.png" alt="" />
 								<span class="h2_text1">积分</span>
-								<p>0</p>
+								<p>${user1.userMask}</p>
 							</a>
 						</div>
 					</div>
@@ -85,7 +85,7 @@ pageEncoding="UTF-8"%>
 						<a href="08.Ljp_Personal_Index.html">
 							<img class="h2_img2" src="../img/ljp_12.png" alt="" />
 							<span class="h2_text2">余额/充值</span>
-							<p>0</p>
+							<p>${user1.money}</p>
 						</a>
 					</div>
 					<div class="jf h2_hb">

@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
+<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../css/01.Ljp_Personal_Index.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/02.Ljp_Personal_Index.css"/>
@@ -24,15 +26,15 @@
 				
 				<div class="userinfo">
 					<span class="rig">头像</span><input type="file"/><br />
-					<span class="rig">昵称</span><input type="text" placeholder="12312312345" /><br />
-					<span class="rig">邮箱</span><input type="text" /><a href="151.Ljp_Personal_Index.html"><span class="change">绑定</span></a><br />
-					<span class="rig">手机</span><input type="text" placeholder="12312312345" /><a href="152.Ljp_Personal_Index.html"><span class="change">更改</span></a><br />
-					<span class="rig">QQ</span><input type="text" /><br />
-					<span class="rig">真实姓名</span><input type="text" /><br />
+					<span class="rig">昵称</span><input type="text" placeholder="${user1.userNickName}" /><br />
+					<span class="rig">邮箱</span><input type="text" placeholder="${user1.userMail}" /><a href="151.Ljp_Personal_Index.html"><span class="change">绑定</span></a><br />
+					<span class="rig">手机</span><input type="text" placeholder="${user1.userPhone}" /><a href="152.Ljp_Personal_Index.html"><span class="change">更改</span></a><br />
+					<span class="rig">QQ</span><input type="text"  placeholder="${user1.userQQ}"/><br />
+					<span class="rig">真实姓名</span><input type="text" placeholder="${user1.userTrueName}"/><br />
 					<span class="rig">性别</span><input type="radio" name="male" /> 男
 					<input type="radio" name="female" /> 女<br />
 					<span class="rig">生日</span><input type="date" /><span class="sup">填写生日有惊喜</span><br />
-					<span class="rig">身份证号</span><input type="text" /><br />
+					<span class="rig">身份证号</span><input type="text" placeholder="${user1.userIdentity}"/><br />
 					<span class="rig">地区</span><select name="">
 						<option value="">请选择</option>
 					</select>
@@ -42,7 +44,7 @@
 					<select name="">
 						<option value="">请选择</option>
 					</select><br />
-					<span class="rig">详细地址</span><input type="text" /><br /><br />
+					<span class="rig">详细地址</span><input type="text" placeholder="${user1.userDetilHome}"/><br /><br />
 					
 					<hr />
 					
