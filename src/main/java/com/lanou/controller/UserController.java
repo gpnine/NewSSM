@@ -32,7 +32,7 @@ public class UserController {
     }
 
     //    查看手机号是否已存在
-    @RequestMapping(value = "/findUserPhone.do", method = RequestMethod.POST)
+    @RequestMapping(value = "/findUserPhone.do")
     @ResponseBody
     public String findUserPhone(String userPhone) throws IOException {
         System.out.println(userPhone);
@@ -60,16 +60,17 @@ public class UserController {
     }
 
     //   登录返回页面
-    @RequestMapping(value = "/login.do")
-    @ResponseBody
-    public String login(HttpSession session,User user) throws IOException {
-        User user1 = userService.findUser(user);
+    @RequestMapping(value = "/login.do", method = RequestMethod.POST)
+    public String login(HttpSession session,String userPhone,String password) throws IOException {
+        System.out.println(userPhone);
+        System.out.println(password);
+        User user1 = userService.findUser(userPhone,password);
         session.setAttribute("user1",user1);
         System.out.print(user1);
         if (user1 != null) {
-            return "false";
+            return "html/lkl_index";
         } else {
-            return "true";
+            return "false";
         }
 
     }

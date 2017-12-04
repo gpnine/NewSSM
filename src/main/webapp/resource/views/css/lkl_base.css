@@ -1,0 +1,40 @@
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix:after{
+	display: block;
+	content:"";
+	clear:both;
+}
+.clearfix:after{
+	zoom:1;
+}
+ul,ol,dl{
+	padding:0;
+	list-style-type: none;
+}
+body{
+	margin:0;
+}
+.mt{
+	margin-top:10px;
+}
+.mr{
+	margin-right:10px;
+}
+.a{
+	display:block;
+}
+a{
+	text-decoration: none;
+}
+
+.pr{
+	position: relative;
+}
+.pa{
+	position: absolute;
+}

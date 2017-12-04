@@ -52,11 +52,13 @@ phone.onblur = function(){
 	var reg = /^1[13-9]\d{9}$/g;
 	var phoneNumber = this.value.match(reg);
 	if(phoneNumber!=null){
-		xhr.open("POST","10.80.13.161:8081/user/findUserPhone.do",true);
-		console.log(document.getElementById("phone").value);
-		var formData = new FormData();
-		formData.append("userPhone",document.getElementById("phone").value);
-		xhr.send(formData);
+        xhr.open("GET","http://10.80.13.161:8081/user/findUserPhone.do?userPhone="+document.getElementById("phone").value);
+        xhr.send();
+		// xhr.open("POST","http://10.80.13.161:8081/user/findUserPhone.do",true);
+		// console.log(document.getElementById("phone").value);
+		// var formData = new FormData();
+		// formData.append("userPhone",document.getElementById("phone").value);
+		// xhr.send(formData);
         // $.ajax({
         //     url:"http://10.80.13.161:8081/user/findUserPhone.do",
         //     method:"get",
