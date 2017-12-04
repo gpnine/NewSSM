@@ -59,7 +59,7 @@ public class UserController {
         }
     }
 
-    //   登录
+    //   登录返回页面
     @RequestMapping(value = "/login.do")
     @ResponseBody
     public String login(HttpSession session,User user) throws IOException {
