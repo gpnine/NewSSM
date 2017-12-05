@@ -23,10 +23,6 @@ public class ShopController {
         return shops;
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d724de1493b5d8a89a41308d822b74940dae69b5
     @RequestMapping("/findFenlei1.do")
     @ResponseBody
     public List<Shop> finds(Shop shop1, Integer parentId) {
@@ -36,11 +32,6 @@ public class ShopController {
         }
         return shops;
     }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d724de1493b5d8a89a41308d822b74940dae69b5
 
     //    查询父级
     @RequestMapping("/findFuji.do")
