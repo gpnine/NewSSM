@@ -120,7 +120,19 @@ pageEncoding="UTF-8"%>
 			<div id="rig_goods">
 				<h4><a href="">商品推荐</a></h4>
 				<ul class="goods_ul">
-					
+
+				<c:forEach items="${wineList2}" var="item">
+					<div class='box'><div class='mother'>
+						<li class='goods_li'><img class='goods_img' src='${item.getWineImg1()}'/>
+							<li class='goods_hover'>
+								<a class='xfWord' href=''>去购买 ></a>
+							</li>
+						</li>
+					</div>
+					<p class='jiu_kind'><a href=''>${item.getWineName()}</a></p></div>
+				</c:forEach>
+
+
 				</ul>
 			</div>
 			

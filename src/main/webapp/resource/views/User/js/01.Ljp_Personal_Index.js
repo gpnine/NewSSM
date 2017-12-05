@@ -10,11 +10,14 @@ for(var i= 0;i<lis.length;i++){
 
 
 //右商品推荐
-for(var i = 0;i<6;i++){
-	$("<div class='box'><div class='mother'><li class='goods_li'><img class='goods_img goods_img"+(i+1)+"' src=''/><li class='goods_hover'><a class='xfWord' href='' title='52度出口型白西风绵柔凤香型500ml（6瓶装）'>去购买 ></a></li></li></div><p class='jiu_kind'><a href=''></a></p></div>").appendTo($(".goods_ul"));
-}
-$(".goods_img").prop("src","../img/ljp_16.png");
-$(".jiu_kind a").text("52度出口型白西风绵柔…");
+// for(var i = 0;i<6;i++){
+// 	$("<div class='box'><div class='mother'><li class='goods_li'><img class='goods_img goods_img"+(i+1)+"' src=''/>" +
+// 		"<li class='goods_hover'>" +
+// 		"<a class='xfWord' href='' title='52度出口型白西风绵柔凤香型500ml（6瓶装）'>去购买 ></a></li></li></div>" +
+// 		"<p class='jiu_kind'><a href=''></a></p></div>").appendTo($(".goods_ul"));
+// }
+// $(".goods_img").prop("src","../img/ljp_16.png");
+// $(".jiu_kind a").text("52度出口型白西风绵柔…");
 $(".xfWord").css({
 	"color":"white",
 	"fontSize":"12px",

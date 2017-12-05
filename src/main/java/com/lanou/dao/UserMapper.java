@@ -18,4 +18,6 @@ public interface UserMapper {
     public void updatePassword(User user);
 
     public List<Wine> liuLanJiLu();
+
+    public List<Wine> shangPinTuiJian();
 }
