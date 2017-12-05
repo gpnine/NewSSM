@@ -23,6 +23,7 @@ public class IndexController {
     private WineService wineService;
     @Resource
     private IndexService indexService;
+    
     @Resource
     private ShopService shopService;
 
