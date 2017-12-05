@@ -130,7 +130,7 @@ pageEncoding="UTF-8"%>
 
 				<c:forEach items="${wineList2}" var="item">
 					<div class='box'><div class='mother'>
-						<li class='goods_li'><img class='goods_img' src='<%=basePath%>/resource/views/img/${item.getWineImg1()}'/>
+						<li class='goods_li'><img class='goods_img' src='<%=basePath%>/resource/views/img/${item.getWineImg1()}' style="width: 184px;height: 182px;"/>
 							<li class='goods_hover'>
 								<a class='xfWord' href=''>去购买 ></a>
 							</li>
@@ -149,7 +149,7 @@ pageEncoding="UTF-8"%>
 					<span class="rec_gg1">——</span><div class="rec_hea">浏览记录</div><span class="rec_gg2">——</span>
 					<c:forEach items="${wineList}" var="item">
 							<li class='rec_li'>
-								<a href=''><img src="<%=basePath%>/resource/views/img/${item.getWineImg1()}" /></a>
+								<a href=''><img src="<%=basePath%>/resource/views/img/${item.getWineImg1()}" style="width: 100%;height: 80%;" /></a>
 								<a>
 									<span class='jiu_name' style="display: inline-block;height:20px;overflow: hidden;  ">
 										<c:out value="${item.getWineName()}"></c:out>

@@ -1525,7 +1525,7 @@ pageEncoding="UTF-8"%>
 			<div class="gouwuche_left">
 				<ol class="gouwuche_left_content">
 					<li class="gouwuche_left_content_first pr">
-						<a class="a" href=""><i  class="iconfont icon-gerentouxiang "></i></a>
+						<a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i  class="iconfont icon-gerentouxiang "></i></a>
 						<div class="pa kefu_shuoming">
 							<span>个人中心</span>
 							<div class="sanjiaoxing pa"></div>
