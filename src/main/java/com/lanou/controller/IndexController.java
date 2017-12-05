@@ -2,6 +2,7 @@ package com.lanou.controller;
 
 import com.lanou.entity.Banner;
 import com.lanou.entity.Car;
+import com.lanou.entity.Shop;
 import com.lanou.service.CarService;
 import com.lanou.service.IndexService;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ public class IndexController {
     @Resource
     private IndexService indexService;
 
+
     @RequestMapping("/index.do")
     @ResponseBody
     public List<Banner> lunBotu() {
@@ -25,4 +27,5 @@ public class IndexController {
         System.out.print(banners);
         return banners;
     }
+
 }

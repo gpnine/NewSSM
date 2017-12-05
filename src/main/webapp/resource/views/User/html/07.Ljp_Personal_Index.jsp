@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -23,7 +26,7 @@
 				</div>
 				
 				<div id="information">
-					<p>您当前可用积分：<span style="text-decoration: underline;">0分</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="071.jifen.html">如何获取积分？</a></p>
+					<p>您当前可用积分：<span style="text-decoration: underline;">${user1.userMask}分</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="071.jifen.html">如何获取积分？</a></p>
 					<p>可抵扣订单现金：<span>0.03元</span></p>
 					<p>积分使用说明：<span>1、每 100 积分可抵扣1元； 2、如订单发生退款、退货等问题时，获得的积分将被扣除。</span>
 </p>
@@ -43,7 +46,7 @@
 							<th class="bz">备注</th>
 						</tr>
 						<tr>
-							<td class="no_have5 no_have" colspan="4">暂时没有积分哦！</td>
+							<td class="no_have5 no_have" colspan="4"></td>
 						</tr>
 					</table>
 					

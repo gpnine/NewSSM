@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -21,7 +23,7 @@
 					<span>账户管理</span>
 				</div>
 				
-				<div class="kyye">可用余额：<span>0</span>元<a href="081.Ljp_Personal_Index.html"><button>去充值</button></a></div>
+				<div class="kyye">可用余额：<span>${user1.money}</span>元<a href="081.Ljp_Personal_Index.html"><button>去充值</button></a></div>
 				
 				<div id="syzk" class="jia">
 					<span>账户明细</span><span>领取红包</span><span>充值</span><span>消费</span><span>退款</span><span>佣金收入</span>
