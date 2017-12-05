@@ -6,6 +6,8 @@
 	<resultMap type="Wine" id="wineResult">
 		<id column="WineId" property="WId" jdbcType="INTEGER"/>
 		<result column="WineName" property="WineName" jdbcType="VARCHAR"/>
+		<result column="WineEvalution" property="WineEvalution" jdbcType="VARCHAR"/>
+		<result column="WineEvaCount" property="WineEvaCount" jdbcType="INTEGER"/>
 		<result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
 		<result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
 		<result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
@@ -15,7 +17,11 @@
 		<result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
 		<result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
 		<result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
+		<result column="WineCity" property="WineCity" jdbcType="VARCHAR"/>
+		<result column="FromAdress" property="FromAdress" jdbcType="VARCHAR"/>
+		<result column="WineBianhao" property="WineBianhao" jdbcType="VARCHAR"/>
 		<result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
+		<result column="WineContain" property="WineContain" jdbcType="VARCHAR"/>
 		<result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
 		<result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
 		<result column="WineImg3" property="WineImg3" jdbcType="VARCHAR"/>
