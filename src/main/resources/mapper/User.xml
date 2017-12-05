@@ -53,4 +53,31 @@
 
 
 
+
+	<resultMap type="Wine" id="wineResult">
+		<id column="WineId" property="WId" jdbcType="INTEGER"/>
+		<result column="WineName" property="WineName" jdbcType="VARCHAR"/>
+		<result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
+		<result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
+		<result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
+		<result column="WineSales" property="WineSales" jdbcType="VARCHAR"/>
+		<result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
+		<result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
+		<result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
+		<result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
+		<result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
+		<result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
+		<result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
+		<result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
+		<result column="WineImg3" property="WineImg3" jdbcType="VARCHAR"/>
+		<result column="WineImg4" property="WineImg4" jdbcType="VARCHAR"/>
+		<result column="WineImg5" property="WineImg5" jdbcType="VARCHAR"/>
+		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+	</resultMap>
+
+
+	<select id="liuLanJiLu" resultMap="wineResult" parameterType="Wine">
+		select * from zhongjiu_wine where WineId in(1001,1007,1035,1065,2040)
+	</select>
+
 </mapper>
