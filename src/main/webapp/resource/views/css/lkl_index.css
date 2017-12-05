@@ -1,8 +1,234 @@
+/*轮播图*/
+
+.slider {
+	
+    height:515px;
+    background: black;
+	position:relative;
+}
+.slider .fade li {
+    width: 100px;
+	position:absolute;
+	display:none;
+}
+.slider .fade li:first-child {
+	display:block;
+}
+.arrow {
+	display:none;
+}
+.slider:hover .arrow {
+	display:block;
+}
+
+.slider .pagination {
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	margin-left:-68px
+}
+.slider .pagination ul li {
+	float:left;
+	margin-right:5px;
+	width:18px;
+	height:18px;
+	border-radius:50%;
+	background-color: white;
+	text-align:center;
+	cursor:pointer
+}
+.slider .pagination ul li.active {
+    border: 3px solid white;
+    background: transparent;
+    margin-top: -3px;
+}
+.small_banner{
+	width: 200px;
+	height: 513px;
+	border: 1px solid transparent;
+	position: absolute;
+	top: 0px;
+	transtion: all 1s;
+	right:0;
+	top:34px;
+	z-index:50;
+}
+.small_banner .lazyload{
+	position: relative;
+	top: 0px;
+	right: 0px;
+	width: 200px;
+	height: 254px;
+	transtion: all 1s;
+}
+
+
+
+.small_banner .lazyload:hover{
+	transform: translateX(-8px);
+
+}
+
+
+.side_nav_slider_top{
+	width:1190px;
+	margin:0 auto;
+	height: 35px;
+	/*margin-bottom:-14px;*/
+}
+.side_nav_slider_top .cate-all{
+	display: inline-block;
+	width: 198px;
+	height: 35px;
+	border: 1px solid red;
+	background: red;
+	line-height: 35px;
+	font-size: 17px;
+	color: white;
+}
+.cate-all img{
+	margin-left: 20px;
+}
+.cate-all a{
+	margin-left: 10px;
+}
+.side_nav_slider_top .item{
+	margin-right:30px;
+	margin-left:30px;
+}
+.side_nav_slider_top .item .item_one{
+	color: red;
+}
+.side_nav_slider_top .cate-all a{
+	color: white;
+}
+.side_nav_slider_top .item{
+	
+}
+.side_nav_slider_top .item a:hover{
+	color: red;
+}
+.side_nav_slider{
+	position: relative;
+}
+/*a{
+	text-decoration: none;
+	color:black;
+}*/
+
+
+.side-nav {
+	position: absolute;
+	top:34px;
+	left: 0;
+	width: 200px;
+	z-index: 3;
+}
+.sidenav-list {
+	position: relative;
+	padding: 15px 0px;
+	background: rgb(61,72,81);
+}
+.side-item img{
+	position: relative;
+	top: 5px;
+}
+.side-item a {
+	position: relative;
+	display: block;
+	color: #fff;
+	padding-left: 20px;
+	height: 40.5px;
+	line-height: 40px;
+}
+.sidenav-list_one{
+	font-size: 16px;
+}
+.sidenav-list_two{
+	font-size: 13px;
+}
+.side-item .iconfont {
+	position: absolute;
+	right: 20px;
+	color: #b2b2b2;
+}
+.side-item:hover {
+	background-color: rgb(61,65,65);
+}
+.side-item:hover  .children-nav {
+	display: block;
+}
+/* 子导航 */
+.children-nav {
+	display: none;
+	position: absolute;
+	left: 200px;
+	top: 0;
+	width: 780px;
+	height: 515px;
+	border: 1px solid #e0e0e0;
+	background: #fff;
+	box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+.children-nav-left{
+	width: 550px;
+	height: 515px;
+}
+.children-nav-right{
+	margin-top: -515px;
+	width: 180px;
+	height: 358px;
+	border:  1px solid #f9f7f6;
+	float: right;
+	background: #f9f7f6;
+}
+.children-nav-right-top{
+	display: block;
+	width: 180px;
+	height: 38px;
+	line-height: 38px;
+	color: rgb(62, 58, 57);
+	text-align: center;
+}
+.children-nav-right img{
+	display: block;
+	width: 180px;
+	height: 320px;
+	border:  1px solid #f9f7f6;					
+	float: right;
+}
+.children-nav span{
+ 	display: block;
+	width: 518px;
+	height: 50px;
+	margin-left: 35px;
+	border-bottom: 1px solid black; 
+	line-height: 50px;
+}
+.children-list {
+	width: 540px;
+	/*height: 102px;*/
+}
+.children-list li{
+	height: 30px;
+	position: relative;
+	float: left;
+}
+.children-list .link {
+	color: rgb(102,102,102);
+}
+
+
+
+
+
+
+
 .wrap{
 	position: fixed;
+	top:0;
 	width:calc(100% - 260px);
 	height:100vh;
-	top:0;
 }
 /*热销爆款区*/
 .content{
@@ -55,6 +281,7 @@
 /*帮你选酒及其他楼层区域 */
 .floor{
 	margin-top:30px;
+	transition:2s;
 }
 .floor-hd{
 	height: 32px;
@@ -248,11 +475,8 @@
 	right:50%;
 	display: none;
 	text-align: left;
+	cursor: pointer;
 }
-.floor_setting_list:hover{
-	background: red;
-}
-
 
 
 
@@ -261,10 +485,11 @@
 	width:40px;
 	height:100vh;
 	position: fixed;
+	z-index: 9999;
 	top:0;
 	right:0;
 	background: #E6E6E6;
-	transition: 1s;
+	transition: 0.1s;
 }
 /*.gouwuche:hover{
 	width:260px;
@@ -272,7 +497,7 @@
 .gouwuche_left{
 	width:40px;
 	height:100vh;
-	float:left;
+	
 	background: black;
 	position: absolute;
 	z-index: 10;
@@ -372,22 +597,3 @@
 	right:0px;
 	transition: all 1s;
 }
-/*.divs{
-
-display: block;
-
-width: 30px;
-
-height: 30px;
-
-border-radius: 30px;
-
-position: fixed;
-
-z-index: 9999;
-font-size: 30px;
-color:white;
-text-align: center;
-line-height:30px;
-
-}*/
