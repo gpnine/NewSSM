@@ -82,9 +82,16 @@ public class UserController {
     public String login(HttpSession session, HttpServletRequest request, String userPhone, String password) throws IOException {
         User user1 = userService.findUser(userPhone,password);
 
+//        商品浏览记录
         List<Wine> wineList = userService.liuLanJiLu();
         session.setAttribute("wineList",wineList);
         System.out.println(wineList);
+//        商品推荐
+        List<Wine> wineList2 = userService.shangPinTuiJian();
+        session.setAttribute("wineList2",wineList2);
+        System.out.println(wineList2);
+
+
         session.setAttribute("user1",user1);
 
         if (user1 != null) {
