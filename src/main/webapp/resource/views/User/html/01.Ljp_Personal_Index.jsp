@@ -147,7 +147,6 @@ pageEncoding="UTF-8"%>
 			<div id="rig_recode">
 				<div class="rec_head">
 					<span class="rec_gg1">——</span><div class="rec_hea">浏览记录</div><span class="rec_gg2">——</span>
-
 					<c:forEach items="${wineList}" var="item">
 							<li class='rec_li'>
 								<a href=''><img src="<%=basePath%>/resource/views/img/${item.getWineImg1()}" /></a>
@@ -158,13 +157,6 @@ pageEncoding="UTF-8"%>
 								</a>
 							</li>
 					</c:forEach>
-
-
-
-
-
-
-
 				</div>
 			</div>
 			
