@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -125,6 +128,24 @@ pageEncoding="UTF-8"%>
 			<div id="rig_recode">
 				<div class="rec_head">
 					<span class="rec_gg1">——</span><div class="rec_hea">浏览记录</div><span class="rec_gg2">——</span>
+
+					<c:forEach items="${wineList}" var="item">
+							<li class='rec_li'>
+								<a href=''><img src="${item.getWineImg1()}" /></a>
+								<a>
+									<span class='jiu_name' style="display: inline-block;height:20px;overflow: hidden;  ">
+										<c:out value="${item.getWineName()}"></c:out>
+									</span>
+								</a>
+							</li>
+					</c:forEach>
+
+
+
+
+
+
+
 				</div>
 			</div>
 			

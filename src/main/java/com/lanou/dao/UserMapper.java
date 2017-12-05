@@ -2,6 +2,7 @@ package com.lanou.dao;
 
 
 import com.lanou.entity.User;
+import com.lanou.entity.Wine;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface UserMapper {
     public User login(User user);
 
     public void updatePassword(User user);
+
+    public List<Wine> liuLanJiLu();
 }

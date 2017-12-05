@@ -34,17 +34,17 @@ for(var i = 0;i<mothers.length;i++){
 
 
 //右浏览记录
-for(var i = 0;i<5;i++){
-	$("<li class='rec_li rec_li"+(i+1)+"'><a href=''><img src='' /></a><a href=''><span class='jiu_name'><span></a></li>").appendTo($("#rig_recode"));
-}
-$("#rig_recode img").prop("src","../img/ljp_17.png");
-$(".jiu_name").html("拉菲传奇波尔多…");
+// for(var i = 0;i<5;i++){
+// 	$("<li class='rec_li rec_li"+(i+1)+"'><a href=''><img src='' /></a><a href=''><span class='jiu_name'><span></a></li>").appendTo($("#rig_recode"));
+// }
+// $("#rig_recode img").prop("src","../img/ljp_17.png");
+// $(".jiu_name").html("拉菲传奇波尔多…");
 $(".jiu_name").on("mouseover",function(){
 	$(this).css("color","red");
 })
 $(".jiu_name").on("mouseout",function(){
 	$(this).css("color","black");
-})
+ })
 
 
 
