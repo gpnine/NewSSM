@@ -53,7 +53,7 @@ public class UserController {
     @RequestMapping(value="/updatePassword.do", method = RequestMethod.POST)
     public String updatePassword(String userPhone,String password,String newPassword) throws IOException {
        userService.updatePassword(userPhone,password,newPassword);
-      return "index";
+      return "/html/lkl_index";
     }
 
 
@@ -73,7 +73,7 @@ public class UserController {
         if (result == 0) {
             return "false";
         } else {
-            return "index";
+            return "/html/lkl_index";
         }
     }
 

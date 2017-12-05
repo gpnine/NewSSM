@@ -22,15 +22,15 @@
 			<div id="login_right">
 				<div class="login_right_top">
 					<div>
-						<a href="###" class="sao">扫码登录</a>
-						<a href="#" class="zhanghu">账户登录</a>
+						<a  class="sao">扫码登录</a>
+						<a  class="zhanghu">账户登录</a>
 					</div>
 					<div class="erweima">
 						<div class="ma">
 							<img src="http://zhongjiu.cn/login/GetQR?t=131565072957237278"/>
 						</div>
 						<div class="code_bottom">
-							<span>打开<a href="###" style="color: red;">中酒网App</a></span><span>扫描二维码</span>
+							<span>打开<a href="" style="color: red;">中酒网App</a></span><span>扫描二维码</span>
 						</div>
 						<img src="http://zhongjiu.cn/Areas/Web/Images/sao_2.png"/>
 					</div>
@@ -59,7 +59,7 @@
 							<a href="###">微信</a>
 						</div>
 						<div style="border: none;text-align: center;">
-							<a href="###" style="color: red;">立即注册</a>
+							<a href="<%=basePath%>/resource/views/html/szz_register.jsp" style="color: red;">立即注册</a>
 						</div>
 					</div>
 				</div>
