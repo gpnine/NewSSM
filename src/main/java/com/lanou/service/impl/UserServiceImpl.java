@@ -31,7 +31,16 @@ public class UserServiceImpl implements UserService {
 		return userMapper.insertUser(user);
 	}
 
-	public User findUser(String userPhone,String password) {
+	public void updatePassword(String userPhone,String password,String newPassword) {
+		password = newPassword;
+		User user = new User();
+		user.setUserPhone(userPhone);
+		user.setPassword(password);
+		userMapper.updatePassword(user);
+		System.out.print("修改密码");
+	}
+
+	public User findUser(String userPhone, String password) {
 		User user = new User();
 		user.setUserPhone(userPhone);
 		user.setPassword(password);
