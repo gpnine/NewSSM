@@ -26,7 +26,6 @@ public class IndexController {
     @Resource
     private ShopService shopService;
 
-
     @RequestMapping("/index.do")
     @ResponseBody
     public Map<String, Object> lunBotu(Shop shop1, Integer parentId) {
