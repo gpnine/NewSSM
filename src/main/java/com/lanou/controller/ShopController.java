@@ -23,7 +23,6 @@ public class ShopController {
         return shops;
     }
 
-    //    查找所有用户
     @RequestMapping("/findFenlei1.do")
     @ResponseBody
     public List<Shop> finds(Shop shop1, Integer parentId) {
