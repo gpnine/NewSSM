@@ -9,5 +9,6 @@ public interface UserService {
 	public User findUserPhone(String iphone);
 	public int insertUser(String userPhone,String password);
 	public User findUser(String userPhone,String password);
+	public void updatePassword(String userPhone,String password,String newPasswod);
 
 }

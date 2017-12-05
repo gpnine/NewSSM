@@ -74,7 +74,7 @@ pageEncoding="UTF-8"%>
 				<div class="rigHead_h2">
 					<div class="jf h2_jf">
 						<div class="h2_it">
-							<a href="07.Ljp_Personal_Index.html">
+							<a href="07.Ljp_Personal_Index.jsp">
 								<img class="h2_img1" src="../img/ljp_11.png" alt="" />
 								<span class="h2_text1">积分</span>
 								<p>${user1.userMask}</p>
@@ -82,14 +82,14 @@ pageEncoding="UTF-8"%>
 						</div>
 					</div>
 					<div class="jf h2_ye">
-						<a href="08.Ljp_Personal_Index.html">
+						<a href="08.Ljp_Personal_Index.jsp">
 							<img class="h2_img2" src="../img/ljp_12.png" alt="" />
 							<span class="h2_text2">余额/充值</span>
 							<p>${user1.money}</p>
 						</a>
 					</div>
 					<div class="jf h2_hb">
-						<a href="08.Ljp_Personal_Index.html">
+						<a href="08.Ljp_Personal_Index.jsp">
 							<img class="h2_img3" src="../img/ljp_13.png" alt="" />
 							<span class="h2_text3">红包</span>
 							<p>0元</p>

@@ -3,7 +3,10 @@ package com.lanou.controller;
 import com.lanou.entity.Banner;
 import com.lanou.entity.Car;
 import com.lanou.entity.Shop;
+<<<<<<< HEAD
 import com.lanou.entity.Wine;
+=======
+>>>>>>> a2a845a402a3fea1ce1593c90ea28ac03ae74835
 import com.lanou.service.CarService;
 import com.lanou.service.IndexService;
 import com.lanou.service.ShopService;
@@ -27,6 +30,7 @@ public class IndexController {
     @Resource
     private ShopService shopService;
 
+
     @RequestMapping("/index.do")
     @ResponseBody
     public Map<String, Object> lunBotu(Shop shop1, Integer parentId) {
@@ -48,4 +52,5 @@ public class IndexController {
         }
         return shops;
     }
+
 }

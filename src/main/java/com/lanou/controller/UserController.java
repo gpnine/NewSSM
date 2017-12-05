@@ -46,6 +46,22 @@ public class UserController {
         }
     }
 
+
+
+    //    修改密码
+    @RequestMapping(value="/updatePassword.do", method = RequestMethod.POST)
+    public String updatePassword(String userPhone,String password,String newPassword) throws IOException {
+       userService.updatePassword(userPhone,password,newPassword);
+      return "index";
+    }
+
+
+
+
+
+
+
+
     //    注册后插入用户
     @RequestMapping(value = "/insertUser.do", method = RequestMethod.POST)
     public String insertUser(String userPhone,String password) throws IOException {

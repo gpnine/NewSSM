@@ -47,4 +47,10 @@
 
 
 
+	<update id="updatePassword"  parameterType="User">
+		update zhongjiu_user set userPassword = #{password} where userPhone = #{userPhone}
+	</update>
+
+
+
 </mapper>

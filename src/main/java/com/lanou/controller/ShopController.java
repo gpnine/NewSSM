@@ -23,6 +23,7 @@ public class ShopController {
         return shops;
     }
 
+<<<<<<< HEAD
     @RequestMapping("/findFenlei1.do")
     @ResponseBody
     public List<Shop> finds(Shop shop1, Integer parentId) {
@@ -32,6 +33,18 @@ public class ShopController {
         }
         return shops;
     }
+=======
+    //    查找所有用户
+//    @RequestMapping("/findFenlei1.do")
+//    @ResponseBody
+//    public List<Shop> finds(Shop shop1, Integer parentId) {
+//        List<Shop> shops = shopService.findFenlei(parentId);
+//        for (Shop shop : shops) {
+//            shop.setShopList(finds(shop1, shop.getShopId()));
+//        }
+//        return shops;
+//    }
+>>>>>>> a2a845a402a3fea1ce1593c90ea28ac03ae74835
 
     //    查询父级
     @RequestMapping("/findFuji.do")
