@@ -11,6 +11,13 @@ pageEncoding="UTF-8"%>
 		<title>01.Ljp_Personal_Index-个人中心</title>
 	</head>
 	<body>
+
+	<%
+		String path = request.getContextPath();
+		String basePath = request.getScheme()+"://"+request.getServerName()+":"	+request.getServerPort()+path;
+	%>
+
+
 	<!--红色的横杠-->
 		<div class="per_line"></div>
 	<!--个人中心主页面容器-->
@@ -123,7 +130,7 @@ pageEncoding="UTF-8"%>
 
 				<c:forEach items="${wineList2}" var="item">
 					<div class='box'><div class='mother'>
-						<li class='goods_li'><img class='goods_img' src='${item.getWineImg1()}'/>
+						<li class='goods_li'><img class='goods_img' src='<%=basePath%>/resource/views/img/${item.getWineImg1()}'/>
 							<li class='goods_hover'>
 								<a class='xfWord' href=''>去购买 ></a>
 							</li>
@@ -143,7 +150,7 @@ pageEncoding="UTF-8"%>
 
 					<c:forEach items="${wineList}" var="item">
 							<li class='rec_li'>
-								<a href=''><img src="${item.getWineImg1()}" /></a>
+								<a href=''><img src="<%=basePath%>/resource/views/img/${item.getWineImg1()}" /></a>
 								<a>
 									<span class='jiu_name' style="display: inline-block;height:20px;overflow: hidden;  ">
 										<c:out value="${item.getWineName()}"></c:out>
