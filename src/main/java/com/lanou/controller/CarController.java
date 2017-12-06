@@ -19,10 +19,10 @@ public class CarController {
     //    查找该用户购物车
     @RequestMapping("/findCars.do")
     @ResponseBody
-    public List<Car> findCars(int userId) {
-        List<Car> cars = carService.findCars(userId);
-        System.out.print(cars);
-        return cars;
+    public String findCars(int userId) {
+        String s = carService.findCars(userId)+"";
+        System.out.print(carService.findCars(userId));
+        return s;
     }
 
     //    插入商品

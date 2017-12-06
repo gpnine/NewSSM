@@ -77,11 +77,11 @@
 
 
 	<select id="liuLanJiLu" resultMap="wineResult" parameterType="Wine">
-		select * from zhongjiu_wine where WineId in(1001,1007,1035,1065,2040)
+		select * from zhongjiu_wine where WineId in(1001,1007,1035,1065,1066)
 	</select>
 
 	<select id="shangPinTuiJian" resultMap="wineResult" parameterType="Wine">
-		select * from zhongjiu_wine where WineId in(1016,1045,1078,1093,1098,2002,2018,2021)
+		select * from zhongjiu_wine where WineId in(1016,1045,1078,1093,1094,1079,1096,1097)
 	</select>
 
 </mapper>

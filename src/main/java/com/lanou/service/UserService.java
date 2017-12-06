@@ -1,5 +1,6 @@
 package com.lanou.service;
 
+import com.lanou.entity.Car;
 import com.lanou.entity.User;
 import com.lanou.entity.Wine;
 
@@ -14,6 +15,10 @@ public interface UserService {
 
 	public List<Wine> liuLanJiLu();
 	public List<Wine> shangPinTuiJian();
+
+
+	public List<Car> cars();
+	public Wine selectCar(int w);
 
 
 }

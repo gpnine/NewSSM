@@ -4,41 +4,37 @@ package com.lanou.entity;
  * Created by lanou on 2017/12/3.
  */
 public class Car {
+
     private Integer CarId;
-    private Integer WineId;
-    private Integer UserId;
-    private Integer deleteId;
+
+    private Integer wineId;
+
     private Integer counts;
+
+    private Integer UserId;
+
+    private Integer deleteId;
+
+    private Wine wines;
 
     @Override
     public String toString() {
         return "Car{" +
                 "CarId=" + CarId +
-                ", WineId=" + WineId +
+                ", wineId=" + wineId +
+                ", counts=" + counts +
                 ", UserId=" + UserId +
                 ", deleteId=" + deleteId +
-                ", counts=" + counts +
+                ", wines=" + wines +
                 '}';
     }
 
-    public Car(Integer carId, Integer wineId, Integer userId, Integer deleteId, Integer counts) {
-        CarId = carId;
-        WineId = wineId;
-        UserId = userId;
-        this.deleteId = deleteId;
-        this.counts = counts;
+    public Wine getWines() {
+        return wines;
     }
 
-    public Integer getCounts() {
-        return counts;
-    }
-
-    public void setCounts(Integer counts) {
-        this.counts = counts;
-    }
-
-    public Car() {
-        super();
+    public void setWines(Wine wines) {
+        this.wines = wines;
     }
 
     public Integer getCarId() {
@@ -50,11 +46,19 @@ public class Car {
     }
 
     public Integer getWineId() {
-        return WineId;
+        return wineId;
     }
 
     public void setWineId(Integer wineId) {
-        WineId = wineId;
+        this.wineId = wineId;
+    }
+
+    public Integer getCounts() {
+        return counts;
+    }
+
+    public void setCounts(Integer counts) {
+        this.counts = counts;
     }
 
     public Integer getUserId() {
@@ -71,6 +75,12 @@ public class Car {
 
     public void setDeleteId(Integer deleteId) {
         this.deleteId = deleteId;
+    }
+
+
+
+    public Car() {
+        super();
     }
 
 

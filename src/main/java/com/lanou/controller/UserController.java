@@ -1,6 +1,7 @@
 package com.lanou.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.lanou.entity.Car;
 import com.lanou.entity.Teacher;
 import com.lanou.entity.User;
 import com.lanou.entity.Wine;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -84,6 +86,15 @@ public class UserController {
         List<Wine> wineList2 = userService.shangPinTuiJian();
         session.setAttribute("wineList2",wineList2);
         System.out.println(wineList2);
+
+//        查看购物车
+        List<Car> cars = userService.cars();
+        for(int i=0;i<cars.size();i++){
+            int w = cars.get(i).getWineId();
+            Wine wi = userService.selectCar(w);
+            cars.get(i).setWines(wi);
+        }
+        session.setAttribute("cars",cars);
 
 
         session.setAttribute("user1",user1);
