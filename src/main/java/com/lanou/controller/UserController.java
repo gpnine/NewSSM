@@ -57,12 +57,6 @@ public class UserController {
     }
 
 
-
-
-
-
-
-
     //    注册后插入用户
     @RequestMapping(value = "/insertUser.do", method = RequestMethod.POST)
     public String insertUser(String userPhone,String password) throws IOException {
