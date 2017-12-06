@@ -41,7 +41,7 @@
 	</resultMap>
 
 	<select id="findCars" parameterType="int" resultMap="carResult">
-		select * from zhongjiu_car 
+		select * from zhongjiu_car
 	</select>
 
 	<select id="selectCar" parameterType="int" resultMap="wineResult">
