@@ -20,4 +20,8 @@ public class ShopServiceImpl implements ShopService {
 	public List<Shop> findFuji(Integer shopId) {
 		return shopMapper.findFuji(shopId);
 	}
+
+	public List<Shop> findNotNull() {
+		return shopMapper.findNotNull();
+	}
 }

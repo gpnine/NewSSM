@@ -9,14 +9,14 @@
 	%>
 		<meta charset="UTF-8">
 		<title>注册页</title>
-		<link rel="stylesheet" type="text/css" href="../css/szz_register.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/szz_base.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/css/szz_register.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/css/szz_base.css"/>
 	</head>
 	<body>
 		<div class="top">
 			<div class="head">
 				<div class="top_left">
-					<img src="../img/shoucang.png" width="13"/>
+					<img src="<%=basePath%>/resource/views/img/shoucang.png" width="13"/>
 					<a href="###" class="shoucangcity">收藏商城</a>
 				</div>
 				<div class="top_right">
@@ -60,6 +60,44 @@
 		</form>
 		<div class="bottom">Copyright©2017   中酒网  版权所有</div>
 	</body>
-	<script src="../js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="../js/szz_register.js"></script>
+	<script src="<%=basePath%>/resource/views/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="<%=basePath%>/resource/views/js/szz_register.js"></script>
+	<script>
+        // //验证手机号是否重复
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+            console.log(this.responseText);
+            if(document.getElementById("phone").value!="" && this.responseText =="true"){
+                tishi[0].style.visibility = "hidden";
+                tishi[0].innerHTML = "请输入手机号";
+            }else{
+                tishi[0].style.visibility = "visible";
+                tishi[0].innerHTML = "该账号已注册,请更换号码";
+            }
+        }
+        //正则，限定手机号，复合格式，才能继续提交
+        phone.onblur = function(){
+            var reg = /^1[13-9]\d{9}$/g;
+            var phoneNumber = this.value.match(reg);
+            if(phoneNumber!=null){
+                xhr.open("GET","<%=basePath%>/user/findUserPhone.do?userPhone="+document.getElementById("phone").value);
+                xhr.send();
+                // xhr.open("POST","http://10.80.13.161:8081/user/findUserPhone.do",true);
+                // console.log(document.getElementById("phone").value);
+                // var formData = new FormData();
+                // formData.append("userPhone",document.getElementById("phone").value);
+                // xhr.send(formData);
+                // $.ajax({
+                //     url:"http://10.80.13.161:8081/user/findUserPhone.do",
+                //     method:"get",
+                //     data:{
+                //         userPhone:document.getElementById("phone").value
+                //     },
+                //     success:function (data) {
+                //         console.log(data)
+                //     }
+                // })
+            }
+        }
+	</script>
 </html>

@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/shop")
@@ -22,7 +24,7 @@ public class ShopController {
     @RequestMapping("/findFenlei.do")
     @ResponseBody
     public List<Shop> finds(Integer parentId) {
-        FastJson_Ali.toJson(response);
+//        FastJson_Ali.toJson(response);
         List<Shop> shops = shopService.findFenlei(parentId);
         return shops;
     }
@@ -30,13 +32,14 @@ public class ShopController {
     @RequestMapping("/findFenlei1.do")
     @ResponseBody
     public List<Shop> finds(Shop shop1, Integer parentId) {
-        FastJson_Ali.toJson(response);
+//        FastJson_Ali.toJson(response);
         List<Shop> shops = shopService.findFenlei(parentId);
         for (Shop shop : shops) {
             shop.setShopList(finds(shop1, shop.getShopId()));
         }
         return shops;
     }
+
 
     //    查询父级
     @RequestMapping("/findFuji.do")
