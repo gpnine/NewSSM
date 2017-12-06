@@ -1501,6 +1501,7 @@
 </span>
         <span>公司名称：中酒时代酒业（北京）有限公司 公司地址：北京市朝阳区高碑店乡半壁店村惠河南街1111号国投尚科大厦2层E202单元办公室 联系人：刘铮 联系方式：400-798-9999 社会信用代码证：911101055938071245 食品经营许可证
 </span>
+
         <div>
             <a href="">
                 <img src="http://www.zhongjiu.cn/Images/authentication_01.png"/>
@@ -1743,4 +1744,101 @@
 <script type="text/javascript" src="jqery2.js"></script>
 <script type="text/javascript" src="frame.js"></script>
 <script type="text/javascript" src="ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>-->
+
+				<div>
+					<a href="">
+						<img src="http://www.zhongjiu.cn/Images/authentication_01.png"/>
+					</a>
+					<a href="">
+						<img src="http://v.trustutn.org/images/cert/brand_bottom_large.jpg"/>
+					</a>
+					<a href="">
+						<img src="<%=basePath%>/resource/views/img/kexin.png"/>
+					</a>
+					<a href="">
+						<img src="http://www.zhongjiu.cn/Images/authentication_05.png"/>
+					</a>
+					<a href="">
+						<img src="http://www.zhongjiu.cn/Images/authentication_07.png"/>
+					</a>
+					<a href="">
+						<img src="http://www.zhongjiu.cn/Images/authentication_09.png"/>
+					</a>
+				</div>
+			</div>
+		</footer>
+		<!--左侧边栏楼层结构-->
+		<div class="floor_setting">
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		<!--右侧边栏购物详情-->
+		<div class="gouwuche">
+			<div class="gouwuche_left">
+				<ol class="gouwuche_left_content">
+					<li class="gouwuche_left_content_first pr">
+						<a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i  class="iconfont icon-gerentouxiang "></i></a>
+						<div class="pa kefu_shuoming">
+							<span>个人中心</span>
+							<div class="sanjiaoxing pa"></div>
+						</div>
+					</li>
+					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
+						<a class="a" href="###"><i id="rr" class="iconfont icon-gouwuche "></i></a>
+						<span style="width:22px;display: block;margin-left:9px;">购物车</span>
+						<span>0</span>
+					</li>
+					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
+						<a class="a" href="###"><i  class="iconfont icon-hongbao "></i></a>
+						<div class="pa kefu_shuoming">
+							<span>资产中心</span>
+							<div class="sanjiaoxing pa"></div>
+						</div>
+					</li>
+					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
+						<a class="a" href="###"><i  class="iconfont icon-xiangqu "></i></a>
+						<div class="pa kefu_shuoming">
+							<span>收藏商品</span>
+							<div class="sanjiaoxing pa"></div>
+						</div>
+					</li>
+					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
+						<div class="pa kefu_shuoming">
+							<span>浏览历史</span>
+							<div class="sanjiaoxing pa"></div>
+						</div>
+						<a class="a" href="###"><i  class="iconfont icon-shizhong "></i></a>
+					</li>
+					<li>
+						<div class="kefu pr">
+							<span>客服</span>
+							<div class="kefu_shuoming pa">
+								<span>妮妮</span>
+								<span>佳佳</span>
+								<div class="sanjiaoxing pa"></div>
+							</div>
+						</div>
+					</li>
+				</ol>
+			</div>
+			<div class="gouwuche_right">
+				
+			</div>
+		</div>
+	</body>		
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="<%=basePath%>/resource/views/js/lkl_index.js">
+		
+	</script>
+	<!--<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jqery2.js"></script>
+	<script type="text/javascript" src="frame.js"></script>
+	<script type="text/javascript" src="ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>-->
+
 </html>
