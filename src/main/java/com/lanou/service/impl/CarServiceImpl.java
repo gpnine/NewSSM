@@ -13,8 +13,9 @@ public class CarServiceImpl implements CarService {
 	@Resource
 	private CarMapper carMapper;
 
-	public List<Car> findCars(int userId) {
-		return carMapper.findCars(userId);
+	public String findCars(int userId) {
+		String s = carMapper.findCars(userId)+"";
+		return s;
 	}
 
 	public int insertShop(int userId, int wineId, int counts) {

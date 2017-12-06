@@ -42,25 +42,25 @@ pageEncoding="UTF-8"%>
 						</div>
 						
 						<ul class="h1_part2">
-							<a href="02.Ljp_Personal_Index.html">
+							<a href="02.Ljp_Personal_Index.jsp">
 								<li class="h1_dfk dcl">
 									<img class="dfk1" src="../img/ljp_5.png"/>
 									<div class="dfk2">待付款 <span>0</span></div>
 								</li>
 							</a>
-							<a href="02.Ljp_Personal_Index.html">
+							<a href="02.Ljp_Personal_Index.jsp">
 								<li class="h1_dfh dcl">
 									<img class="dfh1" src="../img/ljp_6.png"/>
 									<div class="dfh2">待发货 <span>0</span></div>
 								</li>
 							</a>
-							<a href="02.Ljp_Personal_Index.html">
+							<a href="02.Ljp_Personal_Index.jsp">
 								<li class="h1_dsh dcl">
 									<img class="dsh1" src="../img/ljp_7.png"/>
 									<div class="dsh2">待收货 <span>0</span></div>
 								</li>
 							</a>
-							<a href="02.Ljp_Personal_Index.html">
+							<a href="02.Ljp_Personal_Index.jsp">
 								<li class="h1_dpj dcl">
 									<img class="dpj1" src="../img/ljp_8.png"/>
 									<div class="dpj2">待评价 <span>0</span></div>

@@ -1,7 +1,9 @@
 package com.lanou.service.impl;
 
+import com.lanou.dao.CarMapper;
 import com.lanou.dao.TeacherMapper;
 import com.lanou.dao.UserMapper;
+import com.lanou.entity.Car;
 import com.lanou.entity.Teacher;
 import com.lanou.entity.User;
 import com.lanou.entity.Wine;
@@ -49,6 +51,9 @@ public class UserServiceImpl implements UserService {
 	}
 
 
+	@Resource
+	private CarMapper carMapper;
+
 	public List<Wine> liuLanJiLu() {
 		return userMapper.liuLanJiLu();
 	}
@@ -56,6 +61,15 @@ public class UserServiceImpl implements UserService {
 		return userMapper.shangPinTuiJian();
 	}
 
+	public List<Car> cars(){
+		List<Car> list = carMapper.findCars(1);
+		return list;
+	}
+
+	public Wine selectCar(int w) {
+		Wine wine = carMapper.selectCar(w);
+		return wine;
+	}
 
 
 }
