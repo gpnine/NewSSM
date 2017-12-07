@@ -28,16 +28,16 @@ pageEncoding="UTF-8"%>
 					>
 					<span><a href="">葡萄酒</a></span>
 					>
-					<span><a href="">拉菲</a></span>
+					<span><a href="">${wineInfo.getWineBrand()}</a></span>
 					>
-					<span><a href="">拉菲珍藏波尔多 750ml（2瓶装）</a></span>
+					<span><a href="">${wineInfo.getWineName()} ${wineInfo.getWineLiter()}（2瓶装）</a></span>
 				</div>
 				
 				<!--下方左图部分-->
 				<div class="main_left">
 					<div class="left_bigpic">
 						<div class="move">
-							<img src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/1.png" alt="" class="bigpic" />
+							<img src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}" alt="" class="bigpic" />
 							<!--放大镜-->
 							<div class="wrap"></div>
 						</div>
@@ -49,11 +49,11 @@ pageEncoding="UTF-8"%>
 						
 					</div>
 					<ul class="left_smallpic">
-						<li class="leftPic1 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_24.jpg" alt="" class="smallpic1 smallpic" /></a></li>
-						<li class="leftPic2 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_25.jpg" alt="" class="smallpic2 smallpic" /></a></li>
-						<li class="leftPic3 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_26.jpg" alt="" class="smallpic3 smallpic" /></a></li>
-						<li class="leftPic4 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_27.jpg" alt="" class="smallpic4 smallpic" /></a></li>
-						<li class="leftPic5 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_28.jpg" alt="" class="smallpic5 smallpic" /></a></li>
+						<li class="leftPic1 leftPic"><a href=""><img style="width: 100%;height: 100%;" src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}" alt="" class="smallpic1 smallpic" /></a></li>
+						<li class="leftPic2 leftPic"><a href=""><img style="width: 100%;height: 100%;"src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg2()}" alt="" class="smallpic2 smallpic" /></a></li>
+						<li class="leftPic3 leftPic"><a href=""><img style="width: 100%;height: 100%;"src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg3()}" alt="" class="smallpic3 smallpic" /></a></li>
+						<li class="leftPic4 leftPic"><a href=""><img style="width: 100%;height: 100%;"src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg4()}" alt="" class="smallpic4 smallpic" /></a></li>
+						<li class="leftPic5 leftPic"><a href=""><img style="width: 100%;height: 100%;"src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg5()}" alt="" class="smallpic5 smallpic" /></a></li>
 					</ul>
 				</div>
 				
@@ -74,11 +74,11 @@ pageEncoding="UTF-8"%>
 				
 				<!--下方右详情-->
 				<div class="right_info">
-					<h3 class="h3">拉菲珍藏波尔多 750ml（2瓶装）</h3>
-					<p class="p">法国波尔多法定产区AOC级别</p>
+					<h3 class="h3">${wineInfo.getWineName()} ${wineInfo.getWineLiter()}（2瓶装）</h3>
+					<p class="p">${wineInfo.getWineName()}</p>
 					<div class="price">价格
 						<span>￥</span>
-						<span class="pri">199</span>
+						<span class="pri">${wineInfo.getWinePrice()}</span>
 					</div>
 					
 					<ul class="three_kind">
@@ -193,15 +193,15 @@ pageEncoding="UTF-8"%>
 						</ul>
 						
 						<ul class="part_one_info">
-							<li class="goods_name">商品名称：<span>拉菲珍藏波尔多 750ml（2瓶装）</span></li>
-							<li class="txm">条形码：<span>3296327541419Z2</span></li>
-							<li class="goods_place">产地：<span>法国</span></li>
-							<li class="goods_kind">种类：<span>干红葡萄酒</span></li>
-							<li class="sy">适用：<span>礼节拜访</span></li>
+							<li class="goods_name">商品名称：<span>${wineInfo.getWineName()}</span></li>
+							<li class="txm">条形码：<span>${wineInfo.getWineBianhao()}</span></li>
+							<li class="goods_place">产地：<span>${wineInfo.getFromAdress()}</span></li>
+							<li class="goods_kind">种类：<span>${wineInfo.getWineBrand()}</span></li>
+							<li class="sy">适用：<span>${wineInfo.getWineShiyong()}</span></li>
 							<li class="cctj">储藏条件：<span>恒温恒湿 避光避震</span></li>
 							<li class="goods_when">参考年份：<span>参考年份以产品实物为准</span></li>
-							<li class="jjd">酒精度<span>12%vol</span></li>
-							<li class="jhl">净含量：<span>750ml*2</span></li>
+							<li class="jjd">酒精度<span>${wineInfo.getWineDegree()}%vol</span></li>
+							<li class="jhl">净含量：<span>${wineInfo.getWineLiter()}*2</span></li>
 						</ul>
 					</div>
 					
@@ -225,9 +225,9 @@ pageEncoding="UTF-8"%>
 					
 					<!--下面是图片部分-->
 					<div class="part_three">
-						<img class="three_img1 three_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_39.jpg"/>
-						<img class="three_img2 three_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_40.jpg"/>
-						<img class="three_img3 three_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_41.jpg"/>
+						<img class="three_img1 three_img" src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg3()}"/>
+						<img class="three_img2 three_img" src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg4()}"/>
+						<img class="three_img3 three_img" src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg5()}"/>
 					</div>
 					
 					<div class="part_four">
@@ -362,4 +362,27 @@ pageEncoding="UTF-8"%>
 	<script  src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/jqery2.js"></script>
 	<script  src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
 	<script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/02.Ljp_info.js"></script>
+
+
+	<script>
+        //大小图的切换
+        var picArr = ["<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}","<%=basePath%>/resource/views/img/${wineInfo.getWineImg2()}","<%=basePath%>/resource/views/img/${wineInfo.getWineImg3()}","<%=basePath%>/resource/views/img/${wineInfo.getWineImg4()}","<%=basePath%>/resource/views/img/${wineInfo.getWineImg5()}"];
+
+        //var picArr = ["../img/ljp_24.jpg","../img/ljp_25.jpg","../img/ljp_26.jpg","../img/ljp_27.jpg","../img/ljp_28.jpg"];
+
+        //鼠标移入小图，对应border显示
+        //大图切换成小图的放大版
+        var leftSmallImg = $(".left_smallpic .leftPic");
+        var lastPic = leftSmallImg[0];
+        for(var i = 0;i<leftSmallImg.length;i++){
+            leftSmallImg[i].index = i;
+            leftSmallImg[i].onmouseover = function(){
+                lastPic.style.borderColor = "transparent";
+                leftSmallImg[this.index].style.borderColor = "red";
+                $(".bigpic").prop("src",picArr[this.index]);
+                $(".change_pic").prop("src",picArr[this.index]);
+                lastPic = leftSmallImg[this.index];
+            }
+        }
+	</script>
 </html>

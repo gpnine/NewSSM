@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -39,34 +40,25 @@ public class WineController {
         return wines;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 78a9cb94aeab6faeb60f8367a0eec6af6216669a
 
 //    商品详情
 @RequestMapping(value="/goods.do")
-public String goods_detile(Integer goodsId, HttpSession session){
+public String goods_detile(Integer goodsId, HttpServletRequest request){
 
     List<Wine> wineList = userService.liuLanJiLu();
-    session.setAttribute("wineList",wineList);
-    System.out.println(wineList);
+    request.setAttribute("wineList",wineList);
 
     List<Wine> wineList1 = userService.guanZhu();
-    session.setAttribute("wineList1",wineList1);
-    System.out.println(wineList1);
+    request.setAttribute("wineList1",wineList1);
 
 
     List<Wine> wineList2 = userService.shangPinTuiJian();
-    session.setAttribute("wineList2",wineList2);
-    System.out.println(wineList2);
+    request.setAttribute("wineList2",wineList2);
+
 
    Wine wine =  wineService.goods_detile(goodsId);
+    request.setAttribute("wineInfo",wine);
     return "/Ljp_Xiang_Info/html/01.Ljp_info";
 }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 78a9cb94aeab6faeb60f8367a0eec6af6216669a
 }

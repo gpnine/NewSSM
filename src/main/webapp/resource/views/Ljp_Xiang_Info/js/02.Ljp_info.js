@@ -1,22 +1,22 @@
-//大小图的切换
-var picArr = ["http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/1.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/2.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/3.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/4.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/5.png"];
-
-//var picArr = ["../img/ljp_24.jpg","../img/ljp_25.jpg","../img/ljp_26.jpg","../img/ljp_27.jpg","../img/ljp_28.jpg"];
-
-//鼠标移入小图，对应border显示
-//大图切换成小图的放大版
-var leftSmallImg = $(".left_smallpic .leftPic");
-var lastPic = leftSmallImg[0];
-for(var i = 0;i<leftSmallImg.length;i++){
-	leftSmallImg[i].index = i;
-	leftSmallImg[i].onmouseover = function(){
-		lastPic.style.borderColor = "transparent";
-		leftSmallImg[this.index].style.borderColor = "red";
-		$(".bigpic").prop("src",picArr[this.index]);
-		$(".change_pic").prop("src",picArr[this.index]);
-		lastPic = leftSmallImg[this.index];
-	}
-}
+// //大小图的切换
+// var picArr = ["http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/1.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/2.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/3.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/4.png","http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/5.png"];
+//
+// //var picArr = ["../img/ljp_24.jpg","../img/ljp_25.jpg","../img/ljp_26.jpg","../img/ljp_27.jpg","../img/ljp_28.jpg"];
+//
+// //鼠标移入小图，对应border显示
+// //大图切换成小图的放大版
+// var leftSmallImg = $(".left_smallpic .leftPic");
+// var lastPic = leftSmallImg[0];
+// for(var i = 0;i<leftSmallImg.length;i++){
+// 	leftSmallImg[i].index = i;
+// 	leftSmallImg[i].onmouseover = function(){
+// 		lastPic.style.borderColor = "transparent";
+// 		leftSmallImg[this.index].style.borderColor = "red";
+// 		$(".bigpic").prop("src",picArr[this.index]);
+// 		$(".change_pic").prop("src",picArr[this.index]);
+// 		lastPic = leftSmallImg[this.index];
+// 	}
+// }
 
 
 //图片放大镜
