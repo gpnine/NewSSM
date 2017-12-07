@@ -13,8 +13,6 @@
 
 
     <select id="lunBoTu"  resultMap="BannerResult">
-		select * from zhongjiu_banner where delectId = 0
+		select bannerSrc from zhongjiu_banner where delectId = 0
 	</select>
-
-
 </mapper>

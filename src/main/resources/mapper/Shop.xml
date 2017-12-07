@@ -11,7 +11,7 @@
         <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
     </resultMap>
     <select id="findFenlei" parameterType="int" resultMap="shopResult">
-		select * from zhongjiu_shop where parentId = #{parentId}
+		select ShopId,ShopName,parentId,deleteId from zhongjiu_shop where parentId = #{parentId}
 	</select>
     <select id="findFuji" parameterType="int" resultMap="shopResult">
 		select * from zhongjiu_shop where ShopId = #{shopId}
