@@ -39,8 +39,6 @@ public class WineController {
         return wines;
     }
 
-<<<<<<< HEAD
-
 
 //    商品详情
 @RequestMapping(value="/goods.do")
@@ -64,7 +62,4 @@ public String goods_detile(Integer goodsId, HttpSession session){
 }
 
 
-
-=======
->>>>>>> 20c0764879bd3dcdab3ffbe2db948fec13f3e240
 }

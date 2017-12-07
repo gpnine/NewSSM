@@ -45,7 +45,7 @@
 
 	<!--商品详情-->
 	<select id="goods_detile" parameterType="int" resultMap="wineResult">
-		select * from zhongjiu_wine where WineId = #{goodsId}
+		select * from zhongjiu_wine where WineId = 1001
 	</select>
 
 
