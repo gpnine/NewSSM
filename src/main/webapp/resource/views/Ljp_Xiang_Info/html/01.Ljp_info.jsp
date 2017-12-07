@@ -1,12 +1,22 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <html>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
+	int i=1;
+	int j=1;
+%>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/03.Ljp_info.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/Ljp_Xiang_Info/css/03.Ljp_info.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/Ljp_Xiang_Info/css/iconfont.css"/>
 		<title>01.商品详情页</title>
 	</head>
 	<body>
+
 		<!--显示框-->
 		<div class="null"></div>
 		<div id="head_part">
@@ -39,25 +49,25 @@
 						
 					</div>
 					<ul class="left_smallpic">
-						<li class="leftPic1 leftPic"><a href=""><img src="../img/ljp_24.jpg" alt="" class="smallpic1 smallpic" /></a></li>
-						<li class="leftPic2 leftPic"><a href=""><img src="../img/ljp_25.jpg" alt="" class="smallpic2 smallpic" /></a></li>
-						<li class="leftPic3 leftPic"><a href=""><img src="../img/ljp_26.jpg" alt="" class="smallpic3 smallpic" /></a></li>
-						<li class="leftPic4 leftPic"><a href=""><img src="../img/ljp_27.jpg" alt="" class="smallpic4 smallpic" /></a></li>
-						<li class="leftPic5 leftPic"><a href=""><img src="../img/ljp_28.jpg" alt="" class="smallpic5 smallpic" /></a></li>
+						<li class="leftPic1 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_24.jpg" alt="" class="smallpic1 smallpic" /></a></li>
+						<li class="leftPic2 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_25.jpg" alt="" class="smallpic2 smallpic" /></a></li>
+						<li class="leftPic3 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_26.jpg" alt="" class="smallpic3 smallpic" /></a></li>
+						<li class="leftPic4 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_27.jpg" alt="" class="smallpic4 smallpic" /></a></li>
+						<li class="leftPic5 leftPic"><a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_28.jpg" alt="" class="smallpic5 smallpic" /></a></li>
 					</ul>
 				</div>
 				
 				<div class="save_share">
 					<span class="save">
-						<img src="../img/ljp_35.png" alt="" />
+						<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_35.png" alt="" />
 						收藏商品
 					</span>
 					
 					<span class="share">
 						分享到：
-						<a href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fwww.zhongjiu.cn%2Fproductdetail%2F4211.htm&type=icon&language=zh_cn&title=%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A%20750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89&pic=http%3A%2F%2Fimg6.zhongjiu.cn%2Fresourceb2b2c%2FStorage%2FShop%2F1%2FProducts%2F4211%2F1_350.png&searchPic=true&style=simple#_loginLayer_1512389931438"><img src="../img/ljp_21.png" alt="" /></a>
-						<a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fwww.zhongjiu.cn%2Fproductdetail%2F4211.htm%23none&title=%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A+750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89__%E8%91%A1%E8%90%84%E9%85%92_%E3%80%90%E4%BB%B7%E6%A0%BC+%E5%9B%BE%E7%89%87+%E8%AF%84%E4%BB%B7+%E8%AF%84%E8%AE%BA%E3%80%91_%E4%B8%AD%E9%85%92%E7%BD%91&pics=http%3A%2F%2Fimg6.zhongjiu.cn%2Fresourceb2b2c%2FStorage%2FShop%2F1%2FProducts%2F4211%2FDetails%2F7cf09234894f4bb0a9e1f964ab753550.jpg&summary=%E4%B8%AD%E9%85%92%E7%BD%91%E6%8F%90%E4%BE%9B%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89%E4%BB%A5%E5%8F%8A%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89%E5%95%86%E5%93%81%E5%9B%BE%E7%89%87%E3%80%81%E4%BB%8B%E7%BB%8D%E3%80%81%E8%AF%84%E8%AE%BA%E3%80%81%E8%AF%84%E4%BB%B7%E7%AD%89%E4%BF%A1%E6%81%AF%EF%BC%8C%E4%B8%AD%E9%85%92%E7%BD%91%E5%B9%B3%E4%BB%B7%E4%BF%9D%E7%9C%9F%EF%BC%81"><img src="../img/ljp_20.png" alt="" /></a>
-						<a href=""><img src="../img/ljp_34.png" alt="" /></a>
+						<a href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fwww.zhongjiu.cn%2Fproductdetail%2F4211.htm&type=icon&language=zh_cn&title=%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A%20750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89&pic=http%3A%2F%2Fimg6.zhongjiu.cn%2Fresourceb2b2c%2FStorage%2FShop%2F1%2FProducts%2F4211%2F1_350.png&searchPic=true&style=simple#_loginLayer_1512389931438"><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_21.png" alt="" /></a>
+						<a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fwww.zhongjiu.cn%2Fproductdetail%2F4211.htm%23none&title=%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A+750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89__%E8%91%A1%E8%90%84%E9%85%92_%E3%80%90%E4%BB%B7%E6%A0%BC+%E5%9B%BE%E7%89%87+%E8%AF%84%E4%BB%B7+%E8%AF%84%E8%AE%BA%E3%80%91_%E4%B8%AD%E9%85%92%E7%BD%91&pics=http%3A%2F%2Fimg6.zhongjiu.cn%2Fresourceb2b2c%2FStorage%2FShop%2F1%2FProducts%2F4211%2FDetails%2F7cf09234894f4bb0a9e1f964ab753550.jpg&summary=%E4%B8%AD%E9%85%92%E7%BD%91%E6%8F%90%E4%BE%9B%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89%E4%BB%A5%E5%8F%8A%E6%8B%89%E8%8F%B2%E7%8F%8D%E8%97%8F%E6%B3%A2%E5%B0%94%E5%A4%9A750ml%EF%BC%882%E7%93%B6%E8%A3%85%EF%BC%89%E5%95%86%E5%93%81%E5%9B%BE%E7%89%87%E3%80%81%E4%BB%8B%E7%BB%8D%E3%80%81%E8%AF%84%E8%AE%BA%E3%80%81%E8%AF%84%E4%BB%B7%E7%AD%89%E4%BF%A1%E6%81%AF%EF%BC%8C%E4%B8%AD%E9%85%92%E7%BD%91%E5%B9%B3%E4%BB%B7%E4%BF%9D%E7%9C%9F%EF%BC%81"><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_20.png" alt="" /></a>
+						<a href=""><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_34.png" alt="" /></a>
 					</span>
 				</div>
 				
@@ -78,7 +88,7 @@
 					</ul>
 					<br />
 					<p class="cux">促销&nbsp;&nbsp;
-						<img class="cux_img" src="../img/ljp_30.png"/>
+						<img class="cux_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_30.png"/>
 						<span class="cux_info">单笔订单满<span>99.00</span>元免运费</span>
 						
 					</p>
@@ -105,8 +115,8 @@
 					</p>
 					
 					<div class="button">
-						<span class="btn1"><img src="../img/ljp_31.png"/></span>
-						<span class="btn2"><img src="../img/ljp_32.png"/></span>
+						<span class="btn1"><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_31.png"/></span>
+						<span class="btn2"><img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_32.png"/></span>
 					</div>
 					
 				</div>
@@ -136,9 +146,36 @@
 						</div>
 						<ul class="hot_sell_goods">
 							<!--后台生成-->
+
+
+						<c:forEach items="${wineList}" var="item">
+							<li>
+								<img class="sell_pic" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}"/>
+								<a class='sell_a' href=''><p class="sell_hot_name">${item.getWineName()}</p></a>
+								<p class="sell_num">
+									<span class="span1"><%=i++%></span>
+									<span class="span2">热销<span class="sell_amount">6180</span>件</span>
+								</p>
+							</li>
+						</c:forEach>
+
+
 						</ul>
 						<ul class="hot_concern_goods">
 							<!--后台生成-->
+
+						<c:forEach items="${wineList1}" var="item">
+							<li>
+								<img class="concern_pic" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}">
+								<a class='concern_a' href=''><p class="concern_hot_name">${item.getWineName()}</p></a>
+								<p class="concern_num">
+									<span class="span3"><%=j++%></span>
+									<span class="span4">关注<span class="concern_amount">60</span>次</span>
+								</p>
+							</li>
+						</c:forEach>
+
+
 						</ul>
 					</div>
 				</div>
@@ -171,31 +208,43 @@
 					<!--二-->
 					<ul class="right_part_two">
 						<!--动态生成-->
+
+					<c:forEach items="${wineList2}" var="item">
+						<a href="">
+							<li class="part_two_pic">
+								<img class="part_two_img" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}"/>
+								<p class="part_two_price">￥<span>${item.getWinePrice()}</span></p>
+								<p class="part_two_goodsName\">${item.getWineName()}</p>
+							</li>
+						</a>
+					</c:forEach>
+
+
 					</ul>
 					
 					
 					<!--下面是图片部分-->
 					<div class="part_three">
-						<img class="three_img1 three_img" src="../img/ljp_39.jpg"/>
-						<img class="three_img2 three_img" src="../img/ljp_40.jpg"/>
-						<img class="three_img3 three_img" src="../img/ljp_41.jpg"/>
+						<img class="three_img1 three_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_39.jpg"/>
+						<img class="three_img2 three_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_40.jpg"/>
+						<img class="three_img3 three_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_41.jpg"/>
 					</div>
 					
 					<div class="part_four">
-						<img class="four_img" src="../img/ljp_42.jpg"/>
+						<img class="four_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_42.jpg"/>
 					</div>
 					
 					<div class="part_five">
-						<img class="five_img" src="../img/ljp_43.jpg"/>
+						<img class="five_img" src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_43.jpg"/>
 					</div>
 					
 					<div class="part_six">
-						<img src="../img/ljp_44.jpg" alt="" class="six_img six_img1" />
-						<img src="../img/ljp_45.jpg" alt="" class="six_img six_img2" />
-						<img src="../img/ljp_46.jpg" alt="" class="six_img six_img3" />
-						<img src="../img/ljp_47.jpg" alt="" class="six_img six_img4" />
-						<img src="../img/ljp_48.jpg" alt="" class="six_img six_img5" />
-						<img src="../img/ljp_49.jpg" alt="" class="six_img six_img6" />
+						<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_44.jpg" alt="" class="six_img six_img1" />
+						<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_45.jpg" alt="" class="six_img six_img2" />
+						<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_46.jpg" alt="" class="six_img six_img3" />
+						<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_47.jpg" alt="" class="six_img six_img4" />
+						<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_48.jpg" alt="" class="six_img six_img5" />
+						<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_49.jpg" alt="" class="six_img six_img6" />
 					</div>
 					
 					
@@ -210,7 +259,7 @@
 							</div>
 							
 							<div class="pj_img">
-								<img src="../img/ljp_50.png"/>
+								<img src="<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_50.png"/>
 							</div>
 						</div>
 					</div>
@@ -308,9 +357,9 @@
 			</div>
 		</div>
 	</body>
-	<script src="jquery-3.2.1.min.js"></script>
-	<script  src="../js/frame.js"></script>
-	<script  src="../js/jqery2.js"></script>
-	<script  src="../js/ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
-	<script src="../js/02.Ljp_info.js"></script>
+	<script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/html/jquery-3.2.1.min.js"></script>
+	<script  src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/frame.js"></script>
+	<script  src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/jqery2.js"></script>
+	<script  src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
+	<script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/02.Ljp_info.js"></script>
 </html>

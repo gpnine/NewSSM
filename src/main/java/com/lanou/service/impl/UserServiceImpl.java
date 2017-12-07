@@ -57,6 +57,9 @@ public class UserServiceImpl implements UserService {
 	public List<Wine> liuLanJiLu() {
 		return userMapper.liuLanJiLu();
 	}
+	public List<Wine> guanZhu() {
+		return userMapper.guanZhu();
+	}
 	public List<Wine> shangPinTuiJian() {
 		return userMapper.shangPinTuiJian();
 	}

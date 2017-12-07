@@ -23,4 +23,9 @@ public class WineServiceImpl implements WineService {
 	public List<Wine> findLike(String likeName) {
 		return wineMapper.findLike(likeName);
 	}
+
+	public Wine goods_detile(Integer goodsId) {
+
+		return wineMapper.goods_detile(goodsId);
+	}
 }

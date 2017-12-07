@@ -84,4 +84,8 @@
 		select * from zhongjiu_wine where WineId in(1016,1045,1078,1093,1094,1079,1096,1097)
 	</select>
 
+	<select id="guanZhu" resultMap="wineResult" parameterType="Wine">
+		select * from zhongjiu_wine where WineId in(1016,1078,1094,1007,1097)
+	</select>
+
 </mapper>

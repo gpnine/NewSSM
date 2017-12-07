@@ -14,6 +14,7 @@ public interface UserService {
 	public void updatePassword(String userPhone,String password,String newPasswod);
 
 	public List<Wine> liuLanJiLu();
+	public List<Wine> guanZhu();
 	public List<Wine> shangPinTuiJian();
 
 

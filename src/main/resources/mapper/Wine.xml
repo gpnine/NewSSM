@@ -36,4 +36,12 @@
 		select * from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
 	</select>
 
+
+	<!--商品详情-->
+	<select id="goods_detile" parameterType="int" resultMap="wineResult">
+		select * from zhongjiu_wine where WineId = #{goodsId}
+	</select>
+
+
+
 </mapper>

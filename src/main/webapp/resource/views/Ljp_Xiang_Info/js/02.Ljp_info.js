@@ -125,13 +125,19 @@ $(".search_btn").on("click",function(){
 
 
 //动态生成热门销售的商品
+
+
+
 for(var i = 0;i<5;i++){
 	//热门销售
-	$("<li><img class=\"sell_pic\" src=\"../img/ljp_36.jpg\"/><a class='sell_a' href=''><p class=\"sell_hot_name\">50°五粮液 500ml(普五水晶盒)</p></a><p class=\"sell_num\"><span class=\"span1\">"+(i+1)+"</span> <span class=\"span2\">热销<span class=\"sell_amount\">6180</span>件</span></p></li>").appendTo($(".hot_sell_goods"));
+	// $("<li><img class=\"sell_pic\" src=\"../img/ljp_36.jpg\"/><a class='sell_a' href=''><p class=\"sell_hot_name\">50°五粮液 500ml(普五水晶盒)</p></a><p class=\"sell_num\"><span class=\"span1\">"+(i+1)+"</span> <span class=\"span2\">热销<span class=\"sell_amount\">6180</span>件</span></p></li>").appendTo($(".hot_sell_goods"));
 	
 	//热门关注
-	$("<li><img class=\"concern_pic\" src=\"../img/ljp_37.jpg\"/><a class='concern_a' href=''><p class=\"concern_hot_name\">12°尧喝货清爽型黄酒500ml</p></a><p class=\"concern_num\"><span class=\"span3\">"+(i+1)+"</span> <span class=\"span4\">关注<span class=\"concern_amount\">60</span>次</span></p></li>").appendTo($(".hot_concern_goods"));
+	// $("<li><img class=\"concern_pic\" src=\"../img/ljp_37.jpg\"/><a class='concern_a' href=''><p class=\"concern_hot_name\">12°尧喝货清爽型黄酒500ml</p></a><p class=\"concern_num\"><span class=\"span3\">"+(i+1)+"</span> <span class=\"span4\">关注<span class=\"concern_amount\">60</span>次</span></p></li>").appendTo($(".hot_concern_goods"));
 }
+
+
+
 
 //鼠标移入移除热门的显示隐藏
 $(".hot_sell").on("mouseover",function(){
@@ -166,9 +172,9 @@ for(var i = 0;i<lis.length;i++){
 
 
 //商品介绍动态生成商品
-for(var i = 0;i<8;i++){
-	$("<a href=\"\"><li class=\"part_two_pic\"><img class=\"part_two_img\" src=\"../img/ljp_38.jpg\"/><p class=\"part_two_price\">￥<span>528</span></p><p class=\"part_two_goodsName\">42°天佑德青稞酒海拔2600 500ml</p></li></a>").appendTo($(".right_part_two"));
-}
+// for(var i = 0;i<8;i++){
+// 	$("<a href=\"\"><li class=\"part_two_pic\"><img class=\"part_two_img\" src=\"../img/ljp_38.jpg\"/><p class=\"part_two_price\">￥<span>528</span></p><p class=\"part_two_goodsName\">42°天佑德青稞酒海拔2600 500ml</p></li></a>").appendTo($(".right_part_two"));
+// }
 
 
 //动态生成初次评论
