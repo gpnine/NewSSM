@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
-    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lanou.dao.WineMapper">
-	<resultMap type="Wine" id="wineResult">
-		<id column="WineId" property="WId" jdbcType="INTEGER"/>
-		<result column="WineName" property="WineName" jdbcType="VARCHAR"/>
-		<result column="WineEvalution" property="WineEvalution" jdbcType="VARCHAR"/>
-		<result column="WineEvaCount" property="WineEvaCount" jdbcType="INTEGER"/>
-		<result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
-		<result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
-		<result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
-		<result column="WineSales" property="WineSales" jdbcType="VARCHAR"/>
-		<result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
-		<result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
-		<result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
-		<result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
-		<result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
-		<result column="WineCity" property="WineCity" jdbcType="VARCHAR"/>
-		<result column="FromAdress" property="FromAdress" jdbcType="VARCHAR"/>
-		<result column="WineBianhao" property="WineBianhao" jdbcType="VARCHAR"/>
-		<result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
-		<result column="WineContain" property="WineContain" jdbcType="VARCHAR"/>
-		<result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
-		<result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
-		<result column="WineImg3" property="WineImg3" jdbcType="VARCHAR"/>
-		<result column="WineImg4" property="WineImg4" jdbcType="VARCHAR"/>
-		<result column="WineImg5" property="WineImg5" jdbcType="VARCHAR"/>
-		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
-	</resultMap>
-	<select id="findWines" resultMap="wineResult">
+    <resultMap type="Wine" id="wineResult">
+        <id column="WineId" property="WId" jdbcType="INTEGER"/>
+        <result column="WineName" property="WineName" jdbcType="VARCHAR"/>
+        <result column="WineEvalution" property="WineEvalution" jdbcType="VARCHAR"/>
+        <result column="WineEvaCount" property="WineEvaCount" jdbcType="INTEGER"/>
+        <result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
+        <result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
+        <result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
+        <result column="WineSales" property="WineSales" jdbcType="VARCHAR"/>
+        <result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
+        <result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
+        <result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
+        <result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
+        <result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
+        <result column="WineCity" property="WineCity" jdbcType="VARCHAR"/>
+        <result column="FromAdress" property="FromAdress" jdbcType="VARCHAR"/>
+        <result column="WineBianhao" property="WineBianhao" jdbcType="VARCHAR"/>
+        <result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
+        <result column="WineContain" property="WineContain" jdbcType="VARCHAR"/>
+        <result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
+        <result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
+        <result column="WineImg3" property="WineImg3" jdbcType="VARCHAR"/>
+        <result column="WineImg4" property="WineImg4" jdbcType="VARCHAR"/>
+        <result column="WineImg5" property="WineImg5" jdbcType="VARCHAR"/>
+        <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+    </resultMap>
+    <select id="findWines" resultMap="wineResult">
 		select * from zhongjiu_wine
 	</select>
-	<select id="findLike" parameterType="String" resultMap="wineResult">
+    <select id="findWineById" resultMap="wineResult">
+		select * from zhongjiu_wine where WineId = #{WId}
+	</select>
+    <select id="findLike" parameterType="String" resultMap="wineResult">
 		select * from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
 	</select>
+    <select id="findScope" parameterType="Map" resultMap="wineResult">
+		select * from zhongjiu_wine where WineId between #{a,jdbcType=INTEGER} and  #{b,jdbcType=INTEGER}
+    </select>
 
 
 	<!--商品详情-->

@@ -35,43 +35,6 @@ var phoneCode = document.getElementById("phoneCode");
 var checks = document.getElementById("checks");
 var txingyanzheng = document.getElementsByClassName("txingyanzheng")[0];
 
-// //验证手机号是否重复
-var xhr = new XMLHttpRequest();
-xhr.onload = function(){
-	console.log(this.responseText);
-	if(document.getElementById("phone").value!="" && this.responseText =="true"){
-		tishi[0].style.visibility = "hidden";
-		tishi[0].innerHTML = "请输入手机号";
-	}else{
-		tishi[0].style.visibility = "visible";
-		tishi[0].innerHTML = "该账号已注册,请更换号码";
-	}
-}
-//正则，限定手机号，复合格式，才能继续提交
-phone.onblur = function(){
-	var reg = /^1[13-9]\d{9}$/g;
-	var phoneNumber = this.value.match(reg);
-	if(phoneNumber!=null){
-        xhr.open("GET","http://10.80.13.161:8081/user/findUserPhone.do?userPhone="+document.getElementById("phone").value);
-        xhr.send();
-		// xhr.open("POST","http://10.80.13.161:8081/user/findUserPhone.do",true);
-		// console.log(document.getElementById("phone").value);
-		// var formData = new FormData();
-		// formData.append("userPhone",document.getElementById("phone").value);
-		// xhr.send(formData);
-        // $.ajax({
-        //     url:"http://10.80.13.161:8081/user/findUserPhone.do",
-        //     method:"get",
-        //     data:{
-        //         userPhone:document.getElementById("phone").value
-        //     },
-        //     success:function (data) {
-        //         console.log(data)
-        //     }
-        // })
-	}
-}
-
 //设定提交按钮初识状态不能点击
 if(phone.value == "" || yanzheng.value == "" || pass1.value == "" || pass2.value == "" || phoneCode.value == "") {
 	document.getElementById("submits").disabled = true;

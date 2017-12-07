@@ -16,4 +16,7 @@
     <select id="findFuji" parameterType="int" resultMap="shopResult">
 		select * from zhongjiu_shop where ShopId = #{shopId}
 	</select>
+    <select id="findNotNull" resultMap="shopResult">
+        select * from zhongjiu_shop where ShopImg is not NULL
+    </select>
 </mapper>

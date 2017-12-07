@@ -21,8 +21,8 @@
         <div class="top_left">
             <span>您好 , 欢迎来到<span style="color: black;">&nbsp;&nbsp;中酒网!</span></span>
             <a href="" class="goShop">去买家中心</a>
-            <a href="" class="login_in">请登录</a>
-            <a href="" class="register_in">免费注册</a>
+            <a href="<%=basePath%>/resource/views/html/szz_login.jsp" class="login_in">请登录</a>
+            <a href="<%=basePath%>/resource/views/html/szz_register.jsp" class="register_in">免费注册</a>
         </div>
         <div class="top_right">
             <div class="myZhongjiu">
@@ -163,10 +163,39 @@
 </div>
 <div class="slider">
     <ul class="fade">
+        <li>
+            <a class="lunbotu0" href="###">
+            </a>
+        </li>
+        <li>
+            <a class="lunbotu1" href="###">
+            </a>
+        </li>
+        <li>
+            <a class="lunbotu2" href="###">
+            </a>
+        </li>
+        <li>
+            <a class="lunbotu3" href="###">
+            </a>
+        </li>
+        <li>
+            <a class="lunbotu4" href="###">
+            </a>
+        </li>
+        <li>
+            <a class="lunbotu5" href="###">
+            </a>
+        </li>
     </ul>
     <div class="pagination">
         <ul>
-
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
     </div>
     <div class="arrow-right"></div>
@@ -188,43 +217,11 @@
         </div>
         <div style="width:1190px;border-top:1px solid gray;margin-top:-2px;">
             <ol class="hot_sell_list clearfix">
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
-                <li class="hot_sell_list_li">
-                    <a class="hot_sell a" href=""><img src="<%=basePath%>/resource/views/img/0.jpg"></a>
-                </li>
             </ol>
         </div>
 
     </li>
-    <!--楼层结构开始....................................................................................................
-        ................................................................................................................
-    -->
+    <!--楼层结构开始-->
     <li>
         <ol>
             <!--一楼 帮你选酒-->
@@ -513,7 +510,7 @@
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_white" href="">洋河</a>
+                            <a class="help_a  help_aa help_a_white bj_yh" href="">洋河</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
@@ -594,75 +591,16 @@
                                 </div>
                             </li>
                             <li class="fl mr pr" style="width:950px;">
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_white" style="width:960px;left:0;display: block;">
+                                <ol class="fl pa xuanjiuqu xuanjiuqu_white li1_1"
+                                    style="width:960px;left:0;display: block;">
                                     <li class="fl mr mt">
                                         <a href="" class="a">
                                             <img src="<%=basePath%>/resource/views/img/3.jpg"/>
                                         </a>
                                     </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
                                 </ol>
 
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_white" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
+                                <ol class="fl pa xuanjiuqu xuanjiuqu_white li1_2" style="width:960px;left:0">
                                 </ol>
                                 <ol class="fl pa xuanjiuqu xuanjiuqu_white" style="width:960px;left:0">
                                     <li class="fl mr mt">
@@ -711,7 +649,7 @@
                         </ol>
                     </div>
                     <div class="jiupin_first clearfix">
-                        <ol class="clearfix">
+                        <ol class="clearfix bj_bottom">
                             <li class="fl mr mt">
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/4.jpg"/>
@@ -721,19 +659,6 @@
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/5.jpg"/>
                                 </a>
-
-                            </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                </a>
-
-                            </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                </a>
-
                             </li>
                         </ol>
                     </div>
@@ -1312,9 +1237,7 @@
         </ol>
     </li>
 
-    <!--楼层结构结束................................................................................................
-        ................................................................................................................
-    -->
+    <!--楼层结构结束-->
     <li class="qijiandian">
         <div style="font-weight:700">品牌旗舰店</div>
         <div>
@@ -1327,53 +1250,11 @@
                     <div class="qijiandian_logos">
                         <ol class="clearfix qijiandian_logoss">
 
-                            <li class="fl qijiandian_logos_logo">
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
+                            <li class="fl qijiandian_logos_logo brand1">
                             </li>
-                            <li class="fl qijiandian_logos_logo">
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
+                            <li class="fl qijiandian_logos_logo brand2">
                             </li>
-                            <li class="fl qijiandian_logos_logo">
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
-                                <div class="fl qijiandian_logos_logo_box"><a href=""><img
-                                        class="qijiandian_logos_logo_box_img" src="../img/10.jpg" alt=""/></a></div>
+                            <li class="fl qijiandian_logos_logo brand3">
                             </li>
                         </ol>
                     </div>
@@ -1535,7 +1416,7 @@
     <div class="gouwuche_left">
         <ol class="gouwuche_left_content">
             <li class="gouwuche_left_content_first pr">
-                <a class="a" href=""><i class="iconfont icon-gerentouxiang "></i></a>
+                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i class="iconfont icon-gerentouxiang "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>个人中心</span>
                     <div class="sanjiaoxing pa"></div>
@@ -1584,7 +1465,6 @@
     </div>
 </div>
 </body>
-</body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/resource/views/js/lkl_index.js">
 
@@ -1598,8 +1478,7 @@
             console.log(data)
             for (i in data.banners) {
                 console.log(i)
-                $("<li><a href=''><img src='<%=basePath%>/" + data.banners[i].bannerSrc + "'/></a></li>").appendTo($(".fade"));
-                $("<li></li>").appendTo(".pagination ul");
+                $("<img src='<%=basePath%>/" + data.banners[i].bannerSrc + "'/>").appendTo($(".lunbotu" + i));
             }
             for (j in data.shops) {
                 $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'><img src='http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201609280918332737800.png' alt=''>" + data.shops[j].shopName + "</a><a class='sidenav-list_two' href='#'>茅台 五粮液 天佑德</a><div class='children-nav'><div class='children-nav-left children-nav-left_" + j + "'></div></div></li>").appendTo($(".sidenav-list"));
@@ -1610,113 +1489,113 @@
                         $("<span>" + data.shops[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_10'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 18; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_10"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_10"));
                         }
                         $("<span>" + data.shops[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_12'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 5; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_12"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_12"));
                         }
                         $("<span>" + data.shops[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_11'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_11"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_11"));
                         }
                     case 2:
                         $("<span>" + data.shops[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_20'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 8; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_20"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_20"));
                         }
                         $("<span>" + data.shops[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_22'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_22"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_22"));
                         }
                         $("<span>" + data.shops[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_21'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_21"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_21"));
                         }
                     case 3:
                         $("<span>" + data.shops[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_30'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 11; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_30"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_30"));
                         }
                         $("<span>" + data.shops[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_32'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_32"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_32"));
                         }
                         $("<span>" + data.shops[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_31'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 4; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_31"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_31"));
                         }
 
                     case 4:
                         for (i in data.shops[j].shopList) {
                             $("<span>" + data.shops[j].shopList[i].shopName + "</span><ul class='children-list clearfix children-list_4" + i + "'></ul>").appendTo($(".children-nav-left_3"));
                             for (k in data.shops[j].shopList[i].shopList) {
-                                $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[j].shopList[i].shopList[k].shopName + "</a></li>").appendTo($(".children-list_4" + i));
+                                $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[i].shopList[k].shopName+"' target='_blank'>" + data.shops[j].shopList[i].shopList[k].shopName + "</a></li>").appendTo($(".children-list_4" + i));
                             }
                         }
                     case 5:
                         $("<span>" + data.shops[0].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_50'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 5; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
                         }
                         $("<span>" + data.shops[0].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_51'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
                         }
                         $("<span>" + data.shops[0].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_52'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
                         }
                     case 6:
                         $("<span>" + data.shops[0].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_60'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 4; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
                         }
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
                         }
                         $("<span>" + data.shops[1].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_61'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
                         }
                         $("<span>" + data.shops[0].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_62'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
                         }
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
                         }
                         break;
                     default:
@@ -1726,119 +1605,124 @@
 
         }
     })
-    var serachName = $("#search").val();
+    var jinxuanArr = ["1001", "1002", "1003", "1004", "1005", "1006", "1007", "1011", "1009", "1010"];
+    for (i in jinxuanArr) {
+        $.ajax({
+            url: "<%=basePath%>/index/findWines.do?WineId=" + jinxuanArr[i],
+            method: "get",
+            success: function (data) {
+                console.log(data)
+                $("<li class='hot_sell_list_li'><a class='hot_sell a' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[0].shopName+"'><img style='width:220px;height:220px' src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/></a></li>").appendTo($(".hot_sell_list"));
+            }
+        })
+    }
+
+    //    1.白酒
+    var baijiuArr = ["1001", "2001"];
+    var baijiuArr1 = ["2000", "3000"];
+    for (var i = 0; i < 2; i++) {
+        console.log(i)
+        $.ajax({
+            url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[i] + "&b=" + baijiuArr1[i],
+            method: "get",
+            success: function (data) {
+                $("<li class='fl mr mt'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[0].wineName+"' class='a'><img style='width:230px;background-color:lightgray;' src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/></a></li>").appendTo($(".li1_1"));
+            }
+        })
+    }
+    var bottomArr = ["1051", "1031"];
+    for (var i = 0; i < 2; i++) {
+        console.log(i)
+        $.ajax({
+            url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
+            method: "get",
+            success: function (data) {
+                $("<li class='fl mr mt'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[0].wineName+"' class='a'><img style='width:230px;background-color:lightgray;' src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/></a></li>").appendTo($(".bj_bottom"));
+            }
+        })
+    }
+    var likeName = $(".bj_yh").val();
     $.ajax({
         url: "<%=basePath%>/wine/findLike.do",
         method: "get",
         data: {
-            likeName:serachName
+            likeName: "南福"
         },
-        async: true,
         success: function (data) {
-            console.log(data)
+            for (var i = 0; i < 10; i++) {
+                $("<li class='fl mr mt'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].wineName+"' class='a'><img style='width:160px;background-color:lightgray;' src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/></a></li>").appendTo($(".li1_2"));
+            }
         }
     })
 
+    $.ajax({
+        url: "<%=basePath%>/index/findNotNull.do",
+        method: "get",
+        success: function (data) {
+            console.log(data)
+            for (var i = 34; i <49; i++) {
+                console.log(data[i].shopImg);
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName+"'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand1"));
+            }
+            for (var i = 95; i <110; i++) {
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName+"'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand2"));
+            }
+            for (var i = 145; i <154; i++) {
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName+"'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand3"));
+            }
+        }
+    })
+
+
+    //图片懒加载
+    // var oBtn = document.getElementsByTagName('button')[0];
+    // document.images 对象属性，用来获取对应页面上的img标签。
+    var img = document.getElementsByTagName("img");
+    for (var i = 0; i < img.length; i++) {
+        img[i].index = i;
+        //	 console.log(i);
+        //	 console.log(img[i].src);
+        img[i].setAttribute("data-original", img[i].src);
+        img[i].src = "<%=basePath%>/resource/views/img/loading.gif";
+
+    }
+    var aImages = document.images;
+    // 这里调用loadImg 是让当前可视窗口的图片先加载出来
+    loadImg(aImages);
+    window.onscroll = function () {
+        // 鼠标滚动之后加载新的可视窗口内的图片。
+        loadImg(aImages);
+    };
+
+    function loadImg(arr) {
+        for (var i = 0, len = arr.length; i < len; i++) {
+            // getBoundingClientRect用于获取某个元素相对于视窗的位置集合。集合中有top, right, bottom, left等属性。
+            if (arr[i].getBoundingClientRect().top < document.documentElement.clientHeight && !arr[i].isLoad) {
+                arr[i].isLoad = true;
+                arr[i].style.transition = "";
+                arr[i].style.opacity = "0";
+                if (arr[i].dataset) {
+                    aftLoadImg(arr[i], arr[i].dataset.original);
+                } else {
+                    // getAttribute() 方法返回指定属性名的属性值。
+                    aftLoadImg(arr[i], arr[i].getAttribute("data-original"));
+                }
+                (function (i) {
+                    setTimeout(function () {
+                        arr[i].style.transition = "1s";
+                        arr[i].style.opacity = "1";
+                    }, 16)
+                })(i);
+            }
+        }
+    }
+
+    function aftLoadImg(obj, url) {
+        var oImg = new Image();
+        oImg.onload = function () {
+            obj.src = oImg.src;
+        }
+        oImg.src = url;
+    }
 </script>
-<!--<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jqery2.js"></script>
-<script type="text/javascript" src="frame.js"></script>
-<script type="text/javascript" src="ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>-->
-
-				<div>
-					<a href="">
-						<img src="http://www.zhongjiu.cn/Images/authentication_01.png"/>
-					</a>
-					<a href="">
-						<img src="http://v.trustutn.org/images/cert/brand_bottom_large.jpg"/>
-					</a>
-					<a href="">
-						<img src="<%=basePath%>/resource/views/img/kexin.png"/>
-					</a>
-					<a href="">
-						<img src="http://www.zhongjiu.cn/Images/authentication_05.png"/>
-					</a>
-					<a href="">
-						<img src="http://www.zhongjiu.cn/Images/authentication_07.png"/>
-					</a>
-					<a href="">
-						<img src="http://www.zhongjiu.cn/Images/authentication_09.png"/>
-					</a>
-				</div>
-			</div>
-		</footer>
-		<!--左侧边栏楼层结构-->
-		<div class="floor_setting">
-			
-		</div>
-		
-		
-		
-		
-		
-		
-		<!--右侧边栏购物详情-->
-		<div class="gouwuche">
-			<div class="gouwuche_left">
-				<ol class="gouwuche_left_content">
-					<li class="gouwuche_left_content_first pr">
-						<a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i  class="iconfont icon-gerentouxiang "></i></a>
-						<div class="pa kefu_shuoming">
-							<span>个人中心</span>
-							<div class="sanjiaoxing pa"></div>
-						</div>
-					</li>
-					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-						<a class="a" href="###"><i id="rr" class="iconfont icon-gouwuche "></i></a>
-						<span style="width:22px;display: block;margin-left:9px;">购物车</span>
-						<span>0</span>
-					</li>
-					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-						<a class="a" href="###"><i  class="iconfont icon-hongbao "></i></a>
-						<div class="pa kefu_shuoming">
-							<span>资产中心</span>
-							<div class="sanjiaoxing pa"></div>
-						</div>
-					</li>
-					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-						<a class="a" href="###"><i  class="iconfont icon-xiangqu "></i></a>
-						<div class="pa kefu_shuoming">
-							<span>收藏商品</span>
-							<div class="sanjiaoxing pa"></div>
-						</div>
-					</li>
-					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-						<div class="pa kefu_shuoming">
-							<span>浏览历史</span>
-							<div class="sanjiaoxing pa"></div>
-						</div>
-						<a class="a" href="###"><i  class="iconfont icon-shizhong "></i></a>
-					</li>
-					<li>
-						<div class="kefu pr">
-							<span>客服</span>
-							<div class="kefu_shuoming pa">
-								<span>妮妮</span>
-								<span>佳佳</span>
-								<div class="sanjiaoxing pa"></div>
-							</div>
-						</div>
-					</li>
-				</ol>
-			</div>
-			<div class="gouwuche_right">
-				
-			</div>
-		</div>
-	</body>		
-	</body>
-	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-	<script type="text/javascript" src="<%=basePath%>/resource/views/js/lkl_index.js">
-		
-	</script>
-	<!--<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="jqery2.js"></script>
-	<script type="text/javascript" src="frame.js"></script>
-	<script type="text/javascript" src="ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>-->
-
 </html>

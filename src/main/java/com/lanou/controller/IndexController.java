@@ -37,8 +37,14 @@ public class IndexController {
         List<Wine> wines = wineService.findWines();
         map.put("banners", banners);
         map.put("shops", shops);
-        map.put("wines", wines);
         return map;
+    }
+    @RequestMapping("/findWines.do")
+    @ResponseBody
+    public List<Wine> shangping(Integer WineId) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        List<Wine> wines = wineService.findWineById(WineId);
+        return wines;
     }
 
     public List<Shop> finds(Shop shop1, Integer parentId) {
@@ -48,5 +54,21 @@ public class IndexController {
         }
         return shops;
     }
-
+    //    范围查询
+    @RequestMapping("/findScope.do")
+    @ResponseBody
+    public List<Wine> findScope(Integer a,Integer b) {
+        System.out.println(a);
+        System.out.println(b);
+        List<Wine> wines = wineService.findScope(a,b);
+        System.out.print(wines);
+        return wines;
+    }
+    //判断品牌字段是否为空
+    @RequestMapping("/findNotNull.do")
+    @ResponseBody
+    public List<Shop> findNotNull() {
+        List<Shop> shops = shopService.findNotNull();
+        return shops;
+    }
 }
