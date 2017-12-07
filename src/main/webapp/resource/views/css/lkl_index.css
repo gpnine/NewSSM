@@ -1,5 +1,11 @@
 /*轮播图*/
-
+p{
+	margin: 0;
+	font-size: 14px;
+}
+.brandimg1_1:nth-of-type(2n){
+	margin-left: 8px;
+}
 .slider {
 	
     height:515px;

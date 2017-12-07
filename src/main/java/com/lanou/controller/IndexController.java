@@ -23,22 +23,25 @@ public class IndexController {
     private WineService wineService;
     @Resource
     private IndexService indexService;
-    
+
     @Resource
     private ShopService shopService;
 
-    @RequestMapping("/index.do")
+    @RequestMapping("/banner.do")
     @ResponseBody
-    public Map<String, Object> lunBotu(Shop shop1, Integer parentId) {
-        Map<String, Object> map = new HashMap<String, Object>();
+    public List<Banner> lunBotu() {
+//        Map<String, Object> map = new HashMap<String, Object>();
         List<Banner> banners = indexService.index();
-        System.out.print(banners);
-        List<Shop> shops = finds(shop1, parentId);
-        List<Wine> wines = wineService.findWines();
-        map.put("banners", banners);
-        map.put("shops", shops);
-        return map;
+        return banners;
     }
+
+    @RequestMapping("/fenlei.do")
+    @ResponseBody
+    public List<Shop> shop(Shop shop1) {
+        List<Shop> shops = finds(shop1, 0);
+        return shops;
+    }
+
     @RequestMapping("/findWines.do")
     @ResponseBody
     public List<Wine> shangping(Integer WineId) {
@@ -54,16 +57,16 @@ public class IndexController {
         }
         return shops;
     }
+
     //    范围查询
     @RequestMapping("/findScope.do")
     @ResponseBody
-    public List<Wine> findScope(Integer a,Integer b) {
-        System.out.println(a);
-        System.out.println(b);
-        List<Wine> wines = wineService.findScope(a,b);
+    public List<Wine> findScope(Integer a, Integer b) {
+        List<Wine> wines = wineService.findScope(a, b);
         System.out.print(wines);
         return wines;
     }
+
     //判断品牌字段是否为空
     @RequestMapping("/findNotNull.do")
     @ResponseBody

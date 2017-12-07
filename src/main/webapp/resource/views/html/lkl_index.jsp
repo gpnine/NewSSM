@@ -257,6 +257,7 @@
                     <div class="jiupin_first ">
                         <ol class="clearfix">
                             <li class="fl mr mt pr">
+                                <%--青稞酒专区--%>
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/2.jpg"/>
                                 </a>
@@ -282,219 +283,44 @@
                                     <div class="jiupin_first_swiper_box">
                                         <div class="jiupin_first_swiper_box_imgs clearfix">
                                             <span class="span_count">0</span>
-                                            <div class="jiupin_first_swiper_box_imgs_four">
-                                                <img class="jiupin_first_swiper_box_imgs_four_img"
-                                                     src="<%=basePath%>/resource/views/img/7.jpg" alt=""/>
-                                                <img class="jiupin_first_swiper_box_imgs_four_img"
-                                                     src="<%=basePath%>/resource/views/img/7.jpg" alt=""/>
-                                                <!--<img class="jiupin_first_swiper_box_imgs_four_img" src="<%=basePath%>/resource/views/img/7.jpg" alt="" />-->
-                                                <img class="jiupin_first_swiper_box_imgs_four_img"
-                                                     src="<%=basePath%>/resource/views/img/7.jpg" alt=""/>
+                                            <div class="jiupin_first_swiper_box_imgs_four zuobran1">
                                             </div>
-                                            <div class="jiupin_first_swiper_box_imgs_four">
-                                                <img class="jiupin_first_swiper_box_imgs_four_img"
-                                                     src="<%=basePath%>/resource/views/img/7.jpg" alt=""/>
-                                                <img class="jiupin_first_swiper_box_imgs_four_img"
-                                                     src="<%=basePath%>/resource/views/img/7.jpg" alt=""/>
-                                                <!--<img class="jiupin_first_swiper_box_imgs_four_img" src="<%=basePath%>/resource/views/img/7.jpg" alt="" />
-														<img class="jiupin_first_swiper_box_imgs_four_img" src="<%=basePath%>/resource/views/img/7.jpg" alt="" />-->
+                                            <div class="jiupin_first_swiper_box_imgs_four zuobran2">
                                             </div>
-                                            <div class="jiupin_first_swiper_box_imgs_four">
-                                                <!--<img class="jiupin_first_swiper_box_imgs_four_img" src="<%=basePath%>/resource/views/img/7.jpg" alt="" />
-														<img class="jiupin_first_swiper_box_imgs_four_img" src="<%=basePath%>/resource/views/img/7.jpg" alt="" />
-														<img class="jiupin_first_swiper_box_imgs_four_img" src="<%=basePath%>/resource/views/img/7.jpg" alt="" />-->
-                                                <!--<img class="jiupin_first_swiper_box_imgs_four_img" src="<%=basePath%>/resource/views/img/7.jpg" alt="" />-->
+                                            <div class="jiupin_first_swiper_box_imgs_four zuobran3">
                                             </div>
-
                                         </div>
 
                                     </div>
                                 </div>
                             </li>
                             <li class="fl mr pr" style="width:950px;">
-                                <ol class="fl pa xuanjiuqu  xuanjiuqu_hot" style="width:960px;left:0;display: block;">
+                                <ol class="fl pa xuanjiuqu  xuanjiuqu_hot li1_0"
+                                    style="width:960px;left:0;display: block;">
                                     <li class="fl mr mt">
                                         <a href="" class="a">
                                             <img src="<%=basePath%>/resource/views/img/3.jpg"/>
                                         </a>
                                     </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
                                 </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_hot" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
+                                <ol class="fl pa xuanjiuqu xuanjiuqu_hot ol1_0" style="width:960px;left:0">
                                 </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_hot" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
+                                <ol class="fl pa xuanjiuqu xuanjiuqu_hot ol1_1" style="width:960px;left:0">
                                 </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_hot" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
+                                <ol class="fl pa xuanjiuqu xuanjiuqu_hot ol1_2" style="width:960px;left:0">
                                 </ol>
-
                             </li>
-
                         </ol>
                     </div>
                     <div class="jiupin_first clearfix">
-                        <ol class="clearfix">
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                </a>
-                            </li>
-                            <li class="fl mr mt">
+                        <ol class="clearfix bj_bottom1">
+                            <li style="border: 1px solid #0000002b;box-sizing: border-box"
+                                class="fl mr mt bj_bottom1_1">
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/5.jpg"/>
                                 </a>
-
                             </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                </a>
 
-                            </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                </a>
-
-                            </li>
                         </ol>
                     </div>
                 </div>
@@ -591,7 +417,7 @@
                                 </div>
                             </li>
                             <li class="fl mr pr" style="width:950px;">
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_white li1_1"
+                                <ol class="fl pa xuanjiuqu xuanjiuqu_white"
                                     style="width:960px;left:0;display: block;">
                                     <li class="fl mr mt">
                                         <a href="" class="a">
@@ -599,57 +425,13 @@
                                         </a>
                                     </li>
                                 </ol>
-
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_white li1_2" style="width:960px;left:0">
+                                <ol class="fl pa xuanjiuqu xuanjiuqu_hot" style="width:960px;left:0">
                                 </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_white" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                </ol>
-
                             </li>
                         </ol>
                     </div>
                     <div class="jiupin_first clearfix">
-                        <ol class="clearfix bj_bottom">
+                        <ol class="clearfix bj_bottom2">
                             <li class="fl mr mt">
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/4.jpg"/>
@@ -769,205 +551,14 @@
                                             <img src="<%=basePath%>/resource/views/img/3.jpg"/>
                                         </a>
                                     </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_pu" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_pu" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
 
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-
-                                </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_pu" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_pu" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
                                 </ol>
 
                             </li>
                         </ol>
                     </div>
                     <div class="jiupin_first clearfix">
-                        <ol class="clearfix">
+                        <ol class="clearfix bj_bottom3">
                             <li class="fl mr mt">
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/4.jpg"/>
@@ -976,18 +567,6 @@
                             <li class="fl mr mt">
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/5.jpg"/>
-                                </a>
-
-                            </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                </a>
-
-                            </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
                                 </a>
 
                             </li>
@@ -1093,120 +672,12 @@
                                             <img src="<%=basePath%>/resource/views/img/3.jpg"/>
                                         </a>
                                     </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
                                 </ol>
-
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_beer" style="width:960px;left:0">
-
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-
-                                </ol>
-                                <ol class="fl pa xuanjiuqu xuanjiuqu_beer" style="width:960px;left:0">
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                    <li class="fl  mr mt">
-                                        <a href="" class="a">
-                                            <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                        </a>
-                                    </li>
-                                </ol>
-
                             </li>
                         </ol>
                     </div>
                     <div class="jiupin_first clearfix">
-                        <ol class="clearfix">
+                        <ol class="clearfix bj_bottom4">
                             <li class="fl mr mt">
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/4.jpg"/>
@@ -1215,18 +686,6 @@
                             <li class="fl mr mt">
                                 <a href="" class="a">
                                     <img src="<%=basePath%>/resource/views/img/5.jpg"/>
-                                </a>
-
-                            </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
-                                </a>
-
-                            </li>
-                            <li class="fl mr mt">
-                                <a href="" class="a">
-                                    <img src="<%=basePath%>/resource/views/img/4.jpg"/>
                                 </a>
 
                             </li>
@@ -1416,7 +875,8 @@
     <div class="gouwuche_left">
         <ol class="gouwuche_left_content">
             <li class="gouwuche_left_content_first pr">
-                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i class="iconfont icon-gerentouxiang "></i></a>
+                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i
+                        class="iconfont icon-gerentouxiang "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>个人中心</span>
                     <div class="sanjiaoxing pa"></div>
@@ -1489,113 +949,113 @@
                         $("<span>" + data.shops[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_10'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 18; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_10"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[0].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_10"));
                         }
                         $("<span>" + data.shops[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_12'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 5; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_12"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[2].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_12"));
                         }
                         $("<span>" + data.shops[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_11'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_11"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[1].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_11"));
                         }
                     case 2:
                         $("<span>" + data.shops[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_20'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 8; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_20"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[0].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_20"));
                         }
                         $("<span>" + data.shops[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_22'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_22"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[2].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_22"));
                         }
                         $("<span>" + data.shops[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_21'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_21"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[1].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_21"));
                         }
                     case 3:
                         $("<span>" + data.shops[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_30'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 11; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_30"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[0].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_30"));
                         }
                         $("<span>" + data.shops[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_32'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_32"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[2].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_32"));
                         }
                         $("<span>" + data.shops[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_31'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 4; k++) {
                             var l = parseInt(Math.random() * data.shops[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_31"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[1].shopList[l].shopName + "' target='_blank'>" + data.shops[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_31"));
                         }
 
                     case 4:
                         for (i in data.shops[j].shopList) {
                             $("<span>" + data.shops[j].shopList[i].shopName + "</span><ul class='children-list clearfix children-list_4" + i + "'></ul>").appendTo($(".children-nav-left_3"));
                             for (k in data.shops[j].shopList[i].shopList) {
-                                $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[j].shopList[i].shopList[k].shopName+"' target='_blank'>" + data.shops[j].shopList[i].shopList[k].shopName + "</a></li>").appendTo($(".children-list_4" + i));
+                                $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[j].shopList[i].shopList[k].shopName + "' target='_blank'>" + data.shops[j].shopList[i].shopList[k].shopName + "</a></li>").appendTo($(".children-list_4" + i));
                             }
                         }
                     case 5:
                         $("<span>" + data.shops[0].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_50'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 5; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[0].shopList[0].shopList[l].shopName + "' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[1].shopList[0].shopList[l].shopName + "' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
                         }
                         $("<span>" + data.shops[0].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_51'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[0].shopList[2].shopList[l].shopName + "' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[1].shopList[2].shopList[l].shopName + "' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
                         }
                         $("<span>" + data.shops[0].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_52'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[0].shopList[1].shopList[l].shopName + "' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[1].shopList[1].shopList[l].shopName + "' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
                         }
                     case 6:
                         $("<span>" + data.shops[0].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_60'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 4; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[0].shopList[0].shopList[l].shopName + "' target='_blank'>" + data.shops[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
                         }
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[0].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[1].shopList[0].shopList[l].shopName + "' target='_blank'>" + data.shops[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
                         }
                         $("<span>" + data.shops[1].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_61'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[0].shopList[2].shopList[l].shopName + "' target='_blank'>" + data.shops[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[2].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[1].shopList[2].shopList[l].shopName + "' target='_blank'>" + data.shops[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
                         }
                         $("<span>" + data.shops[0].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_62'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data.shops[0].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[0].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[0].shopList[1].shopList[l].shopName + "' target='_blank'>" + data.shops[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
                         }
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data.shops[1].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name="+data.shops[1].shopList[1].shopList[l].shopName+"' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data.shops[1].shopList[1].shopList[l].shopName + "' target='_blank'>" + data.shops[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
                         }
                         break;
                     default:
@@ -1612,35 +1072,148 @@
             method: "get",
             success: function (data) {
                 console.log(data)
-                $("<li class='hot_sell_list_li'><a class='hot_sell a' href='<%=basePath%>/wine/goods.do?wineName=" + data[0].wineName+"'><img style='width:220px;height:220px' src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/></a></li>").appendTo($(".hot_sell_list"));
+                $("<li class='hot_sell_list_li' style='border: 1px solid #0000002b;box-sizing: border-box;'>"
+                    + "<a style='text-align: center;' class='pr hot_sell a' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
+                    + data[0].wineImg1 + "'/><p>" + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".hot_sell_list"));
             }
         })
     }
 
-    //    1.白酒
-    var baijiuArr = ["1001", "2001"];
-    var baijiuArr1 = ["2000", "3000"];
-    for (var i = 0; i < 2; i++) {
-        console.log(i)
+    //    楼层
+    var baijiuArr = ["1001", "2001", "3001"];
+    var baijiuArr1 = ["2000", "3000", "4000"];
+    //    精选
+    $.ajax({
+        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[0] + "&b=" + baijiuArr1[0],
+        method: "get",
+        success: function (data) {
+            for (var i = 0; i < 4; i++) {
+                $("<li class='fl mr mt'  style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'>"
+                    + "<a  style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[i].wineName + "' class='a'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
+                    + data[i].wineImg1 + "'/><p>" + data[i].wineName + "</p><p style='color:red'>￥"
+                    + data[i].winePrice + "</p></a></li>").appendTo($(".li1_0"));
+            }
+        }
+    })
+    //    精选内部
+    var innerArr = ["1021", "2008", "2003", "2014", "1015", "1026", "1037", "2001", "1027", "2011"];
+    for (i in innerArr) {
+        console.log("i="+i)
         $.ajax({
-            url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[i] + "&b=" + baijiuArr1[i],
+            url: "<%=basePath%>/index/findWines.do?WineId=" + innerArr[i],
             method: "get",
             success: function (data) {
-                $("<li class='fl mr mt'><a href='<%=basePath%>/wine/goods.do?wineName=" + data[0].wineName+"' class='a'><img style='width:230px;background-color:lightgray;' src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/></a></li>").appendTo($(".li1_1"));
+                console.log(innerArr[i]+"的name："+data[0].wineName)
+                $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_0"));
             }
         })
     }
-    var bottomArr = ["1051", "1031"];
+    //    精选内部
+    var innerArr = ["1027",  "2013", "1025", "1024", "2010", "1029","1027", "2001","2004","1026"];
+    for (i in innerArr) {
+        $.ajax({
+            url: "<%=basePath%>/index/findWines.do?WineId=" + innerArr[i],
+            method: "get",
+            success: function (data) {
+                $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_1"));
+            }
+        })
+    }
+    //    精选内部
+    var innerArr = ["1023", "2019", "2014", "2005", "1016", "1025", "1024", "2010", "1029", "2005"];
+    for (i in innerArr) {
+        $.ajax({
+            url: "<%=basePath%>/index/findWines.do?WineId=" + innerArr[i],
+            method: "get",
+            success: function (data) {
+                $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_2"));
+            }
+        })
+    }
+    //    精选小框的brand
+    $.ajax({
+        url: "<%=basePath%>/index/findNotNull.do",
+        method: "get",
+        success: function (data) {
+            console.log(data)
+            for (var i = 34; i < 38; i++) {
+                console.log(data[i].shopImg);
+                $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuobran1"));
+            }
+            for (var i = 95; i < 99; i++) {
+                $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuobran2"));
+            }
+            for (var i = 145; i < 148; i++) {
+                $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuobran3"));
+            }
+        }
+    })
+    //    精选左下角
+    $.ajax({
+        url: "<%=basePath%>/index/findWines.do?WineId=2021",
+        method: "get",
+        success: function (data) {
+            console.log(data)
+            $(".bj_bottom1_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                + data[0].wineName + "</p><p style='color:red'>￥"
+                + data[0].winePrice + "</p></a></li>")
+        }
+    })
+    //    精选右下角
+    var bottomArr = ["2020", "1031"];
     for (var i = 0; i < 2; i++) {
-        console.log(i)
         $.ajax({
             url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
             method: "get",
             success: function (data) {
-                $("<li class='fl mr mt'><a href='<%=basePath%>/wine/goods.do?wineName=" + data[0].wineName+"' class='a'><img style='width:230px;background-color:lightgray;' src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/></a></li>").appendTo($(".bj_bottom"));
+                console.log(data)
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom1"));
             }
         })
     }
+    //    白酒
+    $.ajax({
+        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[0] + "&b=" + baijiuArr1[0],
+        method: "get",
+        success: function (data) {
+            console.log(data)
+            for (var i = 4; i < 8; i++) {
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + data[i].wineName + "</p><p style='color:red'>￥"
+                    + data[i].winePrice + "</p></a></li>").appendTo($(".li1_1"));
+            }
+        }
+    })
+    //    白酒内部
     var likeName = $(".bj_yh").val();
     $.ajax({
         url: "<%=basePath%>/wine/findLike.do",
@@ -1650,25 +1223,111 @@
         },
         success: function (data) {
             for (var i = 0; i < 10; i++) {
-                $("<li class='fl mr mt'><a href='<%=basePath%>/wine/goods.do?wineName=" + data[i].wineName+"' class='a'><img style='width:160px;background-color:lightgray;' src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/></a></li>").appendTo($(".li1_2"));
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".li1_2"));
             }
         }
     })
+    var bottomArr = ["2010", "1035"];
+    for (var i = 0; i < 2; i++) {
+        $.ajax({
+            url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
+            method: "get",
+            success: function (data) {
+                console.log(data)
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom2"));
+            }
+        })
+    }
+    //    葡萄酒
+    $.ajax({
+        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[1] + "&b=" + baijiuArr1[1],
+        method: "get",
+        success: function (data) {
+            console.log(data)
+            for (var i = 0; i < 4; i++) {
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + data[i].wineName + "</p><p style='color:red'>￥"
+                    + data[i].winePrice + "</p></a></li>").appendTo($(".li1_1"));
+            }
+        }
+    })
+    var bottomArr = ["2010", "1035"];
+    for (var i = 0; i < 2; i++) {
+        $.ajax({
+            url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
+            method: "get",
+            success: function (data) {
+                console.log(data)
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom3"));
+            }
+        })
+    }
+    //    洋酒
+    $.ajax({
+        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[2] + "&b=" + baijiuArr1[2],
+        method: "get",
+        success: function (data) {
+            console.log(data)
+            for (var i = 0; i < 4; i++) {
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + data[i].wineName + "</p><p style='color:red'>￥"
+                    + data[i].winePrice + "</p></a></li>").appendTo($(".li1_1"));
+            }
+        }
+    })
+    var bottomArr = ["2010", "1035"];
+    for (var i = 0; i < 2; i++) {
+        $.ajax({
+            url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
+            method: "get",
+            success: function (data) {
+                console.log(data)
+                $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + data[0].wineName + "</p><p style='color:red'>￥"
+                    + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom4"));
+            }
+        })
+    }
 
+    //品牌
     $.ajax({
         url: "<%=basePath%>/index/findNotNull.do",
         method: "get",
         success: function (data) {
             console.log(data)
-            for (var i = 34; i <49; i++) {
+            for (var i = 34; i < 49; i++) {
                 console.log(data[i].shopImg);
-                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName+"'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand1"));
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand1"));
             }
-            for (var i = 95; i <110; i++) {
-                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName+"'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand2"));
+            for (var i = 95; i < 110; i++) {
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand2"));
             }
-            for (var i = 145; i <154; i++) {
-                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName+"'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand3"));
+            for (var i = 145; i < 154; i++) {
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand3"));
             }
         }
     })
