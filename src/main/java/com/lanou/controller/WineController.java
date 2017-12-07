@@ -39,6 +39,10 @@ public class WineController {
         return wines;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 78a9cb94aeab6faeb60f8367a0eec6af6216669a
 
 //    商品详情
 @RequestMapping(value="/goods.do")
@@ -60,6 +64,9 @@ public String goods_detile(Integer goodsId, HttpSession session){
    Wine wine =  wineService.goods_detile(goodsId);
     return "/Ljp_Xiang_Info/html/01.Ljp_info";
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 78a9cb94aeab6faeb60f8367a0eec6af6216669a
 }

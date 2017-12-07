@@ -12,6 +12,9 @@ public interface WineService {
 
 //	商品详情
 	public Wine goods_detile(Integer goodsId);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 78a9cb94aeab6faeb60f8367a0eec6af6216669a
 	public List<Wine> findScope(Integer a,Integer b);
 }
