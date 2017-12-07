@@ -177,10 +177,10 @@ for(var i = 0;i<lis.length;i++){
 // }
 
 
-//动态生成初次评论
-for(var i= 0;i<10;i++){
-	$("<dl><dt class=\"pj_name\">初次评价：</dt><dd class=\"pj_content\">非常满意！物流很快，包装结实！酒的口感很棒：打开后口感圆润，丹宁丰富，酒体适中，即使是初次喝红酒的人也容易接受，现在这个季节搭配着烤肉非常棒！好酒需慢慢品！下次还来</dd><div class=\"pj_right\"><span class=\"user_number\">131****3248</span><br /><span class=\"star\"><img src=\"../img/ljp_51.png\"/></span></div></dl>").prependTo($(".pj_box"));
-}
+// //动态生成初次评论
+// for(var i= 0;i<10;i++){
+// 	$("<dl><dt class=\"pj_name\">初次评价：</dt><dd class=\"pj_content\">非常满意！物流很快，包装结实！酒的口感很棒：打开后口感圆润，丹宁丰富，酒体适中，即使是初次喝红酒的人也容易接受，现在这个季节搭配着烤肉非常棒！好酒需慢慢品！下次还来</dd><div class=\"pj_right\"><span class=\"user_number\">131****3248</span><br /><span class=\"star\"><img src=\"../img/ljp_51.png\"/></span></div></dl>").prependTo($(".pj_box"));
+// }
 
 
 
@@ -322,42 +322,42 @@ for(var i = 0; i < gouwuche_left_content_first_click.length; i++) {
 }
 
 //btn2 img
-var scrollTop=0;
-	$(window).scroll(function(){
-				 scrollTop=$(this).scrollTop();
-				console.log(scrollTop);
-			})
-	$('.btn2').on('click', addProduct);
-		function addProduct(event) {
-
-		var offset = $('.paowuxian').offset(), flyer = $("<img style='position:absolute;' src='../img/ljp_24.jpg' alt='' class='divsss' />");
-		
-
-		flyer.fly({
-		// 初始位置
-		    start: {
-
-		        left: event.pageX-120,
-
-		        top: event.pageY-scrollTop-30
-
-		    },
-		// 结束位置
-		    end: {
-
-		        left: offset.left-70,
-
-		        top: offset.top-scrollTop-5,
-
-		        width: 0,
-
-		        height: 0
-
-		    }
-
-		});
-
-	}
+// var scrollTop=0;
+// 	$(window).scroll(function(){
+// 				 scrollTop=$(this).scrollTop();
+// 				console.log(scrollTop);
+// 			})
+// 	$('.btn2').on('click', addProduct);
+// 		function addProduct(event) {
+//
+// 		var offset = $('.paowuxian').offset(), flyer = $("<img style='position:absolute;' src='../img/ljp_24.jpg' alt='' class='divsss' />");
+//
+//
+// 		flyer.fly({
+// 		// 初始位置
+// 		    start: {
+//
+// 		        left: event.pageX-120,
+//
+// 		        top: event.pageY-scrollTop-30
+//
+// 		    },
+// 		// 结束位置
+// 		    end: {
+//
+// 		        left: offset.left-70,
+//
+// 		        top: offset.top-scrollTop-5,
+//
+// 		        width: 0,
+//
+// 		        height: 0
+//
+// 		    }
+//
+// 		});
+//
+// 	}
 
 $(".btn2").click(function(){
 //	$.ajax({
