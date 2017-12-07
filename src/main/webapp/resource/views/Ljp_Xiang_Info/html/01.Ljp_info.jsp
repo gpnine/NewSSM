@@ -43,7 +43,7 @@ pageEncoding="UTF-8"%>
 						</div>
 						
 						<div class="changePic">
-							<img class="change_pic" src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/4211/1.png" alt="" />
+							<img class="change_pic" src="<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}" alt="" />
 						</div>
 						
 						
