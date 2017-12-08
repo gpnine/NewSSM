@@ -264,16 +264,16 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">人头马</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">马爹利</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">轩尼诗</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">绝对伏特加</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">贵州</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">四川</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">北京</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">青海</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">百加得</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">翰格蓝爵</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">皇家礼炮</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">深蓝</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">酱香型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">浓香型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">清香型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">绵柔型</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -360,16 +360,16 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">人头马</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">马爹利</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">轩尼诗</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">绝对伏特加</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">五粮液五星级</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">贵州茅台醇</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">高原青稞酒</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">洋河梦之蓝</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">百加得</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">翰格蓝爵</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">皇家礼炮</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">深蓝</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">贵州董酒</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">泸州老窖</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">牛栏山二锅头</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">红星二锅头</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -453,16 +453,16 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">人头马</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">马爹利</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">轩尼诗</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">绝对伏特加</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">法国拉菲</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">华夏长城</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">中国张裕</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">澳洲黄尾袋鼠</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">百加得</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">翰格蓝爵</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">皇家礼炮</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">深蓝</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">南非库玛拉</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">法国小龙船</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">法国圣迪斯</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="">澳洲奔富</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -847,9 +847,7 @@
         method: "get",
         async: true,
         success: function (data) {
-            console.log(data)
             for (i in data) {
-                console.log(i)
                 $("<img src='<%=basePath%>/" + data[i].bannerSrc + "'/>").appendTo($(".lunbotu" + i));
             }
         }
@@ -861,8 +859,6 @@
         success: function (data) {
             for (j in data) {
                 $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'><img src='http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201609280918332737800.png' alt=''>" + data[j].shopName + "</a><a class='sidenav-list_two' href='#'>茅台 五粮液 天佑德</a><div class='children-nav'><div class='children-nav-left children-nav-left_" + j + "'></div></div></li>").appendTo($(".sidenav-list"));
-                console.log(data[j].shopList)
-                console.log(data[0].shopList[0].shopName)
                 switch (data[j].shopId) {
                     case 1:
                         $("<span>" + data[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_10'></ul>").appendTo($(".children-nav-left_0"));
@@ -990,7 +986,6 @@
             url: "<%=basePath%>/index/findWines.do?WineId=" + jinxuanArr[i],
             method: "get",
             success: function (data) {
-                console.log(data)
                 $("<li class='hot_sell_list_li' style='border: 1px solid #0000002b;box-sizing: border-box;'>"
                     + "<a style='text-align: center;' class='pr hot_sell a' href='<%=basePath%>/wine/goods.do?wineName="
                     + data[0].wineName + "'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
@@ -1001,11 +996,9 @@
     }
 
     //    楼层
-    var baijiuArr = ["1001", "2001", "3001", 4001];
-    var baijiuArr1 = ["1200", "2200", "3200", 4100];
     //    精选
     $.ajax({
-        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[0] + "&b=" + baijiuArr1[0],
+        url: "<%=basePath%>/index/findScope.do?a=1001&b=1200",
         method: "get",
         success: function (data) {
             for (var i = 0; i < 4; i++) {
@@ -1020,12 +1013,10 @@
     //    精选内部
     var innerArr = ["1021", "2008", "2003", "2014", "1015", "1026", "1037", "2001", "1027", "2011"];
     for (i in innerArr) {
-        console.log("i=" + i)
         $.ajax({
             url: "<%=basePath%>/index/findWines.do?WineId=" + innerArr[i],
             method: "get",
             success: function (data) {
-                console.log(innerArr[i] + "的name：" + data[0].wineName)
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                     + data[0].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
@@ -1072,15 +1063,13 @@
         url: "<%=basePath%>/index/findNotNull.do",
         method: "get",
         success: function (data) {
-            console.log(data)
             for (var i = 34; i < 38; i++) {
-                console.log(data[i].shopImg);
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuobran1"));
             }
             for (var i = 95; i < 99; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuobran2"));
             }
-            for (var i = 145; i < 148; i++) {
+            for (var i = 144; i < 148; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuobran3"));
             }
         }
@@ -1090,7 +1079,6 @@
         url: "<%=basePath%>/index/findWines.do?WineId=2021",
         method: "get",
         success: function (data) {
-            console.log(data)
             $(".bj_bottom1_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                 + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                 + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1106,7 +1094,6 @@
             url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
             method: "get",
             success: function (data) {
-                console.log(data)
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                     + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1120,10 +1107,9 @@
     //    *****************
     //    白酒
     $.ajax({
-        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[0] + "&b=" + baijiuArr1[0],
+        url: "<%=basePath%>/index/findScope.do?a=1001&b=1200",
         method: "get",
         success: function (data) {
-            console.log(data)
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
@@ -1173,15 +1159,13 @@
         url: "<%=basePath%>/index/findNotNull.do",
         method: "get",
         success: function (data) {
-            console.log(data)
-            for (var i = 34; i < 38; i++) {
-                console.log(data[i].shopImg);
+            for (var i = 12; i < 16; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo1bran1"));
             }
-            for (var i = 43; i < 47; i++) {
+            for (var i = 18; i < 22; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo1bran2"));
             }
-            for (var i = 51; i < 54; i++) {
+            for (var i = 30; i < 33; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo1bran3"));
             }
         }
@@ -1191,7 +1175,6 @@
         url: "<%=basePath%>/index/findWines.do?WineId=1021",
         method: "get",
         success: function (data) {
-            console.log(data)
             $(".bj_bottom2_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                 + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                 + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1207,7 +1190,6 @@
             url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
             method: "get",
             success: function (data) {
-                console.log(data)
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                     + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1221,10 +1203,9 @@
     //    *****************
     //    葡萄酒
     $.ajax({
-        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[1] + "&b=" + baijiuArr1[1],
+        url: "<%=basePath%>/index/findScope.do?a=2001&b=2200",
         method: "get",
         success: function (data) {
-            console.log(data)
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
@@ -1274,25 +1255,22 @@
         url: "<%=basePath%>/index/findNotNull.do",
         method: "get",
         success: function (data) {
-            console.log(data)
-            for (var i = 57; i < 61; i++) {
-                console.log(data[i].shopImg);
+            for (var i = 58; i < 62; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo2bran1"));
             }
             for (var i = 95; i < 99; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo2bran2"));
             }
-            for (var i = 132; i < 135; i++) {
+            for (var i = 100; i < 101; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo2bran3"));
             }
         }
     })
     //    葡萄酒左下角
     $.ajax({
-        url: "<%=basePath%>/index/findWines.do?WineId=2001",
+        url: "<%=basePath%>/index/findWines.do?WineId=2011",
         method: "get",
         success: function (data) {
-            console.log(data)
             $(".bj_bottom3_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                 + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                 + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1302,13 +1280,12 @@
         }
     })
     //    葡萄酒右下角
-    var bottomArr = ["2002", "2003"];
+    var bottomArr = ["2010", "2013"];
     for (var i = 0; i < 2; i++) {
         $.ajax({
             url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
             method: "get",
             success: function (data) {
-                console.log(data)
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                     + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1322,10 +1299,9 @@
     //    *****************
     //    洋酒
     $.ajax({
-        url: "<%=basePath%>/index/findScope.do?a=" + baijiuArr[2] + "&b=" + baijiuArr1[2],
+        url: "<%=basePath%>/index/findScope.do?a=2001&b=2200",
         method: "get",
         success: function (data) {
-            console.log(data)
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
@@ -1340,9 +1316,10 @@
         url: "<%=basePath%>/wine/findLike.do",
         method: "get",
         data: {
-            likeName: "奔富"
+            likeName: "杰卡斯"
         },
         success: function (data) {
+            console.log(data)
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
@@ -1375,25 +1352,22 @@
         url: "<%=basePath%>/index/findNotNull.do",
         method: "get",
         success: function (data) {
-            console.log(data)
             for (var i = 138; i < 142; i++) {
-                console.log(data[i].shopImg);
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo3bran1"));
             }
             for (var i = 142; i < 146; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo3bran2"));
             }
-            for (var i = 146; i < 149; i++) {
+            for (var i = 149; i < 152; i++) {
                 $("<a class='brandimg1_1' href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img class='jiupin_first_swiper_box_imgs_four_img' src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a>").appendTo($(".zuo3bran3"));
             }
         }
     })
     //    洋酒左下角
     $.ajax({
-        url: "<%=basePath%>/index/findWines.do?WineId=3001",
+        url: "<%=basePath%>/index/findWines.do?WineId=2015",
         method: "get",
         success: function (data) {
-            console.log(data)
             $(".bj_bottom4_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                 + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                 + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1403,13 +1377,12 @@
         }
     })
     //    洋酒右下角
-    var bottomArr = ["3001", "3002"];
+    var bottomArr = ["2023", "2014"];
     for (var i = 0; i < 2; i++) {
         $.ajax({
             url: "<%=basePath%>/index/findWines.do?WineId=" + bottomArr[i],
             method: "get",
             success: function (data) {
-                console.log(data)
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
                     + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
@@ -1427,9 +1400,7 @@
         url: "<%=basePath%>/index/findNotNull.do",
         method: "get",
         success: function (data) {
-            console.log(data)
             for (var i = 34; i < 49; i++) {
-                console.log(data[i].shopImg);
                 $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/html/111.jsp?name=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand1"));
             }
             for (var i = 95; i < 110; i++) {
@@ -1441,56 +1412,5 @@
         }
     })
 
-
-    //图片懒加载
-    // var oBtn = document.getElementsByTagName('button')[0];
-    // document.images 对象属性，用来获取对应页面上的img标签。
-    var img = document.getElementsByTagName("img");
-    for (var i = 0; i < img.length; i++) {
-        img[i].index = i;
-        //	 console.log(i);
-        //	 console.log(img[i].src);
-        img[i].setAttribute("data-original", img[i].src);
-        img[i].src = "<%=basePath%>/resource/views/img/loading.gif";
-
-    }
-    var aImages = document.images;
-    // 这里调用loadImg 是让当前可视窗口的图片先加载出来
-    loadImg(aImages);
-    window.onscroll = function () {
-        // 鼠标滚动之后加载新的可视窗口内的图片。
-        loadImg(aImages);
-    };
-
-    function loadImg(arr) {
-        for (var i = 0, len = arr.length; i < len; i++) {
-            // getBoundingClientRect用于获取某个元素相对于视窗的位置集合。集合中有top, right, bottom, left等属性。
-            if (arr[i].getBoundingClientRect().top < document.documentElement.clientHeight && !arr[i].isLoad) {
-                arr[i].isLoad = true;
-                arr[i].style.transition = "";
-                arr[i].style.opacity = "0";
-                if (arr[i].dataset) {
-                    aftLoadImg(arr[i], arr[i].dataset.original);
-                } else {
-                    // getAttribute() 方法返回指定属性名的属性值。
-                    aftLoadImg(arr[i], arr[i].getAttribute("data-original"));
-                }
-                (function (i) {
-                    setTimeout(function () {
-                        arr[i].style.transition = "1s";
-                        arr[i].style.opacity = "1";
-                    }, 16)
-                })(i);
-            }
-        }
-    }
-
-    function aftLoadImg(obj, url) {
-        var oImg = new Image();
-        oImg.onload = function () {
-            obj.src = oImg.src;
-        }
-        oImg.src = url;
-    }
 </script>
 </html>
