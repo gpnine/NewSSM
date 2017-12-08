@@ -1,6 +1,4 @@
 package com.lanou.controller;
-
-
 import com.lanou.entity.Car;
 import com.lanou.entity.Wine;
 import com.lanou.service.CarService;
@@ -85,9 +83,9 @@ public class WineController {
     //    添加商品到购物车
     @RequestMapping("/addCars.do")
     @ResponseBody
-    public  int addCars(String userPhone,Integer goodsId,Integer counts) {
-         int result = carService.insertShop(userPhone,goodsId,counts);
-         System.out.println("+++++++++++"+result);
-         return result;
+    public int addCars(String userPhone, Integer goodsId, Integer counts) {
+        int result = carService.insertShop(userPhone, goodsId, counts);
+        System.out.println("+++++++++++" + result);
+        return result;
     }
 }
