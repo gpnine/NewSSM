@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -83,9 +84,25 @@ public class WineController {
     //    添加商品到购物车
     @RequestMapping("/addCars.do")
     @ResponseBody
-    public int addCars(String userPhone, Integer goodsId, Integer counts) {
+    public int addCars(String userPhone, Integer goodsId, Integer counts, HttpSession session) {
         int result = carService.insertShop(userPhone, goodsId, counts);
-        System.out.println("+++++++++++" + result);
+
+
+        List<Car> cars = userService.cars(userPhone);
+        for(int i=0;i<cars.size();i++){
+            int w = cars.get(i).getWineId();
+            Wine wi = userService.selectCar(w);
+            cars.get(i).setWines(wi);
+        }
+        session.setAttribute("cars",cars);
+
         return result;
     }
+
+
+
+
+
+
+
 }

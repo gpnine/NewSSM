@@ -534,6 +534,7 @@ pageEncoding="UTF-8"%>
                     counts:"1",
                 },
                 success:function(data){
+                    window.location.reload()
                 }
 
             })
