@@ -863,7 +863,7 @@
         async: true,
         success: function (data) {
             for (j in data) {
-                $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'><img src='http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201609280918332737800.png' alt=''>" + data[j].shopName + "</a><a class='sidenav-list_two' href='#'>茅台 五粮液 天佑德</a><div class='children-nav'><div class='children-nav-left children-nav-left_" + j + "'></div></div></li>").appendTo($(".sidenav-list"));
+                $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'><img src='http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201609280918332737800.png' alt=''>" + data[j].shopName + "</a><a class='sidenav-list_two  sange"+j+"' href='#'><div class='children-nav'><div class='children-nav-left children-nav-left_" + j + "'></div></div></li>").appendTo($(".sidenav-list"));
                 switch (data[j].shopId) {
                     case 1:
                         $("<span>" + data[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_10'></ul>").appendTo($(".children-nav-left_0"));
@@ -982,6 +982,12 @@
                         break;
                 }
             }
+//            $("<a>茅台</a><a> 五粮液 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>天佑德</a>").appendTo(".sange0");
+//            $("<a>拉菲</a><a> 张裕 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>马克斯威</a>").appendTo(".sange1");
+//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>马爹利</a><a> 人头马 </a><a>芝华士</a>").appendTo(".sange2");
+//            $("<a>尧喝货</a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'> 唐宋 </a><a>塔牌</a>").appendTo(".sange3");
+//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>五粮液五星级</a>").appendTo(".sange4");
+//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>茅台</a><a> 拉菲 </a><a> 五粮液 </a><a>张裕</a>").appendTo(".sange5");
 
         }
     })

@@ -1,3 +1,8 @@
+.sidenav-list_two  sange0>a{
+	color: #FFFFFF;
+	font-size: 13px;
+	padding: 3px 4px;
+}
 .chang{
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -149,7 +154,6 @@ p{
 }
 .side-item a {
 	position: relative;
-	display: block;
 	color: #fff;
 	padding-left: 20px;
 	height: 40.5px;
@@ -157,6 +161,7 @@ p{
 }
 .sidenav-list_one{
 	font-size: 16px;
+	display: block;
 }
 .sidenav-list_two{
 	font-size: 13px;
