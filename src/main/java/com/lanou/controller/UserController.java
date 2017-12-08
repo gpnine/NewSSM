@@ -89,7 +89,7 @@ public class UserController {
         session.setAttribute("wineList2", wineList2);
 
 
-//        查看购物车
+////        查看购物车
         List<Car> cars = userService.cars(userPhone);
         for (int i = 0; i < cars.size(); i++) {
             int w = cars.get(i).getWineId();

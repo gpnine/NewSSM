@@ -12,14 +12,27 @@ import java.util.List;
 
 @Service("carService")
 public class CarServiceImpl implements CarService {
-
+	int result = 0;
 
 	public int insertShop(String userPhone, Integer WId, Integer counts) {
 		Car car = new Car();
 		car.setUserPhone(userPhone);
 		car.setWineId(WId);
 		car.setCounts(counts);
-		int result = carMapper.insertShop(car);
+
+		List<Car>  list = carMapper.extend(car);
+		System.out.println("是否存在："+list.size());
+
+		if(list.size()==0){
+			 carMapper.insertShop(car);
+			return result;
+		}else{
+			int count = carMapper.selectCount(car).getCounts();
+			System.out.println(count);
+			car.setCounts(count+1);
+			carMapper.addCounts(car);
+		}
+
 		return result;
 
 

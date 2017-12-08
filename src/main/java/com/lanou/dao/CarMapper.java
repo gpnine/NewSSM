@@ -16,4 +16,11 @@ public interface CarMapper {
 
 
     public Wine selectCar(int w);
+
+
+    public List<Car> extend(Car car);
+
+    public void addCounts(Car car);
+
+    public Car selectCount(Car car);
 }

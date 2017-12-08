@@ -57,6 +57,19 @@
 	</insert>
 
 
+	<select id="extend" parameterType="Car" resultMap="carResult">
+		select * from zhongjiu_car where userPhone = #{userPhone} and Wine_id = #{wineId}
+	</select>
+
+	<update id="addCounts" parameterType="Car">
+		update zhongjiu_car set counts = #{counts} where userPhone = #{userPhone} and Wine_id =#{wineId}
+	</update>
+
+	<select id="selectCount" parameterType="Car" resultMap="carResult">
+		select counts from zhongjiu_car where userPhone = #{userPhone} and Wine_id =#{wineId}
+	</select>
+
+
 
 
 
