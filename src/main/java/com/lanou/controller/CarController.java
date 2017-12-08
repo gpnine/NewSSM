@@ -17,13 +17,13 @@ public class CarController {
     private CarService carService;
 
     //    查找该用户购物车
-    @RequestMapping("/findCars.do")
-    @ResponseBody
-    public String findCars(int userId) {
-        String s = carService.findCars(userId)+"";
-        System.out.print(carService.findCars(userId));
-        return s;
-    }
+//    @RequestMapping("/findCars.do")
+//    @ResponseBody
+//    public List<Car> findCars(String userPhone) {
+//        List<Car> list = carService.findCars(userPhone);
+//        System.out.print("购物车："+list);
+//        return list;
+//    }
 
     //    插入商品
     @RequestMapping("/insertShop.do")

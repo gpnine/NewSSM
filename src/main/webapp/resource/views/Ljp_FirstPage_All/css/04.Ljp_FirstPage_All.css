@@ -1,0 +1,318 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.red_line{
+	width: 100%;
+	border-bottom: 1px solid red;
+	margin: 50px auto 0 auto;
+}
+.head_name{
+	width: 1190px;
+	height: 47px;
+	margin: 0 auto;
+	border-bottom: 1px solid #DADBDA;
+	line-height: 47px;
+	font-size: 15px;
+	position: relative;
+}
+.head_name a{
+	color: #656665;
+}
+.goods_amount{
+	position: absolute;
+	right: 20px;
+}
+.goods_amount span{
+	color: red;
+}
+
+
+/*第一部分：侧边栏和选项框*/
+.part_one{
+	width: 1190px;
+	height: 500px;
+	/*border: 1px solid black;*/
+	margin: 20px auto 0px auto;
+	position: relative;
+}
+.all_kind{
+	width: 180px;
+	height: 102px;
+	/*border: 1px solid red;*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	padding: 5px;
+	font-size: 15px;
+}
+
+.jiu_kind{
+	width: 170px;
+	height: 25px;
+	/*border: 1px solid black;*/
+	line-height: 25px;
+	position: relative;
+	top: 5px;
+}
+.white_jiu{
+	color: #6F6C6E;
+	font-size: 13px;
+	position: relative;
+	top: 10px;
+	left: 32px;
+}
+
+
+
+
+/*选项框*/
+.sele_all{
+	width: 990px;
+	float: right;
+	background-color: #F8F9F7;
+}
+.pin_pai,.cd_one,.cd_three,.cd_two,.xx,.zl,.sy,.yjlx,.ds{
+	width: 990px;
+	border-bottom: 1px dotted #DBDCDB;
+	position: relative;
+}
+.pin_pai{
+	border-top: 1.5px solid #E0E1E0;
+}
+.field{
+	width: 88px;
+	box-sizing: border-box;
+	padding: 8px;
+	font-size: 14px;
+	vertical-align: top;
+	display: inline-block;
+}
+.lis{
+	display: inline-block;
+}
+.liS{
+	height: 85px;
+}
+.lis1{
+	height: 51px;
+}
+.lis1 li{
+	float: left;
+	margin: -15px 25px 0px 0px;
+	font-size: 14px;
+	color: #6B6C8A;
+	height: 51px;
+	line-height: 45px;
+}
+.lis{
+	width: 820px;
+	padding: 22px 0 12px 0;
+	box-sizing: border-box;
+}
+.liS li{
+	width: 108px;
+	height: 38px;
+	margin-left: 5px;
+	border: 1px dotted #DADBDA;
+	float: left;
+	margin-bottom: 10px;
+	background-color: white;
+}
+.liS .pai_img img{
+	width: 70px;
+	height: 35px;
+}
+.display{
+	width: 820px;
+	overflow: hidden;
+	display: none;
+}
+.display_one{
+	z-index: 2;
+}
+.display_two{
+	z-index: 3;
+}
+.display_three{
+	z-index: 4;
+}
+.btn{
+	position: absolute;
+	right: 10px;
+}
+.btn_one{
+	top: 20px;
+}
+.btn_two{
+	top: 10px;
+}
+.btn_three{
+	top: 10px;
+}
+
+
+/*筛选条目*/
+.sxtm{
+	width: 1190px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.part_two{
+	width: 990px;
+	height: 48px;
+	border-bottom: 1px solid #DADBDA;
+	border-top: 1px solid #DADBDA;
+	line-height: 46px;
+	margin: 20px 0;
+	padding: 2px 0;
+	float: right;
+}
+.sele_field{
+	border-bottom: 1px dotted #DADBDA;
+	border-top: 1px dotted #DADBDA;
+	display: inline-block;
+}
+.sele_field a span{
+	color: #584E61;
+	font-size: 14px;
+	margin: 0 25px 0 15px;
+}
+
+.page_num{
+	width: 110px;
+	height: 43px;
+	display: inline-block;
+	position: relative;
+	right: -200px;
+	top: 0px;
+	font-size: 14px;
+}
+.last_page,.next_page{
+	display: inline-block;
+	width: 32px;
+	height: 22px;
+	border: 1px solid #DADBDA;
+	text-align: center;
+	line-height: 22px;
+	border-radius: 5px;
+}
+.page{
+	color: #989998;
+}
+.page span:first-child{
+	color: red;
+	font-weight: bolder;
+}
+
+
+/*第三部分：商品展示部分*/
+.show{
+	width: 1190px;
+	margin: 0 auto;
+}
+.part_three{
+	width: 990px;
+	/*border: 1px solid black;*/
+	float: right;
+}
+.goods_list a{
+	color: black;
+}
+.goods_list li{
+	float: left;
+	margin: 8px 7.2px;
+	box-sizing: border-box;
+}
+.goods{
+	width: 225px;
+	height: 325px;
+	border: 1px dotted #DCDDDC;
+	position: relative;
+}
+.bottom{
+	position: absolute;
+	top: 220px;
+}
+.pri_deal{
+	width: 215px;
+	height: 22px;
+	font-size: 15px;
+	margin: 8px 0;
+}
+.price{
+	color: red;
+	font-weight: bolder;
+	float: left;
+	margin-left: 5px;
+}
+.deal{
+	float: right;
+	font-size: 14px;
+}
+.deal span{
+	color: #3BBCB9;
+	font-weight: bolder;
+}
+.jiu_name{
+	width: 215px;
+	height: 22px;
+	font-size: 15px;
+	margin: 8px 0 0 5px;
+}
+.zjzy{
+	width: 100px;
+	height: 22px;
+	font-size: 14px;
+	color: #687CA8;
+	margin: 8px 0 0 5px;
+}
+.zjzy:hover a{
+	color: red;
+}
+.small_pic{
+	width: 223px;
+	height: 60px;
+	margin-top: 10px;
+	background-color: white;
+	position: absolute;
+	left: -1px;
+	border:1px solid red;
+	border-top-color: transparent;
+	bottom: -60px;
+	z-index: 5;
+	display: none;
+}
+.small_pic img{
+	width: 45px;
+	display: inline-block;
+	float: left;
+	margin: 3px 4px;
+	cursor: pointer;
+}
+
+
+
+/*分页部分*/
+.box {
+	margin: 100px auto 100px;
+	width: 1190px;
+	height: 36px;
+	clear: both;
+	position: relative;
+	top: 80px;
+}
+.change_page{
+	float: right;
+}
+.page {
+	float: left;
+}
+.info {
+	width: 200px;
+	height: 34px;
+	line-height: 34px;
+}

@@ -17,11 +17,11 @@ public class ShopServiceImpl implements ShopService {
 		return shopMapper.findFenlei(parentId);
 	}
 
-	public List<Shop> findFuji(Integer shopId) {
-		return shopMapper.findFuji(shopId);
-	}
-
 	public List<Shop> findNotNull() {
 		return shopMapper.findNotNull();
+	}
+
+	public List<Shop> findMore(Integer parentId) {
+		return shopMapper.findMore(parentId);
 	}
 }

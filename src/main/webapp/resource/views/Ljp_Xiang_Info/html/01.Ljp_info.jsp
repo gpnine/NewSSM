@@ -13,6 +13,7 @@ pageEncoding="UTF-8"%>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/Ljp_Xiang_Info/css/03.Ljp_info.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/Ljp_Xiang_Info/css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/Ljp_Xiang_Info/css/cityLayout.css"/>
 		<title>01.商品详情页</title>
 	</head>
 	<body>
@@ -95,14 +96,20 @@ pageEncoding="UTF-8"%>
 					<p class="kc">库存&nbsp;&nbsp;
 						<span>有货</span>
 					</p>
-					
+
+
+
+
+
 					<p class="wl">物流&nbsp;&nbsp;
 						<span class="psz">配送至</span>
-						<span class="sele">北京 北京市 海淀区
-							<span></span>
-						</span>
+						<input name="" id="sel1"  type="text"  class="city_input" readonly="readonly" value="北京-北京市">
 						<span class="hdfk">| 支持货到付款</span>
 					</p>
+
+
+
+
 					
 					<p class="server">服务&nbsp;&nbsp;
 						<span class="ser_info">由<a class="ser_a" href="">中酒自营</a>从北京发货 , 并提供售后服务</span>
@@ -317,7 +324,7 @@ pageEncoding="UTF-8"%>
 					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
 						<a class="a" href="###"><i id="end"></i><i class="iconfont icon-gouwuche paowuxian"></i></a>
 						<span style="width:22px;display: block;margin-left:9px;">购物车</span>
-						<span>0</span>
+						<span class="gouwushuliang">0</span>
 					</li>
 					<li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
 						<a class="a" href="###"><i  class="iconfont icon-hongbao "></i></a>
@@ -362,7 +369,7 @@ pageEncoding="UTF-8"%>
 	<script  src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/jqery2.js"></script>
 	<script  src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/ogLaVp_data/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
 	<script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/02.Ljp_info.js"></script>
-
+	<script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/cityselect.js"></script>
 
 	<script>
         //大小图的切换
@@ -433,6 +440,137 @@ pageEncoding="UTF-8"%>
         for(var i= 0;i<10;i++){
             $("<dl><dt class=\"pj_name\">初次评价：</dt><dd class=\"pj_content\">非常满意！物流很快，包装结实！酒的口感很棒：打开后口感圆润，丹宁丰富，酒体适中，即使是初次喝红酒的人也容易接受，现在这个季节搭配着烤肉非常棒！好酒需慢慢品！下次还来</dd><div class=\"pj_right\"><span class=\"user_number\">${user1.userPhone}</span><br /><span class=\"star\"><img src=\"<%=basePath%>/resource/views/img//ljp_51.png\"/></span></div></dl>").prependTo($(".pj_box"));
         }
+
+
+
+
+
+        $("<ol style='padding:0 15px'><li><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div></li><li><div style='width:190px;height:50px;background:white;padding:10px 0;'><ol><li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'><div>0</div><div style='white-space:nowrap;'>我的积分</div></li><li style='float:right;width:84px;height:50px;text-align:center'><div>0</div><div style='white-space:nowrap;'>优惠劵</div></li><ol></div></li><li style='white-space:nowrap; color:white;'>已领取的优惠劵</li></ol> <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right2"));
+        $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right3"));
+        $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right4"));
+
+
+
+
+
+
+
+
+        $.ajax({
+            type: "get",
+            url: "findCars.do",
+            async: true,
+            dataType: "json",
+            data: {
+                userPhone:${user1.userPhone}
+			},
+            success: function(data) {
+				console.log(data);
+                if(data.shopId =="") {
+                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
+                    $("#inp1").click(function() {
+                        $(".inpcounts").prop("checked", this.checked);
+                        $(".inpcount").prop("checked", this.checked);
+                        change();
+                    })
+                    $(".chakan").mouseover(function() {
+                        $(".chakan").css("color", "red");
+                    })
+                    $(".chakan").mouseout(function() {
+                        $(".chakan").css("color", "black");
+                    })
+                } else {
+                    $("#inp1").click(function() {
+                        $(".inpcounts").prop("checked", this.checked);
+                        $(".inpcount").prop("checked", this.checked);
+                        change();
+                    })
+                    $(".chakan").mouseover(function() {
+                        $(".chakan").css("color", "red");
+                    })
+                    $(".chakan").mouseout(function() {
+                        $(".chakan").css("color", "black");
+                    })
+
+
+
+
+
+                    //获取后台数据进行创建购物车商品
+                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
+                    console.log(data);
+                    console.log(data.shopId);
+//                    for(i in data){
+//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='"+data[i].shopImg+"'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+data[i].parentId+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+data[i].shopId+"</span></li>").appendTo($(".ols"));
+//                    }
+
+                    $(".gouwushuliang").html(function(){
+                        var countss = 0;
+                        console.log($(".inpcount").length)
+                        $(".inpcount").siblings(".s_sum").each(function(index, el) {
+                            countss += parseInt(el.innerHTML);
+                        })
+                        return countss;
+
+                    })
+                    $(".btn2").click(function(){
+                        //判断购物车中有没有此商品
+                        //有 查到此产品，在数量上加上新添加的数量
+                        //查询购物车数据库
+                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='img/0.jpg'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+$('.num').html()+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+$('.pri').html()+"</span></li>").appendTo($(".ols"));
+
+                        $(".gouwushuliang").html(function(){
+                            var countss = 0;
+                            console.log($(".inpcount").length)
+                            $(".inpcount").siblings(".s_sum").each(function(index, el) {
+                                countss += parseInt(el.innerHTML);
+                            })
+                            return countss;
+
+                        })
+                        change();
+
+                    })
+                    $(".inpcounts").click(function() {
+                        $("#inp1").prop("checked", this.checked);
+                        $(".inpcount").prop("checked", this.checked);
+                        change();
+                    })
+
+                    $(".inpcount").click(function() {
+                        $(".inpcounts").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
+                        $("#inp1").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
+                        change();
+                    })
+                    $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span><span class='counts'>0</span><span>件<span></div><div style='float:right ;color:red;'><span>￥</span><span class='prices'>0</span></div><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></div>").appendTo($(".gouwuche_right1"));
+                    //				prices总价 titalprice单个商品的总价 s_sum 每个商品的数量
+                    function change() {
+                        $(".counts").html(function() {
+                            var counts = 0;
+                            $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                                counts += parseInt(el.innerHTML);
+                            })
+                            return counts;
+                        })
+                        $(".prices").html(function() {
+                            var countss = 0;
+                            $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+                                countss += parseInt(el.innerHTML);
+                            })
+                            return countss;
+                        })
+
+                    }
+                    change();
+                }
+            }
+        });
+
+
+
+
+
+
 
 
 	</script>

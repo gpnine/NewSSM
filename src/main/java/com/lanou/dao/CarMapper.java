@@ -7,7 +7,7 @@ import com.lanou.entity.Wine;
 import java.util.List;
 
 public interface CarMapper {
-    public List<Car> findCars(int userId);
+    public List<Car> findCars(String userPhone);
 
 
 

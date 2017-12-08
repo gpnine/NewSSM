@@ -219,9 +219,11 @@ p{
 	height: 30px;
 	position: relative;
 	float: left;
+	margin-left: 12px;
 }
 .children-list .link {
 	color: rgb(102,102,102);
+	font-size: 12px;
 }
 
 

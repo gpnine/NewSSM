@@ -11,7 +11,7 @@ public class Car {
 
     private Integer counts;
 
-    private Integer UserId;
+    private String userPhone;
 
     private Integer deleteId;
 
@@ -23,7 +23,7 @@ public class Car {
                 "CarId=" + CarId +
                 ", wineId=" + wineId +
                 ", counts=" + counts +
-                ", UserId=" + UserId +
+                ", userPhone=" + userPhone +
                 ", deleteId=" + deleteId +
                 ", wines=" + wines +
                 '}';
@@ -61,12 +61,12 @@ public class Car {
         this.counts = counts;
     }
 
-    public Integer getUserId() {
-        return UserId;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setUserId(Integer userId) {
-        UserId = userId;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
     public Integer getDeleteId() {
@@ -83,5 +83,12 @@ public class Car {
         super();
     }
 
-
+    public Car(Integer carId, Integer wineId, Integer counts, String userPhone, Integer deleteId, Wine wines) {
+        CarId = carId;
+        this.wineId = wineId;
+        this.counts = counts;
+        this.userPhone = userPhone;
+        this.deleteId = deleteId;
+        this.wines = wines;
+    }
 }

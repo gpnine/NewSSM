@@ -8,6 +8,7 @@ import java.util.Map;
 
 public interface WineMapper {
     public List<Wine> findWines();
+    public List<Wine> moreWines(Map map);
     public List<Wine> findWineById(Integer WineId);
     public List<Wine> findLike(String likeName);
     public List<Wine> findScope(Map map);
