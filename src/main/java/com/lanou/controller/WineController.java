@@ -1,7 +1,9 @@
 package com.lanou.controller;
 
+import com.lanou.entity.Car;
 import com.lanou.entity.User;
 import com.lanou.entity.Wine;
+import com.lanou.service.CarService;
 import com.lanou.service.UserService;
 import com.lanou.service.WineService;
 import org.springframework.stereotype.Controller;
@@ -59,6 +61,28 @@ public String goods_detile(Integer goodsId, HttpServletRequest request){
    Wine wine =  wineService.goods_detile(goodsId);
     request.setAttribute("wineInfo",wine);
     return "/Ljp_Xiang_Info/html/01.Ljp_info";
+
 }
+
+
+
+
+
+
+    @Resource
+    private CarService carService;
+
+    //    查找该用户购物车
+    @RequestMapping("/findCars.do")
+    @ResponseBody
+    public List<Car> findCars(String userPhone) {
+        List<Car> list = carService.findCars(userPhone);
+        System.out.println("返回的："+list);
+        return list;
+    }
+
+
+
+
 
 }

@@ -5,7 +5,7 @@
 <mapper namespace="com.lanou.dao.CarMapper">
 	<resultMap type="Car" id="carResult">
 		<id column="CarId" property="CarId" jdbcType="INTEGER"/>
-		<result column="User_id" property="UserId" jdbcType="INTEGER"/>
+		<result column="userPhone" property="userPhone" jdbcType="VARCHAR"/>
 		<result column="Wine_id" property="wineId" jdbcType="INTEGER"/>
 		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
 		<result column="counts" property="counts" jdbcType="INTEGER"/>
@@ -40,7 +40,7 @@
 		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
 	</resultMap>
 
-	<select id="findCars" parameterType="int" resultMap="carResult">
+	<select id="findCars" parameterType="Car" resultMap="carResult">
 		select * from zhongjiu_car
 	</select>
 
