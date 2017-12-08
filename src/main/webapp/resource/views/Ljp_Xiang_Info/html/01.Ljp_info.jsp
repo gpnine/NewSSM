@@ -524,6 +524,7 @@ pageEncoding="UTF-8"%>
 
 
         var btn2 = document.getElementsByClassName("btn2")[0];
+//        var num = document.getElementsByClassName("num")[0].innerHTML;
         $(btn2).click(function(){
             $.ajax({
                 method:"get",
@@ -531,7 +532,7 @@ pageEncoding="UTF-8"%>
                 data:{
                     userPhone:${user1.userPhone},
                     goodsId:${wineInfo.getWId()},
-                    counts:"1",
+                    counts:document.getElementsByClassName("num")[0].innerHTML,
                 },
                 success:function(data){
                     window.location.reload()
