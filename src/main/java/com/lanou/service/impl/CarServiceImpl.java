@@ -28,8 +28,9 @@ public class CarServiceImpl implements CarService {
 			return result;
 		}else{
 			int count = carMapper.selectCount(car).getCounts();
-			System.out.println(count);
-			car.setCounts(count+1);
+			System.out.println("添加数量:"+counts);
+			System.out.println("原来数量:"+count);
+			car.setCounts(count+counts);
 			carMapper.addCounts(car);
 		}
 

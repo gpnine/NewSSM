@@ -202,20 +202,45 @@ change();
 				})
 				return countss;		
 			})
-			$(".prices").html(function() {
-					var countss = 0;
-					var arrs=[];
-					var arrss=[];
-					$(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
-						
-						arrs.push(el.innerHTML);
-					})
-					$(".inpcount:checked").siblings(".s_sum").each(function(index, el) {						
-						arrss.push(el.innerHTML);
-						countss+=arrs[index]*arrss[index];
-					})
-					return countss;
-				})
+
+
+
+
+
+			// $(".prices").html(function() {
+			// 		var countss = 0;
+			// 		var arrs=[];
+			// 		var arrss=[];
+            //
+			// 		$(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+			//
+			// 			arrs.push(el.innerHTML);
+            //
+			// 		})
+			// 	console.log(arrs);
+			// 		$(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+			// 			arrss.push(el.innerHTML);
+            //
+			// 			countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+			// 		})
+             //    console.log("+++++++++"+countss);
+			// 		return countss;
+			// 	})
+			//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				$(".counts").html(function() {
 					var counts = 0;
 					$(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
@@ -224,6 +249,10 @@ change();
 					return counts;
 				})
 			}
+change();
+window.onload = function(){
+    change();
+    }
 //			加入购物车
 			$(".btn2").click(function(){
 

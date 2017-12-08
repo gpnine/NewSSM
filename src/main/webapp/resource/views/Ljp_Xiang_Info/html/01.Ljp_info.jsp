@@ -524,6 +524,7 @@ pageEncoding="UTF-8"%>
 
 
         var btn2 = document.getElementsByClassName("btn2")[0];
+//        var num = document.getElementsByClassName("num")[0].innerHTML;
         $(btn2).click(function(){
             $.ajax({
                 method:"get",
@@ -531,7 +532,7 @@ pageEncoding="UTF-8"%>
                 data:{
                     userPhone:${user1.userPhone},
                     goodsId:${wineInfo.getWId()},
-                    counts:"1",
+                    counts:document.getElementsByClassName("num")[0].innerHTML,
                 },
                 success:function(data){
                     window.location.reload()
@@ -668,13 +669,27 @@ pageEncoding="UTF-8"%>
                             })
                             return counts;
                         })
-                        $(".prices").html(function() {
-                            var countss = 0;
-                            $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
-                                countss += parseInt(el.innerHTML);
-                            })
-                            return countss;
-                        })
+                         $(".prices").html(function() {
+                         		var countss = 0;
+                         		var arrs=[];
+                         		var arrss=[];
+
+                         		$(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+                         			arrs.push(el.innerHTML);
+
+                         		})
+                         	console.log(arrs);
+                         		$(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                         			arrss.push(el.innerHTML);
+
+                         			countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+                         		})
+                            console.log("+++++++++"+countss);
+                         		return countss;
+                         	})
+
+
 
                     }
                     change();
@@ -686,6 +701,25 @@ pageEncoding="UTF-8"%>
 
 
 
+        $(".prices").html(function() {
+            var countss = 0;
+            var arrs=[];
+            var arrss=[];
+            var countss = 0;
+            $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+                arrs.push(el.innerHTML);
+
+            })
+            console.log(arrs);
+            $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                arrss.push(el.innerHTML);
+
+                countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+            })
+            console.log("+++++++++"+countss);
+            return countss;
+        })
 
 
 
