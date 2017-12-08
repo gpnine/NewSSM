@@ -133,12 +133,9 @@ for(var k = 0; k < help_aa.length; k++) {
     help_aa[k].index = k;
     help_pa[k].style.display = "none";
     help_aa[help_aa[k].index].addEventListener("mouseover", function() {
-
         this.parentNode.children[1].style.display = "block";
         Help_pa.style.display = "none";
-
         Help_pa = this.parentNode.children[1];
-
     }, false)
 
 }

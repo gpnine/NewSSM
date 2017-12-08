@@ -13,8 +13,8 @@
     <select id="findFenlei" parameterType="int" resultMap="shopResult">
 		select ShopId,ShopName,parentId,deleteId from zhongjiu_shop where parentId = #{parentId}
 	</select>
-    <select id="findFuji" parameterType="int" resultMap="shopResult">
-		select * from zhongjiu_shop where ShopId = #{shopId}
+    <select id="findMore" parameterType="int" resultMap="shopResult">
+		select * from zhongjiu_shop where parentId = #{parentId}
 	</select>
     <select id="findNotNull" resultMap="shopResult">
         select * from zhongjiu_shop where ShopImg is not NULL

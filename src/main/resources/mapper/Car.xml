@@ -52,8 +52,8 @@
 
 
 
-	<insert id="insertShop" parameterType="Car" >
-		insert into zhongjiu_car (User_id,Wine_id,counts) values (#{UserId},#{WineId},#{counts})
+	<insert id="insertShop" parameterType="Car">
+		insert into zhongjiu_car (Wine_id,userPhone,counts) values (#{wineId},#{userPhone},#{counts})
 	</insert>
 
 

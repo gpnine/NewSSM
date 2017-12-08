@@ -9,5 +9,5 @@ public interface CarService {
     public List<Car> findCars(String userPhone);
 
 
-    public int insertShop(int userId, int wineId, int counts);
+    public int insertShop(String userPhone, Integer wineId, Integer counts);
 }

@@ -34,6 +34,12 @@ public class WineServiceImpl implements WineService {
 		return wineMapper.findScope(map);
 	}
 
+	public List<Wine> moreWines(Integer c) {
+		Map map = new HashMap();
+		map.put("c",c);
+		return wineMapper.moreWines(map);
+	}
+
 	public List<Wine> findLike(String likeName) {
 		return wineMapper.findLike(likeName);
 	}

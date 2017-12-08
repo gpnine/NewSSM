@@ -27,7 +27,7 @@ pageEncoding="UTF-8"%>
 				<div class="main_name">
 					<span><a href="">全部</a></span>
 					>
-					<span><a href="">葡萄酒</a></span>
+					<span><a href="">葡萄酒${wineInfo.getWId()}</a></span>
 					>
 					<span><a href="">${wineInfo.getWineBrand()}</a></span>
 					>
@@ -360,8 +360,94 @@ pageEncoding="UTF-8"%>
 				</ol>
 			</div>
 			<div class="gouwuche_right">
-				
+				<div class='gouwuche_right1 gouwuche_right_right'>
+					<div style='white-space:nowrap;padding:0 15px;'>
+						<input type='checkbox' checked='checked' id='inp1'/><label for='inp1' style='white-space:nowrap'>&nbsp;全选</label>
+					</div>
+					<!--查看全部-->
+					<a class='chakan' href=''>查看全部</a>
+					<div class='zhongjiu_goods' style="padding:0 15px;">
+						<div>
+							<input type='checkbox'  checked='checked' class='inpcounts'/>
+							<span>中酒自营</span>
+							<span class='prices' style='float:right'>0</span>
+						</div>
+
+						<!--改动区域***********************************************************-->
+
+						<ol class='ols'>
+							<!--购物车内添加物品-->
+
+						<c:forEach items="${cars}" var="item">
+							<li style='position:relative;margin-bottom:5px;'>
+								<input type='checkbox' checked='checked' class='inpcount'/>
+								<!--添加tup路径-->
+								<img style='vertical-align:middle;width:40px;' src="<%=basePath%>/resource/views/img/${item.getWines().getWineImg1()}"/>
+								<!--添加物品数量-->
+								<div class='s_sum' style="width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;">${item.getCounts()}</div>
+								<!--添加价格-->
+								<span class='titalprice' style="float:right; margin-top:8px;font-size: 13px;color: gray">${item.getWines().getWinePrice()}</span>
+							</li>
+						</c:forEach>
+
+
+						</ol>
+
+						<!--改动区域***********************************************************-->
+					</div>
+					<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'>
+						<div style='float:left'>
+							<span>已选</span>
+							<span class='counts'>0</span>
+							<span>件<span>
+						</div>
+						<div style='float:right ;color:red;'>
+							<span>￥</span>
+							<span class='prices'>0</span>
+						</div>
+						<div class="jiesuan">购物车结算</div>
+					</div>
+				</div>
+				<div class='gouwuche_right2  gouwuche_right_right'>
+					<ol style='padding:0 15px'>
+						<li>
+							<div class='chexiao' >&gt;&gt;</div>
+							<div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div>
+						</li>
+						<li>
+							<div style='width:190px;height:50px;background:white;padding:10px 0;'>
+								<ol>
+									<li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'>
+										<div>0</div>
+										<div style='white-space:nowrap;'>我的积分</div>
+									</li>
+									<li style='float:right;width:84px;height:50px;text-align:center'>
+										<div>0</div>
+										<div style='white-space:nowrap;'>优惠劵</div>
+									</li>
+								</ol>
+							</div>
+						</li>
+						<li style='white-space:nowrap; color:white;'>已领取的优惠劵</li>
+					</ol>
+					<img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+				</div>
+				<div class='gouwuche_right3  gouwuche_right_right'>
+					<div style='padding:5px 15px;'>
+						<div class='chexiao'>&gt;&gt;</div>
+					<div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div>
+				</div>
+				<img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
 			</div>
+			<div class='gouwuche_right4  gouwuche_right_right'>
+				<div style='padding:5px 15px;'>
+					<div class='chexiao'>&gt;&gt;</div>
+					<div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div>
+				</div>
+				<img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+			</div>
+
+		</div>
 		</div>
 	</body>
 	<script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/html/jquery-3.2.1.min.js"></script>
@@ -404,6 +490,8 @@ pageEncoding="UTF-8"%>
          	$('.btn2').on('click', addProduct);
          		function addProduct(event) {
 
+
+
          		var offset = $('.paowuxian').offset(), flyer = $("<img style='position:absolute;' src='<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}' alt='' class='divsss' />");
 
 
@@ -430,15 +518,34 @@ pageEncoding="UTF-8"%>
          		    }
 
          		});
+     	}
 
-         	}
+
+
+
+        var btn2 = document.getElementsByClassName("btn2")[0];
+        $(btn2).click(function(){
+            $.ajax({
+                method:"get",
+                url:"addCars.do",
+                data:{
+                    userPhone:${user1.userPhone},
+                    goodsId:${wineInfo.getWId()},
+                    counts:"1",
+                },
+                success:function(data){
+                }
+
+            })
+        })
+
 
 
 
 
         //动态生成初次评论
         for(var i= 0;i<10;i++){
-            $("<dl><dt class=\"pj_name\">初次评价：</dt><dd class=\"pj_content\">非常满意！物流很快，包装结实！酒的口感很棒：打开后口感圆润，丹宁丰富，酒体适中，即使是初次喝红酒的人也容易接受，现在这个季节搭配着烤肉非常棒！好酒需慢慢品！下次还来</dd><div class=\"pj_right\"><span class=\"user_number\">${user1.userPhone}</span><br /><span class=\"star\"><img src=\"<%=basePath%>/resource/views/img//ljp_51.png\"/></span></div></dl>").prependTo($(".pj_box"));
+            $("<dl><dt class='pj_name'>初次评价：</dt><dd class='pj_content'>非常满意！物流很快，包装结实！酒的口感很棒：打开后口感圆润，丹宁丰富，酒体适中，即使是初次喝红酒的人也容易接受，现在这个季节搭配着烤肉非常棒！好酒需慢慢品！下次还来</dd><div class='pj_right'><span class='user_number'>${user1.userPhone}</span><br /><span class='star'><img src='<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_51.png'></span></div></dl>").prependTo($(".pj_box"));
         }
 
 
@@ -467,7 +574,7 @@ pageEncoding="UTF-8"%>
             success: function(data) {
 				console.log(data);
                 if(data.shopId =="") {
-                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
+//                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
                     $("#inp1").click(function() {
                         $(".inpcounts").prop("checked", this.checked);
                         $(".inpcount").prop("checked", this.checked);
@@ -513,24 +620,32 @@ pageEncoding="UTF-8"%>
                         return countss;
 
                     })
-                    $(".btn2").click(function(){
-                        //判断购物车中有没有此商品
-                        //有 查到此产品，在数量上加上新添加的数量
-                        //查询购物车数据库
-                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='img/0.jpg'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+$('.num').html()+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+$('.pri').html()+"</span></li>").appendTo($(".ols"));
+//                    $(".btn2").click(function(){
+//                        //判断购物车中有没有此商品
+//                        //有 查到此产品，在数量上加上新添加的数量
+//                        //查询购物车数据库
+//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='img/0.jpg'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+$('.num').html()+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+$('.pri').html()+"</span></li>").appendTo($(".ols"));
+//
+//                        $(".gouwushuliang").html(function(){
+//                            var countss = 0;
+//                            console.log($(".inpcount").length)
+//                            $(".inpcount").siblings(".s_sum").each(function(index, el) {
+//                                countss += parseInt(el.innerHTML);
+//                            })
+//                            return countss;
+//
+//                        })
+//                        change();
+//
+//                    })
 
-                        $(".gouwushuliang").html(function(){
-                            var countss = 0;
-                            console.log($(".inpcount").length)
-                            $(".inpcount").siblings(".s_sum").each(function(index, el) {
-                                countss += parseInt(el.innerHTML);
-                            })
-                            return countss;
 
-                        })
-                        change();
 
-                    })
+
+
+
+
+
                     $(".inpcounts").click(function() {
                         $("#inp1").prop("checked", this.checked);
                         $(".inpcount").prop("checked", this.checked);

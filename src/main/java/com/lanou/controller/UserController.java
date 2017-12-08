@@ -39,9 +39,7 @@ public class UserController {
     @RequestMapping(value = "/findUserPhone.do")
     @ResponseBody
     public String findUserPhone(String userPhone) throws IOException {
-        System.out.println(userPhone);
         User user = userService.findUserPhone(userPhone);
-        System.out.print(user);
         if (user != null) {
             return "false";
         } else {
@@ -65,7 +63,6 @@ public class UserController {
         System.out.println(userPhone);
         System.out.println(password);
         int result = userService.insertUser(userPhone,password);
-        System.out.print(result);
         if (result == 0) {
             return "false";
         } else {
@@ -81,11 +78,11 @@ public class UserController {
 //        商品浏览记录
         List<Wine> wineList = userService.liuLanJiLu();
         session.setAttribute("wineList",wineList);
-        System.out.println(wineList);
+
 //        商品推荐
         List<Wine> wineList2 = userService.shangPinTuiJian();
         session.setAttribute("wineList2",wineList2);
-        System.out.println(wineList2);
+
 
 //        查看购物车
         List<Car> cars = userService.cars(userPhone);

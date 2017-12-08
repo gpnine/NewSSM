@@ -32,6 +32,9 @@
     <select id="findWines" resultMap="wineResult">
 		select WineName,WinePrice,WineImg1 from zhongjiu_wine
 	</select>
+    <select id="moreWines" parameterType="Map"  resultMap="wineResult">
+		select WineName,WinePrice,WineLiter,WineEvaCount,WineDegree,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine limit #{c,jdbcType=INTEGER},40
+	</select>
     <select id="findWineById" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{WId}
 	</select>

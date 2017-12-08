@@ -12,9 +12,22 @@ import java.util.List;
 
 @Service("carService")
 public class CarServiceImpl implements CarService {
-	public int insertShop(int userId, int wineId, int counts) {
-		return 0;
+
+
+	public int insertShop(String userPhone, Integer WId, Integer counts) {
+		Car car = new Car();
+		car.setUserPhone(userPhone);
+		car.setWineId(WId);
+		car.setCounts(counts);
+		int result = carMapper.insertShop(car);
+		return result;
+
+
 	}
+
+
+
+
 
 	@Resource
 	private CarMapper carMapper;

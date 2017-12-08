@@ -28,13 +28,8 @@ public class CarController {
     //    插入商品
     @RequestMapping("/insertShop.do")
     @ResponseBody
-    public String insertShop(int userId, int wineId, int counts) {
-        int result = carService.insertShop(userId, wineId, counts);
-        System.out.print(result);
-        if (result == 0) {
-            return "false";
-        } else {
-            return "true";
-        }
+    public int insertShop(String userPhone, Integer wineId, Integer counts) {
+        int result = carService.insertShop(userPhone, wineId, counts);
+        return result;
     }
 }

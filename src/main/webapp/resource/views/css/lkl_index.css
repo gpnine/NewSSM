@@ -219,9 +219,11 @@ p{
 	height: 30px;
 	position: relative;
 	float: left;
+	margin-left: 12px;
 }
 .children-list .link {
 	color: rgb(102,102,102);
+	font-size: 12px;
 }
 
 
@@ -342,7 +344,7 @@ p{
 }
 .jiupin_first_table_pinpai td{
 	font-size:14px;
-	width:83px;
+	width:89px;
 	height:24px;
 	text-align: left;
     line-height: 24px;
