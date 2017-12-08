@@ -1,8 +1,6 @@
 package com.lanou.controller;
 
-import com.lanou.entity.Car;
 import com.lanou.entity.Wine;
-import com.lanou.service.CarService;
 import com.lanou.service.UserService;
 import com.lanou.service.WineService;
 import com.lanou.util.FastJson_Ali;
@@ -71,15 +69,4 @@ public class WineController {
     }
 
 
-    @Resource
-    private CarService carService;
-
-    //    查找该用户购物车
-    @RequestMapping("/findCars.do")
-    @ResponseBody
-    public List<Car> findCars(String userPhone) {
-        List<Car> list = carService.findCars(userPhone);
-        System.out.println("返回的：" + list);
-        return list;
-    }
 }
