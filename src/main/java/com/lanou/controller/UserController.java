@@ -46,23 +46,28 @@ public class UserController {
             return "true";
         }
     }
-
-
+    //    用户退出
+    @RequestMapping(value = "/exitUser.do")
+    public String exitUser(HttpSession session) throws IOException {
+        session.removeAttribute("user1");
+        session.invalidate();
+        return "html/lkl_index";
+    }
 
     //    修改密码
-    @RequestMapping(value="/updatePassword.do", method = RequestMethod.POST)
-    public String updatePassword(String userPhone,String password,String newPassword) throws IOException {
-       userService.updatePassword(userPhone,password,newPassword);
-      return "/html/lkl_index";
+    @RequestMapping(value = "/updatePassword.do", method = RequestMethod.POST)
+    public String updatePassword(String userPhone, String password, String newPassword) throws IOException {
+        userService.updatePassword(userPhone, password, newPassword);
+        return "/html/lkl_index";
     }
 
 
     //    注册后插入用户
     @RequestMapping(value = "/insertUser.do", method = RequestMethod.POST)
-    public String insertUser(String userPhone,String password) throws IOException {
+    public String insertUser(String userPhone, String password) throws IOException {
         System.out.println(userPhone);
         System.out.println(password);
-        int result = userService.insertUser(userPhone,password);
+        int result = userService.insertUser(userPhone, password);
         if (result == 0) {
             return "false";
         } else {
@@ -73,28 +78,28 @@ public class UserController {
     //   登录返回页面
     @RequestMapping(value = "/login.do", method = RequestMethod.POST)
     public String login(HttpSession session, HttpServletRequest request, String userPhone, String password) throws IOException {
-        User user1 = userService.findUser(userPhone,password);
+        User user1 = userService.findUser(userPhone, password);
 
 //        商品浏览记录
         List<Wine> wineList = userService.liuLanJiLu();
-        session.setAttribute("wineList",wineList);
+        session.setAttribute("wineList", wineList);
 
 //        商品推荐
         List<Wine> wineList2 = userService.shangPinTuiJian();
-        session.setAttribute("wineList2",wineList2);
+        session.setAttribute("wineList2", wineList2);
 
 
 //        查看购物车
         List<Car> cars = userService.cars(userPhone);
-        for(int i=0;i<cars.size();i++){
+        for (int i = 0; i < cars.size(); i++) {
             int w = cars.get(i).getWineId();
             Wine wi = userService.selectCar(w);
             cars.get(i).setWines(wi);
         }
-        session.setAttribute("cars",cars);
+        session.setAttribute("cars", cars);
 
 
-        session.setAttribute("user1",user1);
+        session.setAttribute("user1", user1);
 
         if (user1 != null) {
             return "html/lkl_index";

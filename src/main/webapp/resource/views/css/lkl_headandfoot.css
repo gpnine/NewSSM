@@ -39,15 +39,15 @@
 .top_left .login_in {
 	color: grey;
 	margin-left: 30px;
+	padding-right: 10px;
+	border-right: 2px solid lightgrey;
+	box-sizing: border-box;
 }
 
 .top_left .register_in {
 	color: grey;
-	margin-left: 10px;
-	padding-left: 10px;
+	margin-left: 12px;
 	height: 12px;
-	box-sizing: border-box;
-	border-left: 2px solid lightgrey;
 }
 
 .top_right {

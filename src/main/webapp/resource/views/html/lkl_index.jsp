@@ -842,6 +842,11 @@
 
 </script>
 <script>
+    if(${user1.userPhone!=null}){
+        $(".login_in").html(${user1.userPhone});
+        $(".register_in").html($("<a style='color: grey;height: 12px;margin:0' href='<%=basePath%>/user/exitUser.do' class='register_in'>[退出]</a>"));
+    }
+
     $.ajax({
         url: "<%=basePath%>/index/banner.do",
         method: "get",
@@ -987,9 +992,9 @@
             method: "get",
             success: function (data) {
                 $("<li class='hot_sell_list_li' style='border: 1px solid #0000002b;box-sizing: border-box;'>"
-                    + "<a style='text-align: center;' class='pr hot_sell a' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
-                    + data[0].wineImg1 + "'/><p>" + data[0].wineName + "</p><p style='color:red'>￥"
+                    + "<a style='text-align: center;' class='pr hot_sell a' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
+                    + data[0].wineImg1 + "'/><p class='chang'>" + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".hot_sell_list"));
             }
         })
@@ -1003,9 +1008,9 @@
         success: function (data) {
             for (var i = 0; i < 4; i++) {
                 $("<li class='fl mr mt'  style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'>"
-                    + "<a  style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + "<a  style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
-                    + data[i].wineImg1 + "'/><p>" + data[i].wineName + "</p><p style='color:red'>￥"
+                    + data[i].wineImg1 + "'/><p class='chang'>" + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_0"));
             }
         }
@@ -1018,9 +1023,9 @@
             method: "get",
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_0"));
             }
@@ -1034,9 +1039,9 @@
             method: "get",
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_1"));
             }
@@ -1050,9 +1055,9 @@
             method: "get",
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_2"));
             }
@@ -1080,9 +1085,9 @@
         method: "get",
         success: function (data) {
             $(".bj_bottom1_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                 + data[0].wineName + "</p><p style='color:red'>￥"
                 + data[0].winePrice + "</p></a></li>")
         }
@@ -1095,9 +1100,9 @@
             method: "get",
             success: function (data) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom1"));
             }
@@ -1112,9 +1117,9 @@
         success: function (data) {
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_1"));
             }
@@ -1129,9 +1134,9 @@
         success: function (data) {
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineId="
+                    + data[i].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol2_0"));
             }
@@ -1144,11 +1149,12 @@
             likeName: "茅台"
         },
         success: function (data) {
+            console.log(data)
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineId="
+                    + data[i].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol2_1"));
             }
@@ -1176,9 +1182,9 @@
         method: "get",
         success: function (data) {
             $(".bj_bottom2_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                 + data[0].wineName + "</p><p style='color:red'>￥"
                 + data[0].winePrice + "</p></a></li>")
         }
@@ -1191,9 +1197,9 @@
             method: "get",
             success: function (data) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom2"));
             }
@@ -1208,9 +1214,9 @@
         success: function (data) {
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_2"));
             }
@@ -1225,9 +1231,9 @@
         success: function (data) {
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_0"));
             }
@@ -1242,9 +1248,9 @@
         success: function (data) {
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_1"));
             }
@@ -1272,9 +1278,9 @@
         method: "get",
         success: function (data) {
             $(".bj_bottom3_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                 + data[0].wineName + "</p><p style='color:red'>￥"
                 + data[0].winePrice + "</p></a></li>")
         }
@@ -1287,9 +1293,9 @@
             method: "get",
             success: function (data) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom3"));
             }
@@ -1304,9 +1310,9 @@
         success: function (data) {
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_3"));
             }
@@ -1319,12 +1325,11 @@
             likeName: "杰卡斯"
         },
         success: function (data) {
-            console.log(data)
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_0"));
             }
@@ -1339,9 +1344,9 @@
         success: function (data) {
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
                     + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p>"
+                    + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_1"));
             }
@@ -1369,9 +1374,9 @@
         method: "get",
         success: function (data) {
             $(".bj_bottom4_1").before("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                 + data[0].wineName + "</p><p style='color:red'>￥"
                 + data[0].winePrice + "</p></a></li>")
         }
@@ -1384,9 +1389,9 @@
             method: "get",
             success: function (data) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
-                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineName="
-                    + data[0].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
-                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p>"
+                    + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".bj_bottom4"));
             }

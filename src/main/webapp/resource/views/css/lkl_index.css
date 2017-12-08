@@ -1,3 +1,11 @@
+.chang{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 11em;
+	margin: 0 auto;
+	font-size: 14px;
+}
 /*轮播图*/
 p{
 	margin: 0;
