@@ -44,8 +44,8 @@ public class WineServiceImpl implements WineService {
 		return wineMapper.findLike(likeName);
 	}
 
-	public Wine goods_detile(Integer goodsId) {
+	public Wine goods_detile(Integer wid) {
 
-		return wineMapper.goods_detile(goodsId);
+		return wineMapper.goods_detile(wid);
 	}
 }

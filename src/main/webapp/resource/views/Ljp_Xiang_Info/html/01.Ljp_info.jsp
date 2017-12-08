@@ -669,13 +669,27 @@ pageEncoding="UTF-8"%>
                             })
                             return counts;
                         })
-                        $(".prices").html(function() {
-                            var countss = 0;
-                            $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
-                                countss += parseInt(el.innerHTML);
-                            })
-                            return countss;
-                        })
+                         $(".prices").html(function() {
+                         		var countss = 0;
+                         		var arrs=[];
+                         		var arrss=[];
+
+                         		$(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+                         			arrs.push(el.innerHTML);
+
+                         		})
+                         	console.log(arrs);
+                         		$(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                         			arrss.push(el.innerHTML);
+
+                         			countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+                         		})
+                            console.log("+++++++++"+countss);
+                         		return countss;
+                         	})
+
+
 
                     }
                     change();
@@ -687,6 +701,25 @@ pageEncoding="UTF-8"%>
 
 
 
+        $(".prices").html(function() {
+            var countss = 0;
+            var arrs=[];
+            var arrss=[];
+            var countss = 0;
+            $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+                arrs.push(el.innerHTML);
+
+            })
+            console.log(arrs);
+            $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                arrss.push(el.innerHTML);
+
+                countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+            })
+            console.log("+++++++++"+countss);
+            return countss;
+        })
 
 
 

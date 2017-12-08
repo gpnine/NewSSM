@@ -14,6 +14,6 @@ public interface WineMapper {
     public List<Wine> findScope(Map map);
 
 //    商品详情
-    public Wine goods_detile(Integer goodsId);
+    public Wine goods_detile(Integer wid);
 
 }

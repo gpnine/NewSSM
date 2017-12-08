@@ -55,7 +55,7 @@ public class WineController {
 
     //    商品详情
     @RequestMapping(value = "/goods.do")
-    public String goods_detile(Integer goodsId, HttpServletRequest request) {
+    public String goods_detile(Integer wid, HttpServletRequest request) {
 
 
         List<Wine> wineList = userService.liuLanJiLu();
@@ -67,7 +67,7 @@ public class WineController {
         List<Wine> wineList2 = userService.shangPinTuiJian();
         request.setAttribute("wineList2", wineList2);
 
-        Wine wine = wineService.goods_detile(goodsId);
+        Wine wine = wineService.goods_detile(wid);
         request.setAttribute("wineInfo", wine);
         return "/Ljp_Xiang_Info/html/01.Ljp_info";
     }
