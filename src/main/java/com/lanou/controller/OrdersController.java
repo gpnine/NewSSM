@@ -22,4 +22,12 @@ public class OrdersController {
          List<Orders> orders = ordersService.findOrders();
         return orders;
     }
+    @RequestMapping("/insertOrders.do")
+    @ResponseBody
+    public int insertOrders(String OrderPay, String OrderWuliu, double OrderAllMoney, int OrderWineId, int UserId, int WineId, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei) {
+        System.out.printf("OrderYunfei:"+OrderYunfei);
+        int result = ordersService.insertOrders(OrderPay,OrderWuliu,OrderAllMoney,OrderWineId,UserId,WineId,OrderTicket,OrderText,OrderScore,OrderYunfei);
+        return result;
+    }
+
 }

@@ -7,14 +7,49 @@ public class Orders {
     private int OrderId;
     private String OrderPay;
     private String OrderWuliu;
-    private Double OrderAllMoney;
+    private double OrderAllMoney;
     private int OrderWineId;
     private int UserId;
     private int WineId;
     private String OrderTicket;
     private String OrderText;
     private int OrderScore;
-    private Double OrderYunfei;
+    private double OrderYunfei;
+
+    public Orders() {
+        super();
+    }
+
+    public Orders(int orderId, String orderPay, String orderWuliu, double orderAllMoney, int orderWineId, int userId, int wineId, String orderTicket, String orderText, int orderScore, double orderYunfei) {
+        OrderId = orderId;
+        OrderPay = orderPay;
+        OrderWuliu = orderWuliu;
+        OrderAllMoney = orderAllMoney;
+        OrderWineId = orderWineId;
+        UserId = userId;
+        WineId = wineId;
+        OrderTicket = orderTicket;
+        OrderText = orderText;
+        OrderScore = orderScore;
+        OrderYunfei = orderYunfei;
+    }
+
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "OrderId=" + OrderId +
+                ", OrderPay='" + OrderPay + '\'' +
+                ", OrderWuliu='" + OrderWuliu + '\'' +
+                ", OrderAllMoney=" + OrderAllMoney +
+                ", OrderWineId=" + OrderWineId +
+                ", UserId=" + UserId +
+                ", WineId=" + WineId +
+                ", OrderTicket='" + OrderTicket + '\'' +
+                ", OrderText='" + OrderText + '\'' +
+                ", OrderScore=" + OrderScore +
+                ", OrderYunfei=" + OrderYunfei +
+                '}';
+    }
 
     public int getOrderId() {
         return OrderId;
@@ -40,11 +75,11 @@ public class Orders {
         OrderWuliu = orderWuliu;
     }
 
-    public Double getOrderAllMoney() {
+    public double getOrderAllMoney() {
         return OrderAllMoney;
     }
 
-    public void setOrderAllMoney(Double orderAllMoney) {
+    public void setOrderAllMoney(double orderAllMoney) {
         OrderAllMoney = orderAllMoney;
     }
 
@@ -96,46 +131,11 @@ public class Orders {
         OrderScore = orderScore;
     }
 
-    public Double getOrderYunfei() {
+    public double getOrderYunfei() {
         return OrderYunfei;
     }
 
-    public void setOrderYunfei(Double orderYunfei) {
+    public void setOrderYunfei(double orderYunfei) {
         OrderYunfei = orderYunfei;
-    }
-
-    public Orders() {
-        super();
-    }
-
-    @Override
-    public String toString() {
-        return "Order{" +
-                "OrderId=" + OrderId +
-                ", OrderPay='" + OrderPay + '\'' +
-                ", OrderWuliu='" + OrderWuliu + '\'' +
-                ", OrderAllMoney=" + OrderAllMoney +
-                ", OrderWineId=" + OrderWineId +
-                ", UserId=" + UserId +
-                ", WineId=" + WineId +
-                ", OrderTicket='" + OrderTicket + '\'' +
-                ", OrderText='" + OrderText + '\'' +
-                ", OrderScore=" + OrderScore +
-                ", OrderYunfei=" + OrderYunfei +
-                '}';
-    }
-
-    public Orders(int orderId, String orderPay, String orderWuliu, Double orderAllMoney, int orderWineId, int userId, int wineId, String orderTicket, String orderText, int orderScore, Double orderYunfei) {
-        this.OrderId = orderId;
-        this.OrderPay = orderPay;
-        this.OrderWuliu = orderWuliu;
-        this.OrderAllMoney = orderAllMoney;
-        this.OrderWineId = orderWineId;
-        this.UserId = userId;
-        this.WineId = wineId;
-        this.OrderTicket = orderTicket;
-        this.OrderText = orderText;
-        this.OrderScore = orderScore;
-        this.OrderYunfei = orderYunfei;
     }
 }

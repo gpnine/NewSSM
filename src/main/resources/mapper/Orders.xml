@@ -25,7 +25,7 @@
         select * from zhongjiu_order;
 	</select>
 
-    <insert id="insertOrders" parameterType="Orders">
-        insert into zhongjiu_order (OrderPay,OrderWuliu,OrderAllMoney,OrderWineId,UserId,WineId,OrderTicket,OrderText)
+    <insert id="insertOrders" parameterType="Orders" keyProperty="OrderId" useGeneratedKeys="true">
+        insert into zhongjiu_order (OrderPay,OrderWuliu,OrderAllMoney,OrderWineId,UserId,WineId,OrderTicket,OrderText,OrderScore,OrderYunfei) values (#{OrderPay},#{OrderWuliu},#{OrderAllMoney},#{OrderWineId},#{UserId},#{WineId},#{OrderTicket},#{OrderText},#{OrderScore},#{OrderYunfei});
     </insert>
 </mapper>
