@@ -844,6 +844,15 @@ a{
 	color:white;
 	
 }
+.gouwushuliang{
+	background: red;
+	display: block;
+	width:20px;
+	height:20px;
+	margin:0 auto;
+	border-radius: 50%;
+	font-size:12px;
+}
 .kefu{
 	margin-top:10px;
 	font-size:14px;
@@ -899,6 +908,72 @@ a{
 	background: #E6E6E6;
 	right:0px;
 	transition: all .1s;
+}
+.gouwuche_right1{
+	position:absolute;
+	width:220px;
+	height:100vh;
+	background:#E6E6E6;
+}
+.gouwuche_right2{
+	position:absolute;
+	width:220px;
+	height:100vh;
+	background:#393939;
+}
+.chexiao{
+	position:absolute;
+	color:white;
+	cursor:pointer;
+}
+.lanonloads{
+	display:none;
+	position:absolute; 
+	width:60px; 
+	left:calc(50% - 30px);
+}
+.jiesuan{
+	margin-top:30px;
+	height:40px;
+	background:red;
+	color:white;
+	text-align:center;
+	line-height:40px;
+}
+.gouwuche_right3,.gouwuche_right4{
+	position:absolute;
+	width:220px;
+	height:100vh;
+	background:#393939;
+}
+.chakan{
+	white-space:nowrap;
+	position:absolute;
+	margin-left:150px;
+	color:black;
+	top:0;
+}
+.zhongjiu_goods{
+	background:white;
+	padding:0 15px;
+	width:190px
+}
+.s_sum{
+	width:20px;
+	height:20px;
+	background:red;
+	color:white;
+	text-align:center;
+	line-height:20px;
+	font-size:12px;
+	white-space:nowrap;
+	position:absolute;
+	left:100px;
+	top:8px;
+}
+.titalprice{
+	float:right; 
+	margin-top:8px;
 }
 .sum:hover,.sub:hover{
 	color:red;

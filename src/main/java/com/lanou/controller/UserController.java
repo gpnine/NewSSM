@@ -96,6 +96,7 @@ public class UserController {
             Wine wi = userService.selectCar(w);
             cars.get(i).setWines(wi);
         }
+        System.out.println("============="+cars);
         session.setAttribute("cars", cars);
 
 

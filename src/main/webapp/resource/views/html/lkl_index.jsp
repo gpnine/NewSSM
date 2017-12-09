@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <html lang="en">
 <head>
     <%
@@ -116,20 +117,22 @@
                 <option value="商品">商品</option>
                 <option value="店铺">店铺</option>
             </select>
-            <input type="text" name="search" id="search" value="" placeholder="西风"/>
-            <button>搜索</button>
+            <form action="<%=basePath%>/resource/views/html/111.jsp">
+                <input type="text" name="name" id="search" value="" placeholder="西风"/>
+                <button>搜索</button>
+            </form>
         </div>
         <div class="list">
-            <a href="">西风</a>
-            <a href="">青稞酒</a>
-            <a href="">洋酒</a>
-            <a href="">习酒</a>
-            <a href="">小糊涂仙</a>
-            <a href="">酒鬼酒</a>
-            <a href="">张裕</a>
-            <a href="">拉菲</a>
-            <a href="">董酒</a>
-            <a href="">华夏长城</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=西风">西风</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=青稞酒">青稞酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=洋酒">洋酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=习酒">习酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=小糊涂仙">小糊涂仙</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=酒鬼酒">酒鬼酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=张裕">张裕</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=拉菲">拉菲</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=董酒">董酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=华夏长城">华夏长城</a>
         </div>
     </div>
     <a href="" class="present">
@@ -142,9 +145,9 @@
 <div id="" style="position: relative;width:1190px;margin:0 auto;">
     <div class="side_nav_slider_left"></div>
     <div class="small_banner">
-        <a href="http://pro.zhongjiu.cn/20151210/2wly.html" target="_blank"><img class="lazyload"
+        <a href="http://pro.zhongjiu.cn/20151210/2wly.html" target="_blank"><img class="lazyload1"
                                                                                  src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201709121117114935610.jpg"/></a>
-        <a href="http://pro.zhongjiu.cn//20170814/augustmeet.html" target="_blank"><img class="lazyload"
+        <a href="http://pro.zhongjiu.cn//20170814/augustmeet.html" target="_blank"><img class="lazyload2"
                                                                                         src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201708221047305409910.jpg"/></a>
     </div>
     <div class="side-nav">
@@ -156,35 +159,35 @@
     <span class="cate-all"><img src="http://www.zhongjiu.cn/Areas/Web/Images/HIMALL_admin11_04_03.png" alt=""><a
             href="###">全部商品分类</a></span>
     <span class="item"><a class="item_one" href="###">首页</a></span>
-    <span class="item"><a href="###">白酒专区</a></span>
-    <span class="item"><a href="###">红洋酒专区</a></span>
-    <span class="item"><a href="###">天佑德青稞酒</a></span>
-    <span class="item"><a href="###">精品推荐</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">白酒专区</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">红洋酒专区</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">天佑德青稞酒</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">精品推荐</a></span>
 </div>
 <div class="slider">
     <ul class="fade">
         <li>
-            <a class="lunbotu0" href="###">
+            <a class="lunbotu0" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu1" href="###">
+            <a class="lunbotu1" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu2" href="###">
+            <a class="lunbotu2" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu3" href="###">
+            <a class="lunbotu3" href="<%=basePath%>/resource/views/zhongjiu-Shopping-maotai/html/zhongjiu-Shopping-maotai.html">
             </a>
         </li>
         <li>
-            <a class="lunbotu4" href="###">
+            <a class="lunbotu4" href="<%=basePath%>/resource/views/zhongjiu-Shopping-wuliangye/html/zhongjiu-Shopping-wuliangye.html">
             </a>
         </li>
         <li>
-            <a class="lunbotu5" href="###">
+            <a class="lunbotu5" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
     </ul>
@@ -344,7 +347,7 @@
                         </div>
 
                         <div class="pr help">
-                            <a class="gengduo  help_aa" href="">更多&gt;&gt;</a>
+                            <a class="gengduo  help_aa" href="<%=basePath%>/resource/views/bai/bai_html/04.Ljp_FirstPage_All.jsp">更多&gt;&gt;</a>
                             <div class="pa help_pa"></div>
                         </div>
                     </div>
@@ -638,7 +641,6 @@
     </li>
 </ol>
 
-
 <!--底部-->
 <footer>
     <div class="zhengpin_box">
@@ -787,27 +789,26 @@
     <div class="gouwuche_left">
         <ol class="gouwuche_left_content">
             <li class="gouwuche_left_content_first pr">
-                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i
-                        class="iconfont icon-gerentouxiang "></i></a>
+                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i  class="iconfont icon-gerentouxiang "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>个人中心</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i id="rr" class="iconfont icon-gouwuche "></i></a>
+                <a class="a" href="###"><i id="end"></i><i class="iconfont icon-gouwuche paowuxian"></i></a>
                 <span style="width:22px;display: block;margin-left:9px;">购物车</span>
-                <span>0</span>
+                <span class="gouwushuliang">0</span>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-hongbao "></i></a>
+                <a class="a" href="###"><i  class="iconfont icon-hongbao "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>资产中心</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-xiangqu "></i></a>
+                <a class="a" href="###"><i  class="iconfont icon-xiangqu "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>收藏商品</span>
                     <div class="sanjiaoxing pa"></div>
@@ -818,7 +819,7 @@
                     <span>浏览历史</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
-                <a class="a" href="###"><i class="iconfont icon-shizhong "></i></a>
+                <a class="a" href="###"><i  class="iconfont icon-shizhong "></i></a>
             </li>
             <li>
                 <div class="kefu pr">
@@ -833,16 +834,99 @@
         </ol>
     </div>
     <div class="gouwuche_right">
+        <div class='gouwuche_right1 gouwuche_right_right'>
+            <div style='white-space:nowrap;padding:0 15px;'>
+                <input type='checkbox' checked='checked' id='inp1'/><label for='inp1' style='white-space:nowrap'>&nbsp;全选</label>
+            </div>
+            <!--查看全部-->
+            <a class='chakan' href=''>查看全部</a>
+            <div class='zhongjiu_goods' style="padding:0 15px;">
+                <div>
+                    <input type='checkbox'  checked='checked' class='inpcounts'/>
+                    <span>中酒自营</span>
+                    <span class='prices' style='float:right'>0</span>
+                </div>
 
-    </div>
+                <!--改动区域***********************************************************-->
+
+                <ol class='ols'>
+                    <!--购物车内添加物品-->
+                    <c:forEach items="${cars}" var="item">
+                        <li style='position:relative;margin-bottom:5px;'>
+                            <input type='checkbox' checked='checked' class='inpcount'/>
+                            <!--添加tup路径-->
+                            <img style='vertical-align:middle;width:40px;' src="<%=basePath%>/resource/views/img/${item.getWines().getWineImg1()}"/>
+                            <!--添加物品数量-->
+                            <div class='s_sum' style="width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;">${item.getCounts()}</div>
+                            <!--添加价格-->
+                            <span class='titalprice' style="float:right; margin-top:8px;font-size: 13px;color: gray">${item.getWines().getWinePrice()}</span>
+                        </li>
+                    </c:forEach>
+                </ol>
+
+                <!--改动区域***********************************************************-->
+            </div>
+            <div style='position: absolute;bottom:0;padding:10px 15px;width:190px'>
+                <div style='float:left'>
+                    <span>已选</span>
+                    <span class='counts'>0</span>
+                    <span>件</span>
+                </div>
+                <div style='float:right ;color:red;'>
+                    <span>￥</span>
+                    <span class='prices'>0</span>
+                </div>
+                <div class="jiesuan">购物车结算</div>
+            </div>
+        </div>
+        <div class='gouwuche_right2  gouwuche_right_right'>
+            <ol style='padding:0 15px'>
+                <li>
+                    <div class='chexiao' >&gt;&gt;</div>
+                    <div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div>
+                </li>
+                <li>
+                    <div style='width:190px;height:50px;background:white;padding:10px 0;'>
+                        <ol>
+                            <li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'>
+                                <div>0</div>
+                                <div style='white-space:nowrap;'>我的积分</div>
+                            </li>
+                            <li style='float:right;width:84px;height:50px;text-align:center'>
+                                <div>0</div>
+                                <div style='white-space:nowrap;'>优惠劵</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li style='white-space:nowrap; color:white;'>已领取的优惠劵</li>
+            </ol>
+            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+        </div>
+        <div class='gouwuche_right3  gouwuche_right_right'>
+            <div style='padding:5px 15px;'>
+                <div class='chexiao'>&gt;&gt;</div>
+                <div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div>
+            </div>
+            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+        </div>
+        <div class='gouwuche_right4  gouwuche_right_right'>
+            <div style='padding:5px 15px;'>
+                <div class='chexiao'>&gt;&gt;</div>
+                <div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div>
+            </div>
+            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+        </div>
 </div>
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="<%=basePath%>/resource/views/js/02.Ljp_info.js"></script>
 <script type="text/javascript" src="<%=basePath%>/resource/views/js/lkl_index.js">
 
 </script>
 <script>
-    if(${user1.userPhone!=null}){
+    //用户登录
+    if (${user1.userPhone!=null}) {
         $(".login_in").html(${user1.userPhone});
         $(".register_in").html($("<a style='color: grey;height: 12px;margin:0' href='<%=basePath%>/user/exitUser.do' class='register_in'>[退出]</a>"));
     }
@@ -863,7 +947,15 @@
         async: true,
         success: function (data) {
             for (j in data) {
-                $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'><img src='http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201609280918332737800.png' alt=''>" + data[j].shopName + "</a><a class='sidenav-list_two  sange"+j+"' href='#'><div class='children-nav'><div class='children-nav-left children-nav-left_" + j + "'></div></div></li>").appendTo($(".sidenav-list"));
+                $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'>"
+                    + "<img style='width=12px;height=20px' class='iconTu' src='<%=basePath%>/resource/views/img/bzimg/xiao"
+                    + j + ".png' alt=''>"
+                    + data[j].shopName + "</a><a class='sidenav-list_two sange"
+                    + j + "' style='display:block;' href='#'></a><div class='children-nav'>"
+                    + "<div class='children-nav-left children-nav-left_"
+                    + j + "'></div><div class='children-right pa'><h5>推荐品牌</h5><a>"
+                    + "<img class='tuijianTu' src='<%=basePath%>/resource/views/img/bzimg/bz"
+                    + j + ".jpg'/></a></div></div></li>").appendTo($(".sidenav-list"));
                 switch (data[j].shopId) {
                     case 1:
                         $("<span>" + data[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_10'></ul>").appendTo($(".children-nav-left_0"));
@@ -982,12 +1074,12 @@
                         break;
                 }
             }
-//            $("<a>茅台</a><a> 五粮液 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>天佑德</a>").appendTo(".sange0");
-//            $("<a>拉菲</a><a> 张裕 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>马克斯威</a>").appendTo(".sange1");
-//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>马爹利</a><a> 人头马 </a><a>芝华士</a>").appendTo(".sange2");
-//            $("<a>尧喝货</a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'> 唐宋 </a><a>塔牌</a>").appendTo(".sange3");
-//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>五粮液五星级</a>").appendTo(".sange4");
-//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>茅台</a><a> 拉菲 </a><a> 五粮液 </a><a>张裕</a>").appendTo(".sange5");
+            $("<div class='Allsange'><a>茅台</a><a> 五粮液 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>天佑德</a></div>").appendTo(".sange0");
+            $("<div class='Allsange'><a>拉菲</a><a> 张裕 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马克斯威</a></div>").appendTo(".sange1");
+            $("<div class='Allsange'><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马爹利</a><a> 人头马 </a><a>芝华士</a></div>").appendTo(".sange2");
+            $("<div class='Allsange'><a>尧喝货</a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'> 唐宋 </a><a>塔牌</a></div>").appendTo(".sange3");
+            $("<div class='Allsange'><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>五粮液五星级</a></div>").appendTo(".sange4");
+            $("<div class='Allsange'><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>茅台</a><a> 拉菲 </a><a> 五粮液 </a><a>张裕</a></div>").appendTo(".sange5");
 
         }
     })
@@ -1030,7 +1122,7 @@
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_0"));
@@ -1046,7 +1138,7 @@
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_1"));
@@ -1062,7 +1154,7 @@
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_2"));
@@ -1141,7 +1233,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineId="
-                    + data[i].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol2_0"));
@@ -1159,7 +1251,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineId="
-                    + data[i].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol2_1"));
@@ -1238,7 +1330,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_0"));
@@ -1255,7 +1347,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_1"));
@@ -1317,7 +1409,7 @@
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_3"));
@@ -1334,7 +1426,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_0"));
@@ -1351,7 +1443,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_1"));
@@ -1422,6 +1514,170 @@
             }
         }
     })
+
+</script>
+<script>
+    $("<ol style='padding:0 15px'><li><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div></li><li><div style='width:190px;height:50px;background:white;padding:10px 0;'><ol><li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'><div>0</div><div style='white-space:nowrap;'>我的积分</div></li><li style='float:right;width:84px;height:50px;text-align:center'><div>0</div><div style='white-space:nowrap;'>优惠劵</div></li><ol></div></li><li style='white-space:nowrap; color:white;'>已领取的优惠劵</li></ol> <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right2"));
+    $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right3"));
+    $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right4"));
+
+    $.ajax({
+        type: "get",
+        url: "<%=basePath%>/wine/findCars.do",
+        async: true,
+        dataType: "json",
+        data: {
+            userPhone:${user1.userPhone}
+        },
+        success: function(data) {
+            console.log(data);
+            if(data.shopId =="") {
+//                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
+                $("#inp1").click(function() {
+                    $(".inpcounts").prop("checked", this.checked);
+                    $(".inpcount").prop("checked", this.checked);
+                    change();
+                })
+                $(".chakan").mouseover(function() {
+                    $(".chakan").css("color", "red");
+                })
+                $(".chakan").mouseout(function() {
+                    $(".chakan").css("color", "black");
+                })
+            } else {
+                $("#inp1").click(function() {
+                    $(".inpcounts").prop("checked", this.checked);
+                    $(".inpcount").prop("checked", this.checked);
+                    change();
+                })
+                $(".chakan").mouseover(function() {
+                    $(".chakan").css("color", "red");
+                })
+                $(".chakan").mouseout(function() {
+                    $(".chakan").css("color", "black");
+                })
+
+
+
+
+
+                //获取后台数据进行创建购物车商品
+                $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
+                console.log(data);
+                console.log(data.shopId);
+//                    for(i in data){
+//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='"+data[i].shopImg+"'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+data[i].parentId+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+data[i].shopId+"</span></li>").appendTo($(".ols"));
+//                    }
+
+                $(".gouwushuliang").html(function(){
+                    var countss = 0;
+                    console.log($(".inpcount").length)
+                    $(".inpcount").siblings(".s_sum").each(function(index, el) {
+                        countss += parseInt(el.innerHTML);
+                    })
+                    return countss;
+
+                })
+//                    $(".btn2").click(function(){
+//                        //判断购物车中有没有此商品
+//                        //有 查到此产品，在数量上加上新添加的数量
+//                        //查询购物车数据库
+//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='img/0.jpg'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+$('.num').html()+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+$('.pri').html()+"</span></li>").appendTo($(".ols"));
+//
+//                        $(".gouwushuliang").html(function(){
+//                            var countss = 0;
+//                            console.log($(".inpcount").length)
+//                            $(".inpcount").siblings(".s_sum").each(function(index, el) {
+//                                countss += parseInt(el.innerHTML);
+//                            })
+//                            return countss;
+//
+//                        })
+//                        change();
+//
+//                    })
+
+
+
+
+
+
+
+
+                $(".inpcounts").click(function() {
+                    $("#inp1").prop("checked", this.checked);
+                    $(".inpcount").prop("checked", this.checked);
+                    change();
+                })
+
+                $(".inpcount").click(function() {
+                    $(".inpcounts").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
+                    $("#inp1").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
+                    change();
+                })
+                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></div>").appendTo($(".gouwuche_right1"));
+                //				prices总价 titalprice单个商品的总价 s_sum 每个商品的数量
+                function change() {
+                    $(".counts").html(function() {
+                        var counts = 0;
+                        $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                            counts += parseInt(el.innerHTML);
+                        })
+                        return counts;
+                    })
+                    $(".prices").html(function() {
+                        var countss = 0;
+                        var arrs=[];
+                        var arrss=[];
+
+                        $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+                            arrs.push(el.innerHTML);
+
+                        })
+                        console.log(arrs);
+                        $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                            arrss.push(el.innerHTML);
+
+                            countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+                        })
+                        console.log("+++++++++"+countss);
+                        return countss;
+                    })
+
+
+
+                }
+                change();
+            }
+        }
+    });
+
+
+
+
+
+    $(".prices").html(function() {
+        var countss = 0;
+        var arrs=[];
+        var arrss=[];
+        var countss = 0;
+        $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+            arrs.push(el.innerHTML);
+
+        })
+        console.log(arrs);
+        $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+            arrss.push(el.innerHTML);
+
+            countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+        })
+        console.log("+++++++++"+countss);
+        return countss;
+    })
+
+
 
 </script>
 </html>
