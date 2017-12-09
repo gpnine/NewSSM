@@ -116,20 +116,22 @@
                 <option value="商品">商品</option>
                 <option value="店铺">店铺</option>
             </select>
-            <input type="text" name="search" id="search" value="" placeholder="西风"/>
-            <button>搜索</button>
+            <form action="<%=basePath%>/resource/views/html/111.jsp">
+                <input type="text" name="name" id="search" value="" placeholder="西风"/>
+                <button>搜索</button>
+            </form>
         </div>
         <div class="list">
-            <a href="">西风</a>
-            <a href="">青稞酒</a>
-            <a href="">洋酒</a>
-            <a href="">习酒</a>
-            <a href="">小糊涂仙</a>
-            <a href="">酒鬼酒</a>
-            <a href="">张裕</a>
-            <a href="">拉菲</a>
-            <a href="">董酒</a>
-            <a href="">华夏长城</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=西风">西风</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=青稞酒">青稞酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=洋酒">洋酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=习酒">习酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=小糊涂仙">小糊涂仙</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=酒鬼酒">酒鬼酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=张裕">张裕</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=拉菲">拉菲</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=董酒">董酒</a>
+            <a href="<%=basePath%>/resource/views/html/111.jsp?name=华夏长城">华夏长城</a>
         </div>
     </div>
     <a href="" class="present">
@@ -142,9 +144,9 @@
 <div id="" style="position: relative;width:1190px;margin:0 auto;">
     <div class="side_nav_slider_left"></div>
     <div class="small_banner">
-        <a href="http://pro.zhongjiu.cn/20151210/2wly.html" target="_blank"><img class="lazyload"
+        <a href="http://pro.zhongjiu.cn/20151210/2wly.html" target="_blank"><img class="lazyload1"
                                                                                  src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201709121117114935610.jpg"/></a>
-        <a href="http://pro.zhongjiu.cn//20170814/augustmeet.html" target="_blank"><img class="lazyload"
+        <a href="http://pro.zhongjiu.cn//20170814/augustmeet.html" target="_blank"><img class="lazyload2"
                                                                                         src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201708221047305409910.jpg"/></a>
     </div>
     <div class="side-nav">
@@ -156,35 +158,35 @@
     <span class="cate-all"><img src="http://www.zhongjiu.cn/Areas/Web/Images/HIMALL_admin11_04_03.png" alt=""><a
             href="###">全部商品分类</a></span>
     <span class="item"><a class="item_one" href="###">首页</a></span>
-    <span class="item"><a href="###">白酒专区</a></span>
-    <span class="item"><a href="###">红洋酒专区</a></span>
-    <span class="item"><a href="###">天佑德青稞酒</a></span>
-    <span class="item"><a href="###">精品推荐</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">白酒专区</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">红洋酒专区</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">天佑德青稞酒</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/111.jsp">精品推荐</a></span>
 </div>
 <div class="slider">
     <ul class="fade">
         <li>
-            <a class="lunbotu0" href="###">
+            <a class="lunbotu0" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu1" href="###">
+            <a class="lunbotu1" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu2" href="###">
+            <a class="lunbotu2" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu3" href="###">
+            <a class="lunbotu3" href="<%=basePath%>/resource/views/zhongjiu-Shopping-maotai/html/zhongjiu-Shopping-maotai.html">
             </a>
         </li>
         <li>
-            <a class="lunbotu4" href="###">
+            <a class="lunbotu4" href="<%=basePath%>/resource/views/zhongjiu-Shopping-wuliangye/html/zhongjiu-Shopping-wuliangye.html">
             </a>
         </li>
         <li>
-            <a class="lunbotu5" href="###">
+            <a class="lunbotu5" href="<%=basePath%>/resource/views/html/111.jsp">
             </a>
         </li>
     </ul>
@@ -344,7 +346,7 @@
                         </div>
 
                         <div class="pr help">
-                            <a class="gengduo  help_aa" href="">更多&gt;&gt;</a>
+                            <a class="gengduo  help_aa" href="<%=basePath%>/resource/views/bai/bai_html/04.Ljp_FirstPage_All.jsp">更多&gt;&gt;</a>
                             <div class="pa help_pa"></div>
                         </div>
                     </div>
@@ -842,7 +844,8 @@
 
 </script>
 <script>
-    if(${user1.userPhone!=null}){
+    //用户登录
+    if (${user1.userPhone!=null}) {
         $(".login_in").html(${user1.userPhone});
         $(".register_in").html($("<a style='color: grey;height: 12px;margin:0' href='<%=basePath%>/user/exitUser.do' class='register_in'>[退出]</a>"));
     }
@@ -863,7 +866,15 @@
         async: true,
         success: function (data) {
             for (j in data) {
-                $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'><img src='http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201609280918332737800.png' alt=''>" + data[j].shopName + "</a><a class='sidenav-list_two  sange"+j+"' href='#'><div class='children-nav'><div class='children-nav-left children-nav-left_" + j + "'></div></div></li>").appendTo($(".sidenav-list"));
+                $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'>"
+                    + "<img style='width=12px;height=20px' class='iconTu' src='<%=basePath%>/resource/views/img/bzimg/xiao"
+                    + j + ".png' alt=''>"
+                    + data[j].shopName + "</a><a class='sidenav-list_two sange"
+                    + j + "' style='display:block;' href='#'></a><div class='children-nav'>"
+                    + "<div class='children-nav-left children-nav-left_"
+                    + j + "'></div><div class='children-right pa'><h5>推荐品牌</h5><a>"
+                    + "<img class='tuijianTu' src='<%=basePath%>/resource/views/img/bzimg/bz"
+                    + j + ".jpg'/></a></div></div></li>").appendTo($(".sidenav-list"));
                 switch (data[j].shopId) {
                     case 1:
                         $("<span>" + data[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_10'></ul>").appendTo($(".children-nav-left_0"));
@@ -982,12 +993,12 @@
                         break;
                 }
             }
-//            $("<a>茅台</a><a> 五粮液 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>天佑德</a>").appendTo(".sange0");
-//            $("<a>拉菲</a><a> 张裕 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>马克斯威</a>").appendTo(".sange1");
-//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>马爹利</a><a> 人头马 </a><a>芝华士</a>").appendTo(".sange2");
-//            $("<a>尧喝货</a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'> 唐宋 </a><a>塔牌</a>").appendTo(".sange3");
-//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>五粮液五星级</a>").appendTo(".sange4");
-//            $("<a style='color: #323b42;background: #FFFFFF;border-radius: 2px;'>茅台</a><a> 拉菲 </a><a> 五粮液 </a><a>张裕</a>").appendTo(".sange5");
+            $("<div class='Allsange'><a>茅台</a><a> 五粮液 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>天佑德</a></div>").appendTo(".sange0");
+            $("<div class='Allsange'><a>拉菲</a><a> 张裕 </a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马克斯威</a></div>").appendTo(".sange1");
+            $("<div class='Allsange'><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马爹利</a><a> 人头马 </a><a>芝华士</a></div>").appendTo(".sange2");
+            $("<div class='Allsange'><a>尧喝货</a><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'> 唐宋 </a><a>塔牌</a></div>").appendTo(".sange3");
+            $("<div class='Allsange'><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>五粮液五星级</a></div>").appendTo(".sange4");
+            $("<div class='Allsange'><a style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>茅台</a><a> 拉菲 </a><a> 五粮液 </a><a>张裕</a></div>").appendTo(".sange5");
 
         }
     })
@@ -1030,7 +1041,7 @@
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_0"));
@@ -1046,7 +1057,7 @@
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_1"));
@@ -1062,7 +1073,7 @@
             success: function (data) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[0].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[0].wineImg1 + "'/><p class='chang'>"
                     + data[0].wineName + "</p><p style='color:red'>￥"
                     + data[0].winePrice + "</p></a></li>").appendTo($(".ol1_2"));
@@ -1141,7 +1152,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineId="
-                    + data[i].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol2_0"));
@@ -1159,7 +1170,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineId="
-                    + data[i].wid + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol2_1"));
@@ -1238,7 +1249,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_0"));
@@ -1255,7 +1266,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_1"));
@@ -1317,7 +1328,7 @@
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + data[0].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_3"));
@@ -1334,7 +1345,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_0"));
@@ -1351,7 +1362,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:160px;background-color:lightgray;'"
+                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_1"));

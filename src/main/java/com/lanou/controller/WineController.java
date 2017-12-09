@@ -38,7 +38,9 @@ public class WineController {
     @RequestMapping("/findLike.do")
     @ResponseBody
     public List<Wine> findLike(String likeName) {
+        System.out.println(likeName);
         List<Wine> wines = wineService.findLike(likeName);
+        System.out.println(wines);
         return wines;
     }
 
