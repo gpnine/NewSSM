@@ -383,7 +383,6 @@ pageEncoding="UTF-8"%>
 
 						<ol class='ols'>
 							<!--购物车内添加物品-->
-
 						<c:forEach items="${cars}" var="item">
 							<li style='position:relative;margin-bottom:5px;'>
 								<input type='checkbox' checked='checked' class='inpcount'/>

@@ -40,8 +40,8 @@
 		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
 	</resultMap>
 
-	<select id="findCars" parameterType="Car" resultMap="carResult">
-		select * from zhongjiu_car
+	<select id="findCars" parameterType="string" resultMap="carResult">
+		select * from zhongjiu_car where userPhone = #{userPhone}
 	</select>
 
 	<select id="selectCar" parameterType="int" resultMap="wineResult">

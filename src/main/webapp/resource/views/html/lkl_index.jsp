@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <html lang="en">
 <head>
     <%
@@ -640,7 +641,6 @@
     </li>
 </ol>
 
-
 <!--底部-->
 <footer>
     <div class="zhengpin_box">
@@ -789,27 +789,26 @@
     <div class="gouwuche_left">
         <ol class="gouwuche_left_content">
             <li class="gouwuche_left_content_first pr">
-                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i
-                        class="iconfont icon-gerentouxiang "></i></a>
+                <a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i  class="iconfont icon-gerentouxiang "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>个人中心</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i id="rr" class="iconfont icon-gouwuche "></i></a>
+                <a class="a" href="###"><i id="end"></i><i class="iconfont icon-gouwuche paowuxian"></i></a>
                 <span style="width:22px;display: block;margin-left:9px;">购物车</span>
-                <span>0</span>
+                <span class="gouwushuliang">0</span>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-hongbao "></i></a>
+                <a class="a" href="###"><i  class="iconfont icon-hongbao "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>资产中心</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-xiangqu "></i></a>
+                <a class="a" href="###"><i  class="iconfont icon-xiangqu "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>收藏商品</span>
                     <div class="sanjiaoxing pa"></div>
@@ -820,7 +819,7 @@
                     <span>浏览历史</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
-                <a class="a" href="###"><i class="iconfont icon-shizhong "></i></a>
+                <a class="a" href="###"><i  class="iconfont icon-shizhong "></i></a>
             </li>
             <li>
                 <div class="kefu pr">
@@ -835,11 +834,93 @@
         </ol>
     </div>
     <div class="gouwuche_right">
+        <div class='gouwuche_right1 gouwuche_right_right'>
+            <div style='white-space:nowrap;padding:0 15px;'>
+                <input type='checkbox' checked='checked' id='inp1'/><label for='inp1' style='white-space:nowrap'>&nbsp;全选</label>
+            </div>
+            <!--查看全部-->
+            <a class='chakan' href=''>查看全部</a>
+            <div class='zhongjiu_goods' style="padding:0 15px;">
+                <div>
+                    <input type='checkbox'  checked='checked' class='inpcounts'/>
+                    <span>中酒自营</span>
+                    <span class='prices' style='float:right'>0</span>
+                </div>
 
-    </div>
+                <!--改动区域***********************************************************-->
+
+                <ol class='ols'>
+                    <!--购物车内添加物品-->
+                    <c:forEach items="${cars}" var="item">
+                        <li style='position:relative;margin-bottom:5px;'>
+                            <input type='checkbox' checked='checked' class='inpcount'/>
+                            <!--添加tup路径-->
+                            <img style='vertical-align:middle;width:40px;' src="<%=basePath%>/resource/views/img/${item.getWines().getWineImg1()}"/>
+                            <!--添加物品数量-->
+                            <div class='s_sum' style="width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;">${item.getCounts()}</div>
+                            <!--添加价格-->
+                            <span class='titalprice' style="float:right; margin-top:8px;font-size: 13px;color: gray">${item.getWines().getWinePrice()}</span>
+                        </li>
+                    </c:forEach>
+                </ol>
+
+                <!--改动区域***********************************************************-->
+            </div>
+            <div style='position: absolute;bottom:0;padding:10px 15px;width:190px'>
+                <div style='float:left'>
+                    <span>已选</span>
+                    <span class='counts'>0</span>
+                    <span>件</span>
+                </div>
+                <div style='float:right ;color:red;'>
+                    <span>￥</span>
+                    <span class='prices'>0</span>
+                </div>
+                <div class="jiesuan">购物车结算</div>
+            </div>
+        </div>
+        <div class='gouwuche_right2  gouwuche_right_right'>
+            <ol style='padding:0 15px'>
+                <li>
+                    <div class='chexiao' >&gt;&gt;</div>
+                    <div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div>
+                </li>
+                <li>
+                    <div style='width:190px;height:50px;background:white;padding:10px 0;'>
+                        <ol>
+                            <li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'>
+                                <div>0</div>
+                                <div style='white-space:nowrap;'>我的积分</div>
+                            </li>
+                            <li style='float:right;width:84px;height:50px;text-align:center'>
+                                <div>0</div>
+                                <div style='white-space:nowrap;'>优惠劵</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li style='white-space:nowrap; color:white;'>已领取的优惠劵</li>
+            </ol>
+            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+        </div>
+        <div class='gouwuche_right3  gouwuche_right_right'>
+            <div style='padding:5px 15px;'>
+                <div class='chexiao'>&gt;&gt;</div>
+                <div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div>
+            </div>
+            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+        </div>
+        <div class='gouwuche_right4  gouwuche_right_right'>
+            <div style='padding:5px 15px;'>
+                <div class='chexiao'>&gt;&gt;</div>
+                <div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div>
+            </div>
+            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
+        </div>
 </div>
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="<%=basePath%>/resource/views/js/02.Ljp_info.js"></script>
 <script type="text/javascript" src="<%=basePath%>/resource/views/js/lkl_index.js">
 
 </script>
@@ -1433,6 +1514,170 @@
             }
         }
     })
+
+</script>
+<script>
+    $("<ol style='padding:0 15px'><li><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div></li><li><div style='width:190px;height:50px;background:white;padding:10px 0;'><ol><li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'><div>0</div><div style='white-space:nowrap;'>我的积分</div></li><li style='float:right;width:84px;height:50px;text-align:center'><div>0</div><div style='white-space:nowrap;'>优惠劵</div></li><ol></div></li><li style='white-space:nowrap; color:white;'>已领取的优惠劵</li></ol> <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right2"));
+    $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right3"));
+    $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right4"));
+
+    $.ajax({
+        type: "get",
+        url: "<%=basePath%>/wine/findCars.do",
+        async: true,
+        dataType: "json",
+        data: {
+            userPhone:${user1.userPhone}
+        },
+        success: function(data) {
+            console.log(data);
+            if(data.shopId =="") {
+//                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
+                $("#inp1").click(function() {
+                    $(".inpcounts").prop("checked", this.checked);
+                    $(".inpcount").prop("checked", this.checked);
+                    change();
+                })
+                $(".chakan").mouseover(function() {
+                    $(".chakan").css("color", "red");
+                })
+                $(".chakan").mouseout(function() {
+                    $(".chakan").css("color", "black");
+                })
+            } else {
+                $("#inp1").click(function() {
+                    $(".inpcounts").prop("checked", this.checked);
+                    $(".inpcount").prop("checked", this.checked);
+                    change();
+                })
+                $(".chakan").mouseover(function() {
+                    $(".chakan").css("color", "red");
+                })
+                $(".chakan").mouseout(function() {
+                    $(".chakan").css("color", "black");
+                })
+
+
+
+
+
+                //获取后台数据进行创建购物车商品
+                $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
+                console.log(data);
+                console.log(data.shopId);
+//                    for(i in data){
+//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='"+data[i].shopImg+"'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+data[i].parentId+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+data[i].shopId+"</span></li>").appendTo($(".ols"));
+//                    }
+
+                $(".gouwushuliang").html(function(){
+                    var countss = 0;
+                    console.log($(".inpcount").length)
+                    $(".inpcount").siblings(".s_sum").each(function(index, el) {
+                        countss += parseInt(el.innerHTML);
+                    })
+                    return countss;
+
+                })
+//                    $(".btn2").click(function(){
+//                        //判断购物车中有没有此商品
+//                        //有 查到此产品，在数量上加上新添加的数量
+//                        //查询购物车数据库
+//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='img/0.jpg'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+$('.num').html()+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+$('.pri').html()+"</span></li>").appendTo($(".ols"));
+//
+//                        $(".gouwushuliang").html(function(){
+//                            var countss = 0;
+//                            console.log($(".inpcount").length)
+//                            $(".inpcount").siblings(".s_sum").each(function(index, el) {
+//                                countss += parseInt(el.innerHTML);
+//                            })
+//                            return countss;
+//
+//                        })
+//                        change();
+//
+//                    })
+
+
+
+
+
+
+
+
+                $(".inpcounts").click(function() {
+                    $("#inp1").prop("checked", this.checked);
+                    $(".inpcount").prop("checked", this.checked);
+                    change();
+                })
+
+                $(".inpcount").click(function() {
+                    $(".inpcounts").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
+                    $("#inp1").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
+                    change();
+                })
+                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></div>").appendTo($(".gouwuche_right1"));
+                //				prices总价 titalprice单个商品的总价 s_sum 每个商品的数量
+                function change() {
+                    $(".counts").html(function() {
+                        var counts = 0;
+                        $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                            counts += parseInt(el.innerHTML);
+                        })
+                        return counts;
+                    })
+                    $(".prices").html(function() {
+                        var countss = 0;
+                        var arrs=[];
+                        var arrss=[];
+
+                        $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+                            arrs.push(el.innerHTML);
+
+                        })
+                        console.log(arrs);
+                        $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+                            arrss.push(el.innerHTML);
+
+                            countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+                        })
+                        console.log("+++++++++"+countss);
+                        return countss;
+                    })
+
+
+
+                }
+                change();
+            }
+        }
+    });
+
+
+
+
+
+    $(".prices").html(function() {
+        var countss = 0;
+        var arrs=[];
+        var arrss=[];
+        var countss = 0;
+        $(".inpcount:checked").siblings(".titalprice").each(function(index, el) {
+
+            arrs.push(el.innerHTML);
+
+        })
+        console.log(arrs);
+        $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
+            arrss.push(el.innerHTML);
+
+            countss+=parseInt(arrs[index])*parseInt(arrss[index]);
+        })
+        console.log("+++++++++"+countss);
+        return countss;
+    })
+
+
 
 </script>
 </html>
