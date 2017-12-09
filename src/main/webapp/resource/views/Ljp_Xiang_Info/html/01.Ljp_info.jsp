@@ -27,7 +27,7 @@ pageEncoding="UTF-8"%>
 				<div class="main_name">
 					<span><a href="">全部</a></span>
 					>
-					<span><a href="">葡萄酒${wineInfo.getWId()}</a></span>
+					<span><a href="">酒</a></span>
 					>
 					<span><a href="">${wineInfo.getWineBrand()}</a></span>
 					>
@@ -157,12 +157,14 @@ pageEncoding="UTF-8"%>
 
 						<c:forEach items="${wineList}" var="item">
 							<li>
-								<img class="sell_pic" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}"/>
-								<a class='sell_a' href=''><p class="sell_hot_name">${item.getWineName()}</p></a>
-								<p class="sell_num">
-									<span class="span1"><%=i++%></span>
-									<span class="span2">热销<span class="sell_amount">6180</span>件</span>
-								</p>
+								<a href="<%=basePath%>/wine/goods.do?wid=${item.getWId()}">
+									<img class="sell_pic" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}"/>
+									<a class='sell_a' href=''><p class="sell_hot_name">${item.getWineName()}</p></a>
+									<p class="sell_num">
+										<span class="span1"><%=i++%></span>
+										<span class="span2">热销<span class="sell_amount">6180</span>件</span>
+									</p>
+								</a>
 							</li>
 						</c:forEach>
 
@@ -173,12 +175,14 @@ pageEncoding="UTF-8"%>
 
 						<c:forEach items="${wineList1}" var="item">
 							<li>
-								<img class="concern_pic" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}">
-								<a class='concern_a' href=''><p class="concern_hot_name">${item.getWineName()}</p></a>
-								<p class="concern_num">
-									<span class="span3"><%=j++%></span>
-									<span class="span4">关注<span class="concern_amount">60</span>次</span>
-								</p>
+								<a href="<%=basePath%>/wine/goods.do?wid=${item.getWId()}">
+									<img class="concern_pic" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}">
+									<a class='concern_a' href=''><p class="concern_hot_name">${item.getWineName()}</p></a>
+									<p class="concern_num">
+										<span class="span3"><%=j++%></span>
+										<span class="span4">关注<span class="concern_amount">60</span>次</span>
+									</p>
+								</a>
 							</li>
 						</c:forEach>
 
@@ -218,11 +222,13 @@ pageEncoding="UTF-8"%>
 
 					<c:forEach items="${wineList2}" var="item">
 						<a href="">
-							<li class="part_two_pic">
-								<img class="part_two_img" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}"/>
-								<p class="part_two_price">￥<span>${item.getWinePrice()}</span></p>
-								<p class="part_two_goodsName\">${item.getWineName()}</p>
-							</li>
+							<a href="<%=basePath%>/wine/goods.do?wid=${item.getWId()}">
+								<li class="part_two_pic">
+									<img class="part_two_img" src="<%=basePath%>/resource/views/img/${item.getWineImg1()}"/>
+									<p class="part_two_price">￥<span>${item.getWinePrice()}</span></p>
+									<p class="part_two_goodsName\">${item.getWineName()}</p>
+								</li>
+							</a>
 						</a>
 					</c:forEach>
 
@@ -315,7 +321,7 @@ pageEncoding="UTF-8"%>
 			<div class="gouwuche_left">
 				<ol class="gouwuche_left_content">
 					<li class="gouwuche_left_content_first pr">
-						<a class="a" href=""><i  class="iconfont icon-gerentouxiang "></i></a>
+						<a class="a" href="<%=basePath%>/resource/views/User/html/01.Ljp_Personal_Index.jsp"><i  class="iconfont icon-gerentouxiang "></i></a>
 						<div class="pa kefu_shuoming">
 							<span>个人中心</span>
 							<div class="sanjiaoxing pa"></div>
@@ -659,7 +665,7 @@ pageEncoding="UTF-8"%>
                         $("#inp1").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
                         change();
                     })
-                    $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span><span class='counts'>0</span><span>件<span></div><div style='float:right ;color:red;'><span>￥</span><span class='prices'>0</span></div><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></div>").appendTo($(".gouwuche_right1"));
+                    $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></div>").appendTo($(".gouwuche_right1"));
                     //				prices总价 titalprice单个商品的总价 s_sum 每个商品的数量
                     function change() {
                         $(".counts").html(function() {
