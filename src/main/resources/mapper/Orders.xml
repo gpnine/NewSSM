@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.OrdersMapper">
+
+
+    <resultMap type="Orders" id="OrdersResult">
+        <id column="OrderId" property="OrderId" jdbcType="INTEGER"/>
+        <result column="OrderPay" property="OrderPay" jdbcType="VARCHAR"/>
+        <result column="OrderWuliu" property="OrderWuliu" jdbcType="VARCHAR"/>
+        <result column="OrderAllMoney" property="OrderAllMoney" jdbcType="DOUBLE"/>
+        <result column="OrderWineId" property="OrderWineId" jdbcType="INTEGER"/>
+        <result column="UserId" property="UserId" jdbcType="INTEGER"/>
+        <result column="WineId" property="WineId" jdbcType="INTEGER"/>
+        <result column="OrderTicket" property="OrderTicket" jdbcType="VARCHAR"/>
+        <result column="OrderText" property="OrderText" jdbcType="VARCHAR"/>
+        <result column="OrderScore" property="OrderScore" jdbcType="INTEGER"/>
+        <result column="OrderYunfei" property="OrderYunfei" jdbcType="DOUBLE"/>
+
+    </resultMap>
+
+
+    <select id="findOrders"  resultMap="OrdersResult">
+        select * from zhongjiu_order;
+	</select>
+
+    <insert id="insertOrders" parameterType="Orders">
+        insert into zhongjiu_order (OrderPay,OrderWuliu,OrderAllMoney,OrderWineId,UserId,WineId,OrderTicket,OrderText)
+    </insert>
+</mapper>
