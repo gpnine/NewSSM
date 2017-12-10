@@ -23,7 +23,9 @@
 <div class="head_name">
     <span class="first_page"><a href="<%=basePath%>/resource/views/html/lkl_index.jsp">首页 ></a></span>&nbsp;&nbsp;&nbsp;
     <span class="sele_kind"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">全部 ></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <span class="sele_kind1"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/bai_html/04.Ljp_FirstPage_All.jsp">白酒</a>&nbsp;&nbsp;&nbsp;<span><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">X</a></span></span>
+    <span class="sele_kind1"><a
+            href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/bai_html/04.Ljp_FirstPage_All.jsp">白酒</a>&nbsp;&nbsp;&nbsp;<span><a
+            href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">X</a></span></span>
     <span class="goods_amount">共 <span>${counts}</span> 个商品</span>
 </div>
 
@@ -161,10 +163,9 @@
                 <div id="pagination1" class="page fl"></div>
             </div>
         </div>
-
-
     </div>
-    <div class="footer"></div>
+</div>
+<div class="footer"></div>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/bai_html/jquery.pagination.min.js"></script>

@@ -35,9 +35,12 @@
             <span class="san_jiao"><img src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/img/ljp_52.png"/></span>&nbsp;&nbsp;&nbsp;
             <span class=""><a href="">酒类</a></span>
         </div>
-        <div class="white_jiu"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/bai_html/04.Ljp_FirstPage_All.jsp">白酒</a></div>
-        <div class="white_jiu"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/pu_html/04.Ljp_FirstPage_All.jsp">葡萄酒</a></div>
-        <div class="white_jiu"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/yang_html/04.Ljp_FirstPage_All.jsp">洋酒</a></div>
+        <div class="white_jiu"><a
+                href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/bai_html/04.Ljp_FirstPage_All.jsp">白酒</a></div>
+        <div class="white_jiu"><a
+                href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/pu_html/04.Ljp_FirstPage_All.jsp">葡萄酒</a></div>
+        <div class="white_jiu"><a
+                href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/yang_html/04.Ljp_FirstPage_All.jsp">洋酒</a></div>
     </div>
 
 
@@ -484,7 +487,7 @@
         renderList(current);
         $("#pagination1").pagination({
             currentPage: current,
-            totalPage: 28,
+            totalPage: 8,
             callback: function (current) {
                 renderList(current);
             }
