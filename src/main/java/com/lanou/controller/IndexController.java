@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -68,7 +69,7 @@ public class IndexController {
     //    范围查询
     @RequestMapping("/findScope.do")
     @ResponseBody
-    public List<Wine> findScope(Integer a, Integer b,HttpServletResponse response) {
+    public List<Wine> findScope(Integer a, Integer b, HttpServletResponse response, HttpSession session) {
         FastJson_Ali.toJson(response);
         List<Wine> wines = wineService.findScope(a, b);
         System.out.print(wines);

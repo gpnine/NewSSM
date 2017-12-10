@@ -11,7 +11,7 @@ public class Wine {
     private Integer WineEvaCount;
     private double WinePrice;
     private String WineCompany;
-    private String WineSales;
+    private Integer WineSales;
     private String WineScent;
     private String WineBrand;
     private String WineDegree;
@@ -44,7 +44,7 @@ public class Wine {
                 ", WineEvaCount=" + WineEvaCount +
                 ", WinePrice=" + WinePrice +
                 ", WineCompany='" + WineCompany + '\'' +
-                ", WineSales='" + WineSales + '\'' +
+                ", WineSales=" + WineSales +
                 ", WineScent='" + WineScent + '\'' +
                 ", WineBrand='" + WineBrand + '\'' +
                 ", WineDegree='" + WineDegree + '\'' +
@@ -127,11 +127,11 @@ public class Wine {
         WineCompany = wineCompany;
     }
 
-    public String getWineSales() {
+    public Integer getWineSales() {
         return WineSales;
     }
 
-    public void setWineSales(String wineSales) {
+    public void setWineSales(Integer wineSales) {
         WineSales = wineSales;
     }
 
@@ -271,7 +271,7 @@ public class Wine {
         this.deleteId = deleteId;
     }
 
-    public Wine(Integer WId, String wineName, String wineLiter, String wineEvalution, Integer wineEvaCount, double winePrice, String wineCompany, String wineSales, String wineScent, String wineBrand, String wineDegree, String wineAdress, String wineShiyong, String wineCity, String fromAdress, String wineBianhao, Integer wineCount, String wineContain, String wineImg1, String wineImg2, String wineImg3, String wineImg4, String wineImg5, String wineImg6, Integer deleteId) {
+    public Wine(Integer WId, String wineName, String wineLiter, String wineEvalution, Integer wineEvaCount, double winePrice, String wineCompany, Integer wineSales, String wineScent, String wineBrand, String wineDegree, String wineAdress, String wineShiyong, String wineCity, String fromAdress, String wineBianhao, Integer wineCount, String wineContain, String wineImg1, String wineImg2, String wineImg3, String wineImg4, String wineImg5, String wineImg6, Integer deleteId) {
         this.WId = WId;
         WineName = wineName;
         WineLiter = wineLiter;

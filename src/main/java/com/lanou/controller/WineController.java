@@ -1,4 +1,5 @@
 package com.lanou.controller;
+
 import com.lanou.entity.Car;
 import com.lanou.entity.Wine;
 import com.lanou.service.CarService;
@@ -55,6 +56,15 @@ public class WineController {
         return wines;
     }
 
+    //    热销
+    @RequestMapping("/rexiao.do")
+    @ResponseBody
+    public List<Wine> rexiao(HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        List<Wine> wines = wineService.rexiao();
+        return wines;
+    }
+
     //    商品详情
     @RequestMapping(value = "/goods.do")
     public String goods_detile(Integer wid, HttpServletRequest request) {
@@ -91,20 +101,15 @@ public class WineController {
 
 
         List<Car> cars = userService.cars(userPhone);
-        for(int i=0;i<cars.size();i++){
+        for (int i = 0; i < cars.size(); i++) {
             int w = cars.get(i).getWineId();
             Wine wi = userService.selectCar(w);
             cars.get(i).setWines(wi);
         }
-        session.setAttribute("cars",cars);
+        session.setAttribute("cars", cars);
 
         return result;
     }
-
-
-
-
-
 
 
 }

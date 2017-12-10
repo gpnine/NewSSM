@@ -250,7 +250,7 @@
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="gengduo help_aa" href="<%=basePath%>/shop/goods_more.do">更多&gt;&gt;</a>
+                            <a class="gengduo help_aa" href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">更多&gt;&gt;</a>
                             <div class="pa help_pa"></div>
                         </div>
                     </div>
@@ -347,7 +347,7 @@
                         </div>
 
                         <div class="pr help">
-                            <a class="gengduo  help_aa" href="<%=basePath%>/resource/views/bai/bai_html/04.Ljp_FirstPage_All.jsp">更多&gt;&gt;</a>
+                            <a class="gengduo  help_aa" href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/bai_html/04.Ljp_FirstPage_All.jsp">更多&gt;&gt;</a>
                             <div class="pa help_pa"></div>
                         </div>
                     </div>
@@ -440,7 +440,7 @@
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="gengduo  help_aa" href="">更多&gt;&gt;</a>
+                            <a class="gengduo  help_aa" href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/pu_html/04.Ljp_FirstPage_All.jsp">更多&gt;&gt;</a>
                             <div class="pa help_pa"></div>
                         </div>
                     </div>
@@ -534,7 +534,7 @@
                         </div>
 
                         <div class="pr help">
-                            <a class="gengduo help_aa" href="">更多&gt;&gt;</a>
+                            <a class="gengduo help_aa" href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/yang_html/04.Ljp_FirstPage_All.jsp">更多&gt;&gt;</a>
                             <div class="pa help_pa"></div>
                         </div>
                     </div>
@@ -1107,7 +1107,7 @@
             for (var i = 0; i < 4; i++) {
                 $("<li class='fl mr mt'  style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'>"
                     + "<a  style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
+                    + data[i].wid + "' class='a'><img style='width:170px' src='<%=basePath%>/resource/views/img/"
                     + data[i].wineImg1 + "'/><p class='chang'>" + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_0"));
             }
@@ -1216,7 +1216,7 @@
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_1"));
@@ -1247,7 +1247,6 @@
             likeName: "茅台"
         },
         success: function (data) {
-            console.log(data)
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wineId="
@@ -1313,7 +1312,7 @@
             for (var i = 4; i < 8; i++) {
                 $("<li style='width:230px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='width:170px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='width:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".li1_2"));
@@ -1330,7 +1329,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_0"));
@@ -1347,7 +1346,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol3_1"));
@@ -1426,7 +1425,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_0"));
@@ -1443,7 +1442,7 @@
             for (var i = 0; i < 10; i++) {
                 $("<li style='width:180px;height:220px;border: 1px solid #0000002b;box-sizing: border-box;'"
                     + " class='fl mr mt'><a style='text-align: center;' href='<%=basePath%>/wine/goods.do?wid="
-                    + data[i].wineName + "' class='a'><img style='height:170px;background-color:lightgray;'"
+                    + data[i].wid + "' class='a'><img style='height:170px;background-color:lightgray;'"
                     + " src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "'/><p class='chang'>"
                     + data[i].wineName + "</p><p style='color:red'>￥"
                     + data[i].winePrice + "</p></a></li>").appendTo($(".ol4_1"));
@@ -1530,7 +1529,6 @@
             userPhone:${user1.userPhone}
         },
         success: function(data) {
-            console.log(data);
             if(data.shopId =="") {
 //                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
                 $("#inp1").click(function() {
@@ -1563,15 +1561,12 @@
 
                 //获取后台数据进行创建购物车商品
                 $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
-                console.log(data);
-                console.log(data.shopId);
 //                    for(i in data){
 //                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='"+data[i].shopImg+"'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+data[i].parentId+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+data[i].shopId+"</span></li>").appendTo($(".ols"));
 //                    }
 
                 $(".gouwushuliang").html(function(){
                     var countss = 0;
-                    console.log($(".inpcount").length)
                     $(".inpcount").siblings(".s_sum").each(function(index, el) {
                         countss += parseInt(el.innerHTML);
                     })
@@ -1586,7 +1581,6 @@
 //
 //                        $(".gouwushuliang").html(function(){
 //                            var countss = 0;
-//                            console.log($(".inpcount").length)
 //                            $(".inpcount").siblings(".s_sum").each(function(index, el) {
 //                                countss += parseInt(el.innerHTML);
 //                            })
@@ -1635,13 +1629,11 @@
                             arrs.push(el.innerHTML);
 
                         })
-                        console.log(arrs);
                         $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
                             arrss.push(el.innerHTML);
 
                             countss+=parseInt(arrs[index])*parseInt(arrss[index]);
                         })
-                        console.log("+++++++++"+countss);
                         return countss;
                     })
 
@@ -1667,13 +1659,11 @@
             arrs.push(el.innerHTML);
 
         })
-        console.log(arrs);
         $(".inpcount:checked").siblings(".s_sum").each(function(index, el) {
             arrss.push(el.innerHTML);
 
             countss+=parseInt(arrs[index])*parseInt(arrss[index]);
         })
-        console.log("+++++++++"+countss);
         return countss;
     })
 

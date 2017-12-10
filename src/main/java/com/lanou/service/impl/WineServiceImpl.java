@@ -34,6 +34,10 @@ public class WineServiceImpl implements WineService {
 		return wineMapper.findScope(map);
 	}
 
+	public List<Wine> rexiao() {
+		return wineMapper.rexiao();
+	}
+
 	public List<Wine> moreWines(Integer c) {
 		Map map = new HashMap();
 		map.put("c",c);

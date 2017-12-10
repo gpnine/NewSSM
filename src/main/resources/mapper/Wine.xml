@@ -11,7 +11,7 @@
         <result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
         <result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
         <result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
-        <result column="WineSales" property="WineSales" jdbcType="VARCHAR"/>
+        <result column="WineSales" property="WineSales" jdbcType="INTEGER"/>
         <result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
         <result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
         <result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
@@ -32,8 +32,8 @@
     <select id="findWines" resultMap="wineResult">
 		select WineName,WinePrice,WineImg1 from zhongjiu_wine
 	</select>
-    <select id="moreWines" parameterType="Map"  resultMap="wineResult">
-		select WineName,WinePrice,WineLiter,WineEvaCount,WineDegree,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine limit #{c,jdbcType=INTEGER},40
+    <select id="moreWines" parameterType="Map" resultMap="wineResult">
+		select WineId,WineName,WinePrice,WineLiter,WineEvaCount,WineSales,WineDegree,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine limit #{c,jdbcType=INTEGER},40
 	</select>
     <select id="findWineById" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{WId}
@@ -42,15 +42,16 @@
 		select * from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
 	</select>
     <select id="findScope" parameterType="Map" resultMap="wineResult">
-		select WineId,WineName,WinePrice,WineImg1 from zhongjiu_wine where WineId between #{a,jdbcType=INTEGER} and  #{b,jdbcType=INTEGER}
+		select WineId,WineName,WineSales,WineLiter,WineEvaCount,WineDegree,WinePrice,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine where WineId between #{a,jdbcType=INTEGER} and  #{b,jdbcType=INTEGER}
     </select>
-
-
-	<!--商品详情-->
-	<select id="goods_detile" parameterType="int" resultMap="wineResult">
+    <!--商品详情-->
+    <select id="goods_detile" parameterType="int" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{wid}
 	</select>
-
+    <!--热销-->
+    <select id="rexiao" parameterType="int" resultMap="wineResult">
+		select WineId,WineName,WinePrice,WineLiter,WineEvaCount,WineSales,WineDegree,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine order by WineSales DESC
+	</select>
 
 
 </mapper>

@@ -3,6 +3,7 @@ package com.lanou.service;
 import com.lanou.entity.Wine;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WineService {
 
@@ -15,4 +16,5 @@ public interface WineService {
 	public Wine goods_detile(Integer goodsId);
 
 	public List<Wine> findScope(Integer a,Integer b);
+	public List<Wine> rexiao();
 }

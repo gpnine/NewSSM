@@ -15,5 +15,6 @@ public interface WineMapper {
 
 //    商品详情
     public Wine goods_detile(Integer wid);
+    public List<Wine> rexiao();
 
 }
