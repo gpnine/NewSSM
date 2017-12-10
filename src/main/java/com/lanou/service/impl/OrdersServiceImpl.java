@@ -16,4 +16,21 @@ public class OrdersServiceImpl implements OrdersService {
 	public List<Orders> findOrders() {
 		return ordersMapper.findOrders();
 	}
+
+	public int insertOrders(String OrderPay, String OrderWuliu, double OrderAllMoney, int OrderWineId, int UserId, int WineId, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei) {
+		Orders orders = new Orders();
+		orders.setOrderPay(OrderPay);
+		orders.setOrderWuliu(OrderWuliu);
+		orders.setOrderAllMoney(OrderAllMoney);
+		orders.setOrderWineId(OrderWineId);
+		orders.setUserId(UserId);
+		orders.setWineId(WineId);
+		orders.setOrderTicket(OrderTicket);
+		orders.setOrderText(OrderText);
+		orders.setOrderScore(OrderScore);
+		orders.setOrderYunfei(OrderYunfei);
+		int result = ordersMapper.insertOrders(orders);
+		return result;
+
+	}
 }

@@ -17,7 +17,7 @@ public interface UserService {
 	public List<Wine> guanZhu();
 	public List<Wine> shangPinTuiJian();
 
-
+	public User findUserById(Integer uId);
 	public List<Car> cars(String userPhone);
 	public Wine selectCar(int w);
 
