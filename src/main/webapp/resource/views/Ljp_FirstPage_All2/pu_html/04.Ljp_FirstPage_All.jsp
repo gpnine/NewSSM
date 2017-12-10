@@ -16,6 +16,7 @@
     <title>葡萄酒的更多</title>
 </head>
 <body>
+<div class="header"></div>
 <!--上方的红线-->
 <div class="red_line"></div>
 <!--头部-->
@@ -148,11 +149,13 @@
 
 
     </div>
-
+    <div class="footer"></div>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/pu_html/jquery.pagination.min.js"></script>
 <script>
+    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
+    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
     //点击侧边栏的三角形，打开关闭
     $(".san_jiao").on("click", function () {
         $(".white_jiu").toggle("normal");
