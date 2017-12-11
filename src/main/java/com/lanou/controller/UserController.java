@@ -65,8 +65,6 @@ public class UserController {
     //    注册后插入用户
     @RequestMapping(value = "/insertUser.do", method = RequestMethod.POST)
     public String insertUser(String userPhone, String password) throws IOException {
-        System.out.println(userPhone);
-        System.out.println(password);
         int result = userService.insertUser(userPhone, password);
         if (result == 0) {
             return "false";
@@ -96,7 +94,6 @@ public class UserController {
             Wine wi = userService.selectCar(w);
             cars.get(i).setWines(wi);
         }
-        System.out.println("============="+cars);
         session.setAttribute("cars", cars);
 
 

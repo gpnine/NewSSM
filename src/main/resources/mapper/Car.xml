@@ -41,7 +41,7 @@
 	</resultMap>
 
 	<select id="findCars" parameterType="string" resultMap="carResult">
-		select * from zhongjiu_car where userPhone = #{userPhone}
+		select * from zhongjiu_car where userPhone = #{userPhone} and deleteId = 0;
 	</select>
 
 	<select id="selectCar" parameterType="int" resultMap="wineResult">
@@ -49,7 +49,9 @@
 	</select>
 
 
-
+	<update id="deleteCar" parameterType="Car">
+		update zhongjiu_car set deleteId = 1 where CarId = #{CarId}
+	</update>
 
 
 	<insert id="insertShop" parameterType="Car">
@@ -69,9 +71,10 @@
 		select counts from zhongjiu_car where userPhone = #{userPhone} and Wine_id =#{wineId}
 	</select>
 
-
-
-
-
-
+	<update id="deleteWine" parameterType="int">
+		update zhongjiu_car set deleteId = 1 where  Wine_id =#{wineId}
+	</update>
+	<update id="updateCount" parameterType="int">
+		update zhongjiu_car set counts = 1 where  Wine_id =#{wineId}
+	</update>
 </mapper>

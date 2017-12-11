@@ -12,6 +12,8 @@
 </head>
 <body>
     <h1><%=request.getParameter("name")%></h1>
-
+    <input type="checkbox">lol
+    <input type="checkbox">w3c
+    <input type="checkbox">fff
 </body>
 </html>

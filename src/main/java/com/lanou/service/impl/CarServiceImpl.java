@@ -59,7 +59,17 @@ public class CarServiceImpl implements CarService {
 		return list;
 	}
 
-//	public int insertShop(int userId, int wineId, int counts) {
+	public int deleteWine(Integer wineId) {
+		return carMapper.deleteWine(wineId);
+	}
+	public int deleteCar() {
+		return carMapper.deleteCar();
+	}
+
+	public int updateCount(Integer wineId) {
+		return carMapper.updateCount(wineId);
+	}
+	//	public int insertShop(int userId, int wineId, int counts) {
 //		Car car = new Car();
 //		car.setUserId(userId);
 //		car.setWineId(wineId);

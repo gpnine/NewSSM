@@ -1,0 +1,448 @@
+.body_alert {
+	top: 0;
+	width: 100vw;
+	height: 100%;
+	background: rgba(222, 222, 222, 0.4);
+	display: none;
+}
+
+.body_alert_box {
+	width: 306px;
+	height: 130px;
+	background: white;
+	position: fixed;
+	top: 250px;
+	border: 3px solid rgba(222, 222, 222, 0.5);
+	left: calc(50% - 150px);
+}
+
+.body_alert_box_ol {
+	padding: 10px;
+}
+
+.topBox {
+	width: 100%;
+	height: 31px;
+	background: #f5f4f4;
+}
+
+.top {
+	width: 1190px;
+	height: 31px;
+	margin: 0 auto;
+	border: 1px solid transparent;
+	font-size: 13px;
+	color: grey;
+	position: relative;
+	z-index: 20;
+}
+
+.top:after {
+	zoom: 1;
+}
+
+.top:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+
+.top_left {
+	line-height: 31px;
+	float: left;
+}
+
+.top_left .goShop {
+	margin-left: 12px;
+	color: red;
+}
+
+.top_left .login_in {
+	color: grey;
+	margin-left: 30px;
+}
+
+.top_left .register_in {
+	color: grey;
+	margin-left: 10px;
+	padding-left: 10px;
+	height: 12px;
+	box-sizing: border-box;
+	border-left: 2px solid lightgrey;
+}
+
+.top_right {
+	float: right;
+	line-height: 31px;
+}
+
+.top_right .myZhongjiu,
+.top_right .cars,
+.top_right .weixinInter,
+.top_right .app,
+.top_right .SellCenter,
+.top_right .navStation,
+.top_right .hotline {
+	float: left;
+	margin-left: 15px;
+}
+
+.myZhongjiu {
+	position: relative;
+}
+
+.myZhongjiu .trangel {
+	display: inline-block;
+	border-top: 5px solid lightgrey;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+.myZhongjiu .trangel_href {
+	position: absolute;
+	background: white;
+	display: none;
+	width: 90px;
+}
+
+.myZhongjiu .trangel_href a {
+	margin-left: 8px;
+	margin-right: 5px;
+	color: grey;
+	font-size: 12px;
+}
+
+.myZhongjiu:hover {
+	background: white;
+	cursor: pointer;
+}
+
+.myZhongjiu:hover .trangel {
+	transform: rotate(180deg);
+	transition: 0.25s;
+}
+
+.myZhongjiu:hover .trangel_href {
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+.SellCenter {
+	position: relative;
+}
+
+.SellCenter .trangel {
+	display: inline-block;
+	border-top: 5px solid lightgrey;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+.SellCenter .SellCenter_href {
+	position: absolute;
+	background: white;
+	display: none;
+	width: 80px;
+}
+
+.SellCenter .SellCenter_href a {
+	margin-left: 8px;
+	margin-right: 5px;
+	color: grey;
+	font-size: 12px;
+}
+
+.SellCenter:hover {
+	background: white;
+	cursor: pointer;
+}
+
+.SellCenter:hover .trangel {
+	transform: rotate(180deg);
+	transition: 0.25s;
+}
+
+.SellCenter:hover .SellCenter_href {
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+.navStation {
+	position: relative;
+}
+
+.navStation .trangel {
+	display: inline-block;
+	border-top: 5px solid lightgrey;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+.navStation .navStation_href {
+	position: absolute;
+	background: white;
+	display: none;
+}
+
+.navStation:hover {
+	background: white;
+	cursor: pointer;
+}
+
+.navStation:hover .trangel {
+	transform: rotate(180deg);
+	transition: 0.25s;
+}
+
+.navStation:hover .navStation_href {
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+.navStation_href>div {
+	width: 205px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.navStation_href>div p {
+	color: black;
+	font-size: 14px;
+	margin-top: 0px;
+	margin-bottom: -5px;
+}
+
+.nav_a a {
+	margin-right: 32px;
+	color: grey;
+}
+
+.navStation_href .others_top a {
+	margin-right: 30px;
+	color: grey;
+}
+
+.navStation_href .others a {
+	margin-right: 10px;
+	color: grey;
+}
+
+.qingke {
+	width: 100%;
+	height: 90px;
+	margin-top: 2px;
+	background: url(http://img5.zhongjiu.cn/pro/dt/dt.jpg?11) no-repeat center top;
+}
+
+.qingke_ {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.app,
+.weixinInter {
+	position: relative;
+}
+
+.app:hover,
+.weixinInter:hover,
+.hotline:hover {
+	cursor: pointer;
+	background: white;
+}
+
+.app img,
+.weixinInter img {
+	display: none;
+}
+
+.app:hover img {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	left: -5px;
+}
+
+.weixinInter:hover img {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	left: -5px;
+}
+
+.content {
+	margin: 0 auto;
+	width: 990px;
+}
+
+.jindu {
+	width: 990px;
+	height: 70px;
+}
+
+.jindu_pa_a {
+	top: 10px;
+	left: 0;
+}
+
+.jindu_pa_img {
+	right: 0;
+	top: 25px;
+}
+
+.content a {
+	color: black;
+	display: block;
+	text-decoration: none;
+}
+
+.caozuogou {
+	border: 1px solid gray;
+	width: 990px;
+}
+.caozuogou_ol{
+	font-size:12px;
+}
+.caozuogou_list {
+	padding: 8px 5px 8px 5px;
+	border-top: 1px solid lightgray;
+}
+.caozuogou_list_bgss_s{
+	padding: 8px 0px 0px 0px;
+}
+.caozuogou_list_caozuo_quanxuan_zhongjius{
+	margin-bottom: 10px;
+	margin-left:9px;
+}
+.caozuogou_list_bgss_ol_li{
+	padding: 12px 5px 10px 5px;
+	border-top: 1px solid lightgray;
+}
+.caozuogou_list_caozuo {
+	float: left;
+}
+.a_hover:hover{
+	color:indianred;
+}
+.caozuogou_list_caozuo:nth-of-type(1) {
+	width: 100px;
+	line-height: 45px;
+}
+
+.caozuogou_list_caozuo:nth-of-type(2) {
+	width: 500px;
+	text-align: center;	
+}
+
+.caozuogou_list_caozuo:nth-of-type(3) {
+	width: 100px;
+	text-align: center;
+}
+
+.caozuogou_list_caozuo:nth-of-type(4) {
+	width: 100px;
+	text-align: center;
+}
+
+.caozuogou_list_caozuo:nth-of-type(5) {
+	width: 100px;
+	text-align: center;
+}
+
+#quanshan {
+	padding: 0 0 0 10px;
+}
+
+.caozuogou_list_caozuo_shanchu {
+	cursor: pointer;
+}
+
+.caozuogou_list_caozuo_quanshan {
+	cursor: pointer;
+}
+
+.caozuogou_list_bg {
+	background: #FDFDF7;
+}
+
+.caozuogou_list_bgs {
+	background: #EFF2F5;
+}
+
+.tuijian {
+	width: 100px;
+	padding: 5px;
+	color: gray;
+	/*line-height:30px;*/
+}
+
+.tuijian:hover {
+	color: red;
+}
+
+.mypic {
+	width: 182px;
+}
+
+.shangpintuijian_lists {
+	width: 1010px;
+}
+
+.shangpintuijian_list {
+	width: 182px;
+	margin-right: 18px;
+	margin-bottom: 26px;
+	height: 220px;
+	border: 1px solid #f1f1f1;
+}
+
+.shangpintuijian_list_a:hover .shangpintuijian_list_a_hover {
+	display: block;
+}
+
+.shangpintuijian_list_a_hover {
+	width: 182px;
+	height: 182px;
+	background: rgba(255, 0, 0, 0.5);
+	display: none;
+	top: 0;
+	line-height: 182px;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
+
+.shangpintuijian_list_p {
+	overflow: hidden;
+	/*自动隐藏文字*/
+	text-overflow: ellipsis;
+	/*文字隐藏后添加省略号*/
+	white-space: nowrap;
+	/*强制不换行*/
+	width: 11em;
+	/*不允许出现半汉字截断*/
+	/*color:#6699ff;border:1px #ff8000 dashed;*/
+	margin: 0 auto;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.shangpintuijian_list_p:hover {
+	color: red;
+}
+
+.qujiesuan {
+	background: red;
+	width: 100%;
+	height: 30px;
+	position: relative;
+	top: -2px;
+	outline: none;
+	color: white;
+}
