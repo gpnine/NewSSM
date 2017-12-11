@@ -12,7 +12,9 @@ public interface CarService {
 
     public int deleteWine(Integer wineId);
 
-    public int updateCount(Integer wineId);
+    public int updateCount(Integer counts, Integer wineId);
+
+    public int updateChecked(Integer checked, Integer wineId);
 
     public int insertShop(String userPhone, Integer wineId, Integer counts);
 }

@@ -14,8 +14,21 @@ public class Car {
     private String userPhone;
 
     private Integer deleteId;
+    private Integer checked;
 
-    private Wine wines;
+    public Integer getChecked() {
+        return checked;
+    }
+
+    public Car(Integer carId, Integer wineId, Integer counts, String userPhone, Integer deleteId, Integer checked, Wine wines) {
+        CarId = carId;
+        this.wineId = wineId;
+        this.counts = counts;
+        this.userPhone = userPhone;
+        this.deleteId = deleteId;
+        this.checked = checked;
+        this.wines = wines;
+    }
 
     @Override
     public String toString() {
@@ -23,11 +36,19 @@ public class Car {
                 "CarId=" + CarId +
                 ", wineId=" + wineId +
                 ", counts=" + counts +
-                ", userPhone=" + userPhone +
+                ", userPhone='" + userPhone + '\'' +
                 ", deleteId=" + deleteId +
+                ", checked=" + checked +
                 ", wines=" + wines +
                 '}';
     }
+
+    public void setChecked(Integer checked) {
+        this.checked = checked;
+    }
+
+    private Wine wines;
+
 
     public Wine getWines() {
         return wines;
@@ -77,18 +98,8 @@ public class Car {
         this.deleteId = deleteId;
     }
 
-
-
     public Car() {
         super();
     }
 
-    public Car(Integer carId, Integer wineId, Integer counts, String userPhone, Integer deleteId, Wine wines) {
-        CarId = carId;
-        this.wineId = wineId;
-        this.counts = counts;
-        this.userPhone = userPhone;
-        this.deleteId = deleteId;
-        this.wines = wines;
-    }
 }

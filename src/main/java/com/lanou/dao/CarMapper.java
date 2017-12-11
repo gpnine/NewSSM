@@ -24,7 +24,9 @@ public interface CarMapper {
 
     public int deleteWine(Integer wineId);
 
-    public int updateCount(Integer wineId);
+    public int updateCount(Car car);
+
+    public int updateChecked(Car car);
 
     public int deleteCar();
 }

@@ -46,19 +46,42 @@ public class CarController {
 
     //    删除商品
     @RequestMapping("/deleteMore.do")
+    @ResponseBody
     public String deleteMore(String wineStr) {
         String[] wineArr = wineStr.split("\\-");
+        int result = 0;
         for (int i = 0; i < wineArr.length; i++) {
             int wineId = Integer.parseInt(wineArr[i]);
-            int result = carService.deleteWine(wineId);
+            result = carService.deleteWine(wineId);
         }
-        return "1";
+        if (result == 0) {
+            return "0";
+        } else {
+            return "1";
+        }
     }
 
     //    更新商品商品数量
     @RequestMapping("/updateCount.do")
-    public String updateCount(Integer wineId) {
-        int result = carService.updateCount(wineId);
-        return "1";
+    @ResponseBody
+    public String updateCount(Integer counts,Integer wineId) {
+        int result = carService.updateCount(counts,wineId);
+        if (result == 0) {
+            return "0";
+        } else {
+            return "1";
+        }
+    }
+
+    //    更新商品商品数量
+    @RequestMapping("/updateChecked.do")
+    @ResponseBody
+    public String updateChecked(Integer checked, Integer wineId) {
+        int result = carService.updateCount(checked,wineId);
+        if (result == 0) {
+            return "0";
+        } else {
+            return "1";
+        }
     }
 }

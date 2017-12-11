@@ -34,59 +34,7 @@
         我的购物车
     </h2>
     <div class="caozuogou">
-        <ol class="caozuogou_ol">
-
-            <li class="caozuogou_list clearfix" style="background: #EFF2F5;">
-                <div class="caozuogou_list_caozuo">
-                    <input class='caozuogou_list_caozuo_quanxuan caozuogou_list_caozuo_quanxuan_zhongjiu'
-                           checked="checked" type="checkbox" name="" id="" value=""/>全选
-                </div>
-                <div class="caozuogou_list_caozuo" style="line-height: 45px;">商品</div>
-                <div class="caozuogou_list_caozuo" style="line-height: 45px;">商城价</div>
-                <div class="caozuogou_list_caozuo" style="line-height: 45px;">数量</div>
-                <div class="caozuogou_list_caozuo" style="line-height: 45px;">操作</div>
-            </li>
-            <li class="caozuogou_list clearfix caozuogou_list_bgss caozuogou_list_bgss_s">
-                <form action="01.Ljp_Shopcar_CheckInfo.html" method="post">
-                    <!--物品添加区域-->
-
-                    <input type="checkbox" checked="checked"
-                           class="caozuogou_list_caozuo_quanxuan_zhongjiu caozuogou_list_caozuo_quanxuan_zhongjius"
-                           name="" value=""/>中酒自营
-                    <ol class="caozuogou_list_bgss_ol"></ol>
-                    <div class="caozuogou_list caozuogou_list_bgs clearfix">
-                        <div class="caozuogou_list_caozuo">
-
-                            <input type="checkbox" name="" checked="checked" id="" value=""
-                                   class="caozuogou_list_caozuo_quanxuan caozuogou_list_caozuo_quanxuan_zhongjiu"/>全选
-                            <span class="caozuogou_list_caozuo_quanshan">删除</span>
-                            <span class="inpcounts">
-										
-									</span>
-                        </div>
-
-                        <div class="caozuogou_list_caozuo"
-                             style=' vertical-align: middle; text-align: left;line-height: 45px;'>
-                            <span class="counts" style="color:red">0</span><span>件商品</span>
-                        </div>
-                        <div class="caozuogou_list_caozuo" style="line-height:20px; width:200px;line-height: 45px;">
-                            <span>总计(不含运费)：</span><span class="prices">0</span>
-
-                        </div>
-                        <div class="caozuogou_list_caozuo" style="line-height:45px">
-
-
-                            <input class="qujiesuan" type="submit" value="去结算"/>
-
-
-                            <!--<button ></button>-->
-                        </div>
-                    </div>
-                </form>
-            </li>
-
-        </ol>
-
+        <ol class="caozuogou_ol"></ol>
     </div>
     <div class="shangpintuijian">
         <div class="">
@@ -129,11 +77,48 @@
         success: function (data) {
             console.log(data);
             if (data.length == 0) {
-                $("<li class='clearfix' style='width:100%;height:80px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'>"
-                    + "<img style='float:right' src='../img/cart-empty-bg.png'/>"
-                    + "</div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p>"
-                    + "<p style='margin:0'><a href='lkl_index.html' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
+                $("<li class='clearfix' style='width:100%;padding:10px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'><img style='float:right;margin-right:20px;' src='../img/cart-empty-bg.png'/></div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p><p style='margin:0'><a href='lkl_index.html' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
+
             } else {
+                $("<li class='caozuogou_list clearfix' style='background: #EFF2F5;'>"
+                    + "<div class='caozuogou_list_caozuo'>"
+                    + "<input class='caozuogou_list_caozuo_quanxuan caozuogou_list_caozuo_quanxuan_zhongjiu'"
+                    + "checked='checked' type='checkbox' name='' id='' value=''/>全选"
+                    + "</div>"
+                    + " <div class='caozuogou_list_caozuo' style='line-height: 45px;'>商品</div>"
+                    + "<div class='caozuogou_list_caozuo' style='line-height: 45px;'>商城价</div>"
+                    + "<div class='caozuogou_list_caozuo' style='line-height: 45px;'>数量</div>"
+                    + "<div class='caozuogou_list_caozuo' style='line-height: 45px;'>操作</div>"
+                    + "</li>"
+                    + "<li class='caozuogou_list clearfix caozuogou_list_bgss caozuogou_list_bgss_s'>"
+                    + "<form action='' method='get'>"
+                    + "<!--物品添加区域-->"
+                    + "<input type='checkbox' checked='checked'"
+                    + " class='caozuogou_list_caozuo_quanxuan_zhongjiu caozuogou_list_caozuo_quanxuan_zhongjius'"
+                    + "name='' value=''/>中酒自营"
+                    + "<ol class='caozuogou_list_bgss_ol'></ol>"
+                    + "<div class='caozuogou_list caozuogou_list_bgs clearfix'>"
+                    + " <div class='caozuogou_list_caozuo'>"
+                    + "<input type='checkbox' name='' checked='checked' id='' value=''"
+                    + "class='caozuogou_list_caozuo_quanxuan caozuogou_list_caozuo_quanxuan_zhongjiu'/>全选"
+                    + "<span class='caozuogou_list_caozuo_quanshan'>删除</span>"
+                    + "<span class='inpcounts'>"
+                    + "</span>"
+                    + "</div>"
+                    + " <div class='caozuogou_list_caozuo'"
+                    + "style=' vertical-align: middle; text-align: left;line-height: 45px;'>"
+                    + "<span class='counts' style='color:red'>0</span><span>件商品</span>"
+                    + "</div>"
+                    + "<div class='caozuogou_list_caozuo' style='line-height:20px; width:200px;line-height: 45px;'>"
+                    + "<span>总计(不含运费)：</span><span class='prices'>0</span>"
+                    + "</div>"
+                    + "<div class='caozuogou_list_caozuo' style='line-height:45px'>"
+                    + "<input class='qujiesuan' type='submit' value='去结算'/>"
+                    + "<!--<button ></button>-->"
+                    + "</div>"
+                    + "</div>"
+                    + "</form>"
+                    + "</li>").appendTo(".caozuogou_ol");
                 for (var i = 0; i < data.length; i++) {
                     $("<li class='caozuogou_list_bgss_ol_li caozuogou_list_bg clearfix'><div class='caozuogou_list_caozuo'>" +
                         "<input type='checkbox' checked='checked' name='' id='' value='" + data[i].wines.wid + "' class='caozuogou_list_caozuo_quanxuan_danpin' />" +
@@ -169,7 +154,8 @@
         success: function (data) {
 //		43°红星蓝瓶八年陈酿 500ml （12瓶装）
             for (i in data) {
-                $("<li class='fl shangpintuijian_list'><a class=' pr shangpintuijian_list_a' href=''>"
+                $("<li class='fl shangpintuijian_list'><a class=' pr shangpintuijian_list_a' href='<%=basePath%>/wine/goods.do?wid="
+                    + data[i].wid + "'>"
                     + "<img class='mypic' src='<%=basePath%>/resource/views/img/" + data[i].wineImg1 + "' style='height:182px;margin:0 auto' />"
                     + "<div class='pa shangpintuijian_list_a_hover'>去购买&gt;</div></a><div class=''><a href=''>"
                     + "<p class='shangpintuijian_list_p'>" + data[i].wineDegree + "°" + data[i].wineName
@@ -183,6 +169,11 @@
         // 六个触发事件地方
         // 全选  单选 删除 删除所有  加 减
         // 全选
+        $(".caozuogou_list_caozuo_count").change(function () {
+            console.log($(".caozuogou_list_caozuo_count").val());
+            change();
+
+        })
         $(".caozuogou_list_caozuo_quanxuan").click(function () {
             $(".caozuogou_list_caozuo_quanxuan_zhongjiu").prop("checked", this.checked);
             $(".caozuogou_list_caozuo_quanxuan_danpin").prop("checked", this.checked);
@@ -197,6 +188,7 @@
         $(".caozuogou_list_caozuo_quanxuan_danpin").click(function () {
             $(".caozuogou_list_caozuo_quanxuan_zhongjiu").prop("checked", $('.caozuogou_list_caozuo_quanxuan_danpin:checked').length == $('.caozuogou_list_caozuo_quanxuan_danpin').length);
             change();
+            ss();
         })
         $('.caozuogou_list_caozuo_shanchu').click(function () {
             //body_alert
@@ -215,13 +207,13 @@
                         $(".body_alert").css("display", "none");
                         if ($('.caozuogou_list_caozuo_quanxuan_danpin').length == 0) {
                             $(".caozuogou_list_caozuo_quanxuan_zhongjiu").parents("li").remove();
-                            $("<li class='clearfix' style='width:100%;height:80px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'><img style='float:right' src='../img/cart-empty-bg.png'/></div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p><p style='margin:0'><a href='lkl_index.html' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
-
+                            $("<li class='clearfix' style='width:100%;padding:10px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'><img style='float:right;margin-right:20px;' src='../img/cart-empty-bg.png'/></div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p><p style='margin:0'><a href='lkl_index.html' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
                         }
+                        change();
                     }
                 })
 
-                change();
+
             })
             $(".btn_quxiao ").click(function () {
 
@@ -235,22 +227,31 @@
         //全删
         $(".caozuogou_list_caozuo_quanshan").click(function () {
             var _this = this;
-            var wineId = $(this).siblings(".caozuogou_list_caozuo").find(".caozuogou_list_caozuo_quanxuan_danpin").val();
             $(".body_alert").css("display", "block");
+            var caozuogou_list_caozuo_quanxuan_danpin = document.getElementsByClassName("caozuogou_list_caozuo_quanxuan_danpin");
+            var arr = [];
+            for (var i = 0; i < caozuogou_list_caozuo_quanxuan_danpin.length; i++) {
+                if (caozuogou_list_caozuo_quanxuan_danpin[i].checked == 1) {
+
+                    arr.push(caozuogou_list_caozuo_quanxuan_danpin[i].value);
+                }
+
+            }
+            var wineStr = arr.join("-");
+            console.log(wineStr)
             $(".btn_queding").click(function () {
                 $.ajax({
                     url: "<%=basePath%>/car/deleteMore.do",
                     method: "get",
                     data: {
-                        wineId: wineId
+                        wineStr: wineStr
                     },
                     success: function (data) {
-                        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents("li").remove();
+                        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents(".caozuogou_list_bgss_ol_li").remove();
                         $(".body_alert").css("display", "none");
                         if ($('.caozuogou_list_caozuo_quanxuan_danpin').length == 0) {
                             $(".caozuogou_list_caozuo_quanxuan_zhongjiu").parents(".caozuogou_list").remove();
                             $("<li class='clearfix' style='width:100%;padding:10px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'><img style='float:right;margin-right:20px;' src='../img/cart-empty-bg.png'/></div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p><p style='margin:0'><a href='lkl_index.html' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
-
                         }
                         change();
                     }
@@ -267,12 +268,11 @@
             var _this = this;
             $(this).siblings(".caozuogou_list_caozuo_count").val(function (index, value) {
                 var res = parseInt(value) + parseInt(_this.value + 1);
-                return res == -1 ? 0 : res;
+                return res == 0 ? 1 : res;
             })
             change();
         })
     }
-
     function change() {
         $(".counts").html(function () {
             var count = 0;
@@ -289,8 +289,30 @@
             return countss;
         })
     }
-    //提交
-    //$.ajax()
+
+    function ss() {
+        var arrcount=[]
+        var arrid=[]
+        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index,el) {
+            arrid.push(el.value);
+        })
+        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents(".caozuogou_list_bgss_ol_li").find(".caozuogou_list_caozuo_count").each(function (index, el) {
+           arrcount.push(el.value);
+        })
+        for(var i=0;i<arrcount.length;i++){
+            $.ajax({
+                url:"<%=basePath%>/car/updateCount.do",
+                method:"get",
+                data:{
+                    counts:arrcount[i],
+                    wineId:arrid[i],
+                },
+                success:function () {
+
+                }
+            })
+        }
+    }
 </script>
 
 </html>
