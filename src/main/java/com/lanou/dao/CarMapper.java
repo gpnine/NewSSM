@@ -10,9 +10,7 @@ public interface CarMapper {
     public List<Car> findCars(String userPhone);
 
 
-
     public int insertShop(Car car);
-
 
 
     public Wine selectCar(int w);
@@ -23,4 +21,12 @@ public interface CarMapper {
     public void addCounts(Car car);
 
     public Car selectCount(Car car);
+
+    public int deleteWine(Integer wineId);
+
+    public int updateCount(Car car);
+
+    public int updateChecked(Car car);
+
+    public int deleteCar();
 }

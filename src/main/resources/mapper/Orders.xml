@@ -8,24 +8,52 @@
     <resultMap type="Orders" id="OrdersResult">
         <id column="OrderId" property="OrderId" jdbcType="INTEGER"/>
         <result column="OrderPay" property="OrderPay" jdbcType="VARCHAR"/>
-        <result column="OrderWuliu" property="OrderWuliu" jdbcType="VARCHAR"/>
         <result column="OrderAllMoney" property="OrderAllMoney" jdbcType="DOUBLE"/>
-        <result column="OrderWineId" property="OrderWineId" jdbcType="INTEGER"/>
         <result column="UserId" property="UserId" jdbcType="INTEGER"/>
-        <result column="WineId" property="WineId" jdbcType="INTEGER"/>
         <result column="OrderTicket" property="OrderTicket" jdbcType="VARCHAR"/>
         <result column="OrderText" property="OrderText" jdbcType="VARCHAR"/>
         <result column="OrderScore" property="OrderScore" jdbcType="INTEGER"/>
         <result column="OrderYunfei" property="OrderYunfei" jdbcType="DOUBLE"/>
-
+        <result column="YesOrNo" property="YesOrNo" jdbcType="INTEGER"/>
+        <result column="Adress_id" property="Adress_id" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap type="WuliuAdress" id="shouhuorenResult">
+        <id column="xId" property="xId" jdbcType="INTEGER"/>
+        <result column="ShouhuoName" property="ShouhuoName" jdbcType="VARCHAR"/>
+        <result column="ShouhuoAdress" property="ShouhuoAdress" jdbcType="VARCHAR"/>
+        <result column="XiangxiAdress" property="XiangxiAdress" jdbcType="VARCHAR"/>
+        <result column="ShouhuoPhone" property="ShouhuoPhone" jdbcType="VARCHAR"/>
+        <result column="user_id" property="user_id" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap type="OrderAndWine" id="orderAndWineResult">
+        <id column="order_id" property="order_id" jdbcType="INTEGER"/>
+        <result column="wine_id" property="wine_id" jdbcType="INTEGER"/>
+        <result column="wine_count" property="wine_count" jdbcType="INTEGER"/>
     </resultMap>
 
-
-    <select id="findOrders"  resultMap="OrdersResult">
-        select * from zhongjiu_order;
+    <select id="findOrders" parameterType="Integer" resultMap="OrdersResult">
+        select * from zhongjiu_order WHERE user_id = #{user_id} and YesOrNo = 1;
+	</select>
+    <update id="shoped">
+        update zhongjiu_car set YesOrNo = 1
+    </update>
+    <select id="findWuliu" parameterType="Integer" resultMap="shouhuorenResult">
+        select * from zhongjiu_order_shouhuoren where user_id = #{user_id};
 	</select>
 
     <insert id="insertOrders" parameterType="Orders" keyProperty="OrderId" useGeneratedKeys="true">
-        insert into zhongjiu_order (OrderPay,OrderWuliu,OrderAllMoney,OrderWineId,UserId,WineId,OrderTicket,OrderText,OrderScore,OrderYunfei) values (#{OrderPay},#{OrderWuliu},#{OrderAllMoney},#{OrderWineId},#{UserId},#{WineId},#{OrderTicket},#{OrderText},#{OrderScore},#{OrderYunfei});
+        insert into zhongjiu_order (OrderPay,OrderAllMoney,UserId,OrderTicket,OrderText,OrderScore,OrderYunfei) values (#{OrderPay},#{OrderAllMoney},#{UserId},#{OrderTicket},#{OrderText},#{OrderScore},#{OrderYunfei});
+    </insert>
+
+    <insert id="insertWine" parameterType="OrderAndWine">
+            insert into zhongjiu_order_wine (order_id,wine_id,wine_count) values (#{order_id},#{wine_id},#{wine_count});
+    </insert>
+    <select id="findWines" parameterType="Integer" resultMap="orderAndWineResult">
+        select wine_id from zhongjiu_order_wine WHERE order_id = #{order_id};;
+    </select>
+
+    <insert id="insertAdress" parameterType="WuliuAdress">
+        insert into zhongjiu_order_shouhuoren (ShouhuoName,ShouhuoAdress,XiangxiAdress,ShouhuoPhone,user_id)
+        values (#{ShouhuoName},#{ShouhuoAdress},#{XiangxiAdress},#{ShouhuoPhone},#{user_id});
     </insert>
 </mapper>

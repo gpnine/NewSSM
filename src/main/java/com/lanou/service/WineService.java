@@ -10,6 +10,7 @@ public interface WineService {
 	public List<Wine> findWines();
 	public List<Wine> moreWines(Integer c);
 	public List<Wine> findWineById(Integer WineId);
+	public Wine findWineByWineId(Integer wineId);
 	public List<Wine> findLike(String likeName);
 
 //	商品详情

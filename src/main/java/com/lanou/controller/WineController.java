@@ -32,16 +32,14 @@ public class WineController {
     @RequestMapping("/findWines.do")
     public void findWines() {
         List<Wine> wines = wineService.findWines();
-        System.out.print(wines);
     }
 
     //    模糊查询
     @RequestMapping("/findLike.do")
     @ResponseBody
-    public List<Wine> findLike(String likeName) {
-        System.out.println(likeName);
+    public List<Wine> findLike(String likeName, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
         List<Wine> wines = wineService.findLike(likeName);
-        System.out.println(wines);
         return wines;
     }
 
@@ -52,7 +50,6 @@ public class WineController {
         FastJson_Ali.toJson(response);
         c = (c - 1) * 40;
         List<Wine> wines = wineService.moreWines(c);
-        System.out.print(wines);
         return wines;
     }
 
@@ -70,6 +67,7 @@ public class WineController {
     public String goods_detile(Integer wid, HttpServletRequest request) {
 
 
+        request.setAttribute("wid", wid);
         List<Wine> wineList = userService.liuLanJiLu();
         request.setAttribute("wineList", wineList);
 
@@ -87,7 +85,8 @@ public class WineController {
     //    查找该用户购物车
     @RequestMapping("/findCars.do")
     @ResponseBody
-    public List<Car> findCars(String userPhone) {
+    public List<Car> findCars(String userPhone,HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
         List<Car> list = carService.findCars(userPhone);
         return list;
     }

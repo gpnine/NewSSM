@@ -1,37 +1,50 @@
 package com.lanou.entity;
 
+import java.util.List;
+
 /**
  * Created by lanou on 2017/12/9.
  */
 public class Orders {
     private int OrderId;
     private String OrderPay;
-    private String OrderWuliu;
     private double OrderAllMoney;
-    private int OrderWineId;
     private int UserId;
-    private int WineId;
     private String OrderTicket;
     private String OrderText;
     private int OrderScore;
     private double OrderYunfei;
+    private int YesOrNo;
+    private int Adress_id;
+
+    public int getAdress_id() {
+        return Adress_id;
+    }
+
+    public void setAdress_id(int adress_id) {
+        Adress_id = adress_id;
+    }
+
+    public int getYesOrNo() {
+        return YesOrNo;
+    }
+
+    public void setYesOrNo(int yesOrNo) {
+        YesOrNo = yesOrNo;
+    }
+
+    private List<Wine> wines;
 
     public Orders() {
         super();
     }
 
-    public Orders(int orderId, String orderPay, String orderWuliu, double orderAllMoney, int orderWineId, int userId, int wineId, String orderTicket, String orderText, int orderScore, double orderYunfei) {
-        OrderId = orderId;
-        OrderPay = orderPay;
-        OrderWuliu = orderWuliu;
-        OrderAllMoney = orderAllMoney;
-        OrderWineId = orderWineId;
-        UserId = userId;
-        WineId = wineId;
-        OrderTicket = orderTicket;
-        OrderText = orderText;
-        OrderScore = orderScore;
-        OrderYunfei = orderYunfei;
+    public List<Wine> getWines() {
+        return wines;
+    }
+
+    public void setWines(List<Wine> wines) {
+        this.wines = wines;
     }
 
     @Override
@@ -39,16 +52,30 @@ public class Orders {
         return "Orders{" +
                 "OrderId=" + OrderId +
                 ", OrderPay='" + OrderPay + '\'' +
-                ", OrderWuliu='" + OrderWuliu + '\'' +
                 ", OrderAllMoney=" + OrderAllMoney +
-                ", OrderWineId=" + OrderWineId +
                 ", UserId=" + UserId +
-                ", WineId=" + WineId +
                 ", OrderTicket='" + OrderTicket + '\'' +
                 ", OrderText='" + OrderText + '\'' +
                 ", OrderScore=" + OrderScore +
                 ", OrderYunfei=" + OrderYunfei +
+                ", YesOrNo=" + YesOrNo +
+                ", Adress_id=" + Adress_id +
+                ", wines=" + wines +
                 '}';
+    }
+
+    public Orders(int orderId, String orderPay, double orderAllMoney, int userId, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, List<Wine> wines) {
+        OrderId = orderId;
+        OrderPay = orderPay;
+        OrderAllMoney = orderAllMoney;
+        UserId = userId;
+        OrderTicket = orderTicket;
+        OrderText = orderText;
+        OrderScore = orderScore;
+        OrderYunfei = orderYunfei;
+        YesOrNo = yesOrNo;
+        Adress_id = adress_id;
+        this.wines = wines;
     }
 
     public int getOrderId() {
@@ -67,14 +94,6 @@ public class Orders {
         OrderPay = orderPay;
     }
 
-    public String getOrderWuliu() {
-        return OrderWuliu;
-    }
-
-    public void setOrderWuliu(String orderWuliu) {
-        OrderWuliu = orderWuliu;
-    }
-
     public double getOrderAllMoney() {
         return OrderAllMoney;
     }
@@ -83,28 +102,12 @@ public class Orders {
         OrderAllMoney = orderAllMoney;
     }
 
-    public int getOrderWineId() {
-        return OrderWineId;
-    }
-
-    public void setOrderWineId(int orderWineId) {
-        OrderWineId = orderWineId;
-    }
-
     public int getUserId() {
         return UserId;
     }
 
     public void setUserId(int userId) {
         UserId = userId;
-    }
-
-    public int getWineId() {
-        return WineId;
-    }
-
-    public void setWineId(int wineId) {
-        WineId = wineId;
     }
 
     public String getOrderTicket() {

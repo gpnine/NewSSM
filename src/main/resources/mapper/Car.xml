@@ -1,77 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
-    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lanou.dao.CarMapper">
-	<resultMap type="Car" id="carResult">
-		<id column="CarId" property="CarId" jdbcType="INTEGER"/>
-		<result column="userPhone" property="userPhone" jdbcType="VARCHAR"/>
-		<result column="Wine_id" property="wineId" jdbcType="INTEGER"/>
-		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
-		<result column="counts" property="counts" jdbcType="INTEGER"/>
-	</resultMap>
+    <resultMap type="Car" id="carResult">
+        <id column="CarId" property="CarId" jdbcType="INTEGER"/>
+        <result column="userPhone" property="userPhone" jdbcType="VARCHAR"/>
+        <result column="Wine_id" property="wineId" jdbcType="INTEGER"/>
+        <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+        <result column="counts" property="counts" jdbcType="INTEGER"/>
+        <result column="checked" property="checked" jdbcType="INTEGER"/>
+    </resultMap>
 
 
+    <resultMap type="Wine" id="wineResult">
+        <id column="WineId" property="WId" jdbcType="INTEGER"/>
+        <result column="WineName" property="WineName" jdbcType="VARCHAR"/>
+        <result column="WineEvalution" property="WineEvalution" jdbcType="VARCHAR"/>
+        <result column="WineEvaCount" property="WineEvaCount" jdbcType="INTEGER"/>
+        <result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
+        <result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
+        <result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
+        <result column="WineSales" property="WineSales" jdbcType="VARCHAR"/>
+        <result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
+        <result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
+        <result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
+        <result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
+        <result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
+        <result column="WineCity" property="WineCity" jdbcType="VARCHAR"/>
+        <result column="FromAdress" property="FromAdress" jdbcType="VARCHAR"/>
+        <result column="WineBianhao" property="WineBianhao" jdbcType="VARCHAR"/>
+        <result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
+        <result column="WineContain" property="WineContain" jdbcType="VARCHAR"/>
+        <result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
+        <result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
+        <result column="WineImg3" property="WineImg3" jdbcType="VARCHAR"/>
+        <result column="WineImg4" property="WineImg4" jdbcType="VARCHAR"/>
+        <result column="WineImg5" property="WineImg5" jdbcType="VARCHAR"/>
+        <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+    </resultMap>
 
-	<resultMap type="Wine" id="wineResult">
-		<id column="WineId" property="WId" jdbcType="INTEGER"/>
-		<result column="WineName" property="WineName" jdbcType="VARCHAR"/>
-		<result column="WineEvalution" property="WineEvalution" jdbcType="VARCHAR"/>
-		<result column="WineEvaCount" property="WineEvaCount" jdbcType="INTEGER"/>
-		<result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
-		<result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
-		<result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
-		<result column="WineSales" property="WineSales" jdbcType="VARCHAR"/>
-		<result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
-		<result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
-		<result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
-		<result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
-		<result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
-		<result column="WineCity" property="WineCity" jdbcType="VARCHAR"/>
-		<result column="FromAdress" property="FromAdress" jdbcType="VARCHAR"/>
-		<result column="WineBianhao" property="WineBianhao" jdbcType="VARCHAR"/>
-		<result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
-		<result column="WineContain" property="WineContain" jdbcType="VARCHAR"/>
-		<result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
-		<result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
-		<result column="WineImg3" property="WineImg3" jdbcType="VARCHAR"/>
-		<result column="WineImg4" property="WineImg4" jdbcType="VARCHAR"/>
-		<result column="WineImg5" property="WineImg5" jdbcType="VARCHAR"/>
-		<result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
-	</resultMap>
-
-	<select id="findCars" parameterType="string" resultMap="carResult">
-		select * from zhongjiu_car where userPhone = #{userPhone}
+    <select id="findCars" parameterType="string" resultMap="carResult">
+		select * from zhongjiu_car where userPhone = #{userPhone} and deleteId = 0;
 	</select>
 
-	<select id="selectCar" parameterType="int" resultMap="wineResult">
+    <select id="selectCar" parameterType="int" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{w}
 	</select>
 
 
+    <update id="deleteCar" parameterType="Car">
+		update zhongjiu_car set deleteId = 1 where CarId = #{CarId}
+	</update>
 
 
-
-	<insert id="insertShop" parameterType="Car">
+    <insert id="insertShop" parameterType="Car">
 		insert into zhongjiu_car (Wine_id,userPhone,counts) values (#{wineId},#{userPhone},#{counts})
 	</insert>
 
 
-	<select id="extend" parameterType="Car" resultMap="carResult">
+    <select id="extend" parameterType="Car" resultMap="carResult">
 		select * from zhongjiu_car where userPhone = #{userPhone} and Wine_id = #{wineId}
 	</select>
 
-	<update id="addCounts" parameterType="Car">
+    <update id="addCounts" parameterType="Car">
 		update zhongjiu_car set counts = #{counts} where userPhone = #{userPhone} and Wine_id =#{wineId}
 	</update>
 
-	<select id="selectCount" parameterType="Car" resultMap="carResult">
+    <select id="selectCount" parameterType="Car" resultMap="carResult">
 		select counts from zhongjiu_car where userPhone = #{userPhone} and Wine_id =#{wineId}
 	</select>
 
-
-
-
-
-
+    <update id="deleteWine" parameterType="int">
+		update zhongjiu_car set deleteId = 1 where  Wine_id =#{wineId}
+	</update>
+    <update id="updateCount" parameterType="Car">
+		update zhongjiu_car set counts = #{counts} where  Wine_id =#{wineId}
+	</update>
+    <update id="updateChecked" parameterType="Car">
+        update zhongjiu_car set checked = #{checked} where  Wine_id =#{wineId}
+    </update>
 </mapper>

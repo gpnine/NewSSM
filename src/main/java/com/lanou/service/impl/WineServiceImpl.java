@@ -52,4 +52,8 @@ public class WineServiceImpl implements WineService {
 
 		return wineMapper.goods_detile(wid);
 	}
+
+	public Wine findWineByWineId(Integer wineId) {
+		return wineMapper.findWineByWineId(wineId);
+	}
 }
