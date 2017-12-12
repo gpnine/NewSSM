@@ -53,7 +53,6 @@ public class IndexController {
     @ResponseBody
     public List<Wine> shangping(Integer WineId,HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        Map<String, Object> map = new HashMap<String, Object>();
         List<Wine> wines = wineService.findWineById(WineId);
         return wines;
     }
