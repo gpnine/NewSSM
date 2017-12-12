@@ -1,0 +1,131 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;	
+}
+.head{
+	width: 100%;
+	height: 70px;
+	background-color: #41A4E1;
+}
+@font-face {
+	font-family:STXINGKA;
+	src: url("STXINGKA.ttf");
+}
+.logo{
+	font-family:STXINGKA;
+	font-size: 30px;
+	color: white;
+	height: 70px;
+	width: 100px;
+	/*border: 1px solid red;*/
+	text-align: center;
+	line-height: 70px;
+	display: inline-block;
+}
+.head li{
+	float: left;
+	margin: 5px;
+	color: white;
+	font-size: 13px;
+	cursor: pointer;
+}
+.head li:hover{
+	color: orange;
+}
+.head li:hover span{
+	color: white;
+}
+.head ul{
+	display: inline-block;
+	float: right;
+}
+.head_nav{
+	width: 100%;
+	height: 50px;
+	background-color: #F4F5F4;
+}
+.head_nav li{
+	float: left;
+	margin-left: 40px;
+	line-height: 50px;
+	font-size: 13px;
+	cursor: pointer;
+}
+.menu{
+	width:1000px;
+	/*border: 1px solid black;*/
+	position: relative;
+}
+.menu_nav{
+	width: 180px;
+	height: 400px;
+	background-color: #646564;
+	position: absolute;
+	left: 0px;
+	top: 0;
+}
+.menu_page{
+	width: 1000px;
+	/*border: 1px solid red;*/
+	position: absolute;
+	left: 180px;
+	top: 0;
+}
+.p{
+	width: 180px;
+	height: 40px;
+	font-size: 16px;
+	color: white;
+	font-weight: bolder;
+	text-indent: 20px;
+	line-height: 40px;
+	background-color: #595A59;
+	margin-bottom: 10px;
+}
+.man{
+	width: 180px;
+	text-indent: 40px;
+	color: white;
+	font-size: 14px;
+}
+.swiper,.floor,.order,.pl,.spgl,.ppgl{
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.swiper{
+	display: block;
+}
+.floor,.order,.pl,.spgl,.ppgl{
+	display: none;
+}
+.man ul li a{
+	color: white;
+}
+.man ul li{
+	margin-bottom: 10px;
+}
+.swiper table,.floor table,.order table,.pl table,.spgl table,.ppgl table{
+	border: 1px solid #E8E9E8;
+}
+.swiper table tr,.floor table tr,.order table tr,.pl table tr,.spgl table tr,.ppgl table tr{
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.pic1 img{
+	width: 100px;
+	height: 100px;
+}
+.pic img{
+	height: 100px;
+}
+.add,.del,.change{
+	width: 50px;
+	height: 30px;
+	border-radius: 10px;
+}
+
+
+
