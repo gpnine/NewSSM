@@ -9,15 +9,19 @@
         <result column="huichangImg" property="huichangimg" jdbcType="VARCHAR"/>
         <result column="parentId" property="parentId" jdbcType="INTEGER"/>
         <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+        <result column="bigTu" property="bigTu" jdbcType="INTEGER"/>
 
     </resultMap>
 
     <select id="findHuichang" parameterType="Integer" resultMap="huichangResult">
         select huichangName,huichangImg  from zhongjiu_huichang where parentId = #{parentId}
     </select>
+    <select id="findBigtu" parameterType="Huichang" resultMap="huichangResult">
+        select huichangName,huichangImg  from zhongjiu_huichang where parentId = #{parentId} and bigTu = #{bigTu}
+    </select>
 
     <select id="findByHuichangId" parameterType="Integer" resultMap="huichangResult">
-        select * from zhongjiu_huichang where huichangId = #{huichangId}
+        select huichangImg from zhongjiu_huichang where huichangId = #{huichangId}
     </select>
 
 </mapper>

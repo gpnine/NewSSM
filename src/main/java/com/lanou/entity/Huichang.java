@@ -9,6 +9,15 @@ public class Huichang {
     private String huichangimg;
     private Integer parentId;
     private Integer deleteId;
+    private Integer bigTu;
+
+    public Integer getBigTu() {
+        return bigTu;
+    }
+
+    public void setBigTu(Integer bigTu) {
+        this.bigTu = bigTu;
+    }
 
     public Integer getHuichangId() {
         return huichangId;
@@ -54,19 +63,24 @@ public class Huichang {
         super();
     }
 
-    public Huichang(Integer huichangId, String huichangname, String huichangimg, Integer parentId, Integer deleteId) {
+    @Override
+    public String toString() {
+        return "Huichang{" +
+                "huichangId=" + huichangId +
+                ", huichangname='" + huichangname + '\'' +
+                ", huichangimg='" + huichangimg + '\'' +
+                ", parentId=" + parentId +
+                ", deleteId=" + deleteId +
+                ", bigTu=" + bigTu +
+                '}';
+    }
+
+    public Huichang(Integer huichangId, String huichangname, String huichangimg, Integer parentId, Integer deleteId, Integer bigTu) {
         this.huichangId = huichangId;
         this.huichangname = huichangname;
         this.huichangimg = huichangimg;
         this.parentId = parentId;
         this.deleteId = deleteId;
-    }
-
-    @Override
-    public String toString() {
-        return "Huichang{" +
-                "huichangname='" + huichangname + '\'' +
-                ", huichangimg='" + huichangimg + '\'' +
-                '}';
+        this.bigTu = bigTu;
     }
 }

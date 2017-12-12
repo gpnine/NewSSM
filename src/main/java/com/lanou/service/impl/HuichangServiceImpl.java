@@ -20,6 +20,13 @@ public class HuichangServiceImpl implements HuichangService {
         return huichangmapper.findHuichang(parentId);
     }
 
+    public List<Huichang> findBigtu(Integer parentId, Integer bigTu) {
+        Huichang huichang = new Huichang();
+        huichang.setParentId(parentId);
+        huichang.setBigTu(bigTu);
+        return huichangmapper.findBigtu(huichang);
+    }
+
     public Huichang findByHuichangId(Integer huichangId) {
         return huichangmapper.findByHuichangId(huichangId);
     }
