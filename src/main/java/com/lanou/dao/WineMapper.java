@@ -14,6 +14,7 @@ public interface WineMapper {
     public List<Wine> findLike(String likeName);
     public int likeCount(String likeName);
     public List<Wine> findScope(Map map);
+    public List<Wine> findScope1(Map map);
 
 //    商品详情
     public Wine goods_detile(Integer wid);

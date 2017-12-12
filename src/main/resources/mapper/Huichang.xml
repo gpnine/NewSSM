@@ -13,7 +13,11 @@
     </resultMap>
 
     <select id="findHuichang" parameterType="Integer" resultMap="huichangResult">
-      select * from zhongjiu_huichang where parentId = #{parentId}
+        select huichangName,huichangImg  from zhongjiu_huichang where parentId = #{parentId}
+    </select>
+
+    <select id="findByHuichangId" parameterType="Integer" resultMap="huichangResult">
+        select * from zhongjiu_huichang where huichangId = #{huichangId}
     </select>
 
 </mapper>

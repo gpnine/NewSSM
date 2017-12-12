@@ -19,4 +19,8 @@ public class HuichangServiceImpl implements HuichangService {
 
         return huichangmapper.findHuichang(parentId);
     }
+
+    public Huichang findByHuichangId(Integer huichangId) {
+        return huichangmapper.findByHuichangId(huichangId);
+    }
 }

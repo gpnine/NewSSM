@@ -23,6 +23,7 @@ public interface WineService {
     public Wine goods_detile(Integer goodsId);
 
     public List<Wine> findScope(Integer a, Integer b);
+    public List<Wine> findScope1(Integer a1, Integer b1);
 
     public List<Wine> rexiao();
 }

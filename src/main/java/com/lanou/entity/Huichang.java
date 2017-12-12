@@ -65,11 +65,8 @@ public class Huichang {
     @Override
     public String toString() {
         return "Huichang{" +
-                "huichangId=" + huichangId +
-                ", huichangname='" + huichangname + '\'' +
+                "huichangname='" + huichangname + '\'' +
                 ", huichangimg='" + huichangimg + '\'' +
-                ", parentId=" + parentId +
-                ", deleteId=" + deleteId +
                 '}';
     }
 }

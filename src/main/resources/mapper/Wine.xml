@@ -50,6 +50,9 @@
     <select id="findScope" parameterType="Map" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId between #{a,jdbcType=INTEGER} and  #{b,jdbcType=INTEGER}
     </select>
+    <select id="findScope1" parameterType="Map" resultMap="wineResult">
+		select WineId,WineName,WineEvalution,WinePrice,WineLiter,WineDegree,WineImg1 from zhongjiu_wine where WineId between #{a1,jdbcType=INTEGER} and  #{b1,jdbcType=INTEGER}
+    </select>
     <!--商品详情-->
     <select id="goods_detile" parameterType="int" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{wid}

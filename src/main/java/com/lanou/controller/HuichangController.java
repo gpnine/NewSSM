@@ -1,7 +1,9 @@
 package com.lanou.controller;
 
 import com.lanou.entity.Huichang;
+import com.lanou.entity.Wine;
 import com.lanou.service.HuichangService;
+import com.lanou.service.WineService;
 import com.lanou.util.FastJson_Ali;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,17 +21,22 @@ public class HuichangController {
 
     @Resource
     private HuichangService huichangservice;
+    @Resource
+    private WineService wineService;
 
     @RequestMapping("/findhuichang.do")
     @ResponseBody
-    public Map<String, Object> findHuichang(Integer parentId, HttpServletResponse response) {
+    public Map<String, Object> findHuichang(HttpServletResponse response) {
         FastJson_Ali.toJson(response);
         Map<String, Object> map = new HashMap<String, Object>();
-        List<Huichang> huichangs1 = huichangservice.findHuichang(1);
-        List<Huichang> datu1 = huichangservice.findHuichang(12);
-        List<Huichang> datu2 = huichangservice.findHuichang(13);
-        List<Huichang> datu3 = huichangservice.findHuichang(14);
-
+        Huichang bkzj = huichangservice.findByHuichangId(12);
+        List<Huichang> bkzjShangping = huichangservice.findHuichang(12);
+        List<Wine> bkzjWines=wineService.findScope1(1151,1160);
+        map.put("bkzj",bkzj);
+        map.put("bkzjShangping",bkzjShangping);
+        map.put("bkzjWines",bkzjWines);
         return map;
     }
+
+
 }
