@@ -10,9 +10,9 @@ public interface CarService {
 
     public int deleteCar();
 
-    public int deleteWine(Integer wineId);
+    public int deleteWine(Integer wineId,String userPhone);
 
-    public int updateCount(Integer counts, Integer wineId);
+    public int updateCount(Integer counts, Integer wineId,String userPhone);
 
     public int updateChecked(Integer checked, Integer wineId);
 

@@ -72,10 +72,10 @@
 	</select>
 
     <update id="deleteWine" parameterType="int">
-		update zhongjiu_car set deleteId = 1 where  Wine_id =#{wineId}
+		update zhongjiu_car set deleteId = 1 where  Wine_id =#{wineId} and userPhone = #{userPhone}
 	</update>
     <update id="updateCount" parameterType="Car">
-		update zhongjiu_car set counts = #{counts} where  Wine_id =#{wineId}
+		update zhongjiu_car set counts = #{counts} where  Wine_id =#{wineId} and userPhone = #{userPhone}
 	</update>
     <update id="updateChecked" parameterType="Car">
         update zhongjiu_car set checked = #{checked} where  Wine_id =#{wineId}

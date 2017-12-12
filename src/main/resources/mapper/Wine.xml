@@ -33,7 +33,7 @@
 		select WineName,WinePrice,WineImg1 from zhongjiu_wine
 	</select>
     <select id="moreWines" parameterType="Map" resultMap="wineResult">
-		select WineId,WineName,WinePrice,WineLiter,WineEvaCount,WineSales,WineDegree,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine limit #{c,jdbcType=INTEGER},40
+		select * from zhongjiu_wine limit #{c,jdbcType=INTEGER},40
 	</select>
     <select id="findWineById" parameterType="int" resultMap="wineResult">
 		select WineId,WineImg1,WineDegree,WineName,WineLiter,WineBianhao,WinePrice from zhongjiu_wine where WineId = #{WId}
@@ -42,10 +42,13 @@
 		select WineId,WineImg1,WineDegree,WineName,WineLiter,WineBianhao,WinePrice from zhongjiu_wine where WineId = #{WId}
 	</select>
     <select id="findLike" parameterType="String" resultMap="wineResult">
-		select * from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
+		select * from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineScent,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
+	</select>
+    <select id="likeCount" parameterType="String" resultType="integer">
+		select count(*) from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineScent,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
 	</select>
     <select id="findScope" parameterType="Map" resultMap="wineResult">
-		select WineId,WineName,WineSales,WineLiter,WineEvaCount,WineDegree,WinePrice,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine where WineId between #{a,jdbcType=INTEGER} and  #{b,jdbcType=INTEGER}
+		select * from zhongjiu_wine where WineId between #{a,jdbcType=INTEGER} and  #{b,jdbcType=INTEGER}
     </select>
     <!--商品详情-->
     <select id="goods_detile" parameterType="int" resultMap="wineResult">

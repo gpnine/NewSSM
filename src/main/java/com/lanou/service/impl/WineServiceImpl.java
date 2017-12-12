@@ -19,6 +19,10 @@ public class WineServiceImpl implements WineService {
 	@Resource
 	private WineMapper wineMapper;
 
+	public int likeCount(String likeName) {
+		return wineMapper.likeCount(likeName);
+	}
+
 	public List<Wine> findWines() {
 		return wineMapper.findWines();
 	}

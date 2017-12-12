@@ -236,7 +236,7 @@
             }
             //生成产地1
             for (var i = 0; i < b_adressArr0.length; i++) {
-                $("<li class=\"chandi1\"><a class=\"li_a3\" href=\"\">" + b_adressArr0[i] + "</a></li>").prependTo($(".lis_one"));
+                $("<li class=\"chandi1\"><a  class=\"li_a3\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_adressArr0[i] + "'>" + b_adressArr0[i] + "</a></li>").prependTo($(".lis_one"));
             }
 
 
@@ -248,7 +248,7 @@
                 b_yangjiuArr.push(b_scent);
             }
             for (var i = 0; i < b_yangjiuArr.length; i++) {
-                $("<li class=\"chandi1\"><a class=\"li_a3\" href=\"\">" + b_yangjiuArr[i] + "</a></li>").appendTo($(".lis_xx"));
+                $("<li class=\"chandi1\"><a class=\"li_a3\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_yangjiuArr[i] + "'>" + b_yangjiuArr[i] + "</a></li>").appendTo($(".lis_xx"));
             }
 
 
@@ -260,7 +260,7 @@
                 b_shiyong1Arr.push(b_shiyong);
             }
             for (var i = 0; i < b_shiyong1Arr.length; i++) {
-                $("<li class=\"chandi1\"><a class=\"li_a3\" href=\"\">" + b_shiyong1Arr[i] + "</a></li>").appendTo($(".lis_sy"));
+                $("<li class=\"chandi1\"><a class=\"li_a3\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_shiyong1Arr[i] + "'>" + b_shiyong1Arr[i] + "</a></li>").appendTo($(".lis_sy"));
             }
 
 

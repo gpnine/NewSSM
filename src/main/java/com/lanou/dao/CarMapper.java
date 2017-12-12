@@ -22,7 +22,7 @@ public interface CarMapper {
 
     public Car selectCount(Car car);
 
-    public int deleteWine(Integer wineId);
+    public int deleteWine(Integer wineId,String userPhone);
 
     public int updateCount(Car car);
 

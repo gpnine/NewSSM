@@ -65,10 +65,31 @@
         </ol>
     </div>
 </div>
-<h1>${user1.userPhone}</h1>
 </body>
 <script src="<%=basePath%>/resource/views/gouwuche/js/jquery-3.2.1.min.js"></script>
 <script>
+    function check() {
+        var arrid = []
+        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index, el) {
+            arrid.push(el.value);
+            for (var i = 0; i < arrid.length; i++) {
+                if ($(".caozuogou_list_caozuo_quanxuan_danpin")[i].checked == 1) {
+                    $.ajax({
+                        url: "<%=basePath%>/car/updateChecked",
+                        method: "get",
+                        data: {
+                            checked: 1,
+                            wineId: arrid[i],
+                            userPhone: 18395592587,
+                        },
+                        success: function (data) {
+
+                        }
+                    })
+                }
+            }
+        })
+    }
     //		使用Ajax获取购物车中商品
     $.ajax({
         method: "get",
@@ -189,6 +210,7 @@
             $(".caozuogou_list_caozuo_quanxuan_zhongjiu").prop("checked", $('.caozuogou_list_caozuo_quanxuan_danpin:checked').length == $('.caozuogou_list_caozuo_quanxuan_danpin').length);
             change();
             ss();
+            check();
         })
         $('.caozuogou_list_caozuo_shanchu').click(function () {
             //body_alert
@@ -200,7 +222,8 @@
                     url: "<%=basePath%>/car/deleteWine.do",
                     method: "get",
                     data: {
-                        wineId: wineId
+                        wineId: wineId,
+                        userPhone: 18395592587
                     },
                     success: function (data) {
                         $(_this).parents(".caozuogou_list_bgss_ol_li").remove();
@@ -244,7 +267,8 @@
                     url: "<%=basePath%>/car/deleteMore.do",
                     method: "get",
                     data: {
-                        wineStr: wineStr
+                        wineStr: wineStr,
+                        userPhone: 18395592587
                     },
                     success: function (data) {
                         $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents(".caozuogou_list_bgss_ol_li").remove();
@@ -273,6 +297,7 @@
             change();
         })
     }
+
     function change() {
         $(".counts").html(function () {
             var count = 0;
@@ -291,23 +316,24 @@
     }
 
     function ss() {
-        var arrcount=[]
-        var arrid=[]
-        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index,el) {
+        var arrcount = [];
+        var arrid = [];
+        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index, el) {
             arrid.push(el.value);
         })
         $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents(".caozuogou_list_bgss_ol_li").find(".caozuogou_list_caozuo_count").each(function (index, el) {
-           arrcount.push(el.value);
+            arrcount.push(el.value);
         })
-        for(var i=0;i<arrcount.length;i++){
+        for (var i = 0; i < arrcount.length; i++) {
             $.ajax({
-                url:"<%=basePath%>/car/updateCount.do",
-                method:"get",
-                data:{
-                    counts:arrcount[i],
-                    wineId:arrid[i],
+                url: "<%=basePath%>/car/updateCount.do",
+                method: "get",
+                data: {
+                    counts: arrcount[i],
+                    wineId: arrid[i],
+                    userPhone: 18395592587
                 },
-                success:function () {
+                success: function () {
 
                 }
             })
