@@ -16,6 +16,31 @@ public class Orders {
     private double OrderYunfei;
     private int YesOrNo;
     private int Adress_id;
+    private int GouwuCishu;
+    private int ShifouZhifu;
+
+    public Orders(int orderId, String orderPay, double orderAllMoney, int userId, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, int shifouZhifu, List<Wine> wines) {
+        OrderId = orderId;
+        OrderPay = orderPay;
+        OrderAllMoney = orderAllMoney;
+        UserId = userId;
+        OrderTicket = orderTicket;
+        OrderText = orderText;
+        OrderScore = orderScore;
+        OrderYunfei = orderYunfei;
+        YesOrNo = yesOrNo;
+        Adress_id = adress_id;
+        ShifouZhifu = shifouZhifu;
+        this.wines = wines;
+    }
+
+    public int getShifouZhifu() {
+        return ShifouZhifu;
+    }
+
+    public void setShifouZhifu(int shifouZhifu) {
+        ShifouZhifu = shifouZhifu;
+    }
 
     public int getAdress_id() {
         return Adress_id;
@@ -60,22 +85,9 @@ public class Orders {
                 ", OrderYunfei=" + OrderYunfei +
                 ", YesOrNo=" + YesOrNo +
                 ", Adress_id=" + Adress_id +
+                ", ShifouZhifu=" + ShifouZhifu +
                 ", wines=" + wines +
                 '}';
-    }
-
-    public Orders(int orderId, String orderPay, double orderAllMoney, int userId, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, List<Wine> wines) {
-        OrderId = orderId;
-        OrderPay = orderPay;
-        OrderAllMoney = orderAllMoney;
-        UserId = userId;
-        OrderTicket = orderTicket;
-        OrderText = orderText;
-        OrderScore = orderScore;
-        OrderYunfei = orderYunfei;
-        YesOrNo = yesOrNo;
-        Adress_id = adress_id;
-        this.wines = wines;
     }
 
     public int getOrderId() {

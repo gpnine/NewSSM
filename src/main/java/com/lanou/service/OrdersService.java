@@ -21,5 +21,8 @@ public interface OrdersService {
 
     public List<OrderAndWine> findWines(Integer order_id);
 
+    public int tijiaoDingdan(Integer user_id);
+
+    public int findOrdersId(Integer user_id);
 //    public int selectWuliu(Integer user_id);
 }
