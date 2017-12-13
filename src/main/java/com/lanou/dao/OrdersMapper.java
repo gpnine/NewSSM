@@ -11,8 +11,16 @@ public interface OrdersMapper {
     //    查看订单
     public List<Orders> findOrders(Integer user_id);
 
+    public int findOrdersId(Integer user_id);
+
     //是否提交订单，已买为1，没买为0
-    public int shoped();
+    public int tijiaoDingdan(Integer user_id);
+
+    //    购买次数
+    public int GouwuCishu(Integer user_id, Integer ShifouZhifu);
+
+    //    是否支付
+    public int ShifouZhifu(Integer user_id);
 
     //显示收货人地址
     public List<WuliuAdress> findWuliu(Integer user_id);
