@@ -30,6 +30,14 @@ public interface WineMapper {
     public Wine goods_detile(Integer wid);
 
     //热销商品
-    public List<Wine> rexiao();
+    public List<Wine> rexiao(String WineBrand);
+
+    public List<Wine> chengjiao(String WineBrand);
+
+    public List<Wine> jiage(String WineBrand);
+
+    public List<Wine> pinlunshu(String WineBrand);
+
+    public List<Wine> shangjia(String WineBrand);
 
 }
