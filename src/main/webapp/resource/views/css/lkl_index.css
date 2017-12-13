@@ -663,3 +663,13 @@ h5{
 	right:0px;
 	transition: all 1s;
 }
+.zhongjiu_goods{
+	background:white;
+	padding:0 15px;
+	width:190px
+}
+.chakan{
+	position: absolute;
+	right:10px;
+	top:0;
+}
