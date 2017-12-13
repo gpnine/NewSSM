@@ -49,13 +49,13 @@ public class ShopController {
         int[] brandArr = {101, 201, 301, 401};
         for (int i = 0; i < brandArr.length; i++) {
             List<Shop> brand = shopService.findMore(brandArr[i]);
-            map.put("brand"+i,brand);
+            map.put("brand" + i, brand);
         }
 //        产地
         int[] adressArr = {102, 202, 302};
         for (int i = 0; i < adressArr.length; i++) {
             List<Shop> adress = shopService.findMore(adressArr[i]);
-            map.put("adress"+i,adress);
+            map.put("adress" + i, adress);
         }
 //        香型
         List<Shop> scent = shopService.findMore(103);
@@ -63,18 +63,18 @@ public class ShopController {
         List<Shop> degree = shopService.findMore(105);
 //        种类
         List<Shop> zhonglei = shopService.findMore(203);
-        map.put("scent",scent);
-        map.put("degree",degree);
-        map.put("zhonglei",zhonglei);
+        map.put("scent", scent);
+        map.put("degree", degree);
+        map.put("zhonglei", zhonglei);
 //        适用
         int[] shiyongArr = {104, 204, 304, 404};
         for (int i = 0; i < shiyongArr.length; i++) {
             List<Shop> shiyong = shopService.findMore(shiyongArr[i]);
-            map.put("shiyong"+i,shiyong);
+            map.put("shiyong" + i, shiyong);
         }
 //        洋酒类型
         List<Shop> yangjiu = shopService.findMore(304);
-        map.put("yangjiu",yangjiu);
+        map.put("yangjiu", yangjiu);
 
         return map;
     }

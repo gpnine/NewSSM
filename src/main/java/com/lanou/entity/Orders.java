@@ -9,7 +9,7 @@ public class Orders {
     private int OrderId;
     private String OrderPay;
     private double OrderAllMoney;
-    private int UserId;
+    private String UserPhone;
     private String OrderTicket;
     private String OrderText;
     private int OrderScore;
@@ -19,19 +19,55 @@ public class Orders {
     private int GouwuCishu;
     private int ShifouZhifu;
 
-    public Orders(int orderId, String orderPay, double orderAllMoney, int userId, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, int shifouZhifu, List<Wine> wines) {
+    public String getUserPhone() {
+        return UserPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        UserPhone = userPhone;
+    }
+
+    public int getGouwuCishu() {
+        return GouwuCishu;
+    }
+
+    public void setGouwuCishu(int gouwuCishu) {
+        GouwuCishu = gouwuCishu;
+    }
+
+    public Orders(int orderId, String orderPay, double orderAllMoney, String userPhone, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, int gouwuCishu, int shifouZhifu, List<Wine> wines) {
         OrderId = orderId;
         OrderPay = orderPay;
         OrderAllMoney = orderAllMoney;
-        UserId = userId;
+        UserPhone = userPhone;
         OrderTicket = orderTicket;
         OrderText = orderText;
         OrderScore = orderScore;
         OrderYunfei = orderYunfei;
         YesOrNo = yesOrNo;
         Adress_id = adress_id;
+        GouwuCishu = gouwuCishu;
         ShifouZhifu = shifouZhifu;
         this.wines = wines;
+    }
+
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "OrderId=" + OrderId +
+                ", OrderPay='" + OrderPay + '\'' +
+                ", OrderAllMoney=" + OrderAllMoney +
+                ", UserPhone='" + UserPhone + '\'' +
+                ", OrderTicket='" + OrderTicket + '\'' +
+                ", OrderText='" + OrderText + '\'' +
+                ", OrderScore=" + OrderScore +
+                ", OrderYunfei=" + OrderYunfei +
+                ", YesOrNo=" + YesOrNo +
+                ", Adress_id=" + Adress_id +
+                ", GouwuCishu=" + GouwuCishu +
+                ", ShifouZhifu=" + ShifouZhifu +
+                ", wines=" + wines +
+                '}';
     }
 
     public int getShifouZhifu() {
@@ -72,23 +108,6 @@ public class Orders {
         this.wines = wines;
     }
 
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "OrderId=" + OrderId +
-                ", OrderPay='" + OrderPay + '\'' +
-                ", OrderAllMoney=" + OrderAllMoney +
-                ", UserId=" + UserId +
-                ", OrderTicket='" + OrderTicket + '\'' +
-                ", OrderText='" + OrderText + '\'' +
-                ", OrderScore=" + OrderScore +
-                ", OrderYunfei=" + OrderYunfei +
-                ", YesOrNo=" + YesOrNo +
-                ", Adress_id=" + Adress_id +
-                ", ShifouZhifu=" + ShifouZhifu +
-                ", wines=" + wines +
-                '}';
-    }
 
     public int getOrderId() {
         return OrderId;
@@ -114,13 +133,6 @@ public class Orders {
         OrderAllMoney = orderAllMoney;
     }
 
-    public int getUserId() {
-        return UserId;
-    }
-
-    public void setUserId(int userId) {
-        UserId = userId;
-    }
 
     public String getOrderTicket() {
         return OrderTicket;

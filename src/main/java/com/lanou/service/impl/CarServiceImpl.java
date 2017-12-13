@@ -39,6 +39,12 @@ public class CarServiceImpl implements CarService {
 
     }
 
+    public int selectCount1(Integer wineId, String userPhone) {
+        Car car = new Car();
+        car.setUserPhone(userPhone);
+        car.setWineId(wineId);
+        return carMapper.selectCount(car).getCounts();
+    }
 
     @Resource
     private CarMapper carMapper;

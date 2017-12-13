@@ -68,33 +68,6 @@
 </body>
 <script src="<%=basePath%>/resource/views/gouwuche/js/jquery-3.2.1.min.js"></script>
 <script>
-    //    //将商品插入订单，提交订单
-    //    $(".btn_queding").click(function () {
-    ////        提交订单
-    //        $.ajax({
-    //            url: "http://10.80.13.161:8080/orders/tijiaoDingdan.do",
-    //            method: "get",
-    //            data: {
-    //                user_id: 1
-    //            },
-    //            success: function (data) {
-    //
-    //            }
-    //        })
-    ////        插入商品，需要选中的酒的id和counts
-    //        $.ajax({
-    //            url: "http://10.80.13.161:8080/orders/insertWine.do",
-    //            method: "get",
-    //            data: {
-    //                user_id: 1,
-    //                wineId:,
-    //                counts:,
-    //            },
-    //            success: function (data) {
-    //
-    //            }
-    //        })
-    //    })
     //		使用Ajax获取购物车中商品
     $.ajax({
         method: "get",
@@ -122,14 +95,14 @@
                     + "name='' value=''/>中酒自营"
                     + "<ol class='caozuogou_list_bgss_ol'></ol>"
                     + "<div class='caozuogou_list caozuogou_list_bgs clearfix'>"
-                    + " <div class='caozuogou_list_caozuo'>"
+                    + "<div class='caozuogou_list_caozuo'>"
                     + "<input type='checkbox' name='' checked='checked' id='' value=''"
                     + "class='caozuogou_list_caozuo_quanxuan caozuogou_list_caozuo_quanxuan_zhongjiu'/>全选"
                     + "<span class='caozuogou_list_caozuo_quanshan'>删除</span>"
                     + "<span class='inpcounts'>"
                     + "</span>"
                     + "</div>"
-                    + " <div class='caozuogou_list_caozuo'"
+                    + "<div class='caozuogou_list_caozuo'"
                     + "style=' vertical-align: middle; text-align: left;line-height: 45px;'>"
                     + "<span class='counts' style='color:red'>0</span><span>件商品</span>"
                     + "</div>"
@@ -167,23 +140,52 @@
                     return coutss;
                 })
                 count_onclick();
+                //    //将商品插入订单，提交订单
+                $(".qujiesuan").click(function () {
+                    //        提交订单
+                    $.ajax({
+                        url: "http://10.80.13.161:8080/orders/insertOrder.do",
+                        method: "get",
+                        data: {
+                            userPhone: 18395592587,
+                        },
+                        success: function (data) {
+                            var arrss = [];
+                            var arrsc = [];
+                            $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index, el) {
+                                arrss.push(el.value);
+                            })
+                            for (var i = 0; i < arrss.length; i++) {
+                                $.ajax({
+                                    url: "http://10.80.13.161:8080/orders/insertWine.do",
+                                    method: "get",
+                                    data: {
+                                        userPhone: 18395592587,
+                                        wineId: arrss[i]
+                                    },
+                                    success: function (data) {
 
-
+                                    }
+                                })
+                            }
+                        }
+                    })
+                })
             }
         }
     });
-    $(".qujiesuan").click(function () {
-        $.ajax({
-            url: "<%=basePath%>/orders/tijiaoDingdan.do",
-            method: "get",
-            data: {
-                user_id: 1
-            },
-            success: function (data) {
+    <%--$(".qujiesuan").click(function () {--%>
+    <%--$.ajax({--%>
+    <%--url: "<%=basePath%>/orders/tijiaoDingdan.do",--%>
+    <%--method: "get",--%>
+    <%--data: {--%>
+    <%--userPhone: 18395592587,--%>
+    <%--},--%>
+    <%--success: function (data) {--%>
 
-            }
-        })
-    })
+    <%--}--%>
+    <%--})--%>
+    <%--})--%>
     //设置商品推荐
 
     $.ajax({
@@ -313,7 +315,7 @@
 
             }
             var wineStr = arr.join("-");
-            $(".btn_queding").click(function () {
+            $(".").click(function () {
                 $.ajax({
                     url: "<%=basePath%>/car/deleteMore.do",
                     method: "get",

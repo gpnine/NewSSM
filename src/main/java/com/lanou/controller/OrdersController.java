@@ -5,6 +5,7 @@ import com.lanou.service.CarService;
 import com.lanou.service.OrdersService;
 import com.lanou.service.WineService;
 import com.lanou.util.FastJson_Ali;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,6 +37,7 @@ public class OrdersController {
         return list;
     }
 
+    //根据酒的id找到对应的酒
     @RequestMapping("/findWine.do")
     @ResponseBody
     public Wine findWineByWineId(Integer wineId, HttpServletResponse response) {
@@ -44,14 +46,16 @@ public class OrdersController {
         return wine;
     }
 
-
+    //查看订单
     @RequestMapping("/findOrders.do")
     @ResponseBody
-    public Map<String, Object> findOrders(Integer user_id, Integer order_id, HttpServletResponse response) {
+    public Map<String, Object> findOrders(String user_id, String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
         Map<String, Object> map = new HashMap<String, Object>();
         List<WuliuAdress> wuliuAdress = ordersService.findWuliu(user_id);
-        List<OrderAndWine> orderAndWines = ordersService.findWines(order_id);
+        Orders order = ordersService.weiZhifu(userPhone);
+        int orderId = order.getOrderId();
+        List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
         for (int i = 0; i < orderAndWines.size(); i++) {
             map.put("wines" + i, wineService.findWineByWineId(orderAndWines.get(i).getWine_id()));
         }
@@ -59,14 +63,40 @@ public class OrdersController {
         return map;
     }
 
+    //根据xId找到物流地址
+    @RequestMapping("/findByxId.do")
+    @ResponseBody
+    public List<WuliuAdress> findByxId(Integer xId, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        List<WuliuAdress> wuliuAdresses = ordersService.findByxId(xId);
+        return wuliuAdresses;
+    }
+
+    //修改物流地址
+    @RequestMapping("/UpdateAdress.do")
+    @ResponseBody
+    public String UpdateAdress(String ShouhuoName, String ShouhuoAdress, String XiangxiAdress, String ShouhuoPhone, Integer xId, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        int result = ordersService.UpdateAdress(ShouhuoName, ShouhuoAdress, XiangxiAdress, ShouhuoPhone, xId);
+        if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
+
+    //找到订单中的酒
     @RequestMapping("/findWines.do")
     @ResponseBody
-    public List<OrderAndWine> findWines(Integer order_id, HttpServletResponse response) {
+    public List<OrderAndWine> findWines(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        List<OrderAndWine> orderAndWines = ordersService.findWines(order_id);
+        Orders order = ordersService.weiZhifu(userPhone);
+        int orderId = order.getOrderId();
+        List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
         return orderAndWines;
     }
 
+    //更新订单信息
     @RequestMapping("/updateOrders.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50
@@ -80,12 +110,13 @@ public class OrdersController {
         }
     }
 
+    //插入未支付的订单
     @RequestMapping("/insertOrder.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50
-    public String insertOrder(Integer user_id, HttpServletResponse response) {
+    public String insertOrder(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.insertOrder(user_id);
+        int result = ordersService.insertOrder(userPhone);
         if (result == 0) {
             return "false";
         } else {
@@ -93,12 +124,13 @@ public class OrdersController {
         }
     }
 
+    //添加物流地址
     @RequestMapping("/insertAdress.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertAdress.do?ShouhuoName=朱成林&SHouhuoAdress=安徽省&XiangxiAdress=池州&ShouhuoPhone=13859642315&user_id=1
-    public String insertAdress(String ShouhuoName, String SHouhuoAdress, String XiangxiAdress, String ShouhuoPhone, int user_id, HttpServletResponse response) {
+    public String insertAdress(String ShouhuoName, String SHouhuoAdress, String XiangxiAdress, String ShouhuoPhone, String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.insertAdress(ShouhuoName, SHouhuoAdress, XiangxiAdress, ShouhuoPhone, user_id);
+        int result = ordersService.insertAdress(ShouhuoName, SHouhuoAdress, XiangxiAdress, ShouhuoPhone, userPhone);
         if (result == 0) {
             return "false";
         } else {
@@ -106,12 +138,13 @@ public class OrdersController {
         }
     }
 
+    //显示物流地址
     @RequestMapping("/selectWuliu.do")
     @ResponseBody
-//    http://10.80.13.161:8080/orders/insertAdress.do?ShouhuoName=朱成林&SHouhuoAdress=安徽省&XiangxiAdress=池州&ShouhuoPhone=13859642315&user_id=1
-    public String selectWuliu(String ShouhuoName, String SHouhuoAdress, String XiangxiAdress, String ShouhuoPhone, int user_id, HttpServletResponse response) {
+//    http://10.80.13.161:8080/orders/insertAdress.do?ShouhuoName=朱成林&SHouhuoAdress=安徽省&XiangxiAdress=池州&ShouhuoPhone=13859642315&userPhone=1
+    public String selectWuliu(String ShouhuoName, String SHouhuoAdress, String XiangxiAdress, String ShouhuoPhone, String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.insertAdress(ShouhuoName, SHouhuoAdress, XiangxiAdress, ShouhuoPhone, user_id);
+        int result = ordersService.insertAdress(ShouhuoName, SHouhuoAdress, XiangxiAdress, ShouhuoPhone, userPhone);
         if (result == 0) {
             return "false";
         } else {
@@ -119,15 +152,32 @@ public class OrdersController {
         }
     }
 
-
+    //插入选中的酒到订单中（外键表）
     @RequestMapping("/insertWine.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertWine.do?order_id=1&wine_id=1001
-    public String insertWine(int user_id, int wineId, int counts, HttpServletResponse response) {
+    public String insertWine(String userPhone, int wineId, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int orderId = ordersService.weiZhifu(user_id);
+        Orders order = ordersService.weiZhifu(userPhone);
+        int orderId = order.getOrderId();
+        int counts = carService.selectCount1(wineId, userPhone);
         int result = ordersService.insertWine(orderId, wineId, counts);
         if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
+
+    //未支付的订单
+    @RequestMapping("/weiZhifu.do")
+    @ResponseBody
+//    http://10.80.13.161:8080/orders/insertWine.do?order_id=1&wine_id=1001
+    public String weiZhifu(String userPhone, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        Orders order = ordersService.weiZhifu(userPhone);
+        int orderId = order.getOrderId();
+        if (orderId == 0) {
             return "false";
         } else {
             return "true";
@@ -146,16 +196,24 @@ public class OrdersController {
         }
     }
 
-    @RequestMapping("/tijiaoDingdan.do")
+    @RequestMapping("/findWuliu.do")
     @ResponseBody
-//    http://10.80.13.161:8080/orders/tijiaoDingdan.do?user_id=1
-    public String tijiaoDingdan(int user_id, HttpServletResponse response) {
+    public List<WuliuAdress> findWuliu(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.tijiaoDingdan(user_id);
-        if (result == 0) {
-            return "false";
-        } else {
-            return "true";
-        }
+        List<WuliuAdress> wuliu = ordersService.findWuliu(userPhone);
+        return wuliu;
     }
+
+//    @RequestMapping("/tijiaoDingdan.do")
+//    @ResponseBody
+////    http://10.80.13.161:8080/orders/tijiaoDingdan.do?userPhone=1
+//    public String tijiaoDingdan(String userPhone, HttpServletResponse response) {
+//        FastJson_Ali.toJson(response);
+//        int result = ordersService.tijiaoDingdan(userPhone);
+//        if (result == 0) {
+//            return "false";
+//        } else {
+//            return "true";
+//        }
+//    }
 }

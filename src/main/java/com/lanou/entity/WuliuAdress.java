@@ -9,15 +9,15 @@ public class WuliuAdress {
     private String ShouhuoAdress;
     private String XiangxiAdress;
     private String ShouhuoPhone;
-    private Integer user_id;
+    private String UserPhone;
 
-    public WuliuAdress(Integer xId, String shouhuoName, String shouhuoAdress, String xiangxiAdress, String shouhuoPhone, Integer user_id) {
+    public WuliuAdress(Integer xId, String shouhuoName, String shouhuoAdress, String xiangxiAdress, String shouhuoPhone, String userPhone) {
         this.xId = xId;
         ShouhuoName = shouhuoName;
         ShouhuoAdress = shouhuoAdress;
         XiangxiAdress = xiangxiAdress;
         ShouhuoPhone = shouhuoPhone;
-        this.user_id = user_id;
+        UserPhone = userPhone;
     }
 
     @Override
@@ -28,8 +28,16 @@ public class WuliuAdress {
                 ", ShouhuoAdress='" + ShouhuoAdress + '\'' +
                 ", XiangxiAdress='" + XiangxiAdress + '\'' +
                 ", ShouhuoPhone='" + ShouhuoPhone + '\'' +
-                ", user_id=" + user_id +
+                ", UserPhone='" + UserPhone + '\'' +
                 '}';
+    }
+
+    public String getUserPhone() {
+        return UserPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        UserPhone = userPhone;
     }
 
     public String getShouhuoAdress() {
@@ -78,11 +86,4 @@ public class WuliuAdress {
         ShouhuoPhone = shouhuoPhone;
     }
 
-    public Integer getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
-    }
 }

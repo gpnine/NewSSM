@@ -16,6 +16,8 @@ public interface CarService {
 
     public int clearCar(String userPhone);
 
+    public int selectCount1(Integer wineId, String userPhone);
+
     public int updateCount(Integer counts, Integer wineId, String userPhone);
 
     public int updateChecked(Integer checks, Integer wineId);
