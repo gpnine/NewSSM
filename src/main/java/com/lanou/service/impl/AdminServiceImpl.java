@@ -1,9 +1,7 @@
 package com.lanou.service.impl;
 
 import com.lanou.dao.AdminMapper;
-import com.lanou.entity.AdminFunction;
-import com.lanou.entity.Banner;
-import com.lanou.entity.User;
+import com.lanou.entity.*;
 import com.lanou.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,5 +47,55 @@ public class AdminServiceImpl implements AdminService{
         return false;
     }
 
+    public List<Wine> showWine() {
+        List<Wine> list = adminMapper.showWine();
+         return list;
+    }
 
+    public void updeWine(Wine wine){
+        adminMapper.updaWine(wine);
+    }
+
+    public List<Shop> showShop() {
+        List<Shop> list = adminMapper.showShop();
+        return list;
+    }
+
+    public Wine selectGoodsById(int id) {
+        Wine wine = adminMapper.selectGoodsById(id);
+        return wine;
+    }
+
+    public boolean deleteGoodsById(int id) {
+       int i = adminMapper.deleteGoodsById(id);
+       if (i!=0){
+           return true;
+       }
+        return false;
+    }
+
+
+    public boolean addGoodsById(int id) {
+        int i = adminMapper.addGoodsById(id);
+        if (i!=0){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean insertGoods(Wine wine){
+        int i = adminMapper.insertGoods(wine);
+        if (i!=0){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean deleteLogo(Integer logoId) {
+        int i = adminMapper.deleteLogo(logoId);
+        if (i!=0){
+            return true;
+        }
+        return false;
+    }
 }
