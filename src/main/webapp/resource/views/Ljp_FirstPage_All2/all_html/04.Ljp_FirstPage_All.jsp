@@ -135,13 +135,12 @@
 <div class="sxtm">
     <div class="part_two">
         <div class="sele_field">
-            <a href=""><span>默认</span></a>
-            <a href=""><span>成交量</span></a>
-            <a href=""><span>价格</span></a>
-            <a href=""><span>评论数</span></a>
-            <a href=""><span>上架时间</span></a>
-            <a href=""><span>上架时间</span></a>
-            <a href=""><input type="checkbox"/><span>上架时间</span></a>
+            <a href="#" onclick="paixu1()"><span>默认</span></a>
+            <a href="##" onclick="paixu2()"><span>成交量</span></a>
+            <a href="###" onclick="paixu3()"><span>价格</span></a>
+            <a href="####" onclick="paixu4()"><span>评论数</span></a>
+            <a href="" onclick="paixu5()"><span>上架时间</span></a>
+            <a href=""><input type="checkbox"/><span>中酒自营</span></a>
             <div class="page_num">
                 <span class="last_page"><</span>
                 <span class="page">

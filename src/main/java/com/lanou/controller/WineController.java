@@ -64,11 +64,58 @@ public class WineController {
     //    热销
     @RequestMapping("/rexiao.do")
     @ResponseBody
-    public List<Wine> rexiao(HttpServletResponse response) {
+    public List<Wine> rexiao(HttpServletResponse response,String WineBrand) {
         FastJson_Ali.toJson(response);
-        List<Wine> wines = wineService.rexiao();
+        List<Wine> wines = wineService.rexiao(WineBrand);
         return wines;
     }
+
+    //    成交量
+    @RequestMapping("/chengjiao.do")
+    @ResponseBody
+    public List<Wine> chengjiao(HttpServletResponse response,String WineBrand) {
+        FastJson_Ali.toJson(response);
+        List<Wine> wines = wineService.chengjiao(WineBrand);
+        return wines;
+    }
+
+    //    价格
+    @RequestMapping("/jiage.do")
+    @ResponseBody
+    public List<Wine> jiage(HttpServletResponse response,String WineBrand) {
+        FastJson_Ali.toJson(response);
+        List<Wine> wines = wineService.jiage(WineBrand);
+        return wines;
+    }
+
+    //    评论数
+    @RequestMapping("/pinlunshu.do")
+    @ResponseBody
+    public List<Wine> pinlunshu(HttpServletResponse response,String WineBrand) {
+        FastJson_Ali.toJson(response);
+        List<Wine> wines = wineService.pinlunshu(WineBrand);
+        return wines;
+    }
+
+    //   上架时间
+    @RequestMapping("/shangjia.do")
+    @ResponseBody
+    public List<Wine> shangjia(HttpServletResponse response,String WineBrand) {
+        FastJson_Ali.toJson(response);
+        List<Wine> wines = wineService.shangjia(WineBrand);
+        return wines;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     //    商品详情
     @RequestMapping(value = "/goods.do")

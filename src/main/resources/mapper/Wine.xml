@@ -57,10 +57,34 @@
     <select id="goods_detile" parameterType="int" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{wid}
 	</select>
+
+
+
+
+
+
+
     <!--热销-->
-    <select id="rexiao" parameterType="int" resultMap="wineResult">
-		select WineId,WineName,WinePrice,WineLiter,WineEvaCount,WineSales,WineDegree,WineCity,WineImg1,WineImg2,WineImg3,WineImg4,WineImg5 from zhongjiu_wine order by WineSales DESC  limit 0,10;
+    <select id="rexiao"  resultMap="wineResult">
+		select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineSales DESC  limit 0,8;
 	</select>
+
+    <select id="chengjiao"  resultMap="wineResult">
+        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineEvaCount DESC  limit 0,8;
+    </select>
+
+    <select id="jiage"  resultMap="wineResult">
+        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WinePrice DESC  limit 0,8;
+    </select>
+
+    <select id="pinlunshu"  resultMap="wineResult">
+        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineDegree DESC  limit 0,8;
+    </select>
+
+    <select id="shangjia"  resultMap="wineResult">
+        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineId DESC  limit 0,8;
+    </select>
+
 
 
 </mapper>

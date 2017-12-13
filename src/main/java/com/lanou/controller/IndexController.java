@@ -71,7 +71,6 @@ public class IndexController {
     public List<Wine> findScope(Integer a, Integer b, HttpServletResponse response, HttpSession session) {
         FastJson_Ali.toJson(response);
         List<Wine> wines = wineService.findScope(a, b);
-        System.out.print(wines);
         return wines;
     }
 

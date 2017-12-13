@@ -19,6 +19,10 @@ public class WineServiceImpl implements WineService {
 	@Resource
 	private WineMapper wineMapper;
 
+	public WineServiceImpl() {
+		super();
+	}
+
 	public int likeCount(String likeName) {
 		return wineMapper.likeCount(likeName);
 	}
@@ -44,8 +48,24 @@ public class WineServiceImpl implements WineService {
 		return wineMapper.findScope1(map);
 	}
 
-	public List<Wine> rexiao() {
-		return wineMapper.rexiao();
+	public List<Wine> rexiao(String WineBrand) {
+		return wineMapper.rexiao(WineBrand);
+	}
+
+	public List<Wine> chengjiao(String WineBrand) {
+		return wineMapper.chengjiao(WineBrand);
+	}
+
+	public List<Wine> jiage(String WineBrand) {
+		return wineMapper.jiage(WineBrand);
+	}
+
+	public List<Wine> pinlunshu(String WineBrand) {
+		return wineMapper.pinlunshu(WineBrand);
+	}
+
+	public List<Wine> shangjia(String WineBrand) {
+		return wineMapper.shangjia(WineBrand);
 	}
 
 	public List<Wine> moreWines(Integer c) {

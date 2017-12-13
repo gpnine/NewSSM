@@ -85,8 +85,6 @@ public class CarController {
     @RequestMapping("/updateChecked.do")
     @ResponseBody
     public String updateChecked(Integer checks, Integer wineId) {
-        System.out.println(checks);
-        System.out.println("----------------------"+wineId);
         int result = carService.updateChecked(checks, wineId);
         if (result == 0) {
             return "0";
