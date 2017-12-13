@@ -65,12 +65,6 @@ public class Wine {
                 '}';
     }
 
-    public Wine(Integer WId, String wineName, String wineLiter) {
-        this.WId = WId;
-        WineName = wineName;
-        WineLiter = wineLiter;
-    }
-
     public Integer getWId() {
         return WId;
     }

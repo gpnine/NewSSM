@@ -35,8 +35,8 @@ public class CarController {
     //    删除商品
     @RequestMapping("/deleteWine.do")
     @ResponseBody
-    public String deleteWine(Integer wineId) {
-        int result = carService.deleteWine(wineId);
+    public String deleteWine(Integer wineId, String userPhone) {
+        int result = carService.deleteWine(wineId, userPhone);
         if (result == 0) {
             return "0";
         } else {
@@ -47,12 +47,12 @@ public class CarController {
     //    删除商品
     @RequestMapping("/deleteMore.do")
     @ResponseBody
-    public String deleteMore(String wineStr) {
+    public String deleteMore(String wineStr, String userPhone) {
         String[] wineArr = wineStr.split("\\-");
         int result = 0;
         for (int i = 0; i < wineArr.length; i++) {
             int wineId = Integer.parseInt(wineArr[i]);
-            result = carService.deleteWine(wineId);
+            result = carService.deleteWine(wineId, userPhone);
         }
         if (result == 0) {
             return "0";
@@ -62,10 +62,18 @@ public class CarController {
     }
 
     //    更新商品商品数量
+    @RequestMapping("/selectBychecked.do")
+    @ResponseBody
+    public List<Car> selectBychecked() {
+        List<Car> cars = carService.selectBychecked();
+        return cars;
+    }
+
+    //    更新商品商品数量
     @RequestMapping("/updateCount.do")
     @ResponseBody
-    public String updateCount(Integer counts,Integer wineId) {
-        int result = carService.updateCount(counts,wineId);
+    public String updateCount(Integer counts, Integer wineId, String userPhone) {
+        int result = carService.updateCount(counts, wineId, userPhone);
         if (result == 0) {
             return "0";
         } else {
@@ -76,8 +84,10 @@ public class CarController {
     //    更新商品商品数量
     @RequestMapping("/updateChecked.do")
     @ResponseBody
-    public String updateChecked(Integer checked, Integer wineId) {
-        int result = carService.updateCount(checked,wineId);
+    public String updateChecked(Integer checks, Integer wineId) {
+        System.out.println(checks);
+        System.out.println("----------------------"+wineId);
+        int result = carService.updateChecked(checks, wineId);
         if (result == 0) {
             return "0";
         } else {

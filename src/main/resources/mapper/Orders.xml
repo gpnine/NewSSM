@@ -16,6 +16,8 @@
         <result column="OrderYunfei" property="OrderYunfei" jdbcType="DOUBLE"/>
         <result column="YesOrNo" property="YesOrNo" jdbcType="INTEGER"/>
         <result column="Adress_id" property="Adress_id" jdbcType="INTEGER"/>
+        <result column="GouwuCishu" property="GouwuCishu" jdbcType="INTEGER"/>
+        <result column="ShifouZhifu" property="ShifouZhifu" jdbcType="INTEGER"/>
     </resultMap>
     <resultMap type="WuliuAdress" id="shouhuorenResult">
         <id column="xId" property="xId" jdbcType="INTEGER"/>
@@ -32,11 +34,21 @@
     </resultMap>
 
     <select id="findOrders" parameterType="Integer" resultMap="OrdersResult">
-        select * from zhongjiu_order WHERE user_id = #{user_id} and YesOrNo = 1;
+        select * from zhongjiu_order WHERE user_id = #{user_id} and ShifouZhifu = 1;
 	</select>
-    <update id="shoped">
-        update zhongjiu_car set YesOrNo = 1
+    <update id="tijiaoDingdan">
+        update zhongjiu_car set YesOrNo = 1 where user_id = #{user_id};
     </update>
+    <select id="findOrdersId" parameterType="Integer" resultMap="OrdersResult">
+        select OrderId from zhongjiu_order WHERE user_id = #{user_id} and tijiaoDingdan = 1;
+    </select>
+    <update id="GouwuCishu" parameterType="Orders">
+        update zhongjiu_car set GouwuCishu = 1 where user_id = #{user_id} and ShifouZhifu = 1;
+    </update>
+    <update id="ShifouZhifu">
+        update zhongjiu_car set ShifouZhifu = 1 where user_id = #{user_id};
+    </update>
+
     <select id="findWuliu" parameterType="Integer" resultMap="shouhuorenResult">
         select * from zhongjiu_order_shouhuoren where user_id = #{user_id};
 	</select>

@@ -1,14 +1,11 @@
 package com.lanou.service.impl;
 
 import com.lanou.dao.CarMapper;
-import com.lanou.dao.TeacherMapper;
 import com.lanou.dao.UserMapper;
 import com.lanou.dao.WineMapper;
 import com.lanou.entity.Car;
-import com.lanou.entity.Teacher;
 import com.lanou.entity.User;
 import com.lanou.entity.Wine;
-import com.lanou.service.TeacherService;
 import com.lanou.service.UserService;
 import org.springframework.stereotype.Service;
 

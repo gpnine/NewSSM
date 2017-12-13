@@ -58,6 +58,18 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.insertWine(orderAndWine);
     }
 
+    //显示收货人地址信息
+//    public int selectWuliu(Integer user_id) {
+//        return ordersMapper.selectWuliu(user_id);
+//    }
+
+    public int tijiaoDingdan(Integer user_id) {
+        return ordersMapper.tijiaoDingdan(user_id);
+    }
+
+    public int findOrdersId(Integer user_id) {
+        return ordersMapper.findOrdersId(user_id);
+    }
 
     public List<OrderAndWine> findWines(Integer order_id) {
         return ordersMapper.findWines(order_id);

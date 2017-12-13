@@ -295,9 +295,9 @@
             //生成产地1
             for (var i = 0; i < b_adressArr0.length; i++) {
                 if (i < 13) {
-                    $("<li class=\"chandi1\"><a href=\"\" class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".lis_one"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".lis_one"));
                 } else {
-                    $("<li class=\"chandi1\"><a href=\"\" class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".display_two"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".display_two"));
                 }
             }
 
@@ -310,7 +310,7 @@
                 b_scentArr.push(b_scent);
             }
             for (var i = 0; i < b_scentArr.length; i++) {
-                $("<li class=\"chandi1\"><a href=\"\" class=\"li_a\">" + b_scentArr[i] + "</a></li>").appendTo($(".lis_xx"));
+                $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_scentArr[i] + "</a></li>").appendTo($(".lis_xx"));
 
             }
 
@@ -324,9 +324,9 @@
             //生成产地1
             for (var i = 0; i < b_adressArr1.length; i++) {
                 if (i < 13) {
-                    $("<li class=\"chandi1\"><a href=\"\" class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".lis_two"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".lis_two"));
                 } else {
-                    $("<li class=\"chandi1\"><a href=\"\" class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".display_yang"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".display_yang"));
                 }
             }
 
@@ -339,7 +339,7 @@
                 b_yangjiuArr.push(b_scent);
             }
             for (var i = 0; i < b_yangjiuArr.length; i++) {
-                $("<li class=\"chandi1\"><a class=\"li_a\" href=\"\">" + b_yangjiuArr[i] + "</a></li>").appendTo($(".lis_zl"));
+                $("<li class=\"chandi1\"><a class=\"li_a\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "'>" + b_yangjiuArr[i] + "</a></li>").appendTo($(".lis_zl"));
             }
 
 

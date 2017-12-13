@@ -65,17 +65,16 @@
         </ol>
     </div>
 </div>
-<h1>${user1.userPhone}</h1>
 </body>
 <script src="<%=basePath%>/resource/views/gouwuche/js/jquery-3.2.1.min.js"></script>
 <script>
+
     //		使用Ajax获取购物车中商品
     $.ajax({
         method: "get",
         url: "<%=basePath%>/wine/findCars.do?userPhone=18395592587",
         data: {},
         success: function (data) {
-            console.log(data);
             if (data.length == 0) {
                 $("<li class='clearfix' style='width:100%;padding:10px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'><img style='float:right;margin-right:20px;' src='../img/cart-empty-bg.png'/></div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p><p style='margin:0'><a href='lkl_index.html' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
 
@@ -91,7 +90,6 @@
                     + "<div class='caozuogou_list_caozuo' style='line-height: 45px;'>操作</div>"
                     + "</li>"
                     + "<li class='caozuogou_list clearfix caozuogou_list_bgss caozuogou_list_bgss_s'>"
-                    + "<form action='' method='get'>"
                     + "<!--物品添加区域-->"
                     + "<input type='checkbox' checked='checked'"
                     + " class='caozuogou_list_caozuo_quanxuan_zhongjiu caozuogou_list_caozuo_quanxuan_zhongjius'"
@@ -113,11 +111,10 @@
                     + "<span>总计(不含运费)：</span><span class='prices'>0</span>"
                     + "</div>"
                     + "<div class='caozuogou_list_caozuo' style='line-height:45px'>"
-                    + "<input class='qujiesuan' type='submit' value='去结算'/>"
+                    + "<a href='<%=basePath%>/resource/views/Ljp_Shopcar_Check/html/01.Ljp_Shopcar_CheckInfo.jsp'><input class='qujiesuan' type='button' value='去结算'/></a>"
                     + "<!--<button ></button>-->"
                     + "</div>"
                     + "</div>"
-                    + "</form>"
                     + "</li>").appendTo(".caozuogou_ol");
                 for (var i = 0; i < data.length; i++) {
                     $("<li class='caozuogou_list_bgss_ol_li caozuogou_list_bg clearfix'><div class='caozuogou_list_caozuo'>" +
@@ -133,6 +130,7 @@
                         "</div><div class='caozuogou_list_caozuo_shanchu caozuogou_list_caozuo' style='line-height:50px'>删除</div></li>").appendTo($(".caozuogou_list_bgss_ol"));
                 }
                 change();
+                che();
                 $(".car").html(function () {
                     var coutss = 0;
                     $(".caozuogou_list_caozuo_count").each(function (index, el) {
@@ -142,9 +140,36 @@
                 })
                 count_onclick();
 
+
             }
         }
     });
+    <%--$(".qujiesuan").click(function () {--%>
+        <%--$.ajax({--%>
+            <%--url:"<%=basePath%>/orders/tijiaoDingdan.do",--%>
+            <%--method:"get",--%>
+            <%--data:{--%>
+                <%--user_id:1--%>
+            <%--},--%>
+            <%--success:function (data) {--%>
+
+            <%--}--%>
+        <%--})--%>
+        <%--for(var i=0;i<;i++){--%>
+            <%--$.ajax({--%>
+                <%--url:"<%=basePath%>/orders/insertWine.do",--%>
+                <%--method:"get",--%>
+                <%--data:{--%>
+                    <%--user_id:1,--%>
+                    <%--wineId:,--%>
+                    <%--counts:,--%>
+                <%--}--%>
+                <%--success:function (data) {--%>
+
+                <%--}--%>
+            <%--})--%>
+        <%--}--%>
+    <%--})--%>
     //设置商品推荐
 
     $.ajax({
@@ -164,14 +189,48 @@
 
         }
     });
+    <%--function che() {--%>
+        <%--var arrWid = [];--%>
+        <%--$(".caozuogou_list_caozuo_quanxuan_danpin").each(function (index, el) {--%>
+            <%--arrWid.push(el.value)--%>
+            <%--for (var i = 0; i < arrWid.length; i++) {--%>
+                <%--if (el.checked) {--%>
+                    <%--$.ajax({--%>
+                        <%--url: "<%=basePath%>/car/updateChecked.do",--%>
+                        <%--method: "get",--%>
+                        <%--data: {--%>
+                            <%--checks: 1,--%>
+                            <%--wineId: arrWid[i],--%>
+                        <%--},--%>
+                        <%--success: function (data) {--%>
+
+                        <%--}--%>
+                    <%--})--%>
+                <%--}--%>
+                <%--else {--%>
+                    <%--$.ajax({--%>
+                        <%--url: "<%=basePath%>/car/updateChecked.do",--%>
+                        <%--method: "get",--%>
+                        <%--data: {--%>
+                            <%--checks: 0,--%>
+                            <%--wineId: arrWid[i],--%>
+                        <%--},--%>
+                        <%--success: function (data) {--%>
+
+                        <%--}--%>
+                    <%--})--%>
+                <%--}--%>
+            <%--}--%>
+        <%--})--%>
+    <%--}--%>
 
     function count_onclick() {
         // 六个触发事件地方
         // 全选  单选 删除 删除所有  加 减
         // 全选
         $(".caozuogou_list_caozuo_count").change(function () {
-            console.log($(".caozuogou_list_caozuo_count").val());
             change();
+//            che();
 
         })
         $(".caozuogou_list_caozuo_quanxuan").click(function () {
@@ -189,6 +248,7 @@
             $(".caozuogou_list_caozuo_quanxuan_zhongjiu").prop("checked", $('.caozuogou_list_caozuo_quanxuan_danpin:checked').length == $('.caozuogou_list_caozuo_quanxuan_danpin').length);
             change();
             ss();
+//            che();
         })
         $('.caozuogou_list_caozuo_shanchu').click(function () {
             //body_alert
@@ -200,7 +260,8 @@
                     url: "<%=basePath%>/car/deleteWine.do",
                     method: "get",
                     data: {
-                        wineId: wineId
+                        wineId: wineId,
+                        userPhone: 18395592587
                     },
                     success: function (data) {
                         $(_this).parents(".caozuogou_list_bgss_ol_li").remove();
@@ -238,13 +299,13 @@
 
             }
             var wineStr = arr.join("-");
-            console.log(wineStr)
             $(".btn_queding").click(function () {
                 $.ajax({
                     url: "<%=basePath%>/car/deleteMore.do",
                     method: "get",
                     data: {
-                        wineStr: wineStr
+                        wineStr: wineStr,
+                        userPhone: 18395592587
                     },
                     success: function (data) {
                         $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents(".caozuogou_list_bgss_ol_li").remove();
@@ -273,6 +334,7 @@
             change();
         })
     }
+
     function change() {
         $(".counts").html(function () {
             var count = 0;
@@ -291,23 +353,24 @@
     }
 
     function ss() {
-        var arrcount=[]
-        var arrid=[]
-        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index,el) {
+        var arrcount = [];
+        var arrid = [];
+        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index, el) {
             arrid.push(el.value);
         })
         $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents(".caozuogou_list_bgss_ol_li").find(".caozuogou_list_caozuo_count").each(function (index, el) {
-           arrcount.push(el.value);
+            arrcount.push(el.value);
         })
-        for(var i=0;i<arrcount.length;i++){
+        for (var i = 0; i < arrcount.length; i++) {
             $.ajax({
-                url:"<%=basePath%>/car/updateCount.do",
-                method:"get",
-                data:{
-                    counts:arrcount[i],
-                    wineId:arrid[i],
+                url: "<%=basePath%>/car/updateCount.do",
+                method: "get",
+                data: {
+                    counts: arrcount[i],
+                    wineId: arrid[i],
+                    userPhone: 18395592587
                 },
-                success:function () {
+                success: function () {
 
                 }
             })
