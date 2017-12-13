@@ -36,18 +36,25 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.findWuliu(user_id);
     }
 
-    public int insertOrders(String OrderPay, double OrderAllMoney, int UserId, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei) {
+    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei) {
         Orders orders = new Orders();
         orders.setOrderPay(OrderPay);
         orders.setOrderAllMoney(OrderAllMoney);
-        orders.setUserId(UserId);
         orders.setOrderTicket(OrderTicket);
         orders.setOrderText(OrderText);
         orders.setOrderScore(OrderScore);
         orders.setOrderYunfei(OrderYunfei);
-        int result = ordersMapper.insertOrders(orders);
+        int result = ordersMapper.updateOrders(orders);
         return result;
 
+    }
+
+    public int weiZhifu(int user_id) {
+        return ordersMapper.weiZhifu(user_id);
+    }
+
+    public int insertOrder(Integer user_id) {
+        return ordersMapper.insertOrder(user_id);
     }
 
     public int insertWine(int order_id, int wine_id, int wine_count) {

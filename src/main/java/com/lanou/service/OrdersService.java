@@ -11,7 +11,11 @@ public interface OrdersService {
 
     public List<Orders> findOrders(Integer user_id);
 
-    public int insertOrders(String OrderPay, double OrderAllMoney, int UserId, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei);
+    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei);
+
+    public int weiZhifu(int user_id);
+
+    public int insertOrder(Integer user_id);
 
     public int insertAdress(String ShouhuoName, String ShouhuoAdress, String XiangxiAdress, String ShouhuoPhone, int user_id);
 

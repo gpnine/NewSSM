@@ -68,7 +68,33 @@
 </body>
 <script src="<%=basePath%>/resource/views/gouwuche/js/jquery-3.2.1.min.js"></script>
 <script>
-
+    //    //将商品插入订单，提交订单
+    //    $(".btn_queding").click(function () {
+    ////        提交订单
+    //        $.ajax({
+    //            url: "http://10.80.13.161:8080/orders/tijiaoDingdan.do",
+    //            method: "get",
+    //            data: {
+    //                user_id: 1
+    //            },
+    //            success: function (data) {
+    //
+    //            }
+    //        })
+    ////        插入商品，需要选中的酒的id和counts
+    //        $.ajax({
+    //            url: "http://10.80.13.161:8080/orders/insertWine.do",
+    //            method: "get",
+    //            data: {
+    //                user_id: 1,
+    //                wineId:,
+    //                counts:,
+    //            },
+    //            success: function (data) {
+    //
+    //            }
+    //        })
+    //    })
     //		使用Ajax获取购物车中商品
     $.ajax({
         method: "get",
@@ -119,9 +145,11 @@
                 for (var i = 0; i < data.length; i++) {
                     $("<li class='caozuogou_list_bgss_ol_li caozuogou_list_bg clearfix'><div class='caozuogou_list_caozuo'>" +
                         "<input type='checkbox' checked='checked' name='' id='' value='" + data[i].wines.wid + "' class='caozuogou_list_caozuo_quanxuan_danpin' />" +
-                        "<a style='display: inline;' href=''><img  src='<%=basePath%>/resource/views/img/" + data[i].wines.wineImg1 + "' style='width:50px; vertical-align: middle;' /></a></div>" +
+                        "<a style='display: inline;' href='<%=basePath%>/wine/goods.do?wid="
+                        + data[i].wines.wid + "'><img  src='<%=basePath%>/resource/views/img/" + data[i].wines.wineImg1 + "' style='width:50px; vertical-align: middle;' /></a></div>" +
                         "<div class='caozuogou_list_caozuo' style=' vertical-align: middle; text-align: left;'><div class=''>" +
-                        "<a href='' class='a_hover'>" + data[i].wines.wineName + "</a></div><div style='margin-top:12px'>" + data[i].wines.wineBianhao + "</div></div>" +
+                        "<a href='<%=basePath%>/wine/goods.do?wid="
+                        + data[i].wines.wid + "' class='a_hover'>" + data[i].wines.wineName + "</a></div><div style='margin-top:12px'>" + data[i].wines.wineBianhao + "</div></div>" +
                         "<div class='caozuogou_list_caozuo' style=' vertical-align: middle;line-height:50px'><span>￥</span>" +
                         "<span class='caozuogou_list_caozuo_price'>"
                         + data[i].wines.winePrice + "</span></div><div class='caozuogou_list_caozuo' style='line-height:50px'>" +
@@ -130,7 +158,7 @@
                         "</div><div class='caozuogou_list_caozuo_shanchu caozuogou_list_caozuo' style='line-height:50px'>删除</div></li>").appendTo($(".caozuogou_list_bgss_ol"));
                 }
                 change();
-                che();
+                //che();
                 $(".car").html(function () {
                     var coutss = 0;
                     $(".caozuogou_list_caozuo_count").each(function (index, el) {
@@ -144,32 +172,18 @@
             }
         }
     });
-    <%--$(".qujiesuan").click(function () {--%>
-        <%--$.ajax({--%>
-            <%--url:"<%=basePath%>/orders/tijiaoDingdan.do",--%>
-            <%--method:"get",--%>
-            <%--data:{--%>
-                <%--user_id:1--%>
-            <%--},--%>
-            <%--success:function (data) {--%>
+    $(".qujiesuan").click(function () {
+        $.ajax({
+            url: "<%=basePath%>/orders/tijiaoDingdan.do",
+            method: "get",
+            data: {
+                user_id: 1
+            },
+            success: function (data) {
 
-            <%--}--%>
-        <%--})--%>
-        <%--for(var i=0;i<;i++){--%>
-            <%--$.ajax({--%>
-                <%--url:"<%=basePath%>/orders/insertWine.do",--%>
-                <%--method:"get",--%>
-                <%--data:{--%>
-                    <%--user_id:1,--%>
-                    <%--wineId:,--%>
-                    <%--counts:,--%>
-                <%--}--%>
-                <%--success:function (data) {--%>
-
-                <%--}--%>
-            <%--})--%>
-        <%--}--%>
-    <%--})--%>
+            }
+        })
+    })
     //设置商品推荐
 
     $.ajax({
@@ -190,38 +204,38 @@
         }
     });
     <%--function che() {--%>
-        <%--var arrWid = [];--%>
-        <%--$(".caozuogou_list_caozuo_quanxuan_danpin").each(function (index, el) {--%>
-            <%--arrWid.push(el.value)--%>
-            <%--for (var i = 0; i < arrWid.length; i++) {--%>
-                <%--if (el.checked) {--%>
-                    <%--$.ajax({--%>
-                        <%--url: "<%=basePath%>/car/updateChecked.do",--%>
-                        <%--method: "get",--%>
-                        <%--data: {--%>
-                            <%--checks: 1,--%>
-                            <%--wineId: arrWid[i],--%>
-                        <%--},--%>
-                        <%--success: function (data) {--%>
+    <%--var arrWid = [];--%>
+    <%--$(".caozuogou_list_caozuo_quanxuan_danpin").each(function (index, el) {--%>
+    <%--arrWid.push(el.value)--%>
+    <%--for (var i = 0; i < arrWid.length; i++) {--%>
+    <%--if (el.checked) {--%>
+    <%--$.ajax({--%>
+    <%--url: "<%=basePath%>/car/updateChecked.do",--%>
+    <%--method: "get",--%>
+    <%--data: {--%>
+    <%--checks: 1,--%>
+    <%--wineId: arrWid[i],--%>
+    <%--},--%>
+    <%--success: function (data) {--%>
 
-                        <%--}--%>
-                    <%--})--%>
-                <%--}--%>
-                <%--else {--%>
-                    <%--$.ajax({--%>
-                        <%--url: "<%=basePath%>/car/updateChecked.do",--%>
-                        <%--method: "get",--%>
-                        <%--data: {--%>
-                            <%--checks: 0,--%>
-                            <%--wineId: arrWid[i],--%>
-                        <%--},--%>
-                        <%--success: function (data) {--%>
+    <%--}--%>
+    <%--})--%>
+    <%--}--%>
+    <%--else {--%>
+    <%--$.ajax({--%>
+    <%--url: "<%=basePath%>/car/updateChecked.do",--%>
+    <%--method: "get",--%>
+    <%--data: {--%>
+    <%--checks: 0,--%>
+    <%--wineId: arrWid[i],--%>
+    <%--},--%>
+    <%--success: function (data) {--%>
 
-                        <%--}--%>
-                    <%--})--%>
-                <%--}--%>
-            <%--}--%>
-        <%--})--%>
+    <%--}--%>
+    <%--})--%>
+    <%--}--%>
+    <%--}--%>
+    <%--})--%>
     <%--}--%>
 
     function count_onclick() {

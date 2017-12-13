@@ -846,7 +846,7 @@
                 <input type='checkbox' checked='checked' id='inp1'/><label for='inp1' style='white-space:nowrap'>&nbsp;全选</label>
             </div>
             <!--查看全部-->
-            <a class='chakan' href=''>查看全部</a>
+            <a class='chakan' href='<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuchejiesuan.jsp'>查看全部</a>
             <div class='zhongjiu_goods' style="padding:0 15px;">
                 <div>
                     <input type='checkbox' checked='checked' class='inpcounts'/>

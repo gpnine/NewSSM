@@ -208,4 +208,26 @@ public class HuichangController {
         hongxing.put("hongxingWines1", hongxingWines1);
         return hongxing;
     }
+
+    @RequestMapping("/jingping.do")
+    @ResponseBody
+    public Map<String, Object> jingping(HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        Map<String, Object> jingping = new HashMap<String, Object>();
+        List<Huichang> jingpingloucen = huichangservice.findHuichang(10);
+        List<Huichang> jingpingdaT1 = huichangservice.findBigtu(101, 1);
+        List<Huichang> jingpingdaT2 = huichangservice.findBigtu(102, 1);
+        List<Huichang> jingpingdaT3 = huichangservice.findBigtu(103, 1);
+        List<Huichang> jingpingShangping1 = huichangservice.findBigtu(101, 0);
+        List<Huichang> jingpingShangping2 = huichangservice.findBigtu(102, 0);
+        List<Huichang> jingpingShangping3 = huichangservice.findBigtu(103, 0);
+        jingping.put("jingpingloucen", jingpingloucen);
+        jingping.put("jingpingdaT1", jingpingdaT1);
+        jingping.put("jingpingdaT2", jingpingdaT2);
+        jingping.put("jingpingdaT3", jingpingdaT3);
+        jingping.put("jingpingShangping1", jingpingShangping1);
+        jingping.put("jingpingShangping2", jingpingShangping2);
+        jingping.put("jingpingShangping3", jingpingShangping3);
+        return jingping;
+    }
 }

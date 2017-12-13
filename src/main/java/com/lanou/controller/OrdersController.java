@@ -67,13 +67,25 @@ public class OrdersController {
         return orderAndWines;
     }
 
-    @RequestMapping("/insertOrders.do")
+    @RequestMapping("/updateOrders.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50
-    public String insertOrders(String OrderPay, double OrderAllMoney, int UserId, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, HttpServletResponse response) {
+    public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.insertOrders(OrderPay, OrderAllMoney, UserId, OrderTicket, OrderText, OrderScore, OrderYunfei);
-        carService.deleteCar();
+        int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei);
+        if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
+
+    @RequestMapping("/insertOrder.do")
+    @ResponseBody
+//    http://10.80.13.161:8080/orders/insertOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50
+    public String insertOrder(Integer user_id, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        int result = ordersService.insertOrder(user_id);
         if (result == 0) {
             return "false";
         } else {
@@ -108,6 +120,20 @@ public class OrdersController {
     }
 
 
+    @RequestMapping("/insertWine.do")
+    @ResponseBody
+//    http://10.80.13.161:8080/orders/insertWine.do?order_id=1&wine_id=1001
+    public String insertWine(int user_id, int wineId, int counts, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        int orderId = ordersService.weiZhifu(user_id);
+        int result = ordersService.insertWine(orderId, wineId, counts);
+        if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
+
     @RequestMapping("/clearCar.do")
     @ResponseBody
     public String clearCar(String userPhone, HttpServletResponse response) {
@@ -132,19 +158,4 @@ public class OrdersController {
             return "true";
         }
     }
-
-    @RequestMapping("/insertWine.do")
-    @ResponseBody
-//    http://10.80.13.161:8080/orders/insertWine.do?order_id=1&wine_id=1001
-    public String insertWine(int user_id, int wineId, int counts, HttpServletResponse response) {
-        FastJson_Ali.toJson(response);
-        int orderId = ordersService.findOrdersId(user_id);
-        int result = ordersService.insertWine(orderId, wineId, counts);
-        if (result == 0) {
-            return "false";
-        } else {
-            return "true";
-        }
-    }
-
 }

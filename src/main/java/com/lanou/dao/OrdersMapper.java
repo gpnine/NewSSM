@@ -25,11 +25,16 @@ public interface OrdersMapper {
     //显示收货人地址
     public List<WuliuAdress> findWuliu(Integer user_id);
 
+    //    查找用户未支付的账单id
+    public int weiZhifu(Integer user_id);
+
     //根据订单号找到订单中的商品
     public List<OrderAndWine> findWines(Integer order_id);
 
     //提交订单
-    public int insertOrders(Orders orders);
+    public int updateOrders(Orders orders);
+
+    public int insertOrder(Integer user_id);
 
     //插入订单中的商品
     public int insertWine(OrderAndWine orderAndWine);

@@ -431,7 +431,7 @@
                 <span>￥</span>
                 <span class='prices'>0</span>
             </div>
-            <a href="<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuche.html?userPhone=${user1.userPhone}"
+            <a href="<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuchejiesuan.jsp?userPhone=${user1.userPhone}"
                class="jiesuan">购物车结算
             </a>
         </div>

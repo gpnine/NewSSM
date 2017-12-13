@@ -52,9 +52,15 @@
     <select id="findWuliu" parameterType="Integer" resultMap="shouhuorenResult">
         select * from zhongjiu_order_shouhuoren where user_id = #{user_id};
 	</select>
+    <select id="weiZhifu" parameterType="Integer" resultMap="OrdersResult">
+        select OrderId from zhongjiu_order where ShifouZhifu = 0 and user_id = #{user_id};
+	</select>
 
-    <insert id="insertOrders" parameterType="Orders" keyProperty="OrderId" useGeneratedKeys="true">
-        insert into zhongjiu_order (OrderPay,OrderAllMoney,UserId,OrderTicket,OrderText,OrderScore,OrderYunfei) values (#{OrderPay},#{OrderAllMoney},#{UserId},#{OrderTicket},#{OrderText},#{OrderScore},#{OrderYunfei});
+    <update id="updateOrders" parameterType="Orders">
+        update  zhongjiu_order set OrderPay=#{OrderPay},OrderAllMoney=#{OrderAllMoney},UserId=#{UserId},OrderTicket=#{OrderTicket},OrderText=#{OrderText},OrderScore=#{OrderScore},OrderYunfei=#{OrderYunfei});
+    </update>
+    <insert id="insertOrder" parameterType="Integer" keyProperty="OrderId" useGeneratedKeys="true">
+        insert into zhongjiu_order (UserId,ShifouZhifu) values (#{UserId},0);
     </insert>
 
     <insert id="insertWine" parameterType="OrderAndWine">

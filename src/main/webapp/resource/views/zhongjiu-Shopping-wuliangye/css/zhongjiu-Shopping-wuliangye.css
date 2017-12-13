@@ -1,21 +1,19 @@
 .header_bottom_footer_top{
 	width: 100%;
-	height: 7432px;
+	height: 7430px;
 	border: 1px solid transparent;
 	background: url("../image1/download-28.jpg");
 }
 .header_bottom_footer_top_content{
 	width: 990px;
-	height: 6533px;
+	height: 6531px;
 	border: 1px solid transparent;
-	/*background: #666;*/
 	margin: 0 auto;
 }
 /*<!--+++++++++++++内容一 开始+++++++++++++-->*/
 .header_bottom_footer_top_content_hotproMar_one{
 	width: 990px;
 	height: 418px;
-	/*background: aliceblue;*/
 }
 .header_bottom_footer_top_content_hotproMar_one img{
 	display: block;
@@ -41,19 +39,16 @@
 	width: 990px;
 	height: 1859px;
 	background: #666;
-	/*background: blueviolet;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_top{
 	display: block;
 	width: 990px;
 	height: 40px;
 	background: transparent;
-	/*background: brown;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_left{
 	width: 545px;
 	height: 1819px;
-	/*background: burlywood;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_left_one{
 	display: block;
@@ -97,7 +92,6 @@
 	display: block;
 	width: 545px;
 	height: 504px;
-	/*background: fuchsia;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_left_three_prices{
 	width: 53px;
@@ -116,7 +110,6 @@
 	display: block;
 	width: 545px;
 	height: 493px;
-	/*background: #0000BF;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_left_four_prices{
 	width: 53px;
@@ -134,13 +127,11 @@
 .header_bottom_footer_top_content_hotproMar_two_right{
 	width: 445px;
 	height: 1819px;
-	/*background: #0000FA;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_right_one{
 	display: block;
 	width: 445px;
 	height: 822px;
-	/*background: #003F54;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_right_one_prices{
 	width: 53px;
@@ -159,7 +150,6 @@
 	display: block;
 	width: 445px;
 	height: 997px;
-	/*background: #00BF00;*/
 }
 .header_bottom_footer_top_content_hotproMar_two_right_two_prices{
 	width: 53px;
@@ -178,31 +168,26 @@
 .header_bottom_footer_top_content_con_sw{
 	width: 990px;
 	height: 175px;
-	/*background: gold;*/
 }
 .header_bottom_footer_top_content_con_sw img{
 	display: block;
 	width: 990px;
 	height: 175px;
-	/*background: green;*/
 }
 /*<!--+++++++++++++内容一 开始+++++++++++++-->*/
 .header_bottom_footer_top_content_con_sw_one{
 	width: 990px;
 	height: 725px;
 	background: #666;
-	/*background: greenyellow;*/
 }
 .header_bottom_footer_top_content_con_sw_one_top{
 	width: 990px;
 	height: 358px;
-	/*background: hotpink;*/
 }
 .header_bottom_footer_top_content_con_sw_one_top_one{
 	display: block;
 	width: 545px;
 	height: 358px;
-	/*background: chartreuse;*/
 }
 .header_bottom_footer_top_content_con_sw_one_top_one_prices{
 	width: 53px;
@@ -221,7 +206,6 @@
 	display: block;
 	width: 445px;
 	height: 358px;
-	/*background: chocolate;*/
 }
 .header_bottom_footer_top_content_con_sw_one_top_two_prices{
 	width: 53px;
@@ -239,13 +223,11 @@
 .header_bottom_footer_top_content_con_sw_one_bottom{
 	width: 990px;
 	height: 367px;
-	/*background: darkkhaki;*/
 }
 .header_bottom_footer_top_content_con_sw_one_bottom_one{
 	display: block;
 	width: 515px;
 	height: 367px;
-	/*background: indianred;*/
 }
 .header_bottom_footer_top_content_con_sw_one_bottom_one_prices{
 	width: 53px;
@@ -264,7 +246,6 @@
 	display: block;
 	width: 475px;
 	height: 367px;
-	/*background: indigo;*/
 }
 .header_bottom_footer_top_content_con_sw_one_bottom_two_prices{
 	width: 53px;
@@ -283,7 +264,6 @@
 	width: 990px;
 	height: 725px;
 	background: transparent;
-	/*background: navajowhite;*/
 }
 /*<!--+++++++++++++内容二 开始+++++++++++++-->*/
 .header_bottom_footer_top_content_con_sw_two{
@@ -293,11 +273,9 @@
 }
 .header_bottom_footer_top_content_con_sw_two_num{
 	width: 936px;
-	height: 330px;
-	background: rgb(239,239,239);
-	/*background: khaki;*/
+	height: 1348px;
+	background: rgb(220, 221, 223);
 	margin-left: 30px;
-	margin-bottom: 7px;
 }
 .min_picture{
 	display: block;
@@ -305,6 +283,7 @@
 	height: 330px;
 	background: white;
 	margin-right: 1px;
+	margin-bottom: 7px;
 }
 .min_picture img{
 	display: block;
@@ -327,6 +306,10 @@
 	margin-left: 8px;
 	margin-top: 5px;
 }
+.ad-line span{
+	margin-left: 3px;
+	margin-right: 3px;
+}
 .name-line{
 	width: 233px;
 	height: 30px;
@@ -337,6 +320,9 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+.name-line span{
+	margin-left: 5px;
 }
 .my-price-line-zi_button-line{
 	width: 230px;
@@ -375,29 +361,29 @@
     background: #e90100;
     color: white;
 }
-/*.button-line:hover{
-	color: red;
-}*/
 /*<!--+++++++++++++整箱  开始+++++++++++++-->*/
 .header_bottom_footer_top_content_mt_sur{
 	width: 990px;
 	height: 175px;
-	/*background: lavender;*/
 }
 /*<!--+++++++++++++内容一 开始+++++++++++++-->*/
 .header_bottom_footer_top_content_mt_sur_one{
 	width: 990px;
 	height: 674px;
 	background: url("../image1/download-27.jpg");
-	/*background: lavenderblush;*/
+}
+.header_bottom_footer_top_content_mt_sur_one_one{
+	width: 936px;
+	height: 674px;
+	background: rgb(220, 221, 223);
+	margin-left: 30px;
 }
 /*<!--++++++++++++品牌介绍 开始 +++++++++++++-->*/
 .header_bottom_footer_top_content_mt_brand{
 	width: 100%;
 	height: 93px;
 	margin-left: 1px;
-	background: url("../image1/download-9.jpg") center center no-repeat;
-	margin-top: -2px;
+	background: url("http://10.80.13.161:8080/resource/views/img/huichang/wly_4.jpg") center center no-repeat;
 }
 /*<!--+++++++++++++内容一 开始+++++++++++++-->*/
 .header_bottom_footer_top_content_mt_brand_one{
@@ -407,17 +393,17 @@
 .header_bottom_footer_top_content_mt_brand_one_one{
 	width: 100%;
 	height: 238px;
-	background: url("../image1/download-10.jpg");
+	background: url("../image1/download-10.jpg") center center no-repeat;
 }
 .header_bottom_footer_top_content_mt_brand_one_two{
 	width: 100%;
 	height: 217px;
-	background: url("../image1/download-11.jpg");
+	background: url("../image1/download-11.jpg") center center no-repeat;
 }
 .header_bottom_footer_top_content_mt_brand_one_three{
 	width: 100%;
 	height: 350px;
-	background: url("../image1/download-12.jpg");
+	background: url("../image1/download-12.jpg") center center no-repeat;
 }
 /*<!--大图（全屏图）-->*/
 .mt_header{
@@ -437,7 +423,6 @@
 .mt_header_two{
 	width: 100%;
     height: 290px;
-    /*background: aquamarine;*/
     background: url("../image1/download-15.jpg") center center no-repeat;
 }
 .mt_header_three{
@@ -449,7 +434,7 @@
 .mt_header_four{
 	width: 100%;
     height: 175px;
-    background: url("../image1/download-24.jpg") center center no-repeat;   
+    background: url("http://10.80.13.161:8080/resource/views/img/huichang/wly_1.jpg") center center no-repeat;   
 }
 /*<!--左导航-->*/
 .left_nav{
@@ -469,7 +454,6 @@
 	height: 28px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: lightgray;*/
 	margin: 1px auto;
 	border-radius:15px;
 }
@@ -479,7 +463,6 @@
 	height: 130px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: magenta;*/
 	margin: 5px auto;
 	opacity: 0.3;
 	cursor:none;
@@ -490,10 +473,8 @@
 	height: 50px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: maroon;*/
 	margin: 0px auto;
 	opacity: 0.3;
-	/*border-radius:15px;*/
 }
 /*<!--右导航-->*/
 .right_nav{
@@ -502,7 +483,6 @@
 	height: 370px;
 	border: 1px solid transparent;
 	background: url("../image1/download-11.png") no-repeat;
-	/*background: mediumaquamarine;*/
 	position: fixed;
 	right: 5%;
 	top: 50%;
@@ -515,7 +495,6 @@
 	height: 41px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: mediumblue;*/
 	margin: 102px auto;
 }
 .right_nav_two{
@@ -524,7 +503,6 @@
 	height: 50px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: mediumorchid;*/
 	margin: -100px auto;
 }
 .right_nav_three{
@@ -533,7 +511,6 @@
 	height: 50px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: mediumpurple;*/
 	margin: 102px auto;
 }
 .right_nav_four{
@@ -542,7 +519,6 @@
 	height: 50px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: mediumseagreen;*/
 	margin: -99px auto;
 }
 .right_nav_five{
@@ -551,6 +527,5 @@
 	height: 48px;
 	border: 1px solid transparent;
 	background: transparent;
-	/*background: mediumslateblue;*/
 	margin: 100px auto;
 }
