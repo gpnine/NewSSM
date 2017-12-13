@@ -33,8 +33,40 @@
         <result column="funName" property="funName" jdbcType="VARCHAR"/>
     </resultMap>
 
+    <resultMap type="Wine" id="wineResult">
+        <id column="WineId" property="WId" jdbcType="INTEGER"/>
+        <result column="WineName" property="WineName" jdbcType="VARCHAR"/>
+        <result column="WineEvalution" property="WineEvalution" jdbcType="VARCHAR"/>
+        <result column="WineEvaCount" property="WineEvaCount" jdbcType="INTEGER"/>
+        <result column="WineLiter" property="WineLiter" jdbcType="VARCHAR"/>
+        <result column="WinePrice" property="WinePrice" jdbcType="DOUBLE"/>
+        <result column="WineCompany" property="WineCompany" jdbcType="VARCHAR"/>
+        <result column="WineSales" property="WineSales" jdbcType="INTEGER"/>
+        <result column="WineScent" property="WineScent" jdbcType="VARCHAR"/>
+        <result column="WineBrand" property="WineBrand" jdbcType="VARCHAR"/>
+        <result column="WineDegree" property="WineDegree" jdbcType="VARCHAR"/>
+        <result column="WineAdress" property="WineAdress" jdbcType="VARCHAR"/>
+        <result column="WineShiyong" property="WineShiyong" jdbcType="VARCHAR"/>
+        <result column="WineCity" property="WineCity" jdbcType="VARCHAR"/>
+        <result column="FromAdress" property="FromAdress" jdbcType="VARCHAR"/>
+        <result column="WineBianhao" property="WineBianhao" jdbcType="VARCHAR"/>
+        <result column="WineCount" property="WineCount" jdbcType="INTEGER"/>
+        <result column="WineContain" property="WineContain" jdbcType="VARCHAR"/>
+        <result column="WineImg1" property="WineImg1" jdbcType="VARCHAR"/>
+        <result column="WineImg2" property="WineImg2" jdbcType="VARCHAR"/>
+        <result column="WineImg3" property="WineImg3" jdbcType="VARCHAR"/>
+        <result column="WineImg4" property="WineImg4" jdbcType="VARCHAR"/>
+        <result column="WineImg5" property="WineImg5" jdbcType="VARCHAR"/>
+        <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+    </resultMap>
 
-
+    <resultMap type="Shop" id="shopResult">
+        <id column="ShopId" property="shopId" jdbcType="INTEGER"/>
+        <result column="ShopName" property="shopName" jdbcType="VARCHAR"/>
+        <result column="parentId" property="parentId" jdbcType="INTEGER"/>
+        <result column="ShopImg" property="shopImg" jdbcType="VARCHAR"/>
+        <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
+    </resultMap>
 
     <select id="adminLogin" parameterType="User" resultMap="userResult">
         select * from zhongjiu_user where userPhone = #{userPhone} and userPassword = #{password}
@@ -54,10 +86,40 @@
 
 
 
-
-
-    <select id="fun1"  resultMap="BannerResult">
-        select bannerSrc from zhongjiu_banner where delectId = 0
+    <select id="showWine" resultMap="wineResult">
+        select * from zhongjiu_wine where deleteId = 0
     </select>
+
+
+    <update id="updaWine" parameterType="Wine">
+        UPDATE zhongjiu_wine SET WineName = #{WineName},WineScent = #{WineScent},WineCity = #{WineCity} where WineId = #{WId}
+    </update>
+
+
+
+    <select id="showShop" resultMap="shopResult">
+        select * from zhongjiu_shop where shopId BETWEEN 3001 and 3036 and deleteId = 0
+    </select>
+
+    <select id="selectGoodsById" parameterType="int" resultMap="wineResult">
+        SELECT * FROM  zhongjiu_wine WHERE WineId = #{id}
+    </select>
+
+    <update id="deleteGoodsById" parameterType="int" >
+        UPDATE zhongjiu_wine SET deleteId = 1  where WineId = #{id}
+    </update>
+
+    <update id="addGoodsById" parameterType="int" >
+        UPDATE zhongjiu_wine SET deleteId = 0  where WineId = #{id}
+    </update>
+
+    <insert id="insertGoods" parameterType="Wine">
+        INSERT into zhongjiu_wine (WineId,WineName,WineBianhao,WinePrice,WineImg1,deleteId) VALUES (#{WId},#{WineName},#{WineBianhao},#{WinePrice},#{WineImg1},0)
+    </insert>
+
+
+    <update id="deleteLogo" parameterType="Integer" >
+        UPDATE zhongjiu_shop SET deleteId = 1  where ShopId = #{logoId}
+    </update>
 
 </mapper>

@@ -1,7 +1,6 @@
 package com.lanou.dao;
 
-import com.lanou.entity.AdminFunction;
-import com.lanou.entity.User;
+import com.lanou.entity.*;
 
 import java.util.List;
 
@@ -17,4 +16,20 @@ public interface AdminMapper {
     public int addBanner(String bannerSrc);
 
     public int delBanner(String bannerSrc);
+
+    public List<Wine> showWine();
+
+    public int updaWine(Wine wine);
+
+    public List<Shop> showShop();
+
+    public Wine selectGoodsById(int id);
+
+    public int deleteGoodsById(int id);
+
+    public int addGoodsById(int id);
+
+    public int insertGoods(Wine wine);
+
+    public int deleteLogo(Integer logoId);
 }
