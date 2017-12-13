@@ -202,6 +202,7 @@
                 degreeArr.push(data[i].wineDegree);
 //			console.log(shiyongArr);
             }
+            console.log(scentArr);
             //数组去重的函数
             function arr(arr) {
                 var result = []
@@ -220,7 +221,11 @@
             //动态生成选项卡数据
             //白酒的产地
             for (i in adress) {
-                $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + adress[i] + "' class=\"li_a\">" + adress[i] + "</a></li>").prependTo($(".lis_one"));
+                if(i<8){
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + adress[i] + "' class=\"li_a\">" + adress[i] + "</a></li>").prependTo($(".lis_one"));
+                }else{
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + adress[i] + "' class=\"li_a\">" + adress[i] + "</a></li>").prependTo($(".display_two"));
+                }
             }
             //白酒的香型
             for (i in scent) {
@@ -232,7 +237,11 @@
             }
             //白酒的度数
             for (i in degree) {
-                $("<li><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + degree[i] + "' class=\"li_a\">" + degree[i] + "%Vol.</a></li>").prependTo($(".lis_du"));
+               if(i<8){
+                   $("<li><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + degree[i] + "' class=\"li_a\">" + degree[i] + "%Vol.</a></li>").prependTo($(".lis_du"));
+               }else{
+                   $("<li><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + degree[i] + "' class=\"li_a\">" + degree[i] + "%Vol.</a></li>").prependTo($(".display_three"));
+               }
             }
 
 
