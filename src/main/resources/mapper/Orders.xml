@@ -37,6 +37,7 @@
     <update id="shoped">
         update zhongjiu_car set YesOrNo = 1
     </update>
+
     <select id="findWuliu" parameterType="Integer" resultMap="shouhuorenResult">
         select * from zhongjiu_order_shouhuoren where user_id = #{user_id};
 	</select>

@@ -14,20 +14,10 @@ public class Car {
     private String userPhone;
 
     private Integer deleteId;
-    private Integer checked;
+    private Integer checks;
 
-    public Integer getChecked() {
-        return checked;
-    }
-
-    public Car(Integer carId, Integer wineId, Integer counts, String userPhone, Integer deleteId, Integer checked, Wine wines) {
-        CarId = carId;
-        this.wineId = wineId;
-        this.counts = counts;
-        this.userPhone = userPhone;
-        this.deleteId = deleteId;
-        this.checked = checked;
-        this.wines = wines;
+    public Integer getChecks() {
+        return checks;
     }
 
     @Override
@@ -38,13 +28,23 @@ public class Car {
                 ", counts=" + counts +
                 ", userPhone='" + userPhone + '\'' +
                 ", deleteId=" + deleteId +
-                ", checked=" + checked +
+                ", checks=" + checks +
                 ", wines=" + wines +
                 '}';
     }
 
-    public void setChecked(Integer checked) {
-        this.checked = checked;
+    public Car(Integer carId, Integer wineId, Integer counts, String userPhone, Integer deleteId, Integer checks, Wine wines) {
+        CarId = carId;
+        this.wineId = wineId;
+        this.counts = counts;
+        this.userPhone = userPhone;
+        this.deleteId = deleteId;
+        this.checks = checks;
+        this.wines = wines;
+    }
+
+    public void setChecks(Integer checks) {
+        this.checks = checks;
     }
 
     private Wine wines;

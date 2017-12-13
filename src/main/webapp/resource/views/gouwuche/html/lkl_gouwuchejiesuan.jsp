@@ -68,28 +68,7 @@
 </body>
 <script src="<%=basePath%>/resource/views/gouwuche/js/jquery-3.2.1.min.js"></script>
 <script>
-    function check() {
-        var arrid = []
-        $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index, el) {
-            arrid.push(el.value);
-            for (var i = 0; i < arrid.length; i++) {
-                if ($(".caozuogou_list_caozuo_quanxuan_danpin")[i].checked == 1) {
-                    $.ajax({
-                        url: "<%=basePath%>/car/updateChecked",
-                        method: "get",
-                        data: {
-                            checked: 1,
-                            wineId: arrid[i],
-                            userPhone: 18395592587,
-                        },
-                        success: function (data) {
 
-                        }
-                    })
-                }
-            }
-        })
-    }
     //		使用Ajax获取购物车中商品
     $.ajax({
         method: "get",
@@ -163,6 +142,7 @@
                 })
                 count_onclick();
 
+
             }
         }
     });
@@ -185,7 +165,45 @@
 
         }
     });
+    function che() {
+        var arrWid = [];
+        $(".caozuogou_list_caozuo_quanxuan_danpin").each(function (index, el) {
+            console.log(el.checked)
+            if ($(el.checked == 1)) {
+                var che = 1;
+                arrWid.push(el.value)
+                for (var i = 0; i < arrWid.length; i++) {
+                    $.ajax({
+                        url: "<%=basePath%>/car/updateChecked.do",
+                        method: "get",
+                        data: {
+                            checks: che,
+                            wineId: arrWid[i],
+                        },
+                        success: function (data) {
 
+                        }
+                    })
+                }
+            } else if ($(el.checked == "")) {
+                var che = 0;
+                arrWid.push(el.value)
+                for (var i = 0; i < arrWid.length; i++) {
+                    $.ajax({
+                        url: "<%=basePath%>/car/updateChecked.do",
+                        method: "get",
+                        data: {
+                            checks: che,
+                            wineId: arrWid[i],
+                        },
+                        success: function (data) {
+
+                        }
+                    })
+                }
+            }
+        })
+    }
     function count_onclick() {
         // 六个触发事件地方
         // 全选  单选 删除 删除所有  加 减
@@ -193,6 +211,7 @@
         $(".caozuogou_list_caozuo_count").change(function () {
             console.log($(".caozuogou_list_caozuo_count").val());
             change();
+            che();
 
         })
         $(".caozuogou_list_caozuo_quanxuan").click(function () {
@@ -210,7 +229,7 @@
             $(".caozuogou_list_caozuo_quanxuan_zhongjiu").prop("checked", $('.caozuogou_list_caozuo_quanxuan_danpin:checked').length == $('.caozuogou_list_caozuo_quanxuan_danpin').length);
             change();
             ss();
-            check();
+            che();
         })
         $('.caozuogou_list_caozuo_shanchu').click(function () {
             //body_alert

@@ -57,14 +57,21 @@ public class CarServiceImpl implements CarService {
     }
 
     public int deleteWine(Integer wineId, String userPhone) {
-        return carMapper.deleteWine(wineId, userPhone);
+        Car car = new Car();
+        car.setWineId(wineId);
+        car.setUserPhone(userPhone);
+        return carMapper.deleteWine(car);
+    }
+
+    public int clearCar(String userPhone) {
+        return carMapper.clearCar(userPhone);
     }
 
     public int deleteCar() {
         return carMapper.deleteCar();
     }
 
-    public int updateCount(Integer counts, Integer wineId,String userPhone) {
+    public int updateCount(Integer counts, Integer wineId, String userPhone) {
         Car car = new Car();
         car.setCounts(counts);
         car.setWineId(wineId);
@@ -72,12 +79,19 @@ public class CarServiceImpl implements CarService {
         return carMapper.updateCount(car);
     }
 
-    public int updateChecked(Integer checked, Integer wineId) {
+    public int updateChecked(Integer checks, Integer wineId) {
         Car car = new Car();
-        car.setChecked(checked);
+        System.out.println("checked的***************：" + checks);
+        System.out.println("checked的***************：" + wineId);
+        car.setChecks(checks);
         car.setWineId(wineId);
         return carMapper.updateChecked(car);
     }
+
+    public List<Car> selectBychecked() {
+        return carMapper.selectBychecked();
+    }
+
     //	public int insertShop(int userId, int wineId, int counts) {
 //		Car car = new Car();
 //		car.setUserId(userId);

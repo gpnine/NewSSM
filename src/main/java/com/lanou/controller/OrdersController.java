@@ -85,6 +85,18 @@ public class OrdersController {
             return "true";
         }
     }
+    @RequestMapping("/selectWuliu.do")
+    @ResponseBody
+//    http://10.80.13.161:8080/orders/insertAdress.do?ShouhuoName=朱成林&SHouhuoAdress=安徽省&XiangxiAdress=池州&ShouhuoPhone=13859642315&user_id=1
+    public String selectWuliu(String ShouhuoName, String SHouhuoAdress, String XiangxiAdress, String ShouhuoPhone, int user_id, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        int result = ordersService.insertAdress(ShouhuoName, SHouhuoAdress, XiangxiAdress, ShouhuoPhone, user_id);
+        if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
 
     @RequestMapping("/insertWine.do")
     @ResponseBody
@@ -92,6 +104,18 @@ public class OrdersController {
     public String insertWine(Integer order_id, Integer wine_id, Integer wine_count, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
         int result = ordersService.insertWine(order_id, wine_id, wine_count);
+        if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
+    @RequestMapping("/clearCar.do")
+    @ResponseBody
+//    http://10.80.13.161:8080/orders/insertWine.do?order_id=1&wine_id=1001
+    public String clearCar(String userPhone,HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        int result = carService.clearCar(userPhone);
         if (result == 0) {
             return "false";
         } else {
