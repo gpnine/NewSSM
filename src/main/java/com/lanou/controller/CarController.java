@@ -62,30 +62,10 @@ public class CarController {
     }
 
     //    更新商品商品数量
-    @RequestMapping("/selectBychecked.do")
-    @ResponseBody
-    public List<Car> selectBychecked() {
-        List<Car> cars = carService.selectBychecked();
-        return cars;
-    }
-
-    //    更新商品商品数量
     @RequestMapping("/updateCount.do")
     @ResponseBody
     public String updateCount(Integer counts, Integer wineId, String userPhone) {
         int result = carService.updateCount(counts, wineId, userPhone);
-        if (result == 0) {
-            return "0";
-        } else {
-            return "1";
-        }
-    }
-
-    //    更新商品商品数量
-    @RequestMapping("/updateChecked.do")
-    @ResponseBody
-    public String updateChecked(Integer checks, Integer wineId) {
-        int result = carService.updateChecked(checks, wineId);
         if (result == 0) {
             return "0";
         } else {

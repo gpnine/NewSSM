@@ -12,7 +12,9 @@ public interface OrdersMapper {
     //    查看订单
     public List<Orders> findOrders(String userPhone);
 
-    public List<WuliuAdress> findByxId(Integer xId);
+    public Orders findAdressId(Integer order_id);
+
+    public WuliuAdress findByxId(Integer xId);
 
     //    是否支付
     public int ShifouZhifu(String userPhone);

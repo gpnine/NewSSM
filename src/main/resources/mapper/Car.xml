@@ -9,7 +9,6 @@
         <result column="Wine_id" property="wineId" jdbcType="INTEGER"/>
         <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
         <result column="counts" property="counts" jdbcType="INTEGER"/>
-        <result column="checks" property="checks" jdbcType="INTEGER"/>
     </resultMap>
 
 
@@ -43,23 +42,19 @@
     <select id="findCars" parameterType="string" resultMap="carResult">
 		select * from zhongjiu_car where userPhone = #{userPhone} and deleteId = 0;
 	</select>
-
+    <select id="findUserWine" parameterType="Car" resultMap="carResult">
+        select * from zhongjiu_car where userPhone = #{userPhone} and Wine_id=#{wineId}  and deleteId = 0;
+    </select>
     <select id="selectCar" parameterType="int" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{w}
 	</select>
-    <select id="selectBychecked" resultMap="carResult">
-        select * from zhongjiu_car where checks = 1;
-    </select>
-
     <update id="deleteCar" parameterType="Car">
 		update zhongjiu_car set deleteId = 1 where CarId = #{CarId}
 	</update>
 
-
     <insert id="insertShop" parameterType="Car">
 		insert into zhongjiu_car (Wine_id,userPhone,counts) values (#{wineId},#{userPhone},#{counts})
 	</insert>
-
 
     <select id="extend" parameterType="Car" resultMap="carResult">
 		select * from zhongjiu_car where userPhone = #{userPhone} and Wine_id = #{wineId}
@@ -72,7 +67,7 @@
     <select id="selectCount" parameterType="Car" resultMap="carResult">
 		select counts from zhongjiu_car where userPhone = #{userPhone} and Wine_id =#{wineId}
 	</select>
-    <update id="clearCar" parameterType="String">
+    <update id="clearCar" parameterType="string">
         update zhongjiu_car set deleteId = 1 where  userPhone = #{userPhone}
     </update>
     <update id="deleteWine" parameterType="Car">
@@ -81,7 +76,4 @@
     <update id="updateCount" parameterType="Car">
 		update zhongjiu_car set counts = #{counts} where  Wine_id =#{wineId} and userPhone = #{userPhone}
 	</update>
-    <update id="updateChecked" parameterType="Car">
-        update zhongjiu_car set checks = #{checks} where  Wine_id =#{wineId}
-    </update>
 </mapper>

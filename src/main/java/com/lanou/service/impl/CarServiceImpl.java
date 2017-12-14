@@ -85,24 +85,14 @@ public class CarServiceImpl implements CarService {
         return carMapper.updateCount(car);
     }
 
-    public int updateChecked(Integer checks, Integer wineId) {
+    public Car findUserWine(String userPhone, Integer wineId) {
         Car car = new Car();
-        System.out.println("checked的***************：" + checks);
-        System.out.println("checked的***************：" + wineId);
-        car.setChecks(checks);
+        car.setUserPhone(userPhone);
         car.setWineId(wineId);
-        return carMapper.updateChecked(car);
+        car = carMapper.findUserWine(car);
+        int id = car.getWineId();
+        Wine wine = wineMapper.goods_detile(id);
+        car.setWines(wine);
+        return car;
     }
-
-    public List<Car> selectBychecked() {
-        return carMapper.selectBychecked();
-    }
-
-    //	public int insertShop(int userId, int wineId, int counts) {
-//		Car car = new Car();
-//		car.setUserId(userId);
-//		car.setWineId(wineId);
-//		car.setCounts(counts);
-//		return carMapper.insertShop(car);
-//	}
 }

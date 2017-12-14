@@ -5,7 +5,7 @@ import com.lanou.service.CarService;
 import com.lanou.service.OrdersService;
 import com.lanou.service.WineService;
 import com.lanou.util.FastJson_Ali;
-import org.springframework.core.annotation.Order;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -49,16 +49,18 @@ public class OrdersController {
     //查看订单
     @RequestMapping("/findOrders.do")
     @ResponseBody
-    public Map<String, Object> findOrders(String user_id, String userPhone, HttpServletResponse response) {
+    public Map<String, Object> findOrders(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
         Map<String, Object> map = new HashMap<String, Object>();
-        List<WuliuAdress> wuliuAdress = ordersService.findWuliu(user_id);
         Orders order = ordersService.weiZhifu(userPhone);
         int orderId = order.getOrderId();
         List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
         for (int i = 0; i < orderAndWines.size(); i++) {
             map.put("wines" + i, wineService.findWineByWineId(orderAndWines.get(i).getWine_id()));
         }
+        Orders orders = ordersService.findAdressId(orderId);
+        int xId = orders.getAdress_id();
+        WuliuAdress wuliuAdress = ordersService.findByxId(xId);
         map.put("wuliuAdress", wuliuAdress);
         return map;
     }
@@ -66,9 +68,9 @@ public class OrdersController {
     //根据xId找到物流地址
     @RequestMapping("/findByxId.do")
     @ResponseBody
-    public List<WuliuAdress> findByxId(Integer xId, HttpServletResponse response) {
+    public WuliuAdress findByxId(Integer xId, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        List<WuliuAdress> wuliuAdresses = ordersService.findByxId(xId);
+        WuliuAdress wuliuAdresses = ordersService.findByxId(xId);
         return wuliuAdresses;
     }
 
@@ -88,21 +90,26 @@ public class OrdersController {
     //找到订单中的酒
     @RequestMapping("/findWines.do")
     @ResponseBody
-    public List<OrderAndWine> findWines(String userPhone, HttpServletResponse response) {
+    public List<Car> findWines(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
         Orders order = ordersService.weiZhifu(userPhone);
         int orderId = order.getOrderId();
         List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
-        return orderAndWines;
+        List<Car> cars = new ArrayList<Car>();
+        for (int i = 0; i < orderAndWines.size(); i++) {
+            Car car = carService.findUserWine(userPhone, orderAndWines.get(i).getWine_id());
+            cars.add(car);
+        }
+        return cars;
     }
 
     //更新订单信息
     @RequestMapping("/updateOrders.do")
     @ResponseBody
-//    http://10.80.13.161:8080/orders/insertOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50
-    public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, HttpServletResponse response) {
+//    http://10.80.13.161:8080/orders/updateOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50&Adresss_id=1
+    public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adresss_id, String UserPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei);
+        int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei, Adresss_id, UserPhone);
         if (result == 0) {
             return "false";
         } else {

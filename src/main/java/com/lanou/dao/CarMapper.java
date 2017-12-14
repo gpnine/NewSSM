@@ -9,10 +9,8 @@ import java.util.List;
 public interface CarMapper {
     public List<Car> findCars(String userPhone);
 
-    //查找选中要买的商品
-    public List<Car> selectBychecked();
+    public Car findUserWine(Car car);
 
-    //
     public void addCounts(Car car);
 
     public int insertShop(Car car);
@@ -33,8 +31,6 @@ public interface CarMapper {
     //实时更新数量
     public int updateCount(Car car);
 
-    //更新选中的商品
-    public int updateChecked(Car car);
 
     public int deleteCar();
 }

@@ -14,11 +14,8 @@ public class Car {
     private String userPhone;
 
     private Integer deleteId;
-    private Integer checks;
 
-    public Integer getChecks() {
-        return checks;
-    }
+    private Wine wines;
 
     @Override
     public String toString() {
@@ -28,27 +25,18 @@ public class Car {
                 ", counts=" + counts +
                 ", userPhone='" + userPhone + '\'' +
                 ", deleteId=" + deleteId +
-                ", checks=" + checks +
                 ", wines=" + wines +
                 '}';
     }
 
-    public Car(Integer carId, Integer wineId, Integer counts, String userPhone, Integer deleteId, Integer checks, Wine wines) {
+    public Car(Integer carId, Integer wineId, Integer counts, String userPhone, Integer deleteId, Wine wines) {
         CarId = carId;
         this.wineId = wineId;
         this.counts = counts;
         this.userPhone = userPhone;
         this.deleteId = deleteId;
-        this.checks = checks;
         this.wines = wines;
     }
-
-    public void setChecks(Integer checks) {
-        this.checks = checks;
-    }
-
-    private Wine wines;
-
 
     public Wine getWines() {
         return wines;

@@ -123,16 +123,16 @@
             </form>
         </div>
         <div class="list">
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=西凤" target="_blank">西凤</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=今良造" target="_blank">今良造</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=茅台" target="_blank">茅台</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=古井" target="_blank">古井</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=南福" target="_blank">南福</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=国窖" target="_blank">国窖</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=杰卡斯" target="_blank">杰卡斯</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=拉菲" target="_blank">拉菲</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=董酒" target="_blank">董酒</a>
-            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=华夏长城" target="_blank">华夏长城</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=西凤">西凤</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=今良造">今良造</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=茅台">茅台</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=古井">古井</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=南福">南福</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=国窖">国窖</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=杰卡斯">杰卡斯</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=拉菲">拉菲</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=董酒">董酒</a>
+            <a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=华夏长城">华夏长城</a>
         </div>
     </div>
     <a href="" class="present">
@@ -145,10 +145,10 @@
 <div id="" style="position: relative;width:1190px;margin:0 auto;">
     <div class="side_nav_slider_left"></div>
     <div class="small_banner">
-        <a href="http://pro.zhongjiu.cn/20151210/2wly.html" target="_blank"><img class="lazyload1"
-                                                                                 src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201709121117114935610.jpg"/></a>
-        <a href="http://pro.zhongjiu.cn//20170814/augustmeet.html" target="_blank"><img class="lazyload2"
-                                                                                        src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201708221047305409910.jpg"/></a>
+        <a href="http://pro.zhongjiu.cn/20151210/2wly.html"><img class="lazyload1"
+                                                                 src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201709121117114935610.jpg"/></a>
+        <a href="http://pro.zhongjiu.cn//20170814/augustmeet.html"><img class="lazyload2"
+                                                                        src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201708221047305409910.jpg"/></a>
     </div>
     <div class="side-nav">
         <ul class="sidenav-list">
@@ -159,23 +159,28 @@
     <span class="cate-all"><img src="http://www.zhongjiu.cn/Areas/Web/Images/HIMALL_admin11_04_03.png" alt=""><a
             href="###">全部商品分类</a></span>
     <span class="item"><a class="item_one" href="###">首页</a></span>
-    <span class="item"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">白酒专区</a></span>
+    <span class="item"><a
+            href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">白酒专区</a></span>
     <span class="item"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">红洋酒专区</a></span>
     <span class="item"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">天佑德青稞酒</a></span>
-    <span class="item"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">精品推荐</a></span>
+    <span class="item"><a
+            href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">精品推荐</a></span>
 </div>
 <div class="slider">
     <ul class="fade">
         <li>
-            <a class="lunbotu0" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
+            <a class="lunbotu0"
+               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu1" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
+            <a class="lunbotu1"
+               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
             </a>
         </li>
         <li>
-            <a class="lunbotu2" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
+            <a class="lunbotu2"
+               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
             </a>
         </li>
         <li>
@@ -189,7 +194,8 @@
             </a>
         </li>
         <li>
-            <a class="lunbotu5" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
+            <a class="lunbotu5"
+               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
             </a>
         </li>
     </ul>
@@ -236,19 +242,19 @@
                     <div class="fl"><span class="shuxian fl "></span>帮你选酒</div>
                     <div class="fr">
                         <div class="pr  help">
-                            <a class="help_a  help_aa help_a_hot" href="">Hot!热卖</a>
+                            <a class="help_a  help_aa help_a_hot">Hot!热卖</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_hot" href="">必备口粮</a>
+                            <a class="help_a  help_aa help_a_hot">必备口粮</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_hot" href="">送礼佳品</a>
+                            <a class="help_a  help_aa help_a_hot">送礼佳品</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_hot" href="">大型宴请</a>
+                            <a class="help_a  help_aa help_a_hot">大型宴请</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
@@ -270,16 +276,16 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">贵州</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">四川</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">北京</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">青海</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州">贵州</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=四川">四川</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=北京">北京</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=青海">青海</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">酱香型</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">浓香型</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">清香型</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">绵柔型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=酱香型">酱香型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=浓香型">浓香型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=清香型">清香型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=绵柔型">绵柔型</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -322,7 +328,7 @@
                         <ol class="clearfix bj_bottom1">
                             <li style="border: 1px solid #0000002b;box-sizing: border-box"
                                 class="fl mr mt bj_bottom1_1">
-                                <a href="" class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=2154" class="a">
                                     <img src="<%=basePath%>/resource/views/img/b0.jpg"/>
                                 </a>
                             </li>
@@ -337,15 +343,15 @@
                     <div class="fl"><span class="shuxian fl"></span>白酒馆</div>
                     <div class="fr">
                         <div class="pr  help">
-                            <a class="help_a  help_aa help_a_white" href="">Hot!热卖</a>
+                            <a class="help_a  help_aa help_a_white">Hot!热卖</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_white bj_yh" href="">南福</a>
+                            <a class="help_a  help_aa help_a_white bj_yh">南福</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_white" href="">茅台</a>
+                            <a class="help_a  help_aa help_a_white">茅台</a>
                             <div class="pa help_pa"></div>
                         </div>
 
@@ -367,16 +373,16 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">五粮液五星级</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">贵州茅台醇</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">高原青稞酒</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">洋河梦之蓝</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液五星级">五粮液五星级</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州茅台醇">贵州茅台醇</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=高原青稞酒">高原青稞酒</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=洋河梦之蓝">洋河梦之蓝</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">贵州董酒</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">泸州老窖</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">牛栏山二锅头</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">红星二锅头</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州董酒">贵州董酒</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=泸州老窖">泸州老窖</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=牛栏山二锅头">牛栏山二锅头</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=红星二锅头">红星二锅头</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -417,7 +423,7 @@
                     <div class="jiupin_first clearfix">
                         <ol class="clearfix bj_bottom2">
                             <li class="fl mr mt bj_bottom2_1">
-                                <a href="" class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=4168" class="a">
                                     <img src="<%=basePath%>/resource/views/img/b1.jpg"/>
                                 </a>
                             </li>
@@ -432,15 +438,15 @@
                     <div class="fl"><span class="shuxian fl"></span>葡萄酒馆</div>
                     <div class="fr">
                         <div class="pr  help">
-                            <a class="help_a  help_aa help_a_pu" href="">Hot!热卖</a>
+                            <a class="help_a  help_aa help_a_pu">Hot!热卖</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_pu" href="">杰卡斯</a>
+                            <a class="help_a  help_aa help_a_pu">杰卡斯</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a  help_aa help_a_pu" href="">奔富</a>
+                            <a class="help_a  help_aa help_a_pu">奔富</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
@@ -461,16 +467,16 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">法国拉菲</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">华夏长城</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">中国张裕</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">澳洲黄尾袋鼠</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国拉菲">法国拉菲</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=华夏长城">华夏长城</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=中国张裕">中国张裕</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=澳洲黄尾袋鼠">澳洲黄尾袋鼠</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">南非库玛拉</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">法国小龙船</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">法国圣迪斯</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">澳洲奔富</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=南非库玛拉">南非库玛拉</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国小龙船">法国小龙船</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国圣迪斯">法国圣迪斯</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=澳洲奔富">澳洲奔富</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -510,7 +516,7 @@
                     <div class="jiupin_first clearfix">
                         <ol class="clearfix bj_bottom3">
                             <li class="fl mr mt bj_bottom3_1">
-                                <a href="" class="a">
+                                <a class="a">
                                     <img src="<%=basePath%>/resource/views/img/b2.jpg"/>
                                 </a>
 
@@ -526,15 +532,15 @@
                     <div class="fl"><span class="shuxian fl"></span>洋酒&啤酒馆</div>
                     <div class="fr">
                         <div class="pr  help">
-                            <a class="help_a  help_aa help_a_beer" href="">Hot!热卖</a>
+                            <a class="help_a  help_aa help_a_beer">Hot!热卖</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a help_aa  help_a_beer" href="">伏特加</a>
+                            <a class="help_a help_aa  help_a_beer">伏特加</a>
                             <div class="pa help_pa"></div>
                         </div>
                         <div class="pr help">
-                            <a class="help_a help_aa  help_a_beer" href="">威士忌</a>
+                            <a class="help_a help_aa  help_a_beer">威士忌</a>
                             <div class="pa help_pa"></div>
                         </div>
 
@@ -556,16 +562,16 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">人头马</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">马爹利</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">轩尼诗</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">绝对伏特加</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=人头马">人头马</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=马爹利">马爹利</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=轩尼诗">轩尼诗</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=绝对伏特加">绝对伏特加</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">百加得</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">翰格蓝爵</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">皇家礼炮</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="">深蓝</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=百加得">百加得</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=翰格蓝爵">翰格蓝爵</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=皇家礼炮">皇家礼炮</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=深蓝">深蓝</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -606,7 +612,7 @@
                     <div class="jiupin_first clearfix">
                         <ol class="clearfix bj_bottom4">
                             <li class="fl mr mt bj_bottom4_1">
-                                <a href="" class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=2168" class="a">
                                     <img src="<%=basePath%>/resource/views/img/b3.jpg"/>
                                 </a>
                             </li>
@@ -972,125 +978,126 @@
                         $("<span>" + data[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_10'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 18; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[0].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_10"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[0].shopList[l].shopName + "'>" + data[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_10"));
                         }
+                        $("<li><a class='link' href='<%=basePath%>/resource/views/Ljp_FirstPage_All2/bai_html/04.Ljp_FirstPage_All.jsp'>更多</a></li>").appendTo($(".children-list_10"));
                         $("<span>" + data[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_12'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 5; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[2].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_12"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[2].shopList[l].shopName + "'>" + data[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_12"));
                         }
                         $("<span>" + data[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_11'></ul>").appendTo($(".children-nav-left_0"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[1].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_11"));
+                            $("<li><a  class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[1].shopList[l].shopName + "'>" + data[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_11"));
                         }
                     case 2:
                         $("<span>" + data[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_20'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 8; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[0].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_20"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[0].shopList[l].shopName + "'>" + data[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_20"));
                         }
                         $("<span>" + data[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_22'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[2].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_22"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[2].shopList[l].shopName + "'>" + data[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_22"));
                         }
                         $("<span>" + data[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_21'></ul>").appendTo($(".children-nav-left_1"));
                         for (var k = 0; k < 7; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[1].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_21"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[1].shopList[l].shopName + "'>" + data[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_21"));
                         }
                     case 3:
                         $("<span>" + data[j].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_30'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 11; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[0].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_30"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[0].shopList[l].shopName + "'>" + data[j].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_30"));
                         }
                         $("<span>" + data[j].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_32'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[2].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_32"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[2].shopList[l].shopName + "'>" + data[j].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_32"));
                         }
                         $("<span>" + data[j].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_31'></ul>").appendTo($(".children-nav-left_2"));
                         for (var k = 0; k < 4; k++) {
                             var l = parseInt(Math.random() * data[j].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[1].shopList[l].shopName + "' target='_blank'>" + data[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_31"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[1].shopList[l].shopName + "'>" + data[j].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_31"));
                         }
 
                     case 4:
                         for (i in data[j].shopList) {
                             $("<span>" + data[j].shopList[i].shopName + "</span><ul class='children-list clearfix children-list_4" + i + "'></ul>").appendTo($(".children-nav-left_3"));
                             for (k in data[j].shopList[i].shopList) {
-                                $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[i].shopList[k].shopName + "' target='_blank'>" + data[j].shopList[i].shopList[k].shopName + "</a></li>").appendTo($(".children-list_4" + i));
+                                $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[j].shopList[i].shopList[k].shopName + "'>" + data[j].shopList[i].shopList[k].shopName + "</a></li>").appendTo($(".children-list_4" + i));
                             }
                         }
                     case 5:
                         $("<span>" + data[0].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_50'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 5; k++) {
                             var l = parseInt(Math.random() * data[0].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[0].shopList[l].shopName + "' target='_blank'>" + data[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[0].shopList[l].shopName + "'>" + data[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[1].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[0].shopList[l].shopName + "' target='_blank'>" + data[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[0].shopList[l].shopName + "'>" + data[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_50"));
                         }
                         $("<span>" + data[0].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_51'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[0].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[2].shopList[l].shopName + "' target='_blank'>" + data[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[2].shopList[l].shopName + "'>" + data[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[1].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[2].shopList[l].shopName + "' target='_blank'>" + data[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[2].shopList[l].shopName + "'>" + data[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_51"));
                         }
                         $("<span>" + data[0].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_52'></ul>").appendTo($(".children-nav-left_4"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[0].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[1].shopList[l].shopName + "' target='_blank'>" + data[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[1].shopList[l].shopName + "'>" + data[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[1].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[1].shopList[l].shopName + "' target='_blank'>" + data[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[1].shopList[l].shopName + "'>" + data[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_52"));
                         }
                     case 6:
                         $("<span>" + data[0].shopList[0].shopName + "</span><ul class='children-list clearfix children-list_60'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 4; k++) {
                             var l = parseInt(Math.random() * data[0].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[0].shopList[l].shopName + "' target='_blank'>" + data[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[0].shopList[l].shopName + "'>" + data[0].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
                         }
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data[1].shopList[0].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[0].shopList[l].shopName + "' target='_blank'>" + data[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[0].shopList[l].shopName + "'>" + data[1].shopList[0].shopList[l].shopName + "</a></li>").appendTo($(".children-list_60"));
                         }
                         $("<span>" + data[1].shopList[2].shopName + "</span><ul class='children-list clearfix children-list_61'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data[0].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[2].shopList[l].shopName + "' target='_blank'>" + data[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[2].shopList[l].shopName + "'>" + data[0].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
                         }
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[1].shopList[2].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[2].shopList[l].shopName + "' target='_blank'>" + data[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[2].shopList[l].shopName + "'>" + data[1].shopList[2].shopList[l].shopName + "</a></li>").appendTo($(".children-list_61"));
                         }
                         $("<span>" + data[0].shopList[1].shopName + "</span><ul class='children-list clearfix children-list_62'></ul>").appendTo($(".children-nav-left_5"));
                         for (var k = 0; k < 2; k++) {
                             var l = parseInt(Math.random() * data[0].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[1].shopList[l].shopName + "' target='_blank'>" + data[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[0].shopList[1].shopList[l].shopName + "'>" + data[0].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
                         }
                         for (var k = 0; k < 3; k++) {
                             var l = parseInt(Math.random() * data[1].shopList[1].shopList.length);
-                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[1].shopList[l].shopName + "' target='_blank'>" + data[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
+                            $("<li><a class='link' title='' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[1].shopList[1].shopList[l].shopName + "'>" + data[1].shopList[1].shopList[l].shopName + "</a></li>").appendTo($(".children-list_62"));
                         }
                         break;
                     default:
                         break;
                 }
             }
-            $("<div class='Allsange'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=茅台'>茅台</a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液'>五粮液 </a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=天佑德' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>天佑德</a></div>").appendTo(".sange0");
-            $("<div class='Allsange'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=拉菲'>拉菲</a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=张裕'> 张裕 </a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=马克斯威' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马克斯威</a></div>").appendTo(".sange1");
-            $("<div class='Allsange'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=马爹利' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马爹利</a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=人头马'> 人头马 </a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=芝华士'>芝华士</a></div>").appendTo(".sange2");
-            $("<div class='Allsange'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=尧喝货'>尧喝货</a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=唐宋' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'> 唐宋 </a><a>塔牌</a></div>").appendTo(".sange3");
-            $("<div class='Allsange'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液五星级' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>五粮液五星级</a></div>").appendTo(".sange4");
-            $("<div class='Allsange'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=茅台' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>茅台</a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=拉菲'> 拉菲 </a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液'> 五粮液 </a><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=张裕'>张裕</a></div>").appendTo(".sange5");
+            $("<div class='Allsange'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=茅台'>茅台</a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液'>五粮液 </a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=天佑德' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>天佑德</a></div>").appendTo(".sange0");
+            $("<div class='Allsange'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=拉菲'>拉菲</a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=张裕'> 张裕 </a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=马克斯威' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马克斯威</a></div>").appendTo(".sange1");
+            $("<div class='Allsange'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=马爹利' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>马爹利</a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=人头马'> 人头马 </a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=芝华士'>芝华士</a></div>").appendTo(".sange2");
+            $("<div class='Allsange'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=尧喝货'>尧喝货</a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=唐宋' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'> 唐宋 </a><a>塔牌</a></div>").appendTo(".sange3");
+            $("<div class='Allsange'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液五星级' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>五粮液五星级</a></div>").appendTo(".sange4");
+            $("<div class='Allsange'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=茅台' style='color: #323b42;background: #FFFFFF;border-radius: 2px;text-align: center;display: inline-block;padding:1px 3px;vertical-align: middle;'>茅台</a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=拉菲'> 拉菲 </a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液'> 五粮液 </a><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=张裕'>张裕</a></div>").appendTo(".sange5");
 
         }
     })
@@ -1514,13 +1521,13 @@
         method: "get",
         success: function (data) {
             for (var i = 34; i < 49; i++) {
-                $("<div class='fl qijiandian_logos_logo_box'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand1"));
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand1"));
             }
             for (var i = 95; i < 110; i++) {
-                $("<div class='fl qijiandian_logos_logo_box'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand2"));
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand2"));
             }
             for (var i = 145; i < 154; i++) {
-                $("<div class='fl qijiandian_logos_logo_box'><a target='_blank' href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand3"));
+                $("<div class='fl qijiandian_logos_logo_box'><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + data[i].shopName + "'><img src='<%=basePath%>/resource/views/img/" + data[i].shopImg + "' alt=''/></a></div>").appendTo($(".brand3"));
             }
         }
     })

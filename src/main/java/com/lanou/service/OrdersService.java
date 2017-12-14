@@ -12,9 +12,11 @@ public interface OrdersService {
 
     public List<Orders> findOrders(String userPhone);
 
-    public List<WuliuAdress> findByxId(Integer xId);
+    public WuliuAdress findByxId(Integer xId);
 
-    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei);
+    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id,String UserPhone);
+
+    public Orders findAdressId(int order_id);
 
     public Orders weiZhifu(String userPhone);
 

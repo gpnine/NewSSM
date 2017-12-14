@@ -36,7 +36,7 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.findWuliu(userPhone);
     }
 
-    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei) {
+    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, String UserPhone) {
         Orders orders = new Orders();
         orders.setOrderPay(OrderPay);
         orders.setOrderAllMoney(OrderAllMoney);
@@ -44,9 +44,15 @@ public class OrdersServiceImpl implements OrdersService {
         orders.setOrderText(OrderText);
         orders.setOrderScore(OrderScore);
         orders.setOrderYunfei(OrderYunfei);
+        orders.setAdress_id(Adress_id);
+        orders.setUserPhone(UserPhone);
         int result = ordersMapper.updateOrders(orders);
         return result;
 
+    }
+
+    public Orders findAdressId(int order_id) {
+        return ordersMapper.findAdressId(order_id);
     }
 
     public Orders weiZhifu(String userPhone) {
@@ -66,7 +72,7 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.insertWine(orderAndWine);
     }
 
-    public List<WuliuAdress> findByxId(Integer xId) {
+    public WuliuAdress findByxId(Integer xId) {
         return ordersMapper.findByxId(xId);
     }
 
