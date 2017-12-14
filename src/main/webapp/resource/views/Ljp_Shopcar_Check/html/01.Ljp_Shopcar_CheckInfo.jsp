@@ -29,7 +29,7 @@
 			<!--具体信息-->
 			<div class="infor">
 				<div class="write_info">填写并核对订单信息</div>
-				<div class="user_info">
+				<div class="user_info " >
 					<div class="change">
 						<span>收货人信息</span>
 						<span><a class="xiugai" href="###">&nbsp;&nbsp;&nbsp;[修改]</a></span>
@@ -53,6 +53,7 @@
 							<span class="field"><span>*</span> 电话：</span><input class="phone" type="text" />
 						</div>
 					</div>
+					<a href="" style="width:140px;height: 30px;display: block"><button class="save_infos">保存收货人信息</button></a>
 					<button class="save_info">保存收货人信息</button>
 				</div>
 				<!--支付及配送方式-->
@@ -302,6 +303,8 @@
 
                 //点击新增地址,进行新添加地址
                 $(".yincang").click(function() {
+                    $(".save_info").css("display","block");
+                    $(".save_infos").css("display","none");
                     count2++;
                     $(".display").css("display", "block");
                     $(".user").val("");
@@ -336,7 +339,18 @@
                                 //				user_id:"",//这个不知道填什么❓❓❓
                             },
                             success: function(data) {
-                                demos();
+
+                                    $(".addre").css("display", "block");
+                                    var xm = $(".user").val(); //用户名
+                                    var area1 = $(".city_input").val(); //地址
+                                    var area2 = $(".area").val(); //地址
+                                    var phone = $(".phone").val(); //电话
+                                    $(".shouhuoren").html(xm);
+                                    $(".iphone").html(phone);
+                                    $(".dizhi").html(area1 + " " + area2);
+
+
+
                             }
                         })
                         $(".address").css("display", "none");
@@ -345,64 +359,71 @@
                     })
 
                 })
-                demos();
-                //对信息进行修改
-                function demos() {
-                    $(".use_newInfo_xiugai").click(function() {
-                        $(this).parents("label").siblings(".xuanze").val();
-                        console.log($(this).parents("label").siblings(".xuanze").val());
-                        $(".display").css("display", "block");
-                        $(".user").val($(this).siblings(".xm").html());
-                        $(".area").val($(this).siblings(".dz").html());
-                        $(".city_input").val($(this).siblings(".dzz").html());
-                        $(".phone").val($(this).siblings(".dh").html());
-                        var ss = $(this);
-                        $(".save_info").on("click", function() {
-                            $(".addre").css("display", "block");
-                            var xm = $(".user").val(); //用户名
-                            var area1 = $(".city_input").val(); //地址
-                            var area2 = $(".area").val(); //地址
-                            var phone = $(".phone").val(); //电话
-                            $(".shouhuoren").html(xm);
-                            $(".iphone").html(phone);
-                            $(".dizhi").html(area1 + " " + area2);
-                            //如果以上三项不为空，且电话号码符合正则
-                            if($(".user").val() != "" && $(".area1").val() != "" && $(".phone").val() != "" && ss) {
-                                ss.siblings(".xm").html(xm);
-                                console.log(ss);
-                                console.log(ss.siblings(".xm"));
-                                ss.siblings(".dh").html(phone);
-                                ss.siblings(".dz").html(area1);
-                                ss.siblings(".dzz").html(area2);
-                                $(".address").css("display", "none");
-                                $(".yincang").css("display", "none");
-                                $(".display").css("display", "none");
-                            }
-                            //没有执行
-                            $.ajax({
-                                type: "get",
-                                url: "<%=basePath%>/orders/UpdateAdress.do",
-                                data: {
-                                    ShouhuoName: $(".user").val(),
-                                    ShouhuoAdress: $(".city_input").val(),
-                                    XiangxiAdress: $(".area").val(),
-                                    ShouhuoPhone: $(".phone").val(),
-                                },
-                                success: function(data) {
-                                    $(".shouhuoren").html($(".user").val());
-                                    $(".iphone").html($(".phone").val());
-                                    $(".dizhi").html($(".city_input").val() + " " + $(".area").val());
-                                }
-                            })
-                        })
 
-                    })
-                    //对信息进行删除
-                    $(".use_newInfo_shanchu").click(function() {
-                        $(this).parents(".address").remove();
-                    })
-                }
-            }
+                //对信息进行修改
+
+
+                       $(".use_newInfo_xiugai").click(function() {
+                           $(".save_info").css("display","none");
+                           $(".save_infos").css("display","block");
+                           $(this).parents("label").siblings(".xuanze").val();
+                           console.log($(this).parents("label").siblings(".xuanze").val());
+                           $(".display").css("display", "block");
+                           $(".user").val($(this).siblings(".xm").html());
+                           $(".area").val($(this).siblings(".dzz").html());
+                           $(".city_input").val($(this).siblings(".dz").html());
+                           $(".phone").val($(this).siblings(".dh").html());
+                           var ss = $(this);
+                           $(".save_infos").on("click", function() {
+                               $(".addre").css("display", "block");
+                               var xm = $(".user").val(); //用户名
+                               var area1 = $(".city_input").val(); //地址
+                               var area2 = $(".area").val(); //地址
+                               var phone = $(".phone").val(); //电话
+                               $(".shouhuoren").html(xm);
+                               $(".iphone").html(phone);
+                               $(".dizhi").html(area1 + " " + area2);
+                               //如果以上三项不为空，且电话号码符合正则
+                               if($(".user").val() != "" && $(".area1").val() != "" && $(".phone").val() != "" && ss) {
+                                   ss.siblings(".xm").html(xm);
+                                   console.log(ss);
+                                   console.log(ss.siblings(".xm"));
+                                   ss.siblings(".dh").html(phone);
+                                   ss.siblings(".dz").html(area1);
+                                   ss.siblings(".dzz").html(area2);
+                                   $(".address").css("display", "none");
+                                   $(".yincang").css("display", "none");
+                                   $(".display").css("display", "none");
+                               }
+                               //没有执行
+                               $.ajax({
+                                   type: "get",
+                                   url: "<%=basePath%>/orders/UpdateAdress.do",
+
+                                   data: {
+                                       ShouhuoName: $(".user").val(),
+                                       ShouhuoAdress: $(".city_input").val(),
+                                       XiangxiAdress: $(".area").val(),
+                                       ShouhuoPhone: $(".phone").val(),
+									   xId:$(this).parents("label").siblings(".xuanze").val()
+                                   },
+                                   success: function(data) {
+                                       $(".shouhuoren").html($(".user").val());
+                                       $(".iphone").html($(".phone").val());
+                                       $(".dizhi").html($(".city_input").val() + " " + $(".area").val());
+                                   }
+                               })
+                           })
+
+                       })
+
+                       //对信息进行删除
+                       $(".use_newInfo_shanchu").click(function() {
+                           $(this).parents(".address").remove();
+                       })
+				   }
+
+
         })
         //电话号码的正则
         var ss = false;

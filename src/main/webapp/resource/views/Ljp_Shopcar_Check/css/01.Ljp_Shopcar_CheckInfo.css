@@ -67,6 +67,8 @@
 	width: 988px;
 	border-bottom: 1px solid #DCDDDC;
 	font-size: 13px;
+	position: relative;
+	padding-bottom:10px;
 }
 .change{
 	width: 988px;
@@ -138,12 +140,24 @@
 	font-weight: bolder;
 }
 .save_info{
+	position: absolute;
+	left: 16px;
+	bottom:8px;
 	width: 140px;
 	height: 30px;
 	background-color: #F54C50;
 	color: white;
 	font-size: 15px;
-	margin: 30px 0px 8px 15px;
+}
+.save_infos{
+	position: absolute;
+	left: 16px;
+	bottom:8px;
+	width: 140px;
+	height: 30px;
+	background-color: #F54C50;
+	color: white;
+	font-size: 15px;
 }
 .pay_way1{
 	width: 988px;
