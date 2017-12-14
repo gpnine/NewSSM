@@ -285,11 +285,6 @@ h5{
 }
 
 
-
-
-
-
-
 .wrap{
 	position: fixed;
 	top:0;
@@ -659,7 +654,15 @@ h5{
 	width:0px;
 	height:100vh;
 	position: absolute;
-	background: #E6E6E6;
+	background: rgba(255, 255, 255, 0);
+	right:0px;
+	transition: all 1s;
+}
+.gouwuche_right2,.gouwuche_right3,.gouwuche_right4{
+	width: 220px;
+	height: 100vh;
+	position: absolute;
+	background: #000000;
 	right:0px;
 	transition: all 1s;
 }
