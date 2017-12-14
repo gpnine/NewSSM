@@ -206,7 +206,7 @@
     var b_yangjiuArr = [];//葡萄酒类型
     var b_yangjiuArr1 = [];//洋酒类型
     $.ajax({
-        url: "http://10.80.13.161:8080/shop/goods_more.do",
+        url: "<%=basePath%>/shop/goods_more.do",
         method: "get",
         async: true,
         dataType: "json",
@@ -256,9 +256,9 @@
             //生成品牌logo，及其鼠标输入移除的效果
             for (var i = 0; i < b_imgArr.length; i++) {
                 if (i < 7) {
-                    $("<li class=\"pai_img\"><img src='<%=basePath%>/resource/views/Ljp_FirstPage_All2/img/logo/" + b_imgArr[i] + "' /></li>").prependTo($(".liS"));
+                    $("<li class=\"pai_img\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_nameArr[i] + "'><img src='<%=basePath%>/resource/views/Ljp_FirstPage_All2/img/logo/" + b_imgArr[i] + "' /></a></li>").prependTo($(".liS"));
                 } else {
-                    $("<li class=\"pai_img\"><img src='<%=basePath%>/resource/views/Ljp_FirstPage_All2/img/logo/" + b_imgArr[i] + "' /></li>").prependTo($(".display_one"));
+                    $("<li class=\"pai_img\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_nameArr[i] + "'><img src='<%=basePath%>/resource/views/Ljp_FirstPage_All2/img/logo/" + b_imgArr[i] + "' /></a></li>").prependTo($(".display_one"));
                 }
             }
             //hover的文字
@@ -271,7 +271,7 @@
                     this.style.textAlign = "center";
                     this.style.lineHeight = "38px";
                     this.style.color = "red";
-                    this.innerHTML = b_nameArr[this.index];
+                    this.innerHTML = "<a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_nameArr[this.index] + "'>" + b_nameArr[this.index] + "</a>";
                     last_hover = pai_img[this.index];
                 }
                 pai_img[i].onmouseout = function () {

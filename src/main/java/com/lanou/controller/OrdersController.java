@@ -135,9 +135,9 @@ public class OrdersController {
     @RequestMapping("/insertAdress.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertAdress.do?ShouhuoName=朱成林&SHouhuoAdress=安徽省&XiangxiAdress=池州&ShouhuoPhone=13859642315&user_id=1
-    public String insertAdress(String ShouhuoName, String SHouhuoAdress, String XiangxiAdress, String ShouhuoPhone, String userPhone, HttpServletResponse response) {
+    public String insertAdress(String ShouhuoName, String ShouhuoAdress, String XiangxiAdress, String ShouhuoPhone, String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.insertAdress(ShouhuoName, SHouhuoAdress, XiangxiAdress, ShouhuoPhone, userPhone);
+        int result = ordersService.insertAdress(ShouhuoName, ShouhuoAdress, XiangxiAdress, ShouhuoPhone, userPhone);
         if (result == 0) {
             return "false";
         } else {
@@ -163,12 +163,17 @@ public class OrdersController {
     @RequestMapping("/insertWine.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertWine.do?order_id=1&wine_id=1001
-    public String insertWine(String userPhone, int wineId, HttpServletResponse response) {
+    public String insertWine(String userPhone, String wineId, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
         Orders order = ordersService.weiZhifu(userPhone);
         int orderId = order.getOrderId();
-        int counts = carService.selectCount1(wineId, userPhone);
-        int result = ordersService.insertWine(orderId, wineId, counts);
+        String[] wineArr = wineId.split("\\-");
+        int result = 0;
+        for (int i = 0; i < wineArr.length; i++) {
+            int wid = Integer.parseInt(wineArr[i]);
+            int counts = carService.selectCount1(wid, userPhone);
+            ordersService.insertWine(orderId, wid, counts);
+        }
         if (result == 0) {
             return "false";
         } else {

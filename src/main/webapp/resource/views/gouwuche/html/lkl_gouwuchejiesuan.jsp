@@ -110,7 +110,7 @@
                     + "<span>总计(不含运费)：</span><span class='prices'>0</span>"
                     + "</div>"
                     + "<div class='caozuogou_list_caozuo' style='line-height:45px'>"
-                    + "<a href='<%=basePath%>/resource/views/Ljp_Shopcar_Check/html/01.Ljp_Shopcar_CheckInfo.jsp'><input class='qujiesuan' type='button' value='去结算'/></a>"
+                    + "<input class='qujiesuan' type='button' value='去结算'/>"
                     + "<!--<button ></button>-->"
                     + "</div>"
                     + "</div>"
@@ -144,30 +144,33 @@
                 $(".qujiesuan").click(function () {
                     //        提交订单
                     $.ajax({
-                        url: "http://10.80.13.161:8080/orders/insertOrder.do",
+                        url: "<%=basePath%>/orders/insertOrder.do",
                         method: "get",
                         data: {
                             userPhone: 18395592587,
                         },
                         success: function (data) {
                             var arrss = [];
-                            var arrsc = [];
+                            var wid = [];
                             $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index, el) {
                                 arrss.push(el.value);
+                                wid = arrss.join("-")
                             })
-                            for (var i = 0; i < arrss.length; i++) {
-                                $.ajax({
-                                    url: "http://10.80.13.161:8080/orders/insertWine.do",
-                                    method: "get",
-                                    data: {
-                                        userPhone: 18395592587,
-                                        wineId: arrss[i]
-                                    },
-                                    success: function (data) {
-
+                            $.ajax({
+                                url: "<%=basePath%>/orders/insertWine.do",
+                                async:false,
+                                method: "get",
+                                data: {
+                                    userPhone: 18395592587,
+                                    wineId: wid
+                                },
+                                success: function (data) {
+                                    if (data){
+                                        window.location.href = '<%=basePath%>/resource/views/Ljp_Shopcar_Check/html/01.Ljp_Shopcar_CheckInfo.jsp';
                                     }
-                                })
-                            }
+
+                                }
+                            })
                         }
                     })
                 })
