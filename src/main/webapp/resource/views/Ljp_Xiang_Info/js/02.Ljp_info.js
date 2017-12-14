@@ -288,7 +288,7 @@ $(".chexiao").click(function() {
 	 	gouwuche_right_right[_this.index].style.display="block";
 	 	if(_this.index!=0){
 	 		$(".lanonloads").fadeIn(200);
-				$(".lanonloads").fadeOut(500);			
+				$(".lanonloads").fadeOut(1000);
 	 	}else{
 	 		
 	 	}
