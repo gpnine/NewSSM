@@ -10,15 +10,7 @@ public class WuliuAdress {
     private String XiangxiAdress;
     private String ShouhuoPhone;
     private String UserPhone;
-
-    public WuliuAdress(Integer xId, String shouhuoName, String shouhuoAdress, String xiangxiAdress, String shouhuoPhone, String userPhone) {
-        this.xId = xId;
-        ShouhuoName = shouhuoName;
-        ShouhuoAdress = shouhuoAdress;
-        XiangxiAdress = xiangxiAdress;
-        ShouhuoPhone = shouhuoPhone;
-        UserPhone = userPhone;
-    }
+    private Integer deleteId;
 
     @Override
     public String toString() {
@@ -29,7 +21,26 @@ public class WuliuAdress {
                 ", XiangxiAdress='" + XiangxiAdress + '\'' +
                 ", ShouhuoPhone='" + ShouhuoPhone + '\'' +
                 ", UserPhone='" + UserPhone + '\'' +
+                ", deleteId=" + deleteId +
                 '}';
+    }
+
+    public Integer getDeleteId() {
+        return deleteId;
+    }
+
+    public void setDeleteId(Integer deleteId) {
+        this.deleteId = deleteId;
+    }
+
+    public WuliuAdress(Integer xId, String shouhuoName, String shouhuoAdress, String xiangxiAdress, String shouhuoPhone, String userPhone, Integer deleteId) {
+        this.xId = xId;
+        ShouhuoName = shouhuoName;
+        ShouhuoAdress = shouhuoAdress;
+        XiangxiAdress = xiangxiAdress;
+        ShouhuoPhone = shouhuoPhone;
+        UserPhone = userPhone;
+        this.deleteId = deleteId;
     }
 
     public String getUserPhone() {

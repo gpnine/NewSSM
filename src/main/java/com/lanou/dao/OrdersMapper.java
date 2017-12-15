@@ -22,6 +22,8 @@ public interface OrdersMapper {
     //    修改地址
     public int UpdateAdress(WuliuAdress wuliuAdress);
 
+    public int DeleteAdress(Integer xId);
+
     //显示收货人地址
     public List<WuliuAdress> findWuliu(String userPhone);
 

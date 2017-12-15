@@ -87,6 +87,19 @@ public class OrdersController {
         }
     }
 
+    //删除物流地址
+    @RequestMapping("/DeleteAdress.do")
+    @ResponseBody
+    public String DeleteAdress(Integer xId, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        int result = ordersService.DeleteAdress(xId);
+        if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
+
     //找到订单中的酒
     @RequestMapping("/findWines.do")
     @ResponseBody
@@ -107,9 +120,11 @@ public class OrdersController {
     @RequestMapping("/updateOrders.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/updateOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50&Adresss_id=1
-    public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adresss_id, String UserPhone, HttpServletResponse response) {
+    public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei, Adresss_id, UserPhone);
+        System.out.println("+++++++++++++++++++++++++++++++++++++++");
+        System.out.println(userPhone);
+        int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei, Adress_id, userPhone);
         if (result == 0) {
             return "false";
         } else {

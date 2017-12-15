@@ -30,6 +30,10 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.insertAdress(wuliuAdress);
     }
 
+    public int DeleteAdress(Integer xId) {
+        return ordersMapper.DeleteAdress(xId);
+    }
+
     public List<WuliuAdress> findWuliu(String userPhone) {
         System.out.println(userPhone);
         System.out.println(ordersMapper.findWuliu(userPhone));

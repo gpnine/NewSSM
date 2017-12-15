@@ -14,7 +14,7 @@ public interface OrdersService {
 
     public WuliuAdress findByxId(Integer xId);
 
-    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id,String UserPhone);
+    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, String UserPhone);
 
     public Orders findAdressId(int order_id);
 
@@ -31,5 +31,7 @@ public interface OrdersService {
     public int insertWine(int order_id, int wine_id, int wine_count);
 
     public List<OrderAndWine> findWines(Integer order_id);
+
+    public int DeleteAdress(Integer xId);
 
 }

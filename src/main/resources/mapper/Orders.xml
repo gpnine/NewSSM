@@ -25,6 +25,7 @@
         <result column="XiangxiAdress" property="XiangxiAdress" jdbcType="VARCHAR"/>
         <result column="ShouhuoPhone" property="ShouhuoPhone" jdbcType="VARCHAR"/>
         <result column="UserPhone" property="UserPhone" jdbcType="VARCHAR"/>
+        <result column="deleteId" property="deleteId" jdbcType="INTEGER"/>
     </resultMap>
     <resultMap type="OrderAndWine" id="orderAndWineResult">
         <id column="order_id" property="order_id" jdbcType="INTEGER"/>
@@ -32,10 +33,13 @@
         <result column="wine_count" property="wine_count" jdbcType="INTEGER"/>
     </resultMap>
     <select id="findByxId" parameterType="Integer" resultMap="shouhuorenResult">
-        select * from zhongjiu_order_shouhuoren WHERE xId = #{xId};;
+        select * from zhongjiu_order_shouhuoren WHERE xId = #{xId};
     </select>
     <update id="UpdateAdress" parameterType="WuliuAdress">
         update zhongjiu_order_shouhuoren set ShouhuoName = #{ShouhuoName},ShouhuoAdress=#{ShouhuoAdress},XiangxiAdress=#{XiangxiAdress},ShouhuoPhone=#{ShouhuoPhone} where xId = #{xId};
+    </update>
+    <update id="DeleteAdress" parameterType="Integer">
+        update zhongjiu_order_shouhuoren set deleteId = 1 where xId = #{xId};
     </update>
     <select id="findOrders" parameterType="Integer" resultMap="OrdersResult">
         select * from zhongjiu_order WHERE UserPhone = #{UserPhone} and ShifouZhifu = 1;
@@ -47,7 +51,7 @@
         update zhongjiu_order set ShifouZhifu = 1 where UserPhone = #{UserPhone};
     </update>
     <select id="findWuliu" parameterType="string" resultMap="shouhuorenResult">
-        select * from zhongjiu_order_shouhuoren where UserPhone = #{UserPhone};
+        select * from zhongjiu_order_shouhuoren where UserPhone = #{UserPhone} and deleteId = 0;
 	</select>
     <select id="weiZhifu" parameterType="string" resultMap="OrdersResult">
         select * from zhongjiu_order where UserPhone = #{UserPhone} and ShifouZhifu = 0;
