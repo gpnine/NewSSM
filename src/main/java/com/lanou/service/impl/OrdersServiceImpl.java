@@ -26,7 +26,7 @@ public class OrdersServiceImpl implements OrdersService {
         wuliuAdress.setShouhuoAdress(ShouhuoAdress);
         wuliuAdress.setXiangxiAdress(XiangxiAdress);
         wuliuAdress.setShouhuoPhone(ShouhuoPhone);
-        wuliuAdress.setShouhuoPhone(ShouhuoPhone);
+        wuliuAdress.setUserPhone(userPhone);
         return ordersMapper.insertAdress(wuliuAdress);
     }
 

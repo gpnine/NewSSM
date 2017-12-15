@@ -156,9 +156,9 @@
     </div>
 </div>
 <div class="side_nav_slider_top">
-    <span class="cate-all"><img src="http://www.zhongjiu.cn/Areas/Web/Images/HIMALL_admin11_04_03.png" alt=""><a
-            href="###">全部商品分类</a></span>
-    <span class="item"><a class="item_one" href="###">首页</a></span>
+    <span class="cate-all"><img src="http://www.zhongjiu.cn/Areas/Web/Images/HIMALL_admin11_04_03.png"
+                                alt=""><a>全部商品分类</a></span>
+    <span class="item"><a class="item_one">首页</a></span>
     <span class="item"><a
             href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">白酒专区</a></span>
     <span class="item"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">红洋酒专区</a></span>
@@ -276,16 +276,32 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州">贵州</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=四川">四川</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=北京">北京</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=青海">青海</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州">贵州</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=四川">四川</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=北京">北京</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=青海">青海</a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=酱香型">酱香型</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=浓香型">浓香型</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=清香型">清香型</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=绵柔型">绵柔型</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=酱香型">酱香型</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=浓香型">浓香型</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=清香型">清香型</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=绵柔型">绵柔型</a>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
@@ -373,16 +389,32 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液五星级">五粮液五星级</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州茅台醇">贵州茅台醇</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=高原青稞酒">高原青稞酒</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=洋河梦之蓝">洋河梦之蓝</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=五粮液五星级">五粮液五星级</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州茅台醇">贵州茅台醇</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=高原青稞酒">高原青稞酒</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=洋河梦之蓝">洋河梦之蓝</a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州董酒">贵州董酒</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=泸州老窖">泸州老窖</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=牛栏山二锅头">牛栏山二锅头</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=红星二锅头">红星二锅头</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=贵州董酒">贵州董酒</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=泸州老窖">泸州老窖</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=牛栏山二锅头">牛栏山二锅头</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=红星二锅头">红星二锅头</a>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
@@ -467,16 +499,32 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国拉菲">法国拉菲</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=华夏长城">华夏长城</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=中国张裕">中国张裕</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=澳洲黄尾袋鼠">澳洲黄尾袋鼠</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国拉菲">法国拉菲</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=华夏长城">华夏长城</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=中国张裕">中国张裕</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=澳洲黄尾袋鼠">澳洲黄尾袋鼠</a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=南非库玛拉">南非库玛拉</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国小龙船">法国小龙船</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国圣迪斯">法国圣迪斯</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=澳洲奔富">澳洲奔富</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=南非库玛拉">南非库玛拉</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国小龙船">法国小龙船</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=法国圣迪斯">法国圣迪斯</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=澳洲奔富">澳洲奔富</a>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
@@ -562,16 +610,32 @@
                                 <div class="pa jiupin_first_table">
                                     <table class="jiupin_first_table_pinpai clearfix">
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=人头马">人头马</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=马爹利">马爹利</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=轩尼诗">轩尼诗</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=绝对伏特加">绝对伏特加</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=人头马">人头马</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=马爹利">马爹利</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=轩尼诗">轩尼诗</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=绝对伏特加">绝对伏特加</a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=百加得">百加得</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=翰格蓝爵">翰格蓝爵</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=皇家礼炮">皇家礼炮</a></td>
-                                            <td><a class="jiupin_first_table_pinpai_hover" href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=深蓝">深蓝</a></td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=百加得">百加得</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=翰格蓝爵">翰格蓝爵</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=皇家礼炮">皇家礼炮</a>
+                                            </td>
+                                            <td><a class="jiupin_first_table_pinpai_hover"
+                                                   href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=深蓝">深蓝</a>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
@@ -809,19 +873,19 @@
                 </div>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i id="end"></i><i class="iconfont icon-gouwuche paowuxian"></i></a>
+                <a class="a"><i id="end"></i><i class="iconfont icon-gouwuche paowuxian"></i></a>
                 <span style="width:22px;display: block;margin-left:9px;">购物车</span>
                 <span class="gouwushuliang">0</span>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-hongbao "></i></a>
+                <a class="a"><i class="iconfont icon-hongbao "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>资产中心</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
             </li>
             <li class="gouwuche_left_content_first pr gouwuche_left_content_first_click">
-                <a class="a" href="###"><i class="iconfont icon-xiangqu "></i></a>
+                <a class="a"><i class="iconfont icon-xiangqu "></i></a>
                 <div class="pa kefu_shuoming">
                     <span>收藏商品</span>
                     <div class="sanjiaoxing pa"></div>
@@ -832,7 +896,7 @@
                     <span>浏览历史</span>
                     <div class="sanjiaoxing pa"></div>
                 </div>
-                <a class="a" href="###"><i class="iconfont icon-shizhong "></i></a>
+                <a class="a"><i class="iconfont icon-shizhong "></i></a>
             </li>
             <li>
                 <div class="kefu pr">
@@ -854,11 +918,6 @@
             <!--查看全部-->
             <a class='chakan' href='<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuchejiesuan.jsp'>查看全部</a>
             <div class='zhongjiu_goods' style="padding:0 15px;">
-                <div>
-                    <input type='checkbox' checked='checked' class='inpcounts'/>
-                    <span>中酒自营</span>
-                    <span class='prices' style='float:right'>0</span>
-                </div>
 
                 <!--改动区域***********************************************************-->
 
@@ -896,42 +955,10 @@
             </div>
         </div>
         <div class='gouwuche_right2  gouwuche_right_right'>
-            <ol style='padding:0 15px'>
-                <li>
-                    <div class='chexiao'>&gt;&gt;</div>
-                    <div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div>
-                </li>
-                <li>
-                    <div style='width:190px;height:50px;background:white;padding:10px 0;'>
-                        <ol>
-                            <li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'>
-                                <div>0</div>
-                                <div style='white-space:nowrap;'>我的积分</div>
-                            </li>
-                            <li style='float:right;width:84px;height:50px;text-align:center'>
-                                <div>0</div>
-                                <div style='white-space:nowrap;'>优惠劵</div>
-                            </li>
-                        </ol>
-                    </div>
-                </li>
-                <li style='white-space:nowrap; color:white;'>已领取的优惠劵</li>
-            </ol>
-            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
         </div>
         <div class='gouwuche_right3  gouwuche_right_right'>
-            <div style='padding:5px 15px;'>
-                <div class='chexiao'>&gt;&gt;</div>
-                <div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div>
-            </div>
-            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
         </div>
         <div class='gouwuche_right4  gouwuche_right_right'>
-            <div style='padding:5px 15px;'>
-                <div class='chexiao'>&gt;&gt;</div>
-                <div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div>
-            </div>
-            <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif'/>
         </div>
     </div>
 </div>
@@ -947,6 +974,8 @@
         $(".login_in").html(${user1.userPhone});
         $(".register_in").html($("<a style='color: grey;height: 12px;margin:0' href='<%=basePath%>/user/exitUser.do' class='register_in'>[退出]</a>"));
     }
+    //获取后台数据进行创建购物车商品
+    $(".ols").before("<div class='zhongjiu_goods' style='background:#ffffff;padding:0 15px;width:190px'><div style='padding: 7px 0px;margin-left: -15px;width: 192px;'><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>");
 
     $.ajax({
         url: "<%=basePath%>/index/banner.do",
@@ -1573,10 +1602,7 @@
                     $(".chakan").css("color", "black");
                 })
 
-
-                //获取后台数据进行创建购物车商品
-                $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
-//                    for(i in data){
+                //                    for(i in data){
 //                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='"+data[i].shopImg+"'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+data[i].parentId+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+data[i].shopId+"</span></li>").appendTo($(".ols"));
 //                    }
 
