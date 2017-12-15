@@ -32,12 +32,18 @@ public interface WineMapper {
     //热销商品
     public List<Wine> rexiao(String WineBrand);
 
-    public List<Wine> chengjiao(String WineBrand);
+    public List<Wine> rexiao1(Map map);
 
-    public List<Wine> jiage(String WineBrand);
+    public List<Wine> chengjiao(Map map);
 
-    public List<Wine> pinlunshu(String WineBrand);
+    public List<Wine> jiage(Map map);
 
-    public List<Wine> shangjia(String WineBrand);
+    public List<Wine> pinlunshu(Map map);
+
+    public List<Wine> shangjia(Map map);
+
+    public List<Wine> ziying(Map map);
+
+    public List<Wine> allGoodsNum(String WineBrand);
 
 }

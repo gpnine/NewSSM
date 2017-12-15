@@ -22,7 +22,7 @@
 <div class="head_name">
     <span class="first_page"><a href="<%=basePath%>/resource/views/html/lkl_index.jsp">首页 ></a></span>&nbsp;&nbsp;&nbsp;
     <span class="sele_kind"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">全部</a></span>
-    <span class="goods_amount">共 <span>1639</span> 个商品</span>
+    <span class="goods_amount">共 <span></span> 个商品</span>
 </div>
 
 <!--第一部分：侧边栏和选项框-->
