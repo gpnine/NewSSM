@@ -556,7 +556,7 @@
             },
             success: function (data) {
                 if (data) {
-                    window.location.href = '<%=basePath%>/resource/views/zhifu/html/lkl_zhifu.html';
+                    window.location.href = '<%=basePath%>/resource/views/zhifu/html/lkl_zhifu.jsp';
                 }
             }
 

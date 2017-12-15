@@ -18,37 +18,10 @@ public class Orders {
     private int Adress_id;
     private int GouwuCishu;
     private int ShifouZhifu;
+    private Wine wine;
 
-    public String getUserPhone() {
-        return UserPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        UserPhone = userPhone;
-    }
-
-    public int getGouwuCishu() {
-        return GouwuCishu;
-    }
-
-    public void setGouwuCishu(int gouwuCishu) {
-        GouwuCishu = gouwuCishu;
-    }
-
-    public Orders(int orderId, String orderPay, double orderAllMoney, String userPhone, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, int gouwuCishu, int shifouZhifu, List<Wine> wines) {
-        OrderId = orderId;
-        OrderPay = orderPay;
-        OrderAllMoney = orderAllMoney;
-        UserPhone = userPhone;
-        OrderTicket = orderTicket;
-        OrderText = orderText;
-        OrderScore = orderScore;
-        OrderYunfei = orderYunfei;
-        YesOrNo = yesOrNo;
-        Adress_id = adress_id;
-        GouwuCishu = gouwuCishu;
-        ShifouZhifu = shifouZhifu;
-        this.wines = wines;
+    public Wine getWine() {
+        return wine;
     }
 
     @Override
@@ -66,8 +39,46 @@ public class Orders {
                 ", Adress_id=" + Adress_id +
                 ", GouwuCishu=" + GouwuCishu +
                 ", ShifouZhifu=" + ShifouZhifu +
+                ", wine=" + wine +
                 ", wines=" + wines +
                 '}';
+    }
+
+    public void setWine(Wine wine) {
+        this.wine = wine;
+    }
+
+    public String getUserPhone() {
+        return UserPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        UserPhone = userPhone;
+    }
+
+    public int getGouwuCishu() {
+        return GouwuCishu;
+    }
+
+    public void setGouwuCishu(int gouwuCishu) {
+        GouwuCishu = gouwuCishu;
+    }
+
+    public Orders(int orderId, String orderPay, double orderAllMoney, String userPhone, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, int gouwuCishu, int shifouZhifu, Wine wine, List<Wine> wines) {
+        OrderId = orderId;
+        OrderPay = orderPay;
+        OrderAllMoney = orderAllMoney;
+        UserPhone = userPhone;
+        OrderTicket = orderTicket;
+        OrderText = orderText;
+        OrderScore = orderScore;
+        OrderYunfei = orderYunfei;
+        YesOrNo = yesOrNo;
+        Adress_id = adress_id;
+        GouwuCishu = gouwuCishu;
+        ShifouZhifu = shifouZhifu;
+        this.wine = wine;
+        this.wines = wines;
     }
 
     public int getShifouZhifu() {

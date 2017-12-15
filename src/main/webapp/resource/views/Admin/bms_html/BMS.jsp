@@ -84,7 +84,7 @@ pageEncoding="UTF-8" %>
 						</tr>
 						<c:forEach items="${Banner}" var="item" >
 							<tr>
-								<form action="<%=basePath%>/admin/delBanner.do" method="post">
+								<form action="<%=basePath%>/admin/delBanner.do" method="post" >
 									<td><%=i++%></td>
 									<td class="pic"><img src="<%=basePath%>/${item.bannerSrc}" alt="" /></td>
 									<td><button class="del">删除</button></td>
@@ -93,11 +93,16 @@ pageEncoding="UTF-8" %>
 							</tr>
 						</c:forEach>
 						<tr>
-							<form action="<%=basePath%>/admin/addBanner.do" method="post">
+
+							<%--<form action="<%=basePath%>/admin/addBanner.do" enctype="multipart/form-data" method="post">--%>
+								<%--<input type="file" name="myFile">--%>
+								<%--<input type="submit" value="上传">--%>
+							<%--</form>--%>
+							<form action="<%=basePath%>/admin/addBanner.do" method="post" enctype="multipart/form-data">
 								<td>添加图片</td>
-								<td>
-									<img id="preview" style="width:100px;height: 100px"/>
-									<input type="file" name="file" onchange="imgPreview(this)" />
+								<td style="text-align: center">
+									<img id="preview" style="width:388px;height: 100px"/><br>
+									<input type="file" name="myFile" onchange="imgPreview(this)"/><br>
 									图片名称<input type="text" name="bannerSrc">
 								</td>
 								<td><button>确认添加</button></td>

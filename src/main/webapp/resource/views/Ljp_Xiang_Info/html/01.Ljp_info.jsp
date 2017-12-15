@@ -390,7 +390,7 @@
                 <input type='checkbox' checked='checked' id='inp1'/><label for='inp1' style='white-space:nowrap'>&nbsp;全选</label>
             </div>
             <!--查看全部-->
-            <a class='chakan' href=''>查看全部</a>
+            <a class='chakan' href='<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuchejiesuan.jsp'>查看全部</a>
             <div class='zhongjiu_goods' style="padding:0 15px;">
                 <div>
                     <input type='checkbox' checked='checked' class='inpcounts'/>
@@ -427,13 +427,6 @@
                     <span>件</span>
                 </div>
             </div>
-            <div style='float:right ;color:red;'>
-                <span>￥</span>
-                <span class='prices'>0</span>
-            </div>
-            <a href="<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuchejiesuan.jsp?userPhone=${user1.userPhone}"
-               class="jiesuan">购物车结算
-            </a>
         </div>
     </div>
     <div class='gouwuche_right2 gouwuche_right_right'>
@@ -660,7 +653,7 @@
                     $("#inp1").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
                     change();
                 })
-                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></div>").appendTo($(".gouwuche_right1"));
+                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></a></div>").appendTo($(".gouwuche_right1"));
                 // prices总价 titalprice单个商品的总价 s_sum 每个商品的数量
                 function change() {
                     $(".counts").html(function () {

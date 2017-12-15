@@ -14,6 +14,8 @@ public interface OrdersMapper {
 
     public Orders findAdressId(Integer order_id);
 
+    public Orders findAllMoney(String userPhone);
+
     public WuliuAdress findByxId(Integer xId);
 
     //    是否支付
@@ -29,6 +31,8 @@ public interface OrdersMapper {
 
     //    查找用户未支付的账单id
     public Orders weiZhifu(String userPhone);
+
+    public List<Orders> yiZhifu(String userPhone);
 
     //根据订单号找到订单中的商品
     public List<OrderAndWine> findWines(Integer order_id);

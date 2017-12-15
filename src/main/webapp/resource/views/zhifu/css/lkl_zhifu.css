@@ -1,3 +1,92 @@
+#ss{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background: rgba(222,222,222,0.4);
+	display: none;
+}
+.ss_box{
+	width:404px;
+	position: fixed;
+	top:200px ;
+	left:calc(50% - 200px);
+	border: 4px solid #CFCFCF;
+	background: white;
+}
+.ss_box_top{
+	background: #F5F5F5;
+	padding: 5px;
+	font-size: 14px;
+}
+.ss_box_top:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+.ss_box_top:after{
+	zoom: 1;
+}
+.ss_box_top_left{
+	float: left;
+}
+.ss_box_top_right{
+	float: right;
+	width:20px;
+	height:20px;
+	border: 1px solid #F5F5F5;
+	border-radius: 50%;
+}
+
+.ss_box_bottom{
+	padding: 30px;
+	position: relative;
+
+}
+.ss_po{
+	padding:30px;
+	position: absolute;
+	top:0;
+	left:0;
+	display: none;
+}
+.ss_box_bottom:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+.ss_box_bottom:after{
+	zoom: 1;
+}
+.ss_box_bottom_left{
+	float: left;
+	width:160px;
+}
+.ss_box_bottom_right{
+	float: right;
+	width:160px;
+}
+.ss_box_bottom_left_btn{
+	float: right;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	font-size: 14px;
+	background: white;
+	border: 1px solid gray;
+	outline: none;
+}
+.ss_box_bottom_right_btn{
+	float: left;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	font-size: 14px;
+	background: white;
+	border: 1px solid gray;
+	outline: none;
+}
 .topBox {
 	width: 100%;
 	height: 31px;

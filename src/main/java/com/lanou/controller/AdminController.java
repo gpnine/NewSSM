@@ -4,13 +4,17 @@ import com.lanou.entity.*;
 import com.lanou.service.AdminService;
 import com.lanou.service.CarService;
 import com.lanou.service.IndexService;
+import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -52,16 +56,19 @@ public class AdminController {
 
 
 
-    @RequestMapping(value = "/addBanner.do",method = RequestMethod.POST)
-    public String addBanner(String bannerSrc,HttpSession session) {
-
+    @RequestMapping(value = "/addBanner.do")
+    public String addBanner(HttpSession session,MultipartFile myFile,String bannerSrc ) {
+        File files = new File("/Users/lanou/Desktop/zjw/NewSSM/src/main/webapp/resource/views/img/Banner_img/"+bannerSrc);
+        try {
+            FileUtils.copyInputStreamToFile(myFile.getInputStream(),files);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         boolean result = adminService.addBanner("resource/views/img/Banner_img/"+bannerSrc);
         List<AdminFunction> list = adminService.adminFunction();
         session.setAttribute("Afun", list);
-
         List<Banner> banners = indexService.index();
         session.setAttribute("Banner",banners);
-
         return "Admin/bms_html/BMS";
     }
 

@@ -1,77 +1,84 @@
-// 幻灯片
-$(function() {
-    //声明变量记录索引
-    var index = 0;
-    //点击右边按钮
-    //忽略重复点击开关
-    var toggle = true
-    $(".arrow-right").click(function() {
-
-        if (toggle == false) {
-            return
-        }
-        toggle = false
-        index++;
-        if (index > $('.fade li').length - 1) {
-            index = 0;
-        }
-        $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
-        $(".slider>ul>li").eq(index).stop().fadeIn(500, function() {
-                toggle = true
-            }
-
-        ).siblings("li").stop().fadeOut(500);
-
-    });
-    //点击左边按钮
-    $(".arrow-left").click(function() {
-        if (toggle == false) {
-            return
-        }
-        toggle = false
-        index--;
-        if (index < 0) {
-            index = $('.fade li').length - 1;
-        }
-        $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
-        $(".slider>ul>li").eq(index).fadeIn(1000, function() {
-            toggle = true
-        }).siblings("li").fadeOut(1000);
-    });
-    //hover分页器
-    $('.pagination ul li').hover(function() {
-        var paging = $(this).index()
-        //变颜色
-        index=$(this).index();
-        $(this).addClass('active').siblings().removeClass('active')
-        //与图片关联
-        $(".slider>ul>li").eq(paging).fadeIn(1000).siblings("li").fadeOut(1000);
-        clearInterval(timerID);
-
-//       timerID = setInterval(function() {
-//           $(".arrow-right").click()
+// // 幻灯片
+// $(function() {
+//     //声明变量记录索引
+//     var index = 0;
+//     //点击右边按钮
+//     //忽略重复点击开关
+//     var toggle = true
+//     $(".arrow-right").click(function() {
 //
-//       }, 2000)
-    })
-
-    //增加无限轮播效果
-    var timerID = setInterval(function() {
-        $(".arrow-right").click()
-
-    }, 3000)
-    //移入停止计时器
-    $('.slider').mouseenter(function() {
-        clearInterval(timerID)
-    })
-    //移出开始计时器
-    $('.slider').mouseleave(function() {
-        timerID = setInterval(function() {
-            $(".arrow-right").click()
-
-        }, 2000)
-    })
-
-});
+//         if (toggle == false) {
+//             return
+//         }
+//         toggle = false
+//         index++;
+//         if (index > $('.fade li').length - 1) {
+//             index = 0;
+//         }
+//         $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
+//         $(".slider>ul>li").eq(index).stop().fadeIn(500, function() {
+//                 toggle = true
+//             }
+//
+//         ).siblings("li").stop().fadeOut(500);
+//
+//     });
+//     //点击左边按钮
+//     $(".arrow-left").click(function() {
+//         if (toggle == false) {
+//             return
+//         }
+//         toggle = false
+//         index--;
+//         if (index < 0) {
+//             index = $('.fade li').length - 1;
+//         }
+//         $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
+//         $(".slider>ul>li").eq(index).fadeIn(1000, function() {
+//             toggle = true
+//         }).siblings("li").fadeOut(1000);
+//     });
+//
+//
+//
+//     //hover分页器
+//     $('.pagination ul li').hover(function() {
+//         var paging = $(this).index()
+//         //变颜色
+//         index=$(this).index();
+//         $(this).addClass('active').siblings().removeClass('active')
+//         //与图片关联
+//         $(".slider>ul>li").eq(paging).fadeIn(1000).siblings("li").fadeOut(1000);
+//         clearInterval(timerID);
+//
+// //       timerID = setInterval(function() {
+// //           $(".arrow-right").click()
+// //
+// //       }, 2000)
+//     })
+//
+//
+//
+//
+//
+//     //增加无限轮播效果
+//     var timerID = setInterval(function() {
+//         $(".arrow-right").click()
+//
+//     }, 3000)
+//     //移入停止计时器
+//     $('.slider').mouseenter(function() {
+//         clearInterval(timerID)
+//     })
+//     //移出开始计时器
+//     $('.slider').mouseleave(function() {
+//         timerID = setInterval(function() {
+//             $(".arrow-right").click()
+//
+//         }, 2000)
+//     })
+//
+// });
 
 
 
@@ -188,7 +195,7 @@ for(var i = 0; i < help_a_beer.length; i++) {
     xuanjiuqu_beer[i].index = i;
     help_a_beer[i].index = i;
     var Xuanjiuqu4 = xuanjiuqu_beer[0];
-    help_a_beer[i].onclick = function() {
+    help_a_beer[i].onmouseenter = function() {
         Xuanjiuqu4.style.display = "none";
         xuanjiuqu_beer[this.index].style.display = "block";
         Xuanjiuqu4 = xuanjiuqu_beer[this.index];
