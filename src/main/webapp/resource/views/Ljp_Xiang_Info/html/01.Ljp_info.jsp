@@ -149,9 +149,11 @@
             <div class="search">
                 <div class="search_name">本店搜索</div>
                 <div class="search_info">
-                    关键字 <input class="keyword" type="text"/><br/>
+                    <form action="<%=basePath%>/wine/find.do" method="get">
+                    关键字 <input class="keyword" type="text" name="wineName"/><br/>
                     价&nbsp;&nbsp;&nbsp;格 <input type="text" class="beg"/> - <input type="text" class="end"/>
-                    <div class="search_btn">搜索</div>
+                    <button class="search_btn" >搜索</button>
+                    </form>
                 </div>
 
             </div>

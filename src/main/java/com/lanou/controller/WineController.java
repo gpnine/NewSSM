@@ -42,6 +42,17 @@ public class WineController {
         List<Wine> wines = wineService.findLike(likeName);
         return wines;
     }
+
+    //    模糊查询
+    @RequestMapping("/find.do")
+    @ResponseBody
+    public List<Wine> find(String wineName, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        List<Wine> wines = wineService.findLike(wineName);
+        return wines;
+    }
+
+
     //    模糊查询
     @RequestMapping("/likeCount.do")
     @ResponseBody

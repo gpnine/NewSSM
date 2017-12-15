@@ -168,45 +168,41 @@
 </div>
 <div class="slider">
     <ul class="fade">
-        <li>
-            <a class="lunbotu0"
-               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
-            </a>
-        </li>
-        <li>
-            <a class="lunbotu1"
-               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
-            </a>
-        </li>
-        <li>
-            <a class="lunbotu2"
-               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
-            </a>
-        </li>
-        <li>
-            <a class="lunbotu3"
-               href="<%=basePath%>/resource/views/zhongjiu-Shopping-maotai/html/zhongjiu-Shopping-maotai.html">
-            </a>
-        </li>
-        <li>
-            <a class="lunbotu4"
-               href="<%=basePath%>/resource/views/zhongjiu-Shopping-wuliangye/html/zhongjiu-Shopping-wuliangye.html">
-            </a>
-        </li>
-        <li>
-            <a class="lunbotu5"
-               href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">
-            </a>
-        </li>
+        <%--<li>--%>
+            <%--<a class="lunbotu0"--%>
+               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li>--%>
+            <%--<a class="lunbotu1"--%>
+               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li>--%>
+            <%--<a class="lunbotu2"--%>
+               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li>--%>
+            <%--<a class="lunbotu3"--%>
+               <%--href="<%=basePath%>/resource/views/zhongjiu-Shopping-maotai/html/zhongjiu-Shopping-maotai.html">--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li>--%>
+            <%--<a class="lunbotu4"--%>
+               <%--href="<%=basePath%>/resource/views/zhongjiu-Shopping-wuliangye/html/zhongjiu-Shopping-wuliangye.html">--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li>--%>
+            <%--<a class="lunbotu5"--%>
+               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+            <%--</a>--%>
+        <%--</li>--%>
     </ul>
     <div class="pagination">
-        <ul>
+        <ul class="banner_ul">
             <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+
         </ul>
     </div>
     <div class="arrow-right"></div>
@@ -982,11 +978,123 @@
         method: "get",
         async: true,
         success: function (data) {
+            for( var j=0;j<data.length-1;j++){
+                $("<li></li>").appendTo($(".banner_ul"));
+            }
+            for( var j=0;j<data.length;j++){
+                $("<li><a class='lunbotu"+j+"'></a></li>").appendTo($(".fade"));
+            }
             for (i in data) {
                 $("<img src='<%=basePath%>/" + data[i].bannerSrc + "'/>").appendTo($(".lunbotu" + i));
             }
+
+//=======================================================================================================
+            // 幻灯片
+            $(function() {
+                //声明变量记录索引
+                var index = 0;
+                //点击右边按钮
+                //忽略重复点击开关
+                var toggle = true
+                $(".arrow-right").click(function() {
+
+                    if (toggle == false) {
+                        return
+                    }
+                    toggle = false
+                    index++;
+                    if (index > $('.fade li').length - 1) {
+                        index = 0;
+                    }
+                    $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
+                    $(".slider>ul>li").eq(index).stop().fadeIn(500, function() {
+                            toggle = true
+                        }
+
+                    ).siblings("li").stop().fadeOut(500);
+
+                });
+                //点击左边按钮
+                $(".arrow-left").click(function() {
+                    if (toggle == false) {
+                        return
+                    }
+                    toggle = false
+                    index--;
+                    if (index < 0) {
+                        index = $('.fade li').length - 1;
+                    }
+                    $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
+                    $(".slider>ul>li").eq(index).fadeIn(1000, function() {
+                        toggle = true
+                    }).siblings("li").fadeOut(1000);
+                });
+
+
+
+                //hover分页器
+                $('.pagination ul li').hover(function() {
+                    console.log("banner")
+                    var paging = $(this).index()
+                    //变颜色
+                    index=$(this).index();
+                    $(this).addClass('active').siblings().removeClass('active')
+                    //与图片关联
+                    $(".slider>ul>li").eq(paging).fadeIn(1000).siblings("li").fadeOut(1000);
+                    clearInterval(timerID);
+
+//       timerID = setInterval(function() {
+//           $(".arrow-right").click()
+//
+//       }, 2000)
+                })
+
+
+
+
+
+                //增加无限轮播效果
+                var timerID = setInterval(function() {
+                    $(".arrow-right").click()
+
+                }, 3000)
+                //移入停止计时器
+                $('.slider').mouseenter(function() {
+                    clearInterval(timerID)
+                })
+                //移出开始计时器
+                $('.slider').mouseleave(function() {
+                    timerID = setInterval(function() {
+                        $(".arrow-right").click()
+
+                    }, 2000)
+                })
+
+            });
+
+
         }
     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $.ajax({
         url: "<%=basePath%>/index/fenlei.do",
         method: "get",
@@ -1698,6 +1806,10 @@
         })
         return countss;
     })
+
+
+
+
 
 
 </script>
