@@ -14,6 +14,11 @@
     <link rel="stylesheet" type="text/css"
           href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_css/jquery.pagination.css"/>
     <title>搜索</title>
+    <style type="text/css">
+        .wid{
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <!--上方的红线-->
@@ -22,7 +27,7 @@
 <div class="head_name">
     <span class="first_page">全部结果&nbsp; ></span>&nbsp;
     <span class="sele_kind">${param.likeName}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <span class="goods_amount">共 <span id="counts"></span> 个商品</span>
+    <span class="goods_amount">共 <span id="counts">${size}</span>个商品</span>
 </div>
 
 <!--第一部分：侧边栏和选项框-->
@@ -119,12 +124,12 @@
                     <a  onclick="paixu3()"><span>价格</span></a>
                     <a  onclick="paixu4()"><span>评论数</span></a>
                     <a  onclick="paixu5()"><span>上架时间</span></a>
-                    <a ><input type="checkbox"/><span>中酒自营</span></a>
+                    <a ><input class="sh_select" type="checkbox" /><span>中酒自营</span></a>
                     <div class="page_num">
                         <span class="last_page"><</span>
                         <span class="page">
 									<span class="cur_page">1</span>/
-									<span class="amount_page">28</span>
+									<span class="amount_page"></span>
 								</span>
                         <span class="next_page">></span>
                     </div>
@@ -150,13 +155,20 @@
             </div>
         </div>
 
-
     </div>
 </div>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_js/jquery.pagination.min.js"></script>
 <script>
+    //搜索栏的页码
+    console.log($("#counts"));
+    var total_field = $("#counts").html();
+    var page_num = Math.ceil(total_field/8);
+    console.log("total_field:"+total_field);
+    console.log("page_num:"+page_num);
+    $(".amount_page").html(page_num);
+
     $.ajax({
         url:"<%=basePath%>/wine/likeCount.do?likeName=${param.likeName}",
         method:"get",
@@ -164,7 +176,7 @@
             console.log(data)
             //$(data).appendTo("#counts");
         }
-    })
+    });
 
     //点击侧边栏的三角形，打开关闭
     $(".san_jiao").on("click", function () {
@@ -188,8 +200,9 @@
     var scentArr = [];
     var shiyongArr = [];
     var degreeArr = [];
+    var current = 1;
     $.ajax({
-        url: "<%=basePath%>/wine/findLike.do?likeName=${param.likeName}",
+        url: "<%=basePath%>/wine/findLike.do?likeName=${param.likeName}&c="+ current,
         method: "get",
         async: true,
         dataType: "json",
@@ -258,114 +271,125 @@
 
     //分页插件
     //商品列表渲染
-    $(function () {
-        var current = 1;
+    <%--$(function () {--%>
+        <%--var current = 1;--%>
 
 
 
-//============================================================================================
-        function renderList(current) {
-            //热卖的数据
-            var hot_ImgArr = [];
-            var hot_NameArr = [];
-            var hot_PriceArr = [];
-            var hot_DegreeArr = [];
-            var hot_MLArr = [];
-            //热卖的数据
-            $.ajax({
-                url: "http://10.80.13.161:8080/wine/findLike.do?likeName=${param.likeName}",
-                type: "get",
-                dataType: "json",
-                async: true,
-                success: function (data) {
-                    console.log(data.length);
-                    var html = "";
-                    var length = data.length;
-                    for (var i = 0; i < length; i++) {
-                        var winePrice = data[i].winePrice;//商品的价格
-                        var wineEvaCount = data[i].wineEvaCount;//商品的成交量
-                        var wineDegree = data[i].wineDegree;//商品的度数
-                        var wineName = data[i].wineName;//商品的名称
-                        var wineLiter = data[i].wineLiter;//商品的量
-                        var wineCity = data[i].wineCity;//商品的商家
-                        var wineBig = data[i].wineImg1;
-//					console.log(wineBig);
-                        var wineSmall1 = data[i].wineImg1;
-                        var wineSmall2 = data[i].wineImg2;
-                        var wineSmall3 = data[i].wineImg3;
-                        var wineSmall4 = data[i].wineImg4;
-                        html += '<li class="goods"><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
+<%--//======`======================================================================================--%>
+        <%--function renderList(current) {--%>
+            <%--//热卖的数据--%>
+            <%--var hot_ImgArr = [];--%>
+            <%--var hot_NameArr = [];--%>
+            <%--var hot_PriceArr = [];--%>
+            <%--var hot_DegreeArr = [];--%>
+            <%--var hot_MLArr = [];--%>
 
-                        //左边热卖单品的渲染
-                        if (hot_DegreeArr.length < 5) {
-                            hot_ImgArr.push(wineSmall1);
-                            hot_NameArr.push(wineName);
-                            hot_PriceArr.push(winePrice);
-                            hot_DegreeArr.push(wineDegree);
-                            hot_MLArr.push(wineLiter);
-                        }
+            <%--//热卖的数据--%>
+            <%--$.ajax({--%>
+                <%--url: "<%=basePath%>/wine/findLike.do?likeName=${param.likeName}&c="+ current,--%>
+                <%--type: "get",--%>
+                <%--dataType: "json",--%>
+                <%--async: true,--%>
+                <%--success: function (data) {--%>
+                    <%--console.log(data.length);--%>
+                    <%--len = data.length;--%>
+                    <%--console.log(len);--%>
 
-                        //左边热卖单品的渲染
-                    }
-//				console.log(hot_ImgArr);
-                    var cont = "";
-                    for (i in hot_ImgArr) {
-                        cont += '<li><a href=""><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
-                    }
-                    $(".hot_good_a").html(cont);
+                    <%--var html = "";--%>
+                    <%--var length = data.length;--%>
+                    <%--for (var i = 0; i < length; i++) {--%>
+                        <%--var winePrice = data[i].winePrice;//商品的价格--%>
+                        <%--var wineEvaCount = data[i].wineEvaCount;//商品的成交量--%>
+                        <%--var wineDegree = data[i].wineDegree;//商品的度数--%>
+                        <%--var wineName = data[i].wineName;//商品的名称--%>
+                        <%--var wineLiter = data[i].wineLiter;//商品的量--%>
+                        <%--var wineCity = data[i].wineCity;//商品的商家--%>
+                        <%--var wineBig = data[i].wineImg1;--%>
+<%--//					console.log(wineBig);--%>
+                        <%--var wineSmall1 = data[i].wineImg1;--%>
+                        <%--var wineSmall2 = data[i].wineImg2;--%>
+                        <%--var wineSmall3 = data[i].wineImg3;--%>
+                        <%--var wineSmall4 = data[i].wineImg4;--%>
+                        <%--html += '<li class="goods"><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';--%>
 
-                    //除此还浏览了
-                    var content = "";
-                    for (i in hot_ImgArr) {
-                        content += '<li><a href=""><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
-                    }
-                    $(".recode_goods").html(content);
+                        <%--//左边热卖单品的渲染--%>
+                        <%--if (hot_DegreeArr.length < 5) {--%>
+                            <%--hot_ImgArr.push(wineSmall1);--%>
+                            <%--hot_NameArr.push(wineName);--%>
+                            <%--hot_PriceArr.push(winePrice);--%>
+                            <%--hot_DegreeArr.push(wineDegree);--%>
+                            <%--hot_MLArr.push(wineLiter);--%>
+                        <%--}--%>
 
-                    //商品列表
-                    $(".goods_list").html(html);
-                    //鼠标移入移出的时候，小图的显示隐藏
-                    var goods = $(".goods");
-                    var lastGoods = goods[0];
-                    for (var i = 0; i < goods.length; i++) {
-                        goods[i].index = i;
-                        goods[i].onmouseover = function () {
-                            this.style.border = "";
-                            $(".small_pic")[this.index].style.display = "block";
-                            lastGoods = goods[this.index];
-                            $(".zjzy a").css("textDecoration", "underline");
-                            this.style.border = "1px solid red";
-                            this.style.borderBottomColor = "transparent";
-                        }
-                        goods[i].onmouseout = function () {
-                            this.style.border = "1px dotted #DCDDDC";
-                            $(".small_pic")[this.index].style.display = "none";
-                            $(".zjzy a").css("textDecoration", "none");
-                        }
-                    }
-                    //鼠标移入小图的时候，对应的大图的路径切换成小图
-                    var sm_img = $(".small_pic img");
-                    var lastLi = sm_img[0];
-                    for (var i = 0; i < sm_img.length; i++) {
-                        sm_img[i].index = i;
-                        sm_img[i].onmouseover = function () {
-                            var con = $(sm_img[this.index]).attr("src");
-                            $(this).parents(".small_pic").siblings(".aa").children(".wineBig").prop("src", con);
-                            lastLi = sm_img[this.index];
-                        }
-                    }
+                        <%--//左边热卖单品的渲染--%>
+                    <%--}--%>
+<%--//				console.log(hot_ImgArr);--%>
+                    <%--var cont = "";--%>
+                    <%--for (i in hot_ImgArr) {--%>
+                        <%--cont += '<li><a href=""><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';--%>
+                    <%--}--%>
+                    <%--$(".hot_good_a").html(cont);--%>
 
-                }
-            })
+                    <%--//除此还浏览了--%>
+                    <%--var content = "";--%>
+                    <%--for (i in hot_ImgArr) {--%>
+                        <%--content += '<li><a href=""><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';--%>
+                    <%--}--%>
+                    <%--$(".recode_goods").html(content);--%>
+
+                    <%--//商品列表--%>
+                    <%--$(".goods_list").html(html);--%>
+                    <%--//鼠标移入移出的时候，小图的显示隐藏--%>
+                    <%--var goods = $(".goods");--%>
+                    <%--var lastGoods = goods[0];--%>
+                    <%--for (var i = 0; i < goods.length; i++) {--%>
+                        <%--goods[i].index = i;--%>
+                        <%--goods[i].onmouseover = function () {--%>
+                            <%--this.style.border = "";--%>
+                            <%--$(".small_pic")[this.index].style.display = "block";--%>
+                            <%--lastGoods = goods[this.index];--%>
+                            <%--$(".zjzy a").css("textDecoration", "underline");--%>
+                            <%--this.style.border = "1px solid red";--%>
+                            <%--this.style.borderBottomColor = "transparent";--%>
+                        <%--}--%>
+                        <%--goods[i].onmouseout = function () {--%>
+                            <%--this.style.border = "1px dotted #DCDDDC";--%>
+                            <%--$(".small_pic")[this.index].style.display = "none";--%>
+                            <%--$(".zjzy a").css("textDecoration", "none");--%>
+                        <%--}--%>
+                    <%--}--%>
+                    <%--//鼠标移入小图的时候，对应的大图的路径切换成小图--%>
+                    <%--var sm_img = $(".small_pic img");--%>
+                    <%--var lastLi = sm_img[0];--%>
+                    <%--for (var i = 0; i < sm_img.length; i++) {--%>
+                        <%--sm_img[i].index = i;--%>
+                        <%--sm_img[i].onmouseover = function () {--%>
+                            <%--var con = $(sm_img[this.index]).attr("src");--%>
+                            <%--$(this).parents(".small_pic").siblings(".aa").children(".wineBig").prop("src", con);--%>
+                            <%--lastLi = sm_img[this.index];--%>
+                        <%--}--%>
+                    <%--}--%>
+                    <%--console.log("render:"+len)--%>
+                    <%----%>
+
+                <%--}--%>
+            <%--})--%>
+
+        <%--}--%>
+<%--//============================================================================================--%>
+        <%--renderList(current);--%>
+
+    <%--});--%>
+    var len;
+    $("#pagination1").pagination({
+        currentPage: current,
+        count:8,
+        totalPage: page_num,
+        callback: function (current) {
+            console.log("rendercallback")
+            paixu1(current);
         }
-//============================================================================================
-        renderList(current);
-        $("#pagination1").pagination({
-            currentPage: current,
-            totalPage: 2,
-            callback: function (current) {
-                renderList(current);
-            }
-        });
     });
 
 
@@ -395,31 +419,44 @@
 
 
 
+    var ar = document.getElementsByClassName("ui-pagination-page-item");
+    var haha = document.getElementsByClassName("ui-pagination-page-item").length;
+    for(var i=0;i<haha;i++){
+        ar[i].index = i;
+        ar[i].onclick = function(){
+            console.log("666:"+this.index);
+        }
+    }
 
+    var current = 1;
 
     //默认排序
     //============================================================================================
-    function paixu1() {
+    function paixu1(current) {
         //热卖的数据
         var hot_ImgArr = [];
         var hot_NameArr = [];
         var hot_PriceArr = [];
         var hot_DegreeArr = [];
         var hot_MLArr = [];
+        current = current || 1;
+        console.log("paixu:"+current)
         //热卖的数据
         $.ajax({
-            url: "<%=basePath%>/wine/rexiao.do",
+            url: "<%=basePath%>/wine/rexiao1.do",
             type: "get",
             data:{
                 WineBrand:"${param.likeName}",
+                c:current,
             },
             dataType: "json",
-            async: true,
+            async: false,
             success: function (data) {
                 console.log(data)
                 var html = "";
-                var length = data.length;
+                var length = data.length;8
                 for (var i = 0; i < length; i++) {
+                    var wid_id = data[i].wid;//商品ID
                     var winePrice = data[i].winePrice;//商品的价格
                     var wineEvaCount = data[i].wineEvaCount;//商品的成交量
                     var wineDegree = data[i].wineDegree;//商品的度数
@@ -432,7 +469,7 @@
                     var wineSmall2 = data[i].wineImg2;
                     var wineSmall3 = data[i].wineImg3;
                     var wineSmall4 = data[i].wineImg4;
-                    html += '<li class="goods"><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
+                    html += '<li class="goods"><a class="aa"><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="wid">'+wid_id+'</span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></li>';
 
                     //左边热卖单品的渲染
                     if (hot_DegreeArr.length < 5) {
@@ -446,16 +483,17 @@
                     //左边热卖单品的渲染
                 }
 //				console.log(hot_ImgArr);
+
                 var cont = "";
                 for (i in hot_ImgArr) {
-                    cont += '<li><a href=""><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
+                    cont += '<li><span class="wid">'+wid_id+'</span><a><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
                 }
                 $(".hot_good_a").html(cont);
 
                 //除此还浏览了
                 var content = "";
                 for (i in hot_ImgArr) {
-                    content += '<li><a href=""><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
+                    content += '<li><a href=""><span class="wid">'+wid_id+'</span><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
                 }
                 $(".recode_goods").html(content);
 
@@ -491,27 +529,57 @@
                         lastLi = sm_img[this.index];
                     }
                 }
+                console.log(length)
+                $("#pagination1").pagination({
+                    currentPage: current,
+                    count:8,
+                    totalPage: Math.ceil(length/8),
+                    callback: function (current) {
+                        console.log("current:"+current)
+                        paixu1(current);
+                        console.log("defaultcallback")
+                    }
+                });
+
 
             }
+
+
+
+
         })
     }
+
+
+//    for(var i = 0;i<goodS.length;i++){
+//        goodS[i].index = i;
+//        goodS[i].onclick = function(){
+//            console.log("dadada:"+$(this).siblings(".wid").html());
+//        }
+//    }
+
+
+
     //============================================================================================
 
     //成交量排序
     //============================================================================================
-    function paixu2() {
+    function paixu2(current) {
         //热卖的数据
         var hot_ImgArr = [];
         var hot_NameArr = [];
         var hot_PriceArr = [];
         var hot_DegreeArr = [];
         var hot_MLArr = [];
+        current = current || 1;
+        console.log("paixu:"+current)
         //热卖的数据
         $.ajax({
             url: "<%=basePath%>/wine/chengjiao.do",
             type: "get",
             data:{
                 WineBrand:"${param.likeName}",
+                c:current,
             },
             dataType: "json",
             async: true,
@@ -520,6 +588,7 @@
                 var html = "";
                 var length = data.length;
                 for (var i = 0; i < length; i++) {
+                    var wid_id = data[i].wid;//商品ID
                     var winePrice = data[i].winePrice;//商品的价格
                     var wineEvaCount = data[i].wineEvaCount;//商品的成交量
                     var wineDegree = data[i].wineDegree;//商品的度数
@@ -532,7 +601,7 @@
                     var wineSmall2 = data[i].wineImg2;
                     var wineSmall3 = data[i].wineImg3;
                     var wineSmall4 = data[i].wineImg4;
-                    html += '<li class="goods"><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
+                    html += '<li class="goods"><span class="wid">'+wid_id+'</span><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
 
                     //左边热卖单品的渲染
                     if (hot_DegreeArr.length < 5) {
@@ -548,14 +617,14 @@
 //				console.log(hot_ImgArr);
                 var cont = "";
                 for (i in hot_ImgArr) {
-                    cont += '<li><a href=""><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
+                    cont += '<li><span class="wid">'+wid_id+'</span><a><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
                 }
                 $(".hot_good_a").html(cont);
 
                 //除此还浏览了
                 var content = "";
                 for (i in hot_ImgArr) {
-                    content += '<li><a href=""><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
+                    content += '<li><a><span class="wid">'+wid_id+'</span><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
                 }
                 $(".recode_goods").html(content);
 
@@ -599,19 +668,22 @@
 
     //价格排序
     //============================================================================================
-    function paixu3() {
+    function paixu3(current) {
         //热卖的数据
         var hot_ImgArr = [];
         var hot_NameArr = [];
         var hot_PriceArr = [];
         var hot_DegreeArr = [];
         var hot_MLArr = [];
+        current = current || 1;
+        console.log("paixu:"+current)
         //热卖的数据
         $.ajax({
             url: "<%=basePath%>/wine/jiage.do",
             type: "get",
             data:{
                 WineBrand:"${param.likeName}",
+                c:current,
             },
             dataType: "json",
             async: true,
@@ -620,6 +692,7 @@
                 var html = "";
                 var length = data.length;
                 for (var i = 0; i < length; i++) {
+                    var wid_id = data[i].wid;//商品ID
                     var winePrice = data[i].winePrice;//商品的价格
                     var wineEvaCount = data[i].wineEvaCount;//商品的成交量
                     var wineDegree = data[i].wineDegree;//商品的度数
@@ -632,7 +705,7 @@
                     var wineSmall2 = data[i].wineImg2;
                     var wineSmall3 = data[i].wineImg3;
                     var wineSmall4 = data[i].wineImg4;
-                    html += '<li class="goods"><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
+                    html += '<li class="goods"><a class="aa" href=""><span class="wid">'+wid_id+'</span><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
 
                     //左边热卖单品的渲染
                     if (hot_DegreeArr.length < 5) {
@@ -648,14 +721,14 @@
 //				console.log(hot_ImgArr);
                 var cont = "";
                 for (i in hot_ImgArr) {
-                    cont += '<li><a href=""><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
+                    cont += '<li><span class="wid">'+wid_id+'</span><a><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
                 }
                 $(".hot_good_a").html(cont);
 
                 //除此还浏览了
                 var content = "";
                 for (i in hot_ImgArr) {
-                    content += '<li><a href=""><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
+                    content += '<li><span class="wid">'+wid_id+'</span><a><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
                 }
                 $(".recode_goods").html(content);
 
@@ -699,19 +772,22 @@
 
     //评论数排序
     //============================================================================================
-    function paixu4() {
+    function paixu4(current) {
         //热卖的数据
         var hot_ImgArr = [];
         var hot_NameArr = [];
         var hot_PriceArr = [];
         var hot_DegreeArr = [];
         var hot_MLArr = [];
+        current = current || 1;
+        console.log("paixu:"+current)
         //热卖的数据
         $.ajax({
             url: "<%=basePath%>/wine/pinlunshu.do",
             type: "get",
             data:{
                 WineBrand:"${param.likeName}",
+                c:current,
             },
             dataType: "json",
             async: true,
@@ -720,6 +796,7 @@
                 var html = "";
                 var length = data.length;
                 for (var i = 0; i < length; i++) {
+                    var wid_id = data[i].wid;//商品ID
                     var winePrice = data[i].winePrice;//商品的价格
                     var wineEvaCount = data[i].wineEvaCount;//商品的成交量
                     var wineDegree = data[i].wineDegree;//商品的度数
@@ -732,7 +809,7 @@
                     var wineSmall2 = data[i].wineImg2;
                     var wineSmall3 = data[i].wineImg3;
                     var wineSmall4 = data[i].wineImg4;
-                    html += '<li class="goods"><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
+                    html += '<li class="goods"><span class="wid">'+wid_id+'</span><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
 
                     //左边热卖单品的渲染
                     if (hot_DegreeArr.length < 5) {
@@ -748,14 +825,14 @@
 //				console.log(hot_ImgArr);
                 var cont = "";
                 for (i in hot_ImgArr) {
-                    cont += '<li><a href=""><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
+                    cont += '<li><span class="wid">'+wid_id+'</span><a ><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
                 }
                 $(".hot_good_a").html(cont);
 
                 //除此还浏览了
                 var content = "";
                 for (i in hot_ImgArr) {
-                    content += '<li><a href=""><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
+                    content += '<li><span class="wid">'+wid_id+'</span><a><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
                 }
                 $(".recode_goods").html(content);
 
@@ -800,19 +877,22 @@
 
     //上架时间排序
     //============================================================================================
-    function paixu5() {
+    function paixu5(current) {
         //热卖的数据
         var hot_ImgArr = [];
         var hot_NameArr = [];
         var hot_PriceArr = [];
         var hot_DegreeArr = [];
         var hot_MLArr = [];
+        current = current || 1;
+        console.log("paixu:"+current)
         //热卖的数据
         $.ajax({
             url: "<%=basePath%>/wine/shangjia.do",
             type: "get",
             data:{
                 WineBrand:"${param.likeName}",
+                c:current,
             },
             dataType: "json",
             async: true,
@@ -821,6 +901,7 @@
                 var html = "";
                 var length = data.length;
                 for (var i = 0; i < length; i++) {
+                    var wid_id = data[i].wid;//商品ID
                     var winePrice = data[i].winePrice;//商品的价格
                     var wineEvaCount = data[i].wineEvaCount;//商品的成交量
                     var wineDegree = data[i].wineDegree;//商品的度数
@@ -833,7 +914,7 @@
                     var wineSmall2 = data[i].wineImg2;
                     var wineSmall3 = data[i].wineImg3;
                     var wineSmall4 = data[i].wineImg4;
-                    html += '<li class="goods"><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
+                    html += '<li class="goods"><span class="wid">'+wid_id+'</span><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
 
                     //左边热卖单品的渲染
                     if (hot_DegreeArr.length < 5) {
@@ -849,14 +930,14 @@
 //				console.log(hot_ImgArr);
                 var cont = "";
                 for (i in hot_ImgArr) {
-                    cont += '<li><a href=""><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
+                    cont += '<li><span class="wid">'+wid_id+'</span><a><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
                 }
                 $(".hot_good_a").html(cont);
 
                 //除此还浏览了
                 var content = "";
                 for (i in hot_ImgArr) {
-                    content += '<li><a href=""><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
+                    content += '<li><span class="wid">'+wid_id+'</span><a><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
                 }
                 $(".recode_goods").html(content);
 
@@ -898,7 +979,139 @@
     }
     //============================================================================================
 
+    //中酒自营
+    //============================================================================================
+    $(".sh_select").on("click",function(){
+        if(this.checked){
+            paixu6();
+        }else{
+            paixu1();
+        }
+    })
 
+    function paixu6(current) {
+        //热卖的数据
+        var hot_ImgArr = [];
+        var hot_NameArr = [];
+        var hot_PriceArr = [];
+        var hot_DegreeArr = [];
+        var hot_MLArr = [];
+        current = current || 1;
+        console.log("paixu:"+current)
+        //热卖的数据
+        $.ajax({
+            url: "<%=basePath%>/wine/ziying.do",
+            type: "get",
+            data:{
+                WineBrand:"中酒自营",
+                c:current,
+            },
+            dataType: "json",
+            async: true,
+            success: function (data) {
+                console.log(data)
+                var html = "";
+                var length = data.length;
+                for (var i = 0; i < length; i++) {
+                    var wid_id = data[i].wid;//商品ID
+                    var winePrice = data[i].winePrice;//商品的价格
+                    var wineEvaCount = data[i].wineEvaCount;//商品的成交量
+                    var wineDegree = data[i].wineDegree;//商品的度数
+                    var wineName = data[i].wineName;//商品的名称
+                    var wineLiter = data[i].wineLiter;//商品的量
+                    var wineCity = data[i].wineCity;//商品的商家
+                    var wineBig = data[i].wineImg1;
+//					console.log(wineBig);
+                    var wineSmall1 = data[i].wineImg1;
+                    var wineSmall2 = data[i].wineImg2;
+                    var wineSmall3 = data[i].wineImg3;
+                    var wineSmall4 = data[i].wineImg4;
+                    html += '<li class="goods"><span class="wid">'+wid_id+'</span><a class="aa" href=""><img src="<%=basePath%>/resource/views/img/' + wineBig + '" alt="' + i + '" class="wineBig"/></a><div class="bottom"><div class="pri_deal"><span class="price">￥<span>' + winePrice + '</span></span><span class="deal">成交<span> ' + wineEvaCount + ' </span>笔</span></div><p class="jiu_name"><a href=""><span>' + wineDegree + '°</span><span class="w_N">' + wineName + '</span> <span>' + wineLiter + '</span></a></p><p class="zjzy"><a href="">' + wineCity + '</a></p></div><div class="small_pic"><img class="w_s1" src="<%=basePath%>/resource/views/img/' + wineSmall1 + '" alt="" /><img class="w_s2" src="<%=basePath%>/resource/views/img/' + wineSmall2 + '" alt="" /><img class="w_s3" src="<%=basePath%>/resource/views/img/' + wineSmall3 + '" alt="" /><img class="w_s4" src="<%=basePath%>/resource/views/img/' + wineSmall4 + '" alt="" /></div></li>';
+
+                    //左边热卖单品的渲染
+                    if (hot_DegreeArr.length < 5) {
+                        hot_ImgArr.push(wineSmall1);
+                        hot_NameArr.push(wineName);
+                        hot_PriceArr.push(winePrice);
+                        hot_DegreeArr.push(wineDegree);
+                        hot_MLArr.push(wineLiter);
+                    }
+
+                    //左边热卖单品的渲染
+                }
+//				console.log(hot_ImgArr);
+                var cont = "";
+                for (i in hot_ImgArr) {
+                    cont += '<li><span class="wid">'+wid_id+'</span><a><div class="hot_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><div class="hot_info"><span class="info_name"><span>' + hot_DegreeArr[i] + '</span>°<span>' + hot_NameArr[i] + '</span><span>' + hot_MLArr[i] + '</span></span><span class="info_price">￥<span>' + hot_PriceArr[i] + '</span></span></div></a></li>';
+                }
+                $(".hot_good_a").html(cont);
+
+                //除此还浏览了
+                var content = "";
+                for (i in hot_ImgArr) {
+                    content += '<li><span class="wid">'+wid_id+'</span><a><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/img/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>3400</span></p></a></li>';
+                }
+                $(".recode_goods").html(content);
+
+                //商品列表
+                $(".goods_list").html(html);
+                //鼠标移入移出的时候，小图的显示隐藏
+                var goods = $(".goods");
+                var lastGoods = goods[0];
+                for (var i = 0; i < goods.length; i++) {
+                    goods[i].index = i;
+                    goods[i].onmouseover = function () {
+                        this.style.border = "";
+                        $(".small_pic")[this.index].style.display = "block";
+                        lastGoods = goods[this.index];
+                        $(".zjzy a").css("textDecoration", "underline");
+                        this.style.border = "1px solid red";
+                        this.style.borderBottomColor = "transparent";
+                    }
+                    goods[i].onmouseout = function () {
+                        this.style.border = "1px dotted #DCDDDC";
+                        $(".small_pic")[this.index].style.display = "none";
+                        $(".zjzy a").css("textDecoration", "none");
+                    }
+                }
+                //鼠标移入小图的时候，对应的大图的路径切换成小图
+                var sm_img = $(".small_pic img");
+                var lastLi = sm_img[0];
+                for (var i = 0; i < sm_img.length; i++) {
+                    sm_img[i].index = i;
+                    sm_img[i].onmouseover = function () {
+                        var con = $(sm_img[this.index]).attr("src");
+                        $(this).parents(".small_pic").siblings(".aa").children(".wineBig").prop("src", con);
+                        lastLi = sm_img[this.index];
+                    }
+                }
+
+            }
+        })
+    }
+    //============================================================================================
+
+    $(document).ready(function(){
+        paixu1();
+
+
+        var goodS = $(".goods");
+        for(var i = 0;i<goodS.length;i++){
+            goodS[i].index = i;
+            goodS[i].onclick = function(){
+                var goodsId = $(this).find(".wid").html();
+                $.ajax({
+                    method:"get",
+                    async:false,
+                    url:"<%=basePath%>/wine/goods.do?wid="+goodsId,
+                    data:{},
+                    success:function(data){
+                        window.location.href = '<%=basePath%>/wine/goods.do?wid='+goodsId;
+                    }
+                })
+            }
+        }
+    });
 
 
 

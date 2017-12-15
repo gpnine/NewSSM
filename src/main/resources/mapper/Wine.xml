@@ -42,10 +42,10 @@
 		select WineId,WineImg1,WineDegree,WineName,WineLiter,WineBianhao,WinePrice from zhongjiu_wine where WineId = #{WId}
 	</select>
     <select id="findLike" parameterType="String" resultMap="wineResult">
-		select * from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineScent,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
+		select * from zhongjiu_wine where CONCAT(WineName,WineDegree,WineBrand,WineScent,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
 	</select>
     <select id="likeCount" parameterType="String" resultType="integer">
-		select count(*) from zhongjiu_wine where 1 = 1 AND CONCAT(WineName,WineDegree,WineBrand,WineScent,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
+		select count(*) from zhongjiu_wine where CONCAT(WineName,WineDegree,WineBrand,WineScent,WineAdress,WineShiyong) like CONCAT(CONCAT('%', #{WineName}), '%')
 	</select>
     <select id="findScope" parameterType="Map" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId between #{a,jdbcType=INTEGER} and  #{b,jdbcType=INTEGER}
@@ -65,26 +65,38 @@
 
 
     <!--热销-->
-    <select id="rexiao"  resultMap="wineResult">
-		select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineSales DESC  limit 0,8;
+    <select id="rexiao"  resultMap="wineResult" parameterType="Map">
+        select * from zhongjiu_wine order by WineSales DESC limit #{d,jdbcType=INTEGER},8;
+    </select>
+
+
+    <select id="rexiao1"  resultMap="wineResult" parameterType="Map">
+		select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineSales DESC limit #{d,jdbcType=INTEGER},8;
 	</select>
 
     <select id="chengjiao"  resultMap="wineResult">
-        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineEvaCount DESC  limit 0,8;
+        select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineEvaCount DESC limit #{d,jdbcType=INTEGER},8; ;
     </select>
 
     <select id="jiage"  resultMap="wineResult">
-        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WinePrice DESC  limit 0,8;
+        select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WinePrice DESC limit #{d,jdbcType=INTEGER},8; ;
     </select>
 
     <select id="pinlunshu"  resultMap="wineResult">
-        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineDegree DESC  limit 0,8;
+        select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineDegree DESC limit #{d,jdbcType=INTEGER},8;;
     </select>
 
     <select id="shangjia"  resultMap="wineResult">
-        select * from zhongjiu_wine where WineBrand=#{WineBrand} order by WineId DESC  limit 0,8;
+        select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineId DESC limit #{d,jdbcType=INTEGER},8;;
     </select>
 
+    <select id="ziying"  resultMap="wineResult">
+        select * from zhongjiu_wine where WineCity=#{w,jdbcType=VARCHAR} order by WineId DESC limit #{d,jdbcType=INTEGER},8;;
+    </select>
+
+    <select id="allGoodsNum" resultMap="wineResult">
+        select * from zhongjiu_wine where WineBrand=#{WineBrand}
+    </select>
 
 
 </mapper>

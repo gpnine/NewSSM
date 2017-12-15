@@ -48,24 +48,56 @@ public class WineServiceImpl implements WineService {
 		return wineMapper.findScope1(map);
 	}
 
+
+
+
 	public List<Wine> rexiao(String WineBrand) {
 		return wineMapper.rexiao(WineBrand);
 	}
 
-	public List<Wine> chengjiao(String WineBrand) {
-		return wineMapper.chengjiao(WineBrand);
+	public List<Wine> rexiao1(String WineBrand,Integer d) {
+		Map map = new HashMap();
+		map.put("w",WineBrand);
+		map.put("d",d);
+		return wineMapper.rexiao1(map);
 	}
 
-	public List<Wine> jiage(String WineBrand) {
-		return wineMapper.jiage(WineBrand);
+	public List<Wine> chengjiao(String WineBrand,Integer d) {
+		Map map = new HashMap();
+		map.put("w",WineBrand);
+		map.put("d",d);
+		return wineMapper.chengjiao(map);
 	}
 
-	public List<Wine> pinlunshu(String WineBrand) {
-		return wineMapper.pinlunshu(WineBrand);
+	public List<Wine> jiage(String WineBrand,Integer d) {
+		Map map = new HashMap();
+		map.put("w",WineBrand);
+		map.put("d",d);
+		return wineMapper.jiage(map);
 	}
 
-	public List<Wine> shangjia(String WineBrand) {
-		return wineMapper.shangjia(WineBrand);
+	public List<Wine> pinlunshu(String WineBrand,Integer d) {
+		Map map = new HashMap();
+		map.put("w",WineBrand);
+		map.put("d",d);
+		return wineMapper.pinlunshu(map);
+	}
+
+	public List<Wine> shangjia(String WineBrand,Integer d) {
+		Map map = new HashMap();
+		map.put("w",WineBrand);
+		map.put("d",d);
+		return wineMapper.shangjia(map);
+	}
+	public List<Wine> ziying(String WineBrand,Integer d) {
+		Map map = new HashMap();
+		map.put("w",WineBrand);
+		map.put("d",d);
+		return wineMapper.ziying(map);
+	}
+
+	public List<Wine> allGoodsNum(String WineBrand) {
+		return wineMapper.allGoodsNum(WineBrand);
 	}
 
 	public List<Wine> moreWines(Integer c) {
