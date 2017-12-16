@@ -1,5 +1,11 @@
 /*【我的订单】*/
 /*右边部分*/
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+}
 #per_container{
 	height: 800px;
 }
@@ -37,8 +43,6 @@
 	font-size: 15px;
 	border-radius: 5px;
 }
-
-
 .table_name{
 	width: 1018px;
 	height: 32px;
@@ -50,9 +54,6 @@
 }
 .ddxx{
 	width: 380px;
-}
-.zzsp{
-	width: ;
 }
 .ddqxz select{
 	font-size: 14px;
@@ -72,6 +73,74 @@
 	font-size: 16px;
 	color: #9E9F9E;
 }
+
+
+/*我的订单的商品展示*/
+.table2{
+	width: 1018px;
+	/*border: 1px solid red;*/
+	margin-top: 15px;
+	box-sizing: border-box;
+}
+.ding_name{
+	width: 1018px;
+	height: 32px;
+	/*line-height: 32px;*/
+	text-align: left;
+	background-color: #F7F8F7;
+	font-size: 14px;
+	border: 1px solid red;
+	margin-top: 20px;
+}
+.display_show td{
+	border: 0.1px solid lightgray;
+}
+.size{
+	width: 123px;
+	height: 152px;
+}
+.ding_pic,.display_show p{
+	display: inline-block;
+}
+.ding_pic img:nth-child(1){
+	width: 80px;
+	height: 80px;
+	/*border: 1px solid red;*/
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.ding_pic img:nth-child(2){
+	width: 24px;
+	height: 24px;
+	/*border: 1px solid red;*/
+}
+.display_show p{
+	width: 230px;
+	/*border: 1px solid red;*/
+	position: relative;
+	top:-90px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.amount_money{
+	color: red;
+}
+.look_info a{
+	color: lightblue;
+	font-weight: lighter;
+}
+.ding_name a,.display_show p a{
+	font-weight: lighter;
+}
+
+
+
+
+
+
+
 
 
 /*【咨询管理】*/
@@ -159,7 +228,6 @@
 }
 #bdym input[type=button]{
 	width: 150px;
-	height: ;
 }
 #bdym input[type=button]:hover{
 	border: 1px solid black;

@@ -51,16 +51,20 @@ public class OrdersController {
     @ResponseBody
     public List<Orders> findOrders(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
+//        先找到已支付的订单
         List<Orders> orders = ordersService.yiZhifu(userPhone);
         for (int j = 0; j < orders.size(); j++) {
+//            获取订单号
             int orderId = orders.get(j).getOrderId();
-            double ordersAllMoney = orders.get(j).getOrderAllMoney();
-            orders.get(j).setOrderAllMoney(ordersAllMoney);
+//            获取总价
+//            根据订单号找到对应商品
             List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
+            List<Wine> wines = new ArrayList<Wine>();
             for (int i = 0; i < orderAndWines.size(); i++) {
                 Wine wine = wineService.findWineByWineId(orderAndWines.get(i).getWine_id());
-                orders.get(i).setWine(wine);
+                orderAndWines.get(i).setWine(wine);
             }
+            orders.get(j).setOrderAndWines(orderAndWines);
         }
         return orders;
     }
@@ -122,8 +126,6 @@ public class OrdersController {
 //    http://10.80.13.161:8080/orders/updateOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50&Adresss_id=1
     public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        System.out.println("+++++++++++++++++++++++++++++++++++++++");
-        System.out.println(userPhone);
         int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei, Adress_id, userPhone);
         if (result == 0) {
             return "false";

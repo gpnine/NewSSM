@@ -21,6 +21,10 @@
     </style>
 </head>
 <body>
+<div class="header"></div>
+<!--上方的红线-->
+<div class="red_line"></div>
+<!--头部-->
 <!--上方的红线-->
 <div class="red_line"></div>
 <!--头部-->
@@ -157,10 +161,13 @@
 
     </div>
 </div>
+<div class="footer"></div>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_js/jquery.pagination.min.js"></script>
 <script>
+    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
+    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
     //搜索栏的页码
     console.log($("#counts"));
     var total_field = $("#counts").html();
