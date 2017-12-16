@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -51,15 +52,17 @@ public class AdminController {
 
             List<Orders> orders = ordersService.dingdan();
             for (int j = 0; j < orders.size(); j++) {
+//            获取订单号
                 int orderId = orders.get(j).getOrderId();
-                double ordersAllMoney = orders.get(j).getOrderAllMoney();
-                orders.get(j).setOrderAllMoney(ordersAllMoney);
+//            获取总价
+//            根据订单号找到对应商品
                 List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
                 for (int i = 0; i < orderAndWines.size(); i++) {
                     Wine wine = wineService.findWineByWineId(orderAndWines.get(i).getWine_id());
-                    orders.get(i).setWine(wine);
+                    orderAndWines.get(i).setWine(wine);
                 }
-                System.out.println("ordersTest");
+                orders.get(j).setOrderAndWines(orderAndWines);
+                System.out.println("asd");
             }
             System.out.println("orders:"+orders);
             session.setAttribute("orders",orders);

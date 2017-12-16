@@ -203,7 +203,7 @@ pageEncoding="UTF-8" %>
 
 				
 				<!--订单查询-->
-				<div class="order display">
+				<div class="order display" style="margin-bottom: 500px">
 					<div class="table_box1 table_box">
 						<table width="1018" border="0" cellspacing="0" cellpadding="10">
 							<tr class="table_name1 table_name">
@@ -218,6 +218,7 @@ pageEncoding="UTF-8" %>
 					<table class="table2 table_1" width="1018" border="0" cellspacing="0" cellpadding="10">
 						<tbody>
 						<c:forEach items="${orders}" var="item">
+							<c:forEach items="${item.orderAndWines}" var="item2">
 								<tr class="ding_name ding_name_1">
 									<td style="width: 120px;text-indent:50px;" colspan="2" class="date_ding">${item.getUserPhone()}</td>
 									<td style="width: 320px;text-indent:60px;" colspan="5" class="ding_from">
@@ -227,22 +228,23 @@ pageEncoding="UTF-8" %>
 								<tr class="display_show">
 									<td style="width: 371px;height: 152px;" colspan="2">
 										<div class="ding_pic">
-											<a href="<%=basePath%>/wine/goods.do?wid=${item.wine.getWId()}">
-												<img src="<%=basePath%>/resource/views/img/${item.wine.getWineImg1()}">
+											<a href="<%=basePath%>/wine/goods.do?wid=${item2.wine.getWId()}">
+												<img src="<%=basePath%>/resource/views/img/${item2.wine.getWineImg1()}">
 											</a><br>
 											<img src="<%=basePath%>/resource/views/Admin/bms_img/shan.png">
 										</div>
-										<p><a>${item.wine.getWineName()}</a></p>
+										<p><a>${item2.wine.getWineName()}</a></p>
 									</td>
 									<td class="size">
-										<span class="ding_pri">￥${item.wine.getWinePrice()}</span>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<span class="ding_amount">1</span>
+										<span class="ding_pri">￥${item2.wine.getWinePrice()}</span>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<span class="ding_amount">${item2.wine_count}</span>
 									</td>
-									<td class="size" colspan="2">条形码：${item.wine.getWineBianhao()}</td>
-									<td class="size amount_money">￥${item.wine.getWinePrice()}<span></span></td>
+									<td class="size" colspan="2">条形码：${item2.wine.getWineBianhao()}</td>
+									<td class="size amount_money"><span>${item.getOrderPay()}</span></td>
 									<td class="size look_info">
-										<span><a href="<%=basePath%>/wine/goods.do?wid=${item.wine.getWId()}">商品详情</a></span>
+										<span><a href="<%=basePath%>/wine/goods.do?wid=${item2.wine.getWId()}">商品详情</a></span>
 									</td>
 								</tr>
+							</c:forEach>
 						</c:forEach>
 
 						</tbody>
