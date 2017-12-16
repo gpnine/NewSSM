@@ -104,4 +104,10 @@ public class OrdersServiceImpl implements OrdersService {
     public List<OrderAndWine> findWines(Integer order_id) {
         return ordersMapper.findWines(order_id);
     }
+
+
+
+    public List<Orders> dingdan() {
+        return ordersMapper.dingdan();
+    }
 }

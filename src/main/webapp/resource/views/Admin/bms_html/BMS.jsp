@@ -217,33 +217,34 @@ pageEncoding="UTF-8" %>
 					</div>
 					<table class="table2 table_1" width="1018" border="0" cellspacing="0" cellpadding="10">
 						<tbody>
-						<tr class="ding_name ding_name_1">
-							<td style="width: 120px;text-indent:50px;" colspan="2" class="date_ding">订单编号：2017121637926870</td>
-							<td style="width: 320px;text-indent:60px;" colspan="5" class="ding_from">
-								<a href="">中酒自营</a>
-							</td>
-						</tr>
-						<tr class="display_show">
-							<td style="width: 371px;height: 152px;" colspan="2">
-								<div class="ding_pic">
-									<a href="<%=basePath%>/wine/goods.do?wid=2010">
-										<img src="<%=basePath%>/resource/views/img/wine2/pjks8-1.png">
-									</a><br>
-									<img src="<%=basePath%>/resource/views/img/ljp_52.jpg">
-								</div>
-								<p><a href="">13.9°澳洲杰卡斯西拉子红葡萄酒 750ml（两瓶装）</a></p>
-							</td>
-							<td class="size">
-								<span class="ding_pri">￥79</span>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<span class="ding_amount">1</span>
-							</td>
-							<td class="size" colspan="2">条形码：9300727488190</td>
-							<td class="size amount_money">￥<span>79</span></td>
-							<td class="size look_info">
-								<span>已完成</span>
-								<br>
-								<span><a href="">查看详情</a></span>
-							</td>
-						</tr>
+						<c:forEach items="${orders}" var="item">
+								<tr class="ding_name ding_name_1">
+									<td style="width: 120px;text-indent:50px;" colspan="2" class="date_ding">${item.getUserPhone()}</td>
+									<td style="width: 320px;text-indent:60px;" colspan="5" class="ding_from">
+										<a href="">中酒自营</a>
+									</td>
+								</tr>
+								<tr class="display_show">
+									<td style="width: 371px;height: 152px;" colspan="2">
+										<div class="ding_pic">
+											<a href="<%=basePath%>/wine/goods.do?wid=${item.wine.getWId()}">
+												<img src="<%=basePath%>/resource/views/img/${item.wine.getWineImg1()}">
+											</a><br>
+											<img src="<%=basePath%>/resource/views/Admin/bms_img/shan.png">
+										</div>
+										<p><a>${item.wine.getWineName()}</a></p>
+									</td>
+									<td class="size">
+										<span class="ding_pri">￥${item.wine.getWinePrice()}</span>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<span class="ding_amount">1</span>
+									</td>
+									<td class="size" colspan="2">条形码：${item.wine.getWineBianhao()}</td>
+									<td class="size amount_money">￥${item.wine.getWinePrice()}<span></span></td>
+									<td class="size look_info">
+										<span><a href="<%=basePath%>/wine/goods.do?wid=${item.wine.getWId()}">商品详情</a></span>
+									</td>
+								</tr>
+						</c:forEach>
+
 						</tbody>
 					</table>
 				</div>

@@ -1,9 +1,7 @@
 package com.lanou.controller;
 
 import com.lanou.entity.*;
-import com.lanou.service.AdminService;
-import com.lanou.service.CarService;
-import com.lanou.service.IndexService;
+import com.lanou.service.*;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,32 +23,56 @@ public class AdminController {
     private AdminService adminService;
     @Resource
     private IndexService indexService;
+    @Resource
+    private OrdersService ordersService;
+    @Resource
+    private WineService wineService;
 
 
     @RequestMapping("/adminLogin.do")
     public String adminLogin(String userPhone, String password, HttpSession session) {
 
-       boolean result = adminService.adminLogin(userPhone, password);
+        boolean result = adminService.adminLogin(userPhone, password);
 
-       if(result){
-           List<AdminFunction> list = adminService.adminFunction();
-           session.setAttribute("Afun", list);
+        if (result) {
+            List<AdminFunction> list = adminService.adminFunction();
+            session.setAttribute("Afun", list);
 
-           List<Banner> banners = indexService.index();
-           session.setAttribute("Banner",banners);
+            List<Banner> banners = indexService.index();
+            session.setAttribute("Banner", banners);
 
-           List<Wine> wines = adminService.showWine();
-           session.setAttribute("wines",wines);
-
-
-           List<Shop> shops = adminService.showShop();
-           session.setAttribute("shops",shops);
+            List<Wine> wines = adminService.showWine();
+            session.setAttribute("wines", wines);
 
 
-           return "Admin/bms_html/BMS";
-       }
-       return "Admin/bms_html/bms_login";
+            List<Shop> shops = adminService.showShop();
+            session.setAttribute("shops", shops);
+
+
+            List<Orders> orders = ordersService.dingdan();
+            for (int j = 0; j < orders.size(); j++) {
+                int orderId = orders.get(j).getOrderId();
+                double ordersAllMoney = orders.get(j).getOrderAllMoney();
+                orders.get(j).setOrderAllMoney(ordersAllMoney);
+                List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
+                for (int i = 0; i < orderAndWines.size(); i++) {
+                    Wine wine = wineService.findWineByWineId(orderAndWines.get(i).getWine_id());
+                    orders.get(i).setWine(wine);
+                }
+                System.out.println("ordersTest");
+            }
+            System.out.println("orders:"+orders);
+            session.setAttribute("orders",orders);
+            return "Admin/bms_html/BMS";
+        }
+        return "Admin/bms_html/bms_login";
     }
+
+
+    public void as(){
+
+    }
+
 
 
 
