@@ -46,9 +46,11 @@ public class WineController {
     //    模糊查询
     @RequestMapping("/find.do")
     @ResponseBody
-    public List<Wine> find(String wineName, HttpServletResponse response) {
+    public List<Wine> find(String wineName, HttpServletResponse response,HttpSession session) {
         FastJson_Ali.toJson(response);
         List<Wine> wines = wineService.findLike(wineName);
+        System.out.println("wineName:"+wineName);
+        session.setAttribute("wineName",wineName);
         return wines;
     }
 
