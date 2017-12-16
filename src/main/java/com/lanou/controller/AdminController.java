@@ -40,12 +40,10 @@ public class AdminController {
            session.setAttribute("Banner",banners);
 
            List<Wine> wines = adminService.showWine();
-           System.out.println("wines:"+wines);
            session.setAttribute("wines",wines);
 
 
            List<Shop> shops = adminService.showShop();
-           System.out.println("shops:"+shops);
            session.setAttribute("shops",shops);
 
 
@@ -122,15 +120,25 @@ public class AdminController {
     }
 
 
-
+    Integer i =1;
+    String WineImg1;
     @RequestMapping("/insertGoods.do")
-    public String insertGoods(String WineName,String WineBianhao,Double WinePrice,String WineImg1) {
-        Integer i =1;
+    public String insertGoods(String WineName,String WineBianhao,Double WinePrice,MultipartFile imgFile,Integer WineSales) {
+        String imgName = i+".jpg";
+        File files = new File("/Users/lanou/Desktop/zjw/NewSSM/src/main/webapp/resource/views/img/wine1/"+imgName);
+        try {
+            FileUtils.copyInputStreamToFile(imgFile.getInputStream(),files);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         Wine wine = new Wine();
         wine.setWineName(WineName);
         wine.setWineBianhao(WineBianhao);
         wine.setWinePrice(WinePrice);
-        wine.setWineImg1(WineImg1);
+        wine.setWineSales(WineSales);
+        wine.setWineImg1("wine1/"+imgName);
         wine.setWId(i++);
         boolean resule = adminService.insertGoods(wine);
         return "success";

@@ -1,0 +1,254 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.clearfix:after{
+	zoom: 1;
+}
+.clearfix{
+	content: "";
+	display: block;
+	clear: both;
+}
+.up_search{
+	width: 1190px;
+	height: 90px;
+	padding-top: 30px;
+	margin: 0 auto;
+}
+.zjlogo{
+	float: left;
+}
+.up_search_right{
+	width: 398px;
+	height: 50px;
+	float: left;
+	margin-left: 20px;
+}
+.up_search_right div:nth-of-type(1){
+	float: left;
+}
+.up_search_right ul{
+	list-style: none;
+	height: 50px;
+	width: 192px;
+	padding: 0;
+	float: right;
+	position: relative;
+	top: -18px;
+	margin-left: 40px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: nowrap;
+}
+.up_search_right ul li{
+	float: left;
+	
+}
+.up_search_right ul li span:nth-of-type(1){
+	font-size: 15px;
+}
+.up_search_right ul li span:nth-of-type(2){
+	color: red;
+	font-size: 12px;
+	display: inline-block;
+	margin-top: 8px;
+}
+.ha{
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.shouji{
+	position: relative;
+}
+.shouji img:nth-of-type(2){
+	display: none;
+}
+.ha:hover .shouji img:nth-of-type(2){
+	display: block;
+	position:absolute;
+	z-index: 2;
+}
+.search_input{
+	width: 590px;
+	height: 40px;
+	margin: 0 auto;
+	position: relative;
+	top: 50px;
+}
+.search_input input{
+	width: 590px;
+	height: 40px;
+	position: absolute;
+	border: 2px solid red;
+	padding-left: 58px;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+}
+.search_input select{
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	z-index: 3;
+	border: none;
+	background: white;
+	width: 50px;
+	height: 30px;
+}
+.sousuo{
+	width: 65px;
+	height: 40px;
+	display: inline-block;
+	background: red;
+	color:white;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+body>a{
+	width: 100%;
+	height: 128px;
+	display: inline-block;
+	margin-top: 30px;
+	border: 1px solid lightgray;
+}
+.lafei{
+	width: 1790px;
+	height: 128px;
+	/*border: 1px solid black;*/
+	background: url(http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/ImageAd/201609271447010032540.jpg) top center no-repeat;
+}
+
+
+/*导航部分*/
+.nav_list{
+	width: 100%;
+	height: 38px;
+	background: black;
+	margin-top: -5px;
+}
+.nav{
+	width: 1190px;
+	height: 38px;
+	margin: 0 auto;
+}
+.nav ul{
+	list-style: none;
+	padding: 0;margin: 0;
+	/*float: left;*/
+	width: 630px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+}
+.nav ul li{
+	line-height: 38px;
+}
+.nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 17px;
+}
+.nav ul li a:hover{
+	color: darkred;
+}
+.sousuo2{
+	width: 233px;
+	height: 28px;
+	margin-top: 5px;
+	float: right;
+	background: white;
+	position: relative;
+	top: -38px;
+}
+.sousuo2 input{
+	width: 231px;
+	height: 26px;
+	font-size: 15px;
+	border: none;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.sousuo2 span{
+	position: absolute;
+	right: 7px;
+	color: lightgray;
+	top: 5px;
+	z-index: 2;
+}
+.sousuo2 span:hover{
+	color: grey;
+}
+
+
+/*商品部分*/
+.list{
+	width: 1190px;
+	border: 1px solid red;
+	margin: 20px auto;
+	
+}
+.list_top{
+	width: 1190px;
+	height: 46px;
+	text-align: center;
+	line-height: 46px;
+	color: lightgrey;
+	font-size: 26px;
+	font-weight: bolder;
+	margin: 0 auto;
+	background: rgba(0,0,0,0.8);
+}
+.list_top span:first-of-type{
+	margin-left: 180px;
+}
+
+.list ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.list ul li{
+	width: 280px;
+	height: 358px;
+	/*border: 1px solid red;*/
+	float: left;
+}
+.list ul li:nth-of-type(4n+1),
+.list ul li:nth-of-type(4n+2),
+.list ul li:nth-of-type(4n+3){
+	margin-right: 22px;
+}
+.list ul li a{
+	text-decoration: none;
+}
+.list ul li img{
+	width: 279px;
+	height: 280px;
+	background: lightblue;
+	margin: 0 auto;
+}
+.list ul li h5{
+	color: dimgray;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+
+}
+.list ul li p{
+	font-size: 12px;
+	margin-bottom: 0px;
+	color: dimgray;
+}
+.list ul li h5:hover,.list ul li p{
+	text-decoration: none;
+}
+.wineId{
+	display: none;
+}

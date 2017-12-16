@@ -152,11 +152,9 @@
             <div class="search">
                 <div class="search_name">本店搜索</div>
                 <div class="search_info">
-                    <form action="<%=basePath%>/wine/find.do" method="get">
-                    关键字 <input class="keyword" type="text" name="wineName"/><br/>
-                    价&nbsp;&nbsp;&nbsp;格 <input type="text" class="beg"/> - <input type="text" class="end"/>
-                    <button class="search_btn" >搜索</button>
-                    </form>
+                        关键字 <input class="keyword" type="text" name="wineName"/><br/>
+                        价&nbsp;&nbsp;&nbsp;格 <input type="text" class="beg"/> - <input type="text" class="end"/>
+                        <button class="search_btn" >搜索</button>
                 </div>
 
             </div>
@@ -587,7 +585,6 @@
         success: function (data) {
             console.log(data);
             if (data.shopId == "") {
-                // $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox' checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
                 $("#inp1").click(function () {
                     $(".inpcounts").prop("checked", this.checked);
                     $(".inpcount").prop("checked", this.checked);
@@ -617,9 +614,7 @@
                 $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox' checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
                 console.log(data);
                 console.log(data.shopId);
-                // for(i in data){
-                // $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='"+data[i].shopImg+"'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+data[i].parentId+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+data[i].shopId+"</span></li>").appendTo($(".ols"));
-                // }
+
 
                 $(".gouwushuliang").html(function () {
                     var countss = 0;
@@ -630,25 +625,6 @@
                     return countss;
 
                 })
-                // $(".btn2").click(function(){
-                // //判断购物车中有没有此商品
-                // //有 查到此产品，在数量上加上新添加的数量
-                // //查询购物车数据库
-                // $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='img/0.jpg'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+$('.num').html()+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+$('.pri').html()+"</span></li>").appendTo($(".ols"));
-                //
-                // $(".gouwushuliang").html(function(){
-                // var countss = 0;
-                // console.log($(".inpcount").length)
-                // $(".inpcount").siblings(".s_sum").each(function(index, el) {
-                // countss += parseInt(el.innerHTML);
-                // })
-                // return countss;
-                //
-                // })
-                // change();
-                //
-                // })
-
 
                 $(".inpcounts").click(function () {
                     $("#inp1").prop("checked", this.checked);
@@ -675,25 +651,17 @@
                         var countss = 0;
                         var arrs = [];
                         var arrss = [];
-
                         $(".inpcount:checked").siblings(".titalprice").each(function (index, el) {
-
                             arrs.push(el.innerHTML);
-
                         })
-                        console.log(arrs);
                         $(".inpcount:checked").siblings(".s_sum").each(function (index, el) {
                             arrss.push(el.innerHTML);
 
                             countss += parseInt(arrs[index]) * parseInt(arrss[index]);
                         })
-                        console.log("+++++++++" + countss);
                         return countss;
                     })
-
-
                 }
-
                 change();
             }
         }
@@ -706,19 +674,33 @@
         var arrss = [];
         var countss = 0;
         $(".inpcount:checked").siblings(".titalprice").each(function (index, el) {
-
             arrs.push(el.innerHTML);
-
         })
-        console.log(arrs);
         $(".inpcount:checked").siblings(".s_sum").each(function (index, el) {
             arrss.push(el.innerHTML);
-
             countss += parseInt(arrs[index]) * parseInt(arrss[index]);
         })
-        console.log("+++++++++" + countss);
         return countss;
     })
+
+
+$(".search_btn").click(function () {
+    var keyword= document.getElementsByClassName("keyword")[0].value;
+    $.ajax({
+        method:"post",
+        url:"<%=basePath%>/wine/find.do",
+        data:{
+            wineName:keyword,
+        },
+        success:function (data) {
+            window.location.href = '<%=basePath%>/resource/views/Ljp_Xiang_Info/benDianSoSuo/html/szz_shangpingSearch.jsp?wineName='+keyword;
+        }
+    })
+
+})
+
+
+
 
 
 </script>

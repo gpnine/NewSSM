@@ -13,6 +13,7 @@ pageEncoding="UTF-8" %>
 		<meta charset="UTF-8">
 		<title>BMS页面</title>
 		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/Admin/bms_css/BMS.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/Admin/bms_css/02.Ljp_Personal_Index.css"/>
 		<style>
 			ul.pagination {
 				display: inline-block;
@@ -27,6 +28,7 @@ pageEncoding="UTF-8" %>
 				float: left;
 				padding: 8px 16px;
 				text-decoration: none;
+				border: 1px solid black;
 			}
 			 li>a:hover{
 				 background-color: gray;
@@ -69,6 +71,7 @@ pageEncoding="UTF-8" %>
 						<c:forEach items="${Afun}" var="item">
 							<li class="bms">${item.funName}</li>
 						</c:forEach>
+						<li class="bms"><a href="<%=basePath%>/resource/views/Admin/bms_html/bms_login.jsp">退出</a></li>
 					</ul>
 				</div>
 			</div>
@@ -93,11 +96,6 @@ pageEncoding="UTF-8" %>
 							</tr>
 						</c:forEach>
 						<tr>
-
-							<%--<form action="<%=basePath%>/admin/addBanner.do" enctype="multipart/form-data" method="post">--%>
-								<%--<input type="file" name="myFile">--%>
-								<%--<input type="submit" value="上传">--%>
-							<%--</form>--%>
 							<form action="<%=basePath%>/admin/addBanner.do" method="post" enctype="multipart/form-data">
 								<td>添加图片</td>
 								<td style="text-align: center">
@@ -136,7 +134,7 @@ pageEncoding="UTF-8" %>
 						</ul>
 
 						<div class="content_info">
-							<form action="insertGoods.do" method="post">
+							<form action="insertGoods.do" method="post" enctype="multipart/form-data">
 
 								<table border="0" cellspacing="" cellpadding="">
 									<tr>
@@ -146,6 +144,10 @@ pageEncoding="UTF-8" %>
 									<tr>
 										<td>商品货号：</td>
 										<td><input type="text" name="WineBianhao"/></td>
+									</tr>
+									<tr>
+										<td>商品库存：</td>
+										<td><input type="text" name="WineSales"/></td>
 									</tr>
 									<tr>
 										<td>商品分类：</td>
@@ -180,7 +182,9 @@ pageEncoding="UTF-8" %>
 									</tr>
 									<tr>
 										<td>商品图片：</td>
-										<td><input type="text" name="WineImg1"/></td>
+										<td style="text-align: center">
+											<input type="file" name="imgFile"/><br>
+										</td>
 									</tr>
 								</table>
 
@@ -193,31 +197,60 @@ pageEncoding="UTF-8" %>
 						</div>
 					</div>
 				</div>
-				
+
+
+
+
 				
 				<!--订单查询-->
 				<div class="order display">
-					<table width="800" border="1" cellspacing="0" cellpadding="1">
-						<tr style="height: 30px;">
-							<td>订单编号</td>
-							<td>用户名</td>
-							<td>订单详情</td>
-							<td>删除</td>
+					<div class="table_box1 table_box">
+						<table width="1018" border="0" cellspacing="0" cellpadding="10">
+							<tr class="table_name1 table_name">
+								<th class="ddxx" style="    width: 440px;">订单信息</th>
+								<th class="djsl" style="    width: 180px;">单价 数量</th>
+								<th class="czsp" style="    width: 147px;">操作商品</th>
+								<th class="ddsf" style="width: 123px;">订单实付</th>
+								<th class="cz" style="width: 123px;">操作</th>
+							</tr>
+						</table>
+					</div>
+					<table class="table2 table_1" width="1018" border="0" cellspacing="0" cellpadding="10">
+						<tbody>
+						<tr class="ding_name ding_name_1">
+							<td style="width: 120px;text-indent:50px;" colspan="2" class="date_ding">订单编号：2017121637926870</td>
+							<td style="width: 320px;text-indent:60px;" colspan="5" class="ding_from">
+								<a href="">中酒自营</a>
+							</td>
 						</tr>
-
-
-						<tr>
-							<td>01</td>
-							<td>未来可期</td>
-							<td></td>
-							<td><button class="del">删除</button></td>
+						<tr class="display_show">
+							<td style="width: 371px;height: 152px;" colspan="2">
+								<div class="ding_pic">
+									<a href="<%=basePath%>/wine/goods.do?wid=2010">
+										<img src="<%=basePath%>/resource/views/img/wine2/pjks8-1.png">
+									</a><br>
+									<img src="<%=basePath%>/resource/views/img/ljp_52.jpg">
+								</div>
+								<p><a href="">13.9°澳洲杰卡斯西拉子红葡萄酒 750ml（两瓶装）</a></p>
+							</td>
+							<td class="size">
+								<span class="ding_pri">￥79</span>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<span class="ding_amount">1</span>
+							</td>
+							<td class="size" colspan="2">条形码：9300727488190</td>
+							<td class="size amount_money">￥<span>79</span></td>
+							<td class="size look_info">
+								<span>已完成</span>
+								<br>
+								<span><a href="">查看详情</a></span>
+							</td>
 						</tr>
-
-
-
+						</tbody>
 					</table>
 				</div>
-				
+
+
+
+
 				
 				<!--评论管理-->
 				<div class="pl display">
@@ -317,20 +350,20 @@ pageEncoding="UTF-8" %>
 					</table>
 					</div>
 						</c:forEach>
+
 					<ul class="pagination" style="margin-left: 220px;">
-						<li><a href="#" onclick="fun11()">«</a></li>
-						<li><a href="#" onclick="fun22()">1</a></li>
-						<li><a class="active" href="#" onclick="fun22()">2</a></li>
-						<li><a href="#" onclick="fun22()">3</a></li>
-						<li><a href="#" onclick="fun22()">4</a></li>
-						<li><a href="#" onclick="fun22()">5</a></li>
-						<li><a href="#" onclick="fun22()">6</a></li>
-						<li><a href="#" onclick="fun22()">7</a></li>
-						<li><a href="#" onclick="fun22()">»</a></li>
+						<li><a  onclick="fun11()">«</a></li>
+						<li><a class="active" onclick="fun22()">1</a></li>
+						<li><a class="active" onclick="fun22()">2</a></li>
+						<li><a class="active" onclick="fun22()">3</a></li>
+						<li><a class="active" onclick="fun22()">4</a></li>
+						<li><a class="active" onclick="fun22()">5</a></li>
+						<li><a class="active" onclick="fun22()">6</a></li>
+						<li><a class="active" onclick="fun22()">7</a></li>
+						<li><a class="active" onclick="fun22()">8</a></li>
+						<li><a class="active" onclick="fun22()">9</a></li>
+						<li><a onclick="fun22()">»</a></li>
 					</ul>
-
-
-
 				</div>
 
 
