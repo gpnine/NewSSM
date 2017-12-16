@@ -23,24 +23,23 @@ public interface WineService {
     public Wine goods_detile(Integer goodsId);
 
     public List<Wine> findScope(Integer a, Integer b);
+
     public List<Wine> findScope1(Integer a1, Integer b1);
 
 
+    public List<Wine> rexiao();
 
+    public List<Wine> rexiao1(String WineBrand, Integer d);
 
-    public List<Wine> rexiao(String WineBrand);
+    public List<Wine> chengjiao(String WineBrand, Integer d);
 
-    public List<Wine> rexiao1(String WineBrand,Integer d);
+    public List<Wine> jiage(String WineBrand, Integer d);
 
-    public List<Wine> chengjiao(String WineBrand,Integer d);
+    public List<Wine> pinlunshu(String WineBrand, Integer d);
 
-    public List<Wine> jiage(String WineBrand,Integer d);
+    public List<Wine> shangjia(String WineBrand, Integer d);
 
-    public List<Wine> pinlunshu(String WineBrand,Integer d);
-
-    public List<Wine> shangjia(String WineBrand,Integer d);
-
-    public List<Wine> ziying(String WineBrand,Integer d);
+    public List<Wine> ziying(String WineBrand, Integer d);
 
     public List<Wine> allGoodsNum(String WineBrand);
 

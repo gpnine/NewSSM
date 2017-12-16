@@ -49,20 +49,20 @@ public class OrdersController {
     //查看订单
     @RequestMapping("/findOrders.do")
     @ResponseBody
-    public Map<String, Object> findOrders(String userPhone, HttpServletResponse response) {
+    public List<Orders> findOrders(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        Map<String, Object> map = new HashMap<String, Object>();
-        Orders order = ordersService.weiZhifu(userPhone);
-        int orderId = order.getOrderId();
-        List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
-        for (int i = 0; i < orderAndWines.size(); i++) {
-            map.put("wines" + i, wineService.findWineByWineId(orderAndWines.get(i).getWine_id()));
+        List<Orders> orders = ordersService.yiZhifu(userPhone);
+        for (int j = 0; j < orders.size(); j++) {
+            int orderId = orders.get(j).getOrderId();
+            double ordersAllMoney = orders.get(j).getOrderAllMoney();
+            orders.get(j).setOrderAllMoney(ordersAllMoney);
+            List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
+            for (int i = 0; i < orderAndWines.size(); i++) {
+                Wine wine = wineService.findWineByWineId(orderAndWines.get(i).getWine_id());
+                orders.get(i).setWine(wine);
+            }
         }
-        Orders orders = ordersService.findAdressId(orderId);
-        int xId = orders.getAdress_id();
-        WuliuAdress wuliuAdress = ordersService.findByxId(xId);
-        map.put("wuliuAdress", wuliuAdress);
-        return map;
+        return orders;
     }
 
     //根据xId找到物流地址
@@ -174,6 +174,16 @@ public class OrdersController {
         }
     }
 
+    //显示总价格
+    @RequestMapping("/findAllMoney.do")
+    @ResponseBody
+    public double findAllMoney(String userPhone, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        Orders orders = ordersService.findAllMoney(userPhone);
+        double moneys = orders.getOrderAllMoney();
+        return moneys;
+    }
+
     //插入选中的酒到订单中（外键表）
     @RequestMapping("/insertWine.do")
     @ResponseBody
@@ -229,6 +239,18 @@ public class OrdersController {
         FastJson_Ali.toJson(response);
         List<WuliuAdress> wuliu = ordersService.findWuliu(userPhone);
         return wuliu;
+    }
+
+    @RequestMapping("/ShifouZhifu.do")
+    @ResponseBody
+    public String ShifouZhifu(String userPhone, HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        int result = ordersService.ShifouZhifu(userPhone);
+        if (result == 0) {
+            return "false";
+        } else {
+            return "true";
+        }
     }
 
 //    @RequestMapping("/tijiaoDingdan.do")

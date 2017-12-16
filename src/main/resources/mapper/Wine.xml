@@ -57,40 +57,33 @@
     <select id="goods_detile" parameterType="int" resultMap="wineResult">
 		select * from zhongjiu_wine where WineId = #{wid}
 	</select>
-
-
-
-
-
-
-
     <!--热销-->
-    <select id="rexiao"  resultMap="wineResult" parameterType="Map">
-        select * from zhongjiu_wine order by WineSales DESC limit #{d,jdbcType=INTEGER},8;
+    <select id="rexiao" resultMap="wineResult" parameterType="Map">
+        select * from zhongjiu_wine order by WineSales DESC limit 0,10;
     </select>
 
 
-    <select id="rexiao1"  resultMap="wineResult" parameterType="Map">
+    <select id="rexiao1" resultMap="wineResult" parameterType="Map">
 		select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineSales DESC limit #{d,jdbcType=INTEGER},8;
 	</select>
 
-    <select id="chengjiao"  resultMap="wineResult">
+    <select id="chengjiao" resultMap="wineResult">
         select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineEvaCount DESC limit #{d,jdbcType=INTEGER},8; ;
     </select>
 
-    <select id="jiage"  resultMap="wineResult">
+    <select id="jiage" resultMap="wineResult">
         select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WinePrice DESC limit #{d,jdbcType=INTEGER},8; ;
     </select>
 
-    <select id="pinlunshu"  resultMap="wineResult">
+    <select id="pinlunshu" resultMap="wineResult">
         select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineDegree DESC limit #{d,jdbcType=INTEGER},8;;
     </select>
 
-    <select id="shangjia"  resultMap="wineResult">
+    <select id="shangjia" resultMap="wineResult">
         select * from zhongjiu_wine where WineBrand=#{w,jdbcType=VARCHAR} order by WineId DESC limit #{d,jdbcType=INTEGER},8;;
     </select>
 
-    <select id="ziying"  resultMap="wineResult">
+    <select id="ziying" resultMap="wineResult">
         select * from zhongjiu_wine where WineCity=#{w,jdbcType=VARCHAR} order by WineId DESC limit #{d,jdbcType=INTEGER},8;;
     </select>
 

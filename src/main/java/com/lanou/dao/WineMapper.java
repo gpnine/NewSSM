@@ -8,7 +8,9 @@ import java.util.Map;
 
 public interface WineMapper {
     public List<Wine> findWines();
+
     public List<Wine> findWineById(Integer wineId);
+
     //分页展示
     public List<Wine> moreWines(Map map);
 
@@ -30,7 +32,7 @@ public interface WineMapper {
     public Wine goods_detile(Integer wid);
 
     //热销商品
-    public List<Wine> rexiao(String WineBrand);
+    public List<Wine> rexiao();
 
     public List<Wine> rexiao1(Map map);
 

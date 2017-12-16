@@ -59,9 +59,20 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.findAdressId(order_id);
     }
 
+    public Orders findAllMoney(String userPhone) {
+        return ordersMapper.findAllMoney(userPhone);
+    }
+
+    public int ShifouZhifu(String userPhone) {
+        return ordersMapper.ShifouZhifu(userPhone);
+    }
+
     public Orders weiZhifu(String userPhone) {
-        System.out.println(ordersMapper.weiZhifu(userPhone));
         return ordersMapper.weiZhifu(userPhone);
+    }
+
+    public List<Orders> yiZhifu(String userPhone) {
+        return ordersMapper.yiZhifu(userPhone);
     }
 
     public int insertOrder(String userPhone) {

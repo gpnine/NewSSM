@@ -937,18 +937,6 @@
 
                 <!--改动区域***********************************************************-->
             </div>
-            <div style='position: absolute;bottom:0;padding:10px 15px;width:190px'>
-                <div style='float:left'>
-                    <span>已选</span>
-                    <span class='counts'>0</span>
-                    <span>件</span>
-                </div>
-                <div style='float:right ;color:red;'>
-                    <span>￥</span>
-                    <span class='prices'>0</span>
-                </div>
-                <div class="jiesuan">购物车结算</div>
-            </div>
         </div>
         <div class='gouwuche_right2  gouwuche_right_right'>
         </div>
@@ -1752,7 +1740,7 @@
                     $("#inp1").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
                     change();
                 })
-                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></div>").appendTo($(".gouwuche_right1"));
+                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><a href='<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuchejiesuan.jsp'><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></a></div>").appendTo($(".gouwuche_right1"));
                 //				prices总价 titalprice单个商品的总价 s_sum 每个商品的数量
                 function change() {
                     $(".counts").html(function () {

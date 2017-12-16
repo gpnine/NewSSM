@@ -20,6 +20,12 @@ public interface OrdersService {
 
     public Orders weiZhifu(String userPhone);
 
+    public List<Orders> yiZhifu(String userPhone);
+
+    public Orders findAllMoney(String userPhone);
+
+    public int ShifouZhifu(String userPhone);
+
     public int UpdateAdress(String ShouhuoName, String ShouhuoAdress, String XiangxiAdress, String ShouhuoPhone, Integer xId);
 
     public int insertOrder(String userPhone);

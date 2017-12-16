@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -75,12 +74,21 @@ public class WineController {
     }
 
     //    热销
+    @RequestMapping("/rexiao.do")
+    @ResponseBody
+    public List<Wine> reSales(HttpServletResponse response) {
+        FastJson_Ali.toJson(response);
+        List<Wine> wines = wineService.rexiao();
+        return wines;
+    }
+
+    //    热销
     @RequestMapping("/rexiao1.do")
     @ResponseBody
-    public List<Wine> rexiao(HttpServletResponse response,String WineBrand,Integer c,HttpSession session) {
+    public List<Wine> rexiao(HttpServletResponse response, String WineBrand, Integer c, HttpSession session) {
         FastJson_Ali.toJson(response);
         c = (c - 1) * 8;
-        List<Wine> wines = wineService.rexiao1(WineBrand,c);
+        List<Wine> wines = wineService.rexiao1(WineBrand, c);
         session.setAttribute("size", wineService.allGoodsNum(WineBrand).size());
         return wines;
     }
@@ -88,56 +96,53 @@ public class WineController {
     //    成交量
     @RequestMapping("/chengjiao.do")
     @ResponseBody
-    public List<Wine> chengjiao(HttpServletResponse response,String WineBrand,Integer c,HttpSession session) {
+    public List<Wine> chengjiao(HttpServletResponse response, String WineBrand, Integer c, HttpSession session) {
         FastJson_Ali.toJson(response);
         c = (c - 1) * 8;
-        List<Wine> wines = wineService.chengjiao(WineBrand,c);
+        List<Wine> wines = wineService.chengjiao(WineBrand, c);
         return wines;
     }
 
     //    价格
     @RequestMapping("/jiage.do")
     @ResponseBody
-    public List<Wine> jiage(HttpServletResponse response,String WineBrand,Integer c,HttpSession session) {
+    public List<Wine> jiage(HttpServletResponse response, String WineBrand, Integer c, HttpSession session) {
         FastJson_Ali.toJson(response);
         c = (c - 1) * 8;
-        List<Wine> wines = wineService.jiage(WineBrand,c);
+        List<Wine> wines = wineService.jiage(WineBrand, c);
         return wines;
     }
 
     //    评论数
     @RequestMapping("/pinlunshu.do")
     @ResponseBody
-    public List<Wine> pinlunshu(HttpServletResponse response,String WineBrand,Integer c,HttpSession session) {
+    public List<Wine> pinlunshu(HttpServletResponse response, String WineBrand, Integer c, HttpSession session) {
         FastJson_Ali.toJson(response);
         c = (c - 1) * 8;
-        List<Wine> wines = wineService.pinlunshu(WineBrand,c);
+        List<Wine> wines = wineService.pinlunshu(WineBrand, c);
         return wines;
     }
 
     //   上架时间
     @RequestMapping("/shangjia.do")
     @ResponseBody
-    public List<Wine> shangjia(HttpServletResponse response,String WineBrand,Integer c,HttpSession session) {
+    public List<Wine> shangjia(HttpServletResponse response, String WineBrand, Integer c, HttpSession session) {
         FastJson_Ali.toJson(response);
         c = (c - 1) * 8;
-        List<Wine> wines = wineService.shangjia(WineBrand,c);
+        List<Wine> wines = wineService.shangjia(WineBrand, c);
         return wines;
     }
-
 
 
     //  中酒自营
     @RequestMapping("/ziying.do")
     @ResponseBody
-    public List<Wine> ziying(HttpServletResponse response,String WineBrand,Integer c,HttpSession session) {
+    public List<Wine> ziying(HttpServletResponse response, String WineBrand, Integer c, HttpSession session) {
         FastJson_Ali.toJson(response);
         c = (c - 1) * 8;
-        List<Wine> wines = wineService.ziying(WineBrand,c);
+        List<Wine> wines = wineService.ziying(WineBrand, c);
         return wines;
     }
-
-
 
 
     //    商品详情
@@ -162,7 +167,7 @@ public class WineController {
     //    查找该用户购物车
     @RequestMapping("/findCars.do")
     @ResponseBody
-    public List<Car> findCars(String userPhone,HttpServletResponse response) {
+    public List<Car> findCars(String userPhone, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
         List<Car> list = carService.findCars(userPhone);
         return list;
