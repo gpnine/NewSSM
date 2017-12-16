@@ -18,10 +18,10 @@ public class Orders {
     private int Adress_id;
     private int GouwuCishu;
     private int ShifouZhifu;
-    private Wine wine;
+    private List<OrderAndWine> orderAndWines;
 
-    public Wine getWine() {
-        return wine;
+    public Orders() {
+        super();
     }
 
     @Override
@@ -39,32 +39,19 @@ public class Orders {
                 ", Adress_id=" + Adress_id +
                 ", GouwuCishu=" + GouwuCishu +
                 ", ShifouZhifu=" + ShifouZhifu +
-                ", wine=" + wine +
-                ", wines=" + wines +
+                ", orderAndWines=" + orderAndWines +
                 '}';
     }
 
-    public void setWine(Wine wine) {
-        this.wine = wine;
+    public List<OrderAndWine> getOrderAndWines() {
+        return orderAndWines;
     }
 
-    public String getUserPhone() {
-        return UserPhone;
+    public void setOrderAndWines(List<OrderAndWine> orderAndWines) {
+        this.orderAndWines = orderAndWines;
     }
 
-    public void setUserPhone(String userPhone) {
-        UserPhone = userPhone;
-    }
-
-    public int getGouwuCishu() {
-        return GouwuCishu;
-    }
-
-    public void setGouwuCishu(int gouwuCishu) {
-        GouwuCishu = gouwuCishu;
-    }
-
-    public Orders(int orderId, String orderPay, double orderAllMoney, String userPhone, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, int gouwuCishu, int shifouZhifu, Wine wine, List<Wine> wines) {
+    public Orders(int orderId, String orderPay, double orderAllMoney, String userPhone, String orderTicket, String orderText, int orderScore, double orderYunfei, int yesOrNo, int adress_id, int gouwuCishu, int shifouZhifu, List<OrderAndWine> orderAndWines) {
         OrderId = orderId;
         OrderPay = orderPay;
         OrderAllMoney = orderAllMoney;
@@ -77,48 +64,8 @@ public class Orders {
         Adress_id = adress_id;
         GouwuCishu = gouwuCishu;
         ShifouZhifu = shifouZhifu;
-        this.wine = wine;
-        this.wines = wines;
+        this.orderAndWines = orderAndWines;
     }
-
-    public int getShifouZhifu() {
-        return ShifouZhifu;
-    }
-
-    public void setShifouZhifu(int shifouZhifu) {
-        ShifouZhifu = shifouZhifu;
-    }
-
-    public int getAdress_id() {
-        return Adress_id;
-    }
-
-    public void setAdress_id(int adress_id) {
-        Adress_id = adress_id;
-    }
-
-    public int getYesOrNo() {
-        return YesOrNo;
-    }
-
-    public void setYesOrNo(int yesOrNo) {
-        YesOrNo = yesOrNo;
-    }
-
-    private List<Wine> wines;
-
-    public Orders() {
-        super();
-    }
-
-    public List<Wine> getWines() {
-        return wines;
-    }
-
-    public void setWines(List<Wine> wines) {
-        this.wines = wines;
-    }
-
 
     public int getOrderId() {
         return OrderId;
@@ -144,6 +91,13 @@ public class Orders {
         OrderAllMoney = orderAllMoney;
     }
 
+    public String getUserPhone() {
+        return UserPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        UserPhone = userPhone;
+    }
 
     public String getOrderTicket() {
         return OrderTicket;
@@ -176,4 +130,37 @@ public class Orders {
     public void setOrderYunfei(double orderYunfei) {
         OrderYunfei = orderYunfei;
     }
+
+    public int getYesOrNo() {
+        return YesOrNo;
+    }
+
+    public void setYesOrNo(int yesOrNo) {
+        YesOrNo = yesOrNo;
+    }
+
+    public int getAdress_id() {
+        return Adress_id;
+    }
+
+    public void setAdress_id(int adress_id) {
+        Adress_id = adress_id;
+    }
+
+    public int getGouwuCishu() {
+        return GouwuCishu;
+    }
+
+    public void setGouwuCishu(int gouwuCishu) {
+        GouwuCishu = gouwuCishu;
+    }
+
+    public int getShifouZhifu() {
+        return ShifouZhifu;
+    }
+
+    public void setShifouZhifu(int shifouZhifu) {
+        ShifouZhifu = shifouZhifu;
+    }
+
 }

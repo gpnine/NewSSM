@@ -17,7 +17,10 @@
     <title>01.商品详情页</title>
 </head>
 <body>
-
+<div class="header"></div>
+<!--上方的红线-->
+<div class="red_line"></div>
+<!--头部-->
 <!--显示框-->
 <div class="null"></div>
 <div id="head_part">
@@ -470,6 +473,7 @@
 
 </div>
 </div>
+<div class="footer"></div>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/html/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/frame.js"></script>
@@ -479,6 +483,8 @@
 <script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/cityselect.js"></script>
 
 <script>
+    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
+    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
     //大小图的切换
     var picArr = ["<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg2()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg3()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg4()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg5()}"];
 

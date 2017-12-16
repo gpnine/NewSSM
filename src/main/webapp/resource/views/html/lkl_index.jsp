@@ -109,7 +109,8 @@
 </div>
 <!--搜索块-->
 <div class="below_head">
-    <img src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/logo.jpg" alt="logo" height="60"/>
+    <a href="<%=basePath%>/resource/views/html/lkl_index.jsp"><img
+            src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/logo.jpg" alt="logo" height="60"/></a>
     <img src="<%=basePath%>/resource/views/img/app.gif" alt="动图"/>
     <div class="gif_right">
         <div class="sousuo">
@@ -145,10 +146,12 @@
 <div id="" style="position: relative;width:1190px;margin:0 auto;">
     <div class="side_nav_slider_left"></div>
     <div class="small_banner">
-        <a href="http://pro.zhongjiu.cn/20151210/2wly.html"><img class="lazyload1"
-                                                                 src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201709121117114935610.jpg"/></a>
-        <a href="http://pro.zhongjiu.cn//20170814/augustmeet.html"><img class="lazyload2"
-                                                                        src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201708221047305409910.jpg"/></a>
+        <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_qingkejiu.jsp">
+            <img class="lazyload1" src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201709121117114935610.jpg"/>
+        </a>
+        <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_baijiuzhuanqu.jsp">
+            <img class="lazyload2" src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201708221047305409910.jpg"/>
+        </a>
     </div>
     <div class="side-nav">
         <ul class="sidenav-list">
@@ -158,45 +161,46 @@
 <div class="side_nav_slider_top">
     <span class="cate-all"><img src="http://www.zhongjiu.cn/Areas/Web/Images/HIMALL_admin11_04_03.png"
                                 alt=""><a>全部商品分类</a></span>
-    <span class="item"><a class="item_one">首页</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/html/lkl_index.jsp" class="item_one">首页</a></span>
     <span class="item"><a
-            href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">白酒专区</a></span>
-    <span class="item"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">红洋酒专区</a></span>
-    <span class="item"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">天佑德青稞酒</a></span>
+            href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_baijiuzhuanqu.jsp">白酒专区</a></span>
     <span class="item"><a
-            href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">精品推荐</a></span>
+            href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_hongyangzhuanqu.jsp">红洋酒专区</a></span>
+    <span class="item"><a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_qingkejiu.jsp">天佑德青稞酒</a></span>
+    <span class="item"><a
+            href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_jingpintuijian.jsp">精品推荐</a></span>
 </div>
 <div class="slider">
     <ul class="fade">
         <%--<li>--%>
-            <%--<a class="lunbotu0"--%>
-               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
-            <%--</a>--%>
+        <%--<a class="lunbotu0"--%>
+        <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+        <%--</a>--%>
         <%--</li>--%>
         <%--<li>--%>
-            <%--<a class="lunbotu1"--%>
-               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
-            <%--</a>--%>
+        <%--<a class="lunbotu1"--%>
+        <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+        <%--</a>--%>
         <%--</li>--%>
         <%--<li>--%>
-            <%--<a class="lunbotu2"--%>
-               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
-            <%--</a>--%>
+        <%--<a class="lunbotu2"--%>
+        <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+        <%--</a>--%>
         <%--</li>--%>
         <%--<li>--%>
-            <%--<a class="lunbotu3"--%>
-               <%--href="<%=basePath%>/resource/views/zhongjiu-Shopping-maotai/html/zhongjiu-Shopping-maotai.html">--%>
-            <%--</a>--%>
+        <%--<a class="lunbotu3"--%>
+        <%--href="<%=basePath%>/resource/views/zhongjiu-Shopping-maotai/html/zhongjiu-Shopping-maotai.html">--%>
+        <%--</a>--%>
         <%--</li>--%>
         <%--<li>--%>
-            <%--<a class="lunbotu4"--%>
-               <%--href="<%=basePath%>/resource/views/zhongjiu-Shopping-wuliangye/html/zhongjiu-Shopping-wuliangye.html">--%>
-            <%--</a>--%>
+        <%--<a class="lunbotu4"--%>
+        <%--href="<%=basePath%>/resource/views/zhongjiu-Shopping-wuliangye/html/zhongjiu-Shopping-wuliangye.html">--%>
+        <%--</a>--%>
         <%--</li>--%>
         <%--<li>--%>
-            <%--<a class="lunbotu5"--%>
-               <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
-            <%--</a>--%>
+        <%--<a class="lunbotu5"--%>
+        <%--href="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp">--%>
+        <%--</a>--%>
         <%--</li>--%>
     </ul>
     <div class="pagination">
@@ -220,7 +224,7 @@
     <li>
         <div class="clearfix" style="width:1190px;">
             <div class="fl rexiaobaokuan"><a href="">热销爆款</a></div>
-            <div class="fr" style="padding:10px 0px 10px;"><a class="gengduo" href="">更多&gt;&gt;</a></div>
+            <div class="fr" style="padding:10px 0px 10px;"><a class="gengduo" href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_baijiuzhuanqu.jsp">更多&gt;&gt;</a></div>
         </div>
         <div style="width:1190px;border-top:1px solid gray;margin-top:-2px;">
             <ol class="hot_sell_list clearfix">
@@ -266,7 +270,7 @@
                         <ol class="clearfix">
                             <li class="fl mr mt pr">
                                 <%--青稞酒专区--%>
-                                <a href="" class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=1177" class="a">
                                     <img src="<%=basePath%>/resource/views/img/z0.jpg"/>
                                 </a>
                                 <div class="pa jiupin_first_table">
@@ -322,7 +326,8 @@
                                 <ol class="fl pa xuanjiuqu  xuanjiuqu_hot li1_0"
                                     style="width:960px;left:0;display: block;">
                                     <li class="fl mr mt">
-                                        <a href="" class="a">
+                                        <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_baijiuzhuanqu.jpg"
+                                           class="a">
                                             <img src="<%=basePath%>/resource/views/img/dd.jpg"/>
                                         </a>
                                     </li>
@@ -379,7 +384,7 @@
                     <div class="jiupin_first ">
                         <ol class="clearfix">
                             <li class="fl mr mt pr">
-                                <a href="" class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=1025" class="a">
                                     <img src="<%=basePath%>/resource/views/img/z1.jpg"/>
                                 </a>
                                 <div class="pa jiupin_first_table">
@@ -436,7 +441,8 @@
                                 <ol class="fl pa xuanjiuqu xuanjiuqu_white li1_1"
                                     style="width:960px;left:0;display: block;">
                                     <li class="fl mr mt">
-                                        <a href="" class="a">
+                                        <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_qingkejiu.jsp"
+                                           class="a">
                                             <img src="<%=basePath%>/resource/views/img/d0.jpg"/>
                                         </a>
                                     </li>
@@ -489,7 +495,7 @@
                     <div class="jiupin_first ">
                         <ol class="clearfix">
                             <li class="fl mr mt pr">
-                                <a href="" class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=2162" class="a">
                                     <img src="<%=basePath%>/resource/views/img/z2.jpg"/>
                                 </a>
                                 <div class="pa jiupin_first_table">
@@ -545,7 +551,8 @@
                                 <ol class="fl pa xuanjiuqu xuanjiuqu_pu li1_2"
                                     style="width:960px;left:0;display: block;">
                                     <li class="fl mr mt">
-                                        <a href="" class="a">
+                                        <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_hongyangzhuanqu.jsp"
+                                           class="a">
                                             <img src="<%=basePath%>/resource/views/img/d1.jpg"/>
                                         </a>
                                     </li>
@@ -560,7 +567,7 @@
                     <div class="jiupin_first clearfix">
                         <ol class="clearfix bj_bottom3">
                             <li class="fl mr mt bj_bottom3_1">
-                                <a class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=9321" class="a">
                                     <img src="<%=basePath%>/resource/views/img/b2.jpg"/>
                                 </a>
 
@@ -600,7 +607,7 @@
                     <div class="jiupin_first ">
                         <ol class="clearfix">
                             <li class="fl mr mt pr">
-                                <a href="" class="a">
+                                <a href="<%=basePath%>/wine/goods.do?wid=3008" class="a">
                                     <img src="<%=basePath%>/resource/views/img/z3.jpg"/>
                                 </a>
                                 <div class="pa jiupin_first_table">
@@ -688,7 +695,8 @@
         <div style="font-weight:700">品牌旗舰店</div>
         <div>
             <ol class="clearfix">
-                <li class="fl"><img src="<%=basePath%>/resource/views/img/9.jpg"/></li>
+                <li class="fl"><a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_qingkejiu.jsp"><img
+                        src="<%=basePath%>/resource/views/img/9.jpg"/></a></li>
                 <li class="fl qijiandian_logo">
                     <span class="qijiandian_logoss_span_count">0</span>
                     <div class="qijiandian_logos_prev"><i class="iconfont iconfonts icon-arrowleft"></i></div>
@@ -706,7 +714,7 @@
                     </div>
 
                 </li>
-                <li class="fr"><img src="<%=basePath%>/resource/views/img/8.jpg"/></li>
+                <li class="fr"><a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_hongyangzhuanqu.jsp"><img src="<%=basePath%>/resource/views/img/8.jpg"/></a></li>
 
             </ol>
         </div>
@@ -966,11 +974,11 @@
         method: "get",
         async: true,
         success: function (data) {
-            for( var j=0;j<data.length-1;j++){
+            for (var j = 0; j < data.length - 1; j++) {
                 $("<li></li>").appendTo($(".banner_ul"));
             }
-            for( var j=0;j<data.length;j++){
-                $("<li><a class='lunbotu"+j+"'></a></li>").appendTo($(".fade"));
+            for (var j = 0; j < data.length; j++) {
+                $("<li><a class='lunbotu" + j + "'></a></li>").appendTo($(".fade"));
             }
             for (i in data) {
                 $("<img src='<%=basePath%>/" + data[i].bannerSrc + "'/>").appendTo($(".lunbotu" + i));
@@ -981,13 +989,13 @@
 
 //=======================================================================================================
             // 幻灯片
-            $(function() {
+            $(function () {
                 //声明变量记录索引
                 var index = 0;
                 //点击右边按钮
                 //忽略重复点击开关
                 var toggle = true
-                $(".arrow-right").click(function() {
+                $(".arrow-right").click(function () {
 
                     if (toggle == false) {
                         return
@@ -998,15 +1006,14 @@
                         index = 0;
                     }
                     $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
-                    $(".slider>ul>li").eq(index).stop().fadeIn(500, function() {
+                    $(".slider>ul>li").eq(index).stop().fadeIn(500, function () {
                             toggle = true
                         }
-
                     ).siblings("li").stop().fadeOut(500);
 
                 });
                 //点击左边按钮
-                $(".arrow-left").click(function() {
+                $(".arrow-left").click(function () {
                     if (toggle == false) {
                         return
                     }
@@ -1016,19 +1023,18 @@
                         index = $('.fade li').length - 1;
                     }
                     $('.pagination ul li').eq(index).addClass('active').siblings().removeClass('active')
-                    $(".slider>ul>li").eq(index).fadeIn(1000, function() {
+                    $(".slider>ul>li").eq(index).fadeIn(1000, function () {
                         toggle = true
                     }).siblings("li").fadeOut(1000);
                 });
 
 
-
                 //hover分页器
-                $('.pagination ul li').hover(function() {
+                $('.pagination ul li').hover(function () {
                     console.log("banner")
                     var paging = $(this).index()
                     //变颜色
-                    index=$(this).index();
+                    index = $(this).index();
                     $(this).addClass('active').siblings().removeClass('active')
                     //与图片关联
                     $(".slider>ul>li").eq(paging).fadeIn(1000).siblings("li").fadeOut(1000);
@@ -1041,21 +1047,18 @@
                 })
 
 
-
-
-
                 //增加无限轮播效果
-                var timerID = setInterval(function() {
+                var timerID = setInterval(function () {
                     $(".arrow-right").click()
 
                 }, 3000)
                 //移入停止计时器
-                $('.slider').mouseenter(function() {
+                $('.slider').mouseenter(function () {
                     clearInterval(timerID)
                 })
                 //移出开始计时器
-                $('.slider').mouseleave(function() {
-                    timerID = setInterval(function() {
+                $('.slider').mouseleave(function () {
+                    timerID = setInterval(function () {
                         $(".arrow-right").click()
 
                     }, 2000)
@@ -1066,24 +1069,6 @@
 
         }
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     $.ajax({
@@ -1777,10 +1762,6 @@
         })
         return countss;
     })
-
-
-
-
 
 
 </script>
