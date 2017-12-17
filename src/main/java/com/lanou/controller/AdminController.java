@@ -81,13 +81,16 @@ public class AdminController {
 
     @RequestMapping(value = "/addBanner.do")
     public String addBanner(HttpSession session,MultipartFile myFile,String bannerSrc ) {
-        File files = new File("/Users/lanou/Desktop/zjw/NewSSM/src/main/webapp/resource/views/img/Banner_img/"+bannerSrc);
-        try {
-            FileUtils.copyInputStreamToFile(myFile.getInputStream(),files);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        boolean result = adminService.addBanner("resource/views/img/Banner_img/"+bannerSrc);
+//        File files = new File("/Users/lanou/Desktop/zjw/NewSSM/src/main/webapp/resource/views/img/Banner_img/"+bannerSrc);
+//        try {
+//            FileUtils.copyInputStreamToFile(myFile.getInputStream(),files);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        boolean result = adminService.addBanner("resource/views/img/Banner_img/"+bannerSrc);
+
+        boolean result = adminService.addBanner("/usr/local/apache-tomcat-7.0.77/webapps/NewSSM/resource/views/lunbotu/"+bannerSrc);
+
         List<AdminFunction> list = adminService.adminFunction();
         session.setAttribute("Afun", list);
         List<Banner> banners = indexService.index();
