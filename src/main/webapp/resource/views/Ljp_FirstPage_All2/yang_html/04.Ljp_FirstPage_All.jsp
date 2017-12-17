@@ -15,14 +15,14 @@
     <title>洋酒的更多</title>
 </head>
 <body>
-<div class="header"></div>
-<!--上方的红线-->
-<div class="red_line"></div>
-<!--头部-->
+<header></header>
+<div class="pl_nav_slider"></div>
 <div class="head_name">
     <span class="first_page"><a href="<%=basePath%>/resource/views/html/lkl_index.jsp">首页 ></a></span>&nbsp;&nbsp;&nbsp;
     <span class="sele_kind"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">全部 ></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <span class="sele_kind1"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/yang_html/04.Ljp_FirstPage_All.jsp">洋酒</a>&nbsp;&nbsp;&nbsp;<span><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">X</a></span></span>
+    <span class="sele_kind1"><a
+            href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/yang_html/04.Ljp_FirstPage_All.jsp">洋酒</a>&nbsp;&nbsp;&nbsp;<span><a
+            href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">X</a></span></span>
     <span class="goods_amount">共 <span>137</span> 个商品</span>
 </div>
 
@@ -42,7 +42,7 @@
 
 
         <!--热卖单品-->
-        <div class="hot_sell">
+        <div class="hot_sell1">
             <div class="hot_name">热卖单品</div>
             <ul class="hot_good_a">
                 <!--生成-->
@@ -148,14 +148,21 @@
         </div>
 
     </div>
-    </div>
-    <div class="footer"></div>
+</div>
+<!-- 底部 -->
+<footer>
+</footer>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/yang_html/jquery.pagination.min.js"></script>
 <script>
-    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
-    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
+    //加载头部
+    $("header").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/header.jsp");
+    // 加载尾部
+    $("footer").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/footer.jsp");
+    //加载导航栏
+    $(".pl_nav_slider").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/nav_slider.jsp");
+    //
     //点击侧边栏的三角形，打开关闭
     $(".san_jiao").on("click", function () {
         $(".white_jiu").toggle("normal");
@@ -342,7 +349,7 @@
                     //除此还浏览了
                     var content = "";
                     for (i in hot_ImgArr) {
-                        content += '<li><a href="<%=basePath%>/wine/goods.do?wid=' + data[i].wid + '"><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/img/wine/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>'+hot_WEArr[i]+'</span></p></a></li>';
+                        content += '<li><a href="<%=basePath%>/wine/goods.do?wid=' + data[i].wid + '"><div class="recode_goods_img"><img src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/img/wine/' + hot_ImgArr[i] + '" alt="" /></div><p class="recode_goods_name"><span>' + hot_DegreeArr[i] + '</span>°' + hot_NameArr[i] + ' <span>' + hot_MLArr[i] + '</span></p><p class="recode_goods_price">￥<span>' + hot_PriceArr[i] + '</span></p><p class="recode_goods_pls">评论数：<span>' + hot_WEArr[i] + '</span></p></a></li>';
                     }
                     $(".recode_goods").html(content);
 
@@ -385,7 +392,7 @@
         renderList();
         $("#pagination1").pagination({
             currentPage: current,
-            totalPage: 3,
+            totalPage: 2,
             callback: function (current) {
                 renderList();
             }

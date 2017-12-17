@@ -15,10 +15,8 @@
     <title>首页的更多</title>
 </head>
 <body>
-<div class="header"></div>
-<!--上方的红线-->
-<div class="red_line"></div>
-<!--头部-->
+<header></header>
+<div class="pl_nav_slider"></div>
 <div class="head_name">
     <span class="first_page"><a href="<%=basePath%>/resource/views/html/lkl_index.jsp">首页 ></a></span>&nbsp;&nbsp;&nbsp;
     <span class="sele_kind"><a href="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/04.Ljp_FirstPage_All.jsp">全部</a></span>
@@ -170,13 +168,20 @@
         <div id="pagination1" class="page fl"></div>
     </div>
 </div>
-<div class="footer"></div>
+<!-- 底部 -->
+<footer>
+</footer>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_All2/all_html/jquery.pagination.min.js"></script>
 <script>
-    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
-    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
+    //加载头部
+    $("header").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/header.jsp");
+    // 加载尾部
+    $("footer").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/footer.jsp");
+    //加载导航栏
+    $(".pl_nav_slider").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/nav_slider.jsp");
+    //
     //点击侧边栏的三角形，打开关闭
     $(".san_jiao").on("click", function () {
         $(".white_jiu").toggle("normal");

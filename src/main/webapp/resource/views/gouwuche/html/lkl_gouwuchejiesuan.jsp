@@ -20,7 +20,7 @@
 </div>
 <div class="content">
     <div class="jindu pr">
-        <a class="pa jindu_pa_a" href=""><img
+        <a class="pa jindu_pa_a" href="<%=basePath%>/resource/views/html/lkl_index.jsp"><img
                 src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/logo.jpg"/></a>
         <ol class="pa jindu_pa_img" style="width:490px;font-size:12px">
             <img class="" src="<%=basePath%>/resource/views/gouwuche/img/step1.png"/>
@@ -70,11 +70,11 @@
     //		使用Ajax获取购物车中商品
     $.ajax({
         method: "get",
-        url: "<%=basePath%>/wine/findCars.do?userPhone=18395592587",
+        url: "<%=basePath%>/wine/findCars.do?userPhone=${user1.userPhone}",
         data: {},
         success: function (data) {
             if (data.length == 0) {
-                $("<li class='clearfix' style='width:100%;padding:10px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'><img style='float:right;margin-right:20px;' src='../img/cart-empty-bg.png'/></div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p><p style='margin:0'><a href='lkl_index.html' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
+                $("<li class='clearfix' style='width:100%;padding:10px;background:#F3F3F3'><div style='float:left;width:300px;height:100%;'><img style='float:right;margin-right:20px;' src='../img/cart-empty-bg.png'/></div><div style='float:left;'><p style='margin:0'>购物车内暂时没有商品</p><p style='margin:0'><a href='<%=basePath%>/resource/views/html/lkl_index.jsp' style='color:red;display:inline'>去首页</a>挑选喜欢的商品</p></div></li>").appendTo($(".caozuogou_ol"))
 
             } else {
                 $("<li class='caozuogou_list clearfix' style='background: #EFF2F5;'>"
@@ -146,7 +146,7 @@
                         url: "<%=basePath%>/orders/insertOrder.do",
                         method: "get",
                         data: {
-                            userPhone: 18395592587,
+                            userPhone: ${user1.userPhone},
                         },
                         success: function (data) {
                             var arrss = [];
@@ -160,7 +160,7 @@
                                 async:false,
                                 method: "get",
                                 data: {
-                                    userPhone: 18395592587,
+                                    userPhone: ${user1.userPhone},
                                     wineId: wid
                                 },
                                 success: function (data) {
@@ -181,7 +181,7 @@
     <%--url: "<%=basePath%>/orders/tijiaoDingdan.do",--%>
     <%--method: "get",--%>
     <%--data: {--%>
-    <%--userPhone: 18395592587,--%>
+    <%--userPhone: ${user1.userPhone},--%>
     <%--},--%>
     <%--success: function (data) {--%>
 
@@ -279,7 +279,7 @@
                     method: "get",
                     data: {
                         wineId: wineId,
-                        userPhone: 18395592587
+                        userPhone: ${user1.userPhone}
                     },
                     success: function (data) {
                         $(_this).parents(".caozuogou_list_bgss_ol_li").remove();
@@ -317,13 +317,13 @@
 
             }
             var wineStr = arr.join("-");
-            $(".").click(function () {
+            $(".btn_queding").click(function () {
                 $.ajax({
                     url: "<%=basePath%>/car/deleteMore.do",
                     method: "get",
                     data: {
                         wineStr: wineStr,
-                        userPhone: 18395592587
+                        userPhone: ${user1.userPhone}
                     },
                     success: function (data) {
                         $(".caozuogou_list_caozuo_quanxuan_danpin:checked").parents(".caozuogou_list_bgss_ol_li").remove();
@@ -386,7 +386,7 @@
                 data: {
                     counts: arrcount[i],
                     wineId: arrid[i],
-                    userPhone: 18395592587
+                    userPhone: ${user1.userPhone}
                 },
                 success: function () {
 

@@ -21,10 +21,7 @@
     </style>
 </head>
 <body>
-<div class="header"></div>
-<!--上方的红线-->
-<div class="red_line"></div>
-<!--头部-->
+<header></header>
 <!--上方的红线-->
 <div class="red_line"></div>
 <!--头部-->
@@ -161,13 +158,20 @@
 
     </div>
 </div>
-<div class="footer"></div>
+<!-- 底部 -->
+<footer>
+</footer>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_js/jquery.pagination.min.js"></script>
 <script>
-    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
-    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
+    //加载头部
+    $("header").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/header.jsp");
+    // 加载尾部
+    $("footer").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/footer.jsp");
+    //加载导航栏
+    $(".pl_nav_slider").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/nav_slider.jsp");
+    //
     //搜索栏的页码
     console.log($("#counts"));
     var total_field = $("#counts").html();

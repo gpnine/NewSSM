@@ -562,25 +562,22 @@ a{
 	/*border: 1px solid black;*/
 	position: relative;
 	top: 40px;
+	text-align: center;
 	
 }
 .three_img1{
-	width: 750px;
 	height: 426px;
 	top: 0px;
 }
 .three_img2{
-	width: 750px;
 	height: 583px;
 	top: 426px;
 }
 .three_img3{
-	width: 750px;
 	height: 831px;
 	top: 1009px;
 }
 .three_img{
-	position: absolute;
 	left: 80px;
 }
 
@@ -945,6 +942,7 @@ a{
 }
 .gouwuche_right3,.gouwuche_right4{
 	position:absolute;
+	right: 0;
 	width:220px;
 	height:100vh;
 	background:#393939;

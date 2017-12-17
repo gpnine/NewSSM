@@ -1,0 +1,119 @@
+.content {
+	margin: 0 auto;
+	width: 990px;
+}
+
+.jindu {
+	width: 990px;
+	height: 70px;
+	padding:20px 0;
+}
+
+.jindu_pa_a {
+	top: 20px;
+	left: 0;
+}
+
+.jindu_pa_img {
+	right: 0;
+	
+}
+.progress_zhifu .step_1 {
+	margin-left:32px;
+	
+	
+}
+.progress_zhifu .step_2 {
+	margin-left:85px;
+	
+	
+}
+.progress_zhifu .step_3 {
+	margin-left:60px;
+	
+	color:#4FCA3D;
+}
+.content a {
+	color: black;
+	display: block;
+	text-decoration: none;
+}
+.weixin{
+	padding:20px;
+	width:100%;
+	box-sizing: border-box;
+	background: #F1F2F7;
+	
+}
+.weixin_box{
+	width:990px;
+	margin: 0 auto;
+	padding:20px 20px;
+	border-top:3px solid #B7C1C8;
+	background: white;
+	box-sizing: border-box;
+}
+.zhifu{
+	font-size:16px;
+	color:black;
+	
+	
+}
+.zhifu:hover{
+	color:red;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.shangpintuijian_list {
+	width: 182px;
+	margin-right: 5px;
+	margin-bottom: 26px;
+	height: 220px;
+	border: 1px solid #f1f1f1;
+}
+
+.shangpintuijian_list_a:hover .shangpintuijian_list_a_hover {
+	display: block;
+}
+
+.shangpintuijian_list_a_hover {
+	width: 182px;
+	height: 182px;
+	background: rgba(255, 0, 0, 0.5);
+	display: none;
+	top: -166px;
+	line-height: 182px;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
+
+.shangpintuijian_list_p {
+	overflow: hidden;
+	/*自动隐藏文字*/
+	text-overflow: ellipsis;
+	/*文字隐藏后添加省略号*/
+	white-space: nowrap;
+	/*强制不换行*/
+	width: 11em;
+	/*不允许出现半汉字截断*/
+	/*color:#6699ff;border:1px #ff8000 dashed;*/
+	margin: 0 auto;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.shangpintuijian_list_p:hover {
+	color: red;
+}
+

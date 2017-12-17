@@ -97,7 +97,7 @@
             success: function(data) {
                 console.log(data);
                 for(var i = 0; i < data.length; i++) {
-                    $("<li><a><img src='<%=basePath%>/resource/views/img/"+data[i].wineImg1+"'/><i class='wineId'>"+data[i].wid+"</i><h5>"+data[i].wineDegree+"°"+data[i].wineName+data[i].wineLiter+"</h5><p class='price'>￥"+data[i].winePrice+"</p><p>已售<span class='shuliang'>"+data[i].wineSales+"</span>件</p></a></li>").appendTo($(".list ul"));
+                    $("<li><a href='<%=basePath%>/wine/goods.do?wid=" + data[i].wid + "'><img src='<%=basePath%>/resource/views/img/"+data[i].wineImg1+"'/><i class='wineId'>"+data[i].wid+"</i><h5>"+data[i].wineDegree+"°"+data[i].wineName+data[i].wineLiter+"</h5><p class='price'>￥"+data[i].winePrice+"</p><p>已售<span class='shuliang'>"+data[i].wineSales+"</span>件</p></a></li>").appendTo($(".list ul"));
 
                 }
                 products.innerHTML = "${wineName}";

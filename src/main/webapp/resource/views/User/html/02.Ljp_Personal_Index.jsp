@@ -13,18 +13,11 @@
     <title>02.Ljp_Personal_Index-我的订单</title>
 </head>
 <body>
-<div class="header"></div>
-<!--上方的红线-->
-<div class="red_line"></div>
-<!--头部-->
-<!--红色的横杠-->
-<div class="per_line"></div>
+<header></header>
 <!--个人中心-->
 <div id="per_container">
     <!--左边部分-->
     <div id="per_left"></div>
-
-
     <!--右边部分-->
     <div id="rig_order">
         <div class="g_word">
@@ -61,24 +54,28 @@
         </div>
     </div>
 </div>
-<div class="footer"></div>
+<!-- 底部 -->
+<footer>
+</footer>
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="../js/01.Ljp_Personal_Index.js"></script>
 <script>
-    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
-    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
+    //加载头部
+    $("header").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/header.jsp");
+    // 加载尾部
+    $("footer").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/footer.jsp");
     //我的订单
     $.ajax({
-        type:"get",
-        url:"<%=basePath%>/orders/findOrders.do?userPhone=18395592587",
-        data:{},
-        dataType:"json",
-        async:true,
-        success:function(data){
+        type: "get",
+        url: "<%=basePath%>/orders/findOrders.do?userPhone=18395592587",
+        data: {},
+        dataType: "json",
+        async: true,
+        success: function (data) {
             console.log(data);
             var countss = 0;
-            for(var i = 0;i<data.length;i++){
+            for (var i = 0; i < data.length; i++) {
                 var data1 = new Date();
                 var getyear = data1.getFullYear();
                 var mon = data1.getMonth() + 1;
@@ -88,21 +85,21 @@
 //			$(".date_ding").html("订单号：" + hao);
                 //订单头尾
                 console.log(data[i].orderAndWines)
-                $('<table class="table2 table_'+(i+1)+'" width="1018" border="0" cellspacing="0" cellpadding="10"><tr class="ding_name ding_name_'+(i+1)+'"><td style="width: 120px;text-indent:50px;" colspan="2" class="date_ding">订单编号：'+hao+'</td><td style="width: 320px;text-indent:60px;" colspan="5" class="ding_from"><a href="">中酒自营</a></td></tr><tr style="width: 1018px;height: 30px;background-color: #EFF2F5;text-align: right;" class="bottom_part"><td colspan="7"><span class="amount_goods_num'+i+'" style="color: red;"></span>件商品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />总计(不含运费)：￥<span class="amount_money_a">'+data[i].orderAllMoney+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>').appendTo($(".table_box1"));
+                $('<table class="table2 table_' + (i + 1) + '" width="1018" border="0" cellspacing="0" cellpadding="10"><tr class="ding_name ding_name_' + (i + 1) + '"><td style="width: 120px;text-indent:50px;" colspan="2" class="date_ding">订单编号：' + hao + '</td><td style="width: 320px;text-indent:60px;" colspan="5" class="ding_from"><a href="">中酒自营</a></td></tr><tr style="width: 1018px;height: 30px;background-color: #EFF2F5;text-align: right;" class="bottom_part"><td colspan="7"><span class="amount_goods_num' + i + '" style="color: red;"></span>件商品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />总计(不含运费)：￥<span class="amount_money_a">' + data[i].orderAllMoney + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>').appendTo($(".table_box1"));
                 //订单详情
                 var data1 = data[i].orderAndWines;
                 console.log(data1);
-                for(var j = 0;j<data1.length;j++){
+                for (var j = 0; j < data1.length; j++) {
 //				console.log(data1[j].wine.wineName);
                     var jiu_true = data1[j].wine;
                     console.log(jiu_true.wineName);
-                    console.log("酒的id："+jiu_true.wid);
+                    console.log("酒的id：" + jiu_true.wid);
                     countss += data1[j].wine_count;
-                    $(".ding_name_"+(i+1)+"").after($('<tr class="display_show"><td style="width: 371px;height: 152px;" colspan="2"><div class="ding_pic"><a href="<%=basePath%>/wine/goods.do?wid='+jiu_true.wid+'"><img src="<%=basePath%>/resource/views/img/'+jiu_true.wineImg1+'"/></a><br /><img src="<%=basePath%>/resource/views/img/ljp_52.jpg"/></div><p><a href="<%=basePath%>/wine/goods.do?wid='+jiu_true.wid+'">'+jiu_true.wineDegree+'°'+jiu_true.wineName+' '+jiu_true.wineLiter+'（两瓶装）</a></p></td><td class="size"><span class="ding_pri">￥'+jiu_true.winePrice+'</span>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<span class="ding_amount">'+data1[j].wine_count+'</span></td><td class="size" colspan="2">条形码：'+jiu_true.wineBianhao+'</td><td class="size amount_money">￥<span>'+(jiu_true.winePrice*data1[j].wine_count)+'</span></td><td class="size look_info"><span>已完成</span><br /><span><a href="">查看详情</a></span></td></tr>'));
+                    $(".ding_name_" + (i + 1) + "").after($('<tr class="display_show"><td style="width: 371px;height: 152px;" colspan="2"><div class="ding_pic"><a href="<%=basePath%>/wine/goods.do?wid=' + jiu_true.wid + '"><img src="<%=basePath%>/resource/views/img/' + jiu_true.wineImg1 + '"/></a><br /><img src="<%=basePath%>/resource/views/img/ljp_52.jpg"/></div><p><a href="<%=basePath%>/wine/goods.do?wid=' + jiu_true.wid + '">' + jiu_true.wineDegree + '°' + jiu_true.wineName + ' ' + jiu_true.wineLiter + '（两瓶装）</a></p></td><td class="size"><span class="ding_pri">￥' + jiu_true.winePrice + '</span>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<span class="ding_amount">' + data1[j].wine_count + '</span></td><td class="size" colspan="2">条形码：' + jiu_true.wineBianhao + '</td><td class="size amount_money">￥<span>' + (jiu_true.winePrice * data1[j].wine_count) + '</span></td><td class="size look_info"><span>已完成</span><br /><span><a href="">查看详情</a></span></td></tr>'));
                 }
                 console.log(countss)
-                $(".amount_goods_num"+i).html(countss)
-                countss=0;
+                $(".amount_goods_num" + i).html(countss)
+                countss = 0;
             }
         }
     })

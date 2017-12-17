@@ -20,7 +20,7 @@
     <!--logo和进度条-->
     <div class="head">
         <div class="logo">
-            <a href=""><img src="<%=basePath%>/resource/views/Ljp_Shopcar_Check/img/check_info1.jpg"/></a>
+            <a href="<%=basePath%>/resource/views/html/lkl_index.jsp"><img src="<%=basePath%>/resource/views/Ljp_Shopcar_Check/img/check_info1.jpg"/></a>
         </div>
         <div class="info">
             <img src="<%=basePath%>/resource/views/Ljp_Shopcar_Check/img/check_info2.png"/>
@@ -203,12 +203,12 @@
         type: "get",
         url: "<%=basePath%>/orders/findWines.do",
         data: {
-            userPhone: 18395592587
+            userPhone: ${user1.userPhone}
         },
         success: function (data) {
             for (var i = 0; i < data.length; i++) {
                 $("<div class='sell_info'><div class='sell_img'><a href=''><span class='img_wid' style='display:none;'>" + data[i].wines.wid + "</span><img class='dingdantu' src='<%=basePath%>/resource/views/img/" + data[i].wines.wineImg1 + "' alt='' /></a></div>" +
-                    "<div class='info_a2'><p><a href=''>" + data[i].wines.wineDegree + "°" + data[i].wines.wineName + " " + data[i].wines.wineLiter + "</a></p><p>商品货号：<small>" + data[i].wines.wineBianhao + "</small></p>" +
+                    "<div class='info_a2'><p><a style='overflow:hidden;white-space:nowrap;' href=''>" + data[i].wines.wineDegree + "°" + data[i].wines.wineName + " " + data[i].wines.wineLiter + "</a></p><p>商品货号：<small>" + data[i].wines.wineBianhao + "</small></p>" +
                     "</div><div class='sd'><img src='<%=basePath%>/resource/views/Ljp_Shopcar_Check/img/check_info.jpg' alt='' /></div>" +
                     "<div class='price'>￥<span class='univalent'>" + data[i].wines.winePrice + "</span></div>" +
                     "<div class='num'>x<span class='univalent_count'>" + data[i].counts + "</span></div></div>").appendTo($(".goods_sell"));
@@ -268,7 +268,7 @@
     ////
     //先获取所有后台地址信息
     $.ajax({
-        url: "<%=basePath%>/orders/findWuliu.do?userPhone=18395592587",
+        url: "<%=basePath%>/orders/findWuliu.do?userPhone=${user1.userPhone}",
         type: "get",
         data: {},
         success: function (data) {
@@ -350,7 +350,7 @@
                             ShouhuoAdress: area1,
                             XiangxiAdress: area2,
                             ShouhuoPhone: phone,
-                            userPhone: 18395592587
+                            userPhone: ${user1.userPhone}
                             //				user_id:"",//这个不知道填什么❓❓❓
                         },
                         success: function (data) {
@@ -462,7 +462,7 @@
                 //就把电话号码传送到后台数据库
                 $.ajax({
                     type: "get",
-                    url: "<%=basePath%>/orders/findCars.do?userPhone=18395592587",
+                    url: "<%=basePath%>/orders/findCars.do?userPhone=${user1.userPhone}",
                     data: {},
                     success: function (data) {
                         console.log(data)
@@ -552,7 +552,7 @@
                 OrderScore: $(".jifen").html(),
                 OrderYunfei: $(".yunfei").html(),
                 Adress_id: $(".xuanze:checked").val(),
-                userPhone: 18395592587
+                userPhone: ${user1.userPhone}
             },
             success: function (data) {
                 if (data) {

@@ -20,7 +20,7 @@
 </div>
 <div class="content">
     <div class="jindu pr">
-        <a class="pa jindu_pa_a" href=""><img src="<%=basePath%>/resource/views/zhifu/img/download.png"/></a>
+        <a class="pa jindu_pa_a" href="<%=basePath%>/resource/views/html/lkl_index.jsp"><img src="<%=basePath%>/resource/views/zhifu/img/download.png"/></a>
         <div class="pa jindu_pa_img">
             <img class="" src="<%=basePath%>/resource/views/zhifu/img/step1.png"/>
             <div class="progress_zhifu">
@@ -63,7 +63,7 @@
         </div>
     </div>
     <div style="top:10px;position: relative;">
-        <button class="xiayibu">下一步</button>
+        <a href="<%=basePath%>/resource/views/zhifu/html/querenzhifu.jsp"><button class="xiayibu">下一步</button></a>
     </div>
 </div>
 <div id="ss">
@@ -86,47 +86,12 @@
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript">
-    $(".xiayibu").click(function () {
-        $("#ss").css("display", "block");
-    })
-    $(".ss_box_bottom_right_btn").click(function () {
-        $("#ss").css("display", "none");
-    })
-    $(".ss_box_top_right").click(function () {
-        $("#ss").css("display", "none");
-    })
-    $(".ss_box_bottom_left_btn").click(function () {
-        $.ajax({
-            url: "<%=basePath%>/orders/ShifouZhifu.do",
-            type: "get",
-            async: true,
-            data: {
-                userPhone: 18395592587
-            },
-            success: function (data) {
-                $(".ss_po").css("display", "block");
-                $(".ss_box_bottom_left_btn").css("display", "none");
-                $(".ss_box_bottom_left_btn").css("display", "none");
-            }
-        });
-        $.ajax({
-            url: "<%=basePath%>/orders/clearCar.do",
-            type: "get",
-            async: true,
-            data: {
-                userPhone: 18395592587
-            },
-            success: function (data) {
-            }
-        });
-    })
-
     $.ajax({
         url: "<%=basePath%>/orders/findAllMoney.do",
         type: "get",
         async: true,
         data: {
-            userPhone: 18395592587
+            userPhone: ${user1.userPhone}
         },
         success: function (data) {
             $(".totalprice").html(data)

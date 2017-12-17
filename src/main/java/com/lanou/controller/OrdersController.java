@@ -59,7 +59,6 @@ public class OrdersController {
 //            获取总价
 //            根据订单号找到对应商品
             List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
-            List<Wine> wines = new ArrayList<Wine>();
             for (int i = 0; i < orderAndWines.size(); i++) {
                 Wine wine = wineService.findWineByWineId(orderAndWines.get(i).getWine_id());
                 orderAndWines.get(i).setWine(wine);

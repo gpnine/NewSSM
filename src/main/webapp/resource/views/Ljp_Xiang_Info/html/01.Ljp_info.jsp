@@ -17,10 +17,8 @@
     <title>01.商品详情页</title>
 </head>
 <body>
-<div class="header"></div>
-<!--上方的红线-->
-<div class="red_line"></div>
-<!--头部-->
+<header></header>
+<div class="pl_nav_slider"></div>
 <!--显示框-->
 <div class="null"></div>
 <div id="head_part">
@@ -152,9 +150,9 @@
             <div class="search">
                 <div class="search_name">本店搜索</div>
                 <div class="search_info">
-                        关键字 <input class="keyword" type="text" name="wineName"/><br/>
-                        价&nbsp;&nbsp;&nbsp;格 <input type="text" class="beg"/> - <input type="text" class="end"/>
-                        <button class="search_btn" >搜索</button>
+                    关键字 <input class="keyword" type="text" name="wineName"/><br/>
+                    价&nbsp;&nbsp;&nbsp;格 <input type="text" class="beg"/> - <input type="text" class="end"/>
+                    <button class="search_btn">搜索</button>
                 </div>
 
             </div>
@@ -473,7 +471,9 @@
 
 </div>
 </div>
-<div class="footer"></div>
+<!-- 底部 -->
+<footer style="margin-top: 9130px">
+</footer>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/html/jquery-3.2.1.min.js"></script>
 <script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/frame.js"></script>
@@ -483,12 +483,16 @@
 <script src="<%=basePath%>/resource/views/Ljp_Xiang_Info/js/cityselect.js"></script>
 
 <script>
-    $(".footer").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/footer.jsp")
-    $(".header").load("<%=basePath%>/resource/views/Ljp_FirstPage_All2/headAndfoot_html/header.jsp")
+    //加载头部
+    $("header").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/header.jsp");
+    // 加载尾部
+    $("footer").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/footer.jsp");
+    //加载导航栏
+    $(".pl_nav_slider").load("<%=basePath%>/resource/views/zhongjiu-huichang/html/nav_slider.jsp");
+    //
     //大小图的切换
     var picArr = ["<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg2()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg3()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg4()}", "<%=basePath%>/resource/views/img/${wineInfo.getWineImg5()}"];
 
-    //var picArr = ["../img/ljp_24.jpg","../img/ljp_25.jpg","../img/ljp_26.jpg","../img/ljp_27.jpg","../img/ljp_28.jpg"];
 
     //鼠标移入小图，对应border显示
     //大图切换成小图的放大版
@@ -509,44 +513,41 @@
     var scrollTop = 0;
     $(window).scroll(function () {
         scrollTop = $(this).scrollTop();
-        console.log(scrollTop);
     })
-    $('.btn2').on('click', addProduct);
-    function addProduct(event) {
+    <%--$('.btn2').on('click', addProduct);--%>
+    <%--function addProduct(event) {--%>
+
+    <%--var offset = $('.paowuxian').offset(), flyer = $("<img style='position:absolute;' src='<%=basePath%>/resource/views/Ljp_Xiang_Info/img/ljp_24.jpg' alt='' class='divsss' />");--%>
 
 
-        var offset = $('.paowuxian').offset(), flyer = $("<img style='position:absolute;' src='<%=basePath%>/resource/views/img/${wineInfo.getWineImg1()}' alt='' class='divsss' />");
+    <%--flyer.fly({--%>
+    <%--// 初始位置--%>
+    <%--start: {--%>
+
+    <%--left: event.pageX - 120,--%>
+
+    <%--top: event.pageY - scrollTop - 30--%>
+
+    <%--},--%>
+    <%--// 结束位置--%>
+    <%--end: {--%>
+
+    <%--left: offset.left - 70,--%>
+
+    <%--top: offset.top - scrollTop - 5,--%>
+
+    <%--width: 0,--%>
+
+    <%--height: 0--%>
+
+    <%--}--%>
+
+    <%--});--%>
+
+    <%--}--%>
 
 
-        flyer.fly({
-            // 初始位置
-            start: {
-
-                left: event.pageX - 120,
-
-                top: event.pageY - scrollTop - 30
-
-            },
-            // 结束位置
-            end: {
-
-                left: offset.left - 70,
-
-                top: offset.top - scrollTop - 5,
-
-                width: 0,
-
-                height: 0
-
-            }
-
-        });
-    }
-
-
-    var btn2 = document.getElementsByClassName("btn2")[0];
-    // var num = document.getElementsByClassName("num")[0].innerHTML;
-    $(btn2).click(function () {
+    $(".btn2").click(function () {
         $.ajax({
             method: "get",
             url: "addCars.do",
@@ -569,9 +570,9 @@
     }
 
 
-    $("<ol style='padding:0 15px'><li><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div></li><li><div style='width:190px;height:50px;background:white;padding:10px 0;'><ol><li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'><div>0</div><div style='white-space:nowrap;'>我的积分</div></li><li style='float:right;width:84px;height:50px;text-align:center'><div>0</div><div style='white-space:nowrap;'>优惠劵</div></li><ol></div></li><li style='white-space:nowrap; color:white;'>已领取的优惠劵</li></ol> <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right2"));
-    $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right3"));
-    $("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right4"));
+    <%--$("<ol style='padding:0 15px'><li><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>资产中心</div></li><li><div style='width:190px;height:50px;background:white;padding:10px 0;'><ol><li style='float:left;width:95px;height:50px;border-right:1px dotted gray;text-align:center'><div>0</div><div style='white-space:nowrap;'>我的积分</div></li><li style='float:right;width:84px;height:50px;text-align:center'><div>0</div><div style='white-space:nowrap;'>优惠劵</div></li><ol></div></li><li style='white-space:nowrap; color:white;'>已领取的优惠劵</li></ol> <img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right2"));--%>
+    <%--$("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>关注商品</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right3"));--%>
+    <%--$("<div style='padding:5px 15px;'><div class='chexiao' style='position:absolute; color:white;cursor:pointer;'>&gt;&gt;</div><div style='margin-left:65px;white-space:nowrap; color:white;'>浏览历史</div></div><img class='lanonloads' src='<%=basePath%>/resource/views/img/21.gif' style='display:none;position:absolute; width:60px; left:calc(50% - 30px)'/>").appendTo($(".gouwuche_right4"));--%>
 
 
     $.ajax({
@@ -583,7 +584,6 @@
             userPhone:${user1.userPhone}
         },
         success: function (data) {
-            console.log(data);
             if (data.shopId == "") {
                 $("#inp1").click(function () {
                     $(".inpcounts").prop("checked", this.checked);
@@ -612,13 +612,10 @@
 
                 //获取后台数据进行创建购物车商品
                 $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox' checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
-                console.log(data);
-                console.log(data.shopId);
 
 
                 $(".gouwushuliang").html(function () {
                     var countss = 0;
-                    console.log($(".inpcount").length)
                     $(".inpcount").siblings(".s_sum").each(function (index, el) {
                         countss += parseInt(el.innerHTML);
                     })
@@ -637,7 +634,7 @@
                     $("#inp1").prop("checked", $('.inpcount:checked').length == $('.inpcount').length);
                     change();
                 })
-                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></a></div>").appendTo($(".gouwuche_right1"));
+                $("<div style='position: absolute;bottom:0;padding:10px 15px;width:190px'><div style='float:left'><span>已选</span></div><div style='float:right ;color:red;'><span></span><span class='prices'>0</span></div><a href='<%=basePath%>/resource/views/gouwuche/html/lkl_gouwuchejiesuan.jsp'><div style='margin-top:30px;height:40px;background:red;color:white;text-align:center;line-height:40px;'>购物车结算</div></a></div>").appendTo($(".gouwuche_right1"));
                 // prices总价 titalprice单个商品的总价 s_sum 每个商品的数量
                 function change() {
                     $(".counts").html(function () {
@@ -662,6 +659,7 @@
                         return countss;
                     })
                 }
+
                 change();
             }
         }
@@ -684,23 +682,20 @@
     })
 
 
-$(".search_btn").click(function () {
-    var keyword= document.getElementsByClassName("keyword")[0].value;
-    $.ajax({
-        method:"post",
-        url:"<%=basePath%>/wine/find.do",
-        data:{
-            wineName:keyword,
-        },
-        success:function (data) {
-            window.location.href = '<%=basePath%>/resource/views/Ljp_Xiang_Info/benDianSoSuo/html/szz_shangpingSearch.jsp?wineName='+keyword;
-        }
+    $(".search_btn").click(function () {
+        var keyword = document.getElementsByClassName("keyword")[0].value;
+        $.ajax({
+            method: "post",
+            url: "<%=basePath%>/wine/find.do",
+            data: {
+                wineName: keyword,
+            },
+            success: function (data) {
+                window.location.href = '<%=basePath%>/resource/views/Ljp_Xiang_Info/benDianSoSuo/html/szz_shangpingSearch.jsp?wineName=' + keyword;
+            }
+        })
+
     })
-
-})
-
-
-
 
 
 </script>

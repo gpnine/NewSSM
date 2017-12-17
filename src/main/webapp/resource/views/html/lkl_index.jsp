@@ -146,7 +146,7 @@
 <div id="" style="position: relative;width:1190px;margin:0 auto;">
     <div class="side_nav_slider_left"></div>
     <div class="small_banner">
-        <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_qingkejiu.jsp">
+        <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/zhongjiu-Shopping-wuliangye.jsp">
             <img class="lazyload1" src="http://img6.zhongjiu.cn/resourceb2b2c/Storage/Plat/ImageAd/201709121117114935610.jpg"/>
         </a>
         <a href="<%=basePath%>/resource/views/zhongjiu-huichang/html/szz_baijiuzhuanqu.jsp">
@@ -1074,7 +1074,7 @@
         async: true,
         success: function (data) {
             for (j in data) {
-                $("<li class='side-item'><a class='sidenav-list_one' href='http://www.zhongjiu.cn/list/2-0-0-1-1-1.htm'>"
+                $("<li class='side-item'><a class='sidenav-list_one'>"
                     + "<img style='width=12px;height=20px' class='iconTu' src='<%=basePath%>/resource/views/img/bzimg/xiao"
                     + j + ".png' alt=''>"
                     + data[j].shopName + "</a><a class='sidenav-list_two sange"
