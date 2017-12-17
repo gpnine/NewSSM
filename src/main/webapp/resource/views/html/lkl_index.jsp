@@ -983,6 +983,9 @@
             for (i in data) {
                 $("<img src='<%=basePath%>/" + data[i].bannerSrc + "'/>").appendTo($(".lunbotu" + i));
             }
+            for(var u=0;u<6;u++){
+
+            }
 
 //=======================================================================================================
             // 幻灯片
@@ -1658,7 +1661,6 @@
         },
         success: function (data) {
             if (data.shopId == "") {
-//                    $("<div class='zhongjiu_goods' style='background:white;padding:0 15px;width:190px'><div><input type='checkbox'  checked='checked' class='inpcounts'/><span>中酒自营</span><span class='prices' style='float:right'>0</span></div><ol class='ols'></ol></div>").appendTo($(".gouwuche_right1"));
                 $("#inp1").click(function () {
                     $(".inpcounts").prop("checked", this.checked);
                     $(".inpcount").prop("checked", this.checked);
@@ -1683,9 +1685,6 @@
                     $(".chakan").css("color", "black");
                 })
 
-                //                    for(i in data){
-//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='"+data[i].shopImg+"'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+data[i].parentId+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+data[i].shopId+"</span></li>").appendTo($(".ols"));
-//                    }
 
                 $(".gouwushuliang").html(function () {
                     var countss = 0;
@@ -1695,23 +1694,7 @@
                     return countss;
 
                 })
-//                    $(".btn2").click(function(){
-//                        //判断购物车中有没有此商品
-//                        //有 查到此产品，在数量上加上新添加的数量
-//                        //查询购物车数据库
-//                        $("<li style='position:relative;margin-bottom:5px;'><input type='checkbox' checked='checked' class='inpcount'/><img style='vertical-align:middle;width:40px;' src='img/0.jpg'/><div class='s_sum' style='width:20px;height:20px;background:red;color:white;text-align:center;line-height:20px;font-size:12px;white-space:nowrap;position:absolute;left:100px;top:8px;'>"+$('.num').html()+"</div><span class='titalprice' style='float:right; margin-top:8px;'>"+$('.pri').html()+"</span></li>").appendTo($(".ols"));
-//
-//                        $(".gouwushuliang").html(function(){
-//                            var countss = 0;
-//                            $(".inpcount").siblings(".s_sum").each(function(index, el) {
-//                                countss += parseInt(el.innerHTML);
-//                            })
-//                            return countss;
-//
-//                        })
-//                        change();
-//
-//                    })
+
 
 
                 $(".inpcounts").click(function () {

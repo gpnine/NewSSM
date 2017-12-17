@@ -48,5 +48,6 @@ public interface OrdersMapper {
     //插入地址
     public int insertAdress(WuliuAdress wuliuAdress);
 
+    public List<Orders> dingdan();
 
 }

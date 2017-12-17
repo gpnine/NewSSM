@@ -1,9 +1,7 @@
 package com.lanou.controller;
 
 import com.lanou.entity.*;
-import com.lanou.service.AdminService;
-import com.lanou.service.CarService;
-import com.lanou.service.IndexService;
+import com.lanou.service.*;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +13,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -25,44 +24,73 @@ public class AdminController {
     private AdminService adminService;
     @Resource
     private IndexService indexService;
+    @Resource
+    private OrdersService ordersService;
+    @Resource
+    private WineService wineService;
 
 
     @RequestMapping("/adminLogin.do")
     public String adminLogin(String userPhone, String password, HttpSession session) {
 
-       boolean result = adminService.adminLogin(userPhone, password);
+        boolean result = adminService.adminLogin(userPhone, password);
 
-       if(result){
-           List<AdminFunction> list = adminService.adminFunction();
-           session.setAttribute("Afun", list);
+        if (result) {
+            List<AdminFunction> list = adminService.adminFunction();
+            session.setAttribute("Afun", list);
 
-           List<Banner> banners = indexService.index();
-           session.setAttribute("Banner",banners);
+            List<Banner> banners = indexService.index();
+            session.setAttribute("Banner", banners);
 
-           List<Wine> wines = adminService.showWine();
-           session.setAttribute("wines",wines);
-
-
-           List<Shop> shops = adminService.showShop();
-           session.setAttribute("shops",shops);
+            List<Wine> wines = adminService.showWine();
+            session.setAttribute("wines", wines);
 
 
-           return "Admin/bms_html/BMS";
-       }
-       return "Admin/bms_html/bms_login";
+            List<Shop> shops = adminService.showShop();
+            session.setAttribute("shops", shops);
+
+
+            List<Orders> orders = ordersService.dingdan();
+            for (int j = 0; j < orders.size(); j++) {
+//            获取订单号
+                int orderId = orders.get(j).getOrderId();
+//            获取总价
+//            根据订单号找到对应商品
+                List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
+                for (int i = 0; i < orderAndWines.size(); i++) {
+                    Wine wine = wineService.findWineByWineId(orderAndWines.get(i).getWine_id());
+                    orderAndWines.get(i).setWine(wine);
+                }
+                orders.get(j).setOrderAndWines(orderAndWines);
+                System.out.println("asd");
+            }
+            System.out.println("orders:"+orders);
+            session.setAttribute("orders",orders);
+            return "Admin/bms_html/BMS";
+        }
+        return "Admin/bms_html/bms_login";
     }
+
+
+    public void as(){
+
+    }
+
 
 
 
     @RequestMapping(value = "/addBanner.do")
     public String addBanner(HttpSession session,MultipartFile myFile,String bannerSrc ) {
-        File files = new File("/Users/lanou/Desktop/zjw/NewSSM/src/main/webapp/resource/views/img/Banner_img/"+bannerSrc);
-        try {
-            FileUtils.copyInputStreamToFile(myFile.getInputStream(),files);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        boolean result = adminService.addBanner("resource/views/img/Banner_img/"+bannerSrc);
+//        File files = new File("/Users/lanou/Desktop/zjw/NewSSM/src/main/webapp/resource/views/img/Banner_img/"+bannerSrc);
+//        try {
+//            FileUtils.copyInputStreamToFile(myFile.getInputStream(),files);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        boolean result = adminService.addBanner("resource/views/img/Banner_img/"+bannerSrc);
+
+        boolean result = adminService.addBanner("/usr/local/apache-tomcat-7.0.77/webapps/NewSSM/resource/views/lunbotu/"+bannerSrc);
+
         List<AdminFunction> list = adminService.adminFunction();
         session.setAttribute("Afun", list);
         List<Banner> banners = indexService.index();

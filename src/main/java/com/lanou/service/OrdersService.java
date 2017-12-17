@@ -40,4 +40,7 @@ public interface OrdersService {
 
     public int DeleteAdress(Integer xId);
 
+
+    public List<Orders> dingdan();
+
 }

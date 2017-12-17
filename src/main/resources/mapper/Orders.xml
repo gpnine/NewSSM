@@ -81,4 +81,10 @@
         insert into zhongjiu_order_shouhuoren (ShouhuoName,ShouhuoAdress,XiangxiAdress,ShouhuoPhone,UserPhone)
         values (#{ShouhuoName},#{ShouhuoAdress},#{XiangxiAdress},#{ShouhuoPhone},#{UserPhone});
     </insert>
+
+
+    <select id="dingdan" resultMap="OrdersResult">
+        select * from zhongjiu_order;
+    </select>
+
 </mapper>
