@@ -981,7 +981,7 @@
                 $("<li><a class='lunbotu" + j + "'></a></li>").appendTo($(".fade"));
             }
             for (i in data) {
-                $("<img src='<%=basePath%>/" + data[i].bannerSrc + "'/>").appendTo($(".lunbotu" + i));
+                $("<img style='height:514px' src='<%=basePath%>/" + data[i].bannerSrc + "'/>").appendTo($(".lunbotu" + i));
             }
             for(var u=0;u<6;u++){
 

@@ -9,8 +9,8 @@
 	%>
 		<meta charset="UTF-8">
 		<title>登录页</title>
-		<link rel="stylesheet" type="text/css" href="../css/szz_login.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/szz_base.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/css/szz_login.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>/resource/views/css/szz_base.css"/>
 	</head>
 	<body>
 		<div id="logo">
@@ -47,15 +47,15 @@
 					</div>
 					<div class="login_right_bottom">
 						<div>
-							<a href="###"><img src="../img/qq.png" height="22px" width="20"/></a>
+							<a href="###"><img src="<%=basePath%>/resource/views/img/qq.png" height="22px" width="20"/></a>
 							<a href="###">QQ</a>
 						</div>
 						<div>
-							<a href="###"><img src="../img/weibo.png"/></a>
+							<a href="###"><img src="<%=basePath%>/resource/views/img/weibo.png"/></a>
 							<a href="###">微博</a>
 						</div>
 						<div>
-							<a href="###"><img src="../img/weixin.png"/></a>
+							<a href="###"><img src="<%=basePath%>/resource/views/img/weixin.png"/></a>
 							<a href="###">微信</a>
 						</div>
 						<div style="border: none;text-align: center;">
@@ -67,6 +67,6 @@
 		</div>
 		<div class="banquan">Copyright © 2017   中酒网 版权所有</div>
 	</body>
-	<script src="../js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="../js/szz_login.js"></script>
+	<script src="<%=basePath%>/resource/views/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="<%=basePath%>/resource/views/js/szz_login.js"></script>
 </html>
