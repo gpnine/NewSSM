@@ -1,0 +1,157 @@
+.side_nav_slider_top{
+	width: 1200px;
+	height: 35px;
+	margin: 0 auto;
+}
+.cate_all_side_nav_small_banner{
+	width: 200px;
+	/*height: 553px;*/
+	/*margin-left: 9.5%;*/
+}
+.side_nav_slider_top .cate-all{
+	display: inline-block;
+	width: 198px;
+	height: 35px;
+	border: 1px solid red;
+	background: red;
+	line-height: 35px;
+	font-size: 17px;
+	color: white;
+}
+.item a{
+	font-size: 15px;
+}
+.cate-all img{
+	margin-left: 20px;
+}
+.cate-all a{
+	margin-left: 10px;
+}
+.side_nav_slider_top .item{
+	margin-left: 80px;
+}
+.side_nav_slider_top .item .item_one{
+	color: red;
+}
+.side_nav_slider_top .cate-all a{
+	color: white;
+}
+.side_nav_slider_top .item a:hover{
+	color: red;
+}
+.children-nav-left{
+	color: #313131;
+	font-weight: bold;
+}
+.side_nav_slider{
+	position: absolute;
+	/*z-index: 50;*/
+
+
+}
+/* 侧边导航 */
+.side-nav {
+	width: 200px;
+	display: none;
+	z-index: 1;
+	position: relative;
+	top:-2px;
+}
+.sidenav-list {
+	position: relative;
+	padding: 15px 0px;
+	background: rgb(61,72,81);
+}
+.side-item img{
+	position: relative;
+	top: 5px;
+}
+.children-nav a {
+	position: relative;
+	display: block;
+	color: #fff;
+	padding-left: 20px;
+	height: 40.5px;
+	line-height: 40px;
+	margin-left: 15px;
+}
+.sidenav-list_one{
+	position: relative;
+	display: block;
+	color: #fff;
+	padding-left: 20px;
+	height: 40.5px;
+	line-height: 40px;
+	font-size: 16px;
+}
+.sidenav-list_two{
+	position: relative;
+	display: block;
+	color: #fff;
+	padding-left: 20px;
+	height: 40.5px;
+	line-height: 40px;
+	font-size: 13px;
+}
+.side-item .iconfont {
+	position: absolute;
+	right: 20px;
+	color: #b2b2b2;
+}
+.sidenav-list_two a{
+	margin-left: 5px;
+	color: white;
+}
+.sidenav-list_two .pl_active{
+	background-color: white;
+	color: rgb(61,65,65);
+}
+.side-item:hover {
+	background-color: rgb(61,65,65);
+}
+.side-item:hover  .children-nav {
+	display: block;
+}
+/* 子导航 */
+.children-nav {
+	display: none;
+	position: absolute;
+	left: 200px;
+	top: 0;
+	width: 780px;
+	height: 515px;
+	border: 1px solid #e0e0e0;
+	background: #fff;
+	box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+.children-right{
+	width: 180px;
+	height: 513px;
+	border:  1px solid #f7f7f7;
+	float: right;
+	/*margin-top: -459px;*/
+	text-align: center;
+}
+.children-right_3 {
+	margin-top: -305px;
+}
+.children-nav span{
+	display: block;
+	width: 518px;
+	height: 50px;
+	margin-left: 35px;
+	border-bottom: 1px solid black;
+	line-height: 50px;
+}
+.children-list {
+	width: 540px;
+	height: 102px;
+}
+.children-list li{
+	height: 30px;
+	position: relative;
+	float: left;
+}
+.children-list .link {
+	color: rgb(102,102,102);
+}

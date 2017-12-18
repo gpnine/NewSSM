@@ -1,0 +1,334 @@
+body{
+	/*background: red;*/
+	margin: 0;
+	padding: 0;
+}
+.content{
+	margin: 0 ;
+	padding: 0;
+	width: 100%;
+	background: white;
+	position: relative;
+}
+.content .side_left,.content .side_right{
+	position: fixed;
+	top: 300px;
+	z-index: 1;
+	display: none;
+}
+.content .side_left{
+	left: 20px;
+	width: 120px;
+	height: 493px;
+	border-radius: 65px;
+	text-align: center;
+	border: 3px solid white;
+	background: linear-gradient(to top,#ff6166 10%,#b20310 90%);
+}
+.content .side_left a:first-of-type{
+	margin-top: 35px;
+}
+.content .side_left a{
+	width: 112px;
+	height: 30px;
+	font-size: 14px;
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	border-bottom:1px dashed white;
+}
+.content .side_left a:nth-of-type(8) ~a{
+	border: none;
+}
+
+.content .side_right{
+	right: 0;
+	width: 140px;
+	height: 429px;
+	text-align: center;
+	border: 1px solid white;
+	background: url(http://img5.zhongjiu.cn/pro/hy_9/you.png) 0 0/100% 100% no-repeat;
+}
+.content .side_right a{
+	display: inline-block;
+	text-decoration: none;
+	/*border: 1px solid black;*/
+	width: 130px;
+	height: 30px;
+}
+.content .side_right a:first-of-type{
+	margin-top: 170px;
+}
+.content .side_right a:last-of-type{
+	height: 55px;
+}
+.content_top{
+	width: 100%;
+	text-align: center;
+	height: 530px;background: darkorange;
+}
+.content_middle{
+	/*margin-top: -5px;*/
+	background: white;
+}
+.content_middle>div>div{
+	width: 1180px;
+	margin: 0 auto;
+}
+.lingquan{
+	height: 169px;
+	width: 1180px;
+	margin: 0 auto;
+	background:url(http://img5.zhongjiu.cn/pro/tyd/tyd2_1.jpg) 0 0/100% no-repeat;
+}
+.quan{
+	width: 1180px;
+	height: 187px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.quan img{
+	font-size: 0;
+}
+.quan img:nth-of-type(2){
+	margin: 0 -5px;
+}
+.quan img:nth-of-type(3){
+	margin-left: -1px;
+}
+.quan:hover{
+	cursor: pointer;
+}
+.baokuan{
+	width: 1180px;
+	margin: 0 auto;
+	height: 177px;
+}
+.jingqiubaokuan_bigPic{
+	width: 1180px;
+	margin: 0 auto;
+}
+.jingqiubaokuan_bigPic a{
+	display: inline-block;
+	position: relative;
+	margin-bottom: 5px;
+	width: 1178px;
+	height: 391px;
+}
+.jingqiubaokuan_bigPic a img{
+	width: 1178px;
+	height: 391px;
+}
+.jingqiubaokuan_bigPic a span{
+	text-decoration: none;
+	color: red;
+	font-size: 54px;
+	font-weight: bold;
+	position: absolute;
+	z-index: 2;
+}
+.jingqiubaokuan_bigPic a:nth-of-type(1) span,.jingqiubaokuan_bigPic a:nth-of-type(2) span{
+	top: 210px;
+	left: 140px;
+}
+
+/**/
+.jingqiubaokuan_midPic{
+	display: flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	width: 1180px;
+	margin: 0 auto;
+}
+.jingqiubaokuan_midPic a{
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+.jingqiubaokuan_midPic a img{
+	width: 580px;
+	height: 360px;
+}
+.jingqiubaokuan_midPic a:nth-of-type(2n+1){
+	margin-right: -2px;
+}
+.jingqiubaokuan_midPic a span{
+	position: absolute;
+	text-decoration: none;
+	bottom: 95px;
+	z-index: 2;
+	left: 443px;
+	font-weight: bold;
+	font-size: 44px;
+	color: red;
+}
+.jingqiubaokuan_smallPic{
+	display: flex;
+	width: 1180px;
+	margin: 0 auto;
+	flex-flow:row wrap;
+	justify-content: space-between;
+}
+.jingqiubaokuan_smallPic a{
+	width: 393px;
+	height: 438px;
+	border: 1px solid lightgrey;
+	text-align: center;
+	box-sizing: border-box;
+	margin-bottom: 4px;
+	background: white;
+	position: relative;
+}
+.jingqiubaokuan_smallPic a img{
+	width: 390px;
+	height: 348px;
+}
+.jingqiubaokuan_smallPic a .price{
+	position: absolute;
+	bottom: 15px;
+	z-index: 2;
+	left: 80px;
+	font-weight: bold;
+	font-size: 28px;
+	color: red;
+}
+.jingqiubaokuan_smallPic a .jieshao{
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+	position: absolute;
+	display: inline-block;
+	width: 392px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	bottom:65px;
+	left: 12px;
+}
+.jingqiubaokuan_smallPic a .goumaiPic{
+	display: inline-block;
+	width: 76px;
+	height: 26px;
+	color: white;
+	font-size: 13px;
+	border-radius:5px ;
+	text-align: center;
+	line-height: 26px;
+	position: absolute;
+	right: 100px;
+	bottom: 22px;
+	background:red;
+}
+.jingqiubaokuan_ssPic{
+	display: flex;
+	width: 990px;
+	margin: 0 auto;
+	flex-flow:row wrap;
+	justify-content: space-between;
+}
+.jingqiubaokuan_ssPic a{
+	display: inline-block;
+	width: 293px;
+	height: 398px;
+	text-align: center;
+	border: 1px solid lightgrey;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	background: white;
+	position: relative;
+	overflow: hidden;
+}
+.jingqiubaokuan_ssPic a img{
+	width: 292px;
+	height: 259px;
+}
+.jingqiubaokuan_ssPic a .price{
+	position: absolute;
+	bottom: 18px;
+	z-index: 2;
+	left: 60px;
+	font-weight: bold;
+	font-size: 26px;
+	color: red;
+}
+.jingqiubaokuan_ssPic a .jieshao{
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+	position: absolute;
+	display: inline-block;
+	width: 294px;
+	height: 26px;
+	text-align: center;
+	line-height: 26px;
+	bottom: 78px;
+	left: 12px;
+}
+.jingqiubaokuan_ssPic a .goumaiPic{
+	display: inline-block;
+	width: 76px;
+	height: 26px;
+	line-height: 26px;
+	color: white;
+	border-radius: 5px;
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	right: 52px;
+	bottom: 27px;
+	background:red;
+}
+.below_wrap1,.below_wrap3,.below_wrap5{
+	width: 1180px;
+	margin: 0 auto;
+	border: 1px solid lightgrey;
+	text-align: center;
+}
+.below_wrap2,.below_wrap4,.below_wrap6{
+	width: 100%;
+	background: rgb(245,245,245);
+}
+.below_wrap2_box,.below_wrap4_box,.below_wrap6_box{
+	width: 1180px;
+	margin: 0 auto;
+	text-align: center;
+}
+.below_wrap2_box img{
+	margin-bottom: -10px;
+}
+.below_wrap4_box img,.below_wrap6_box img{
+	margin-bottom: -5px;
+}
+.below_wrap3 img,.below_wrap5 img{
+	margin-bottom: -5px;
+}
+.pFix{
+	width: 100%;
+	height: 64px;
+	display:none;
+	background: #09112E;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+}
+.pFix_box{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 1180px;
+	height: 64px;
+	line-height: 64px;
+	margin: 0 auto;
+}
+.pFix_box a{
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+.pFix_box a:hover{
+	color:#4b5887;
+}
