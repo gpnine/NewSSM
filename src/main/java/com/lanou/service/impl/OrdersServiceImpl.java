@@ -40,7 +40,7 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.findWuliu(userPhone);
     }
 
-    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, String UserPhone) {
+    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, int OrderId) {
         Orders orders = new Orders();
         orders.setOrderPay(OrderPay);
         orders.setOrderAllMoney(OrderAllMoney);
@@ -49,7 +49,7 @@ public class OrdersServiceImpl implements OrdersService {
         orders.setOrderScore(OrderScore);
         orders.setOrderYunfei(OrderYunfei);
         orders.setAdress_id(Adress_id);
-        orders.setUserPhone(UserPhone);
+        orders.setOrderId(OrderId);
         int result = ordersMapper.updateOrders(orders);
         return result;
 
@@ -59,8 +59,8 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.findAdressId(order_id);
     }
 
-    public Orders findAllMoney(String userPhone) {
-        return ordersMapper.findAllMoney(userPhone);
+    public Orders findAllMoney(int order_id) {
+        return ordersMapper.findAllMoney(order_id);
     }
 
     public int ShifouZhifu(String userPhone) {
@@ -75,8 +75,8 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.yiZhifu(userPhone);
     }
 
-    public int insertOrder(String userPhone) {
-        return ordersMapper.insertOrder(userPhone);
+    public int insertOrder(Orders orders) {
+        return ordersMapper.insertOrder(orders);
     }
 
     public int insertWine(int order_id, int wine_id, int wine_count) {
@@ -104,7 +104,6 @@ public class OrdersServiceImpl implements OrdersService {
     public List<OrderAndWine> findWines(Integer order_id) {
         return ordersMapper.findWines(order_id);
     }
-
 
 
     public List<Orders> dingdan() {

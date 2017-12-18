@@ -9,9 +9,12 @@ import org.aspectj.weaver.ast.Or;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import sun.jvm.hotspot.debugger.Page;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -106,10 +109,10 @@ public class OrdersController {
     //找到订单中的酒
     @RequestMapping("/findWines.do")
     @ResponseBody
-    public List<Car> findWines(String userPhone, HttpServletResponse response) {
+    public List<Car> findWines(String userPhone, int orderId, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        Orders order = ordersService.weiZhifu(userPhone);
-        int orderId = order.getOrderId();
+//        Orders order = ordersService.weiZhifu(userPhone);
+//        int orderId = order.getOrderId();
         List<OrderAndWine> orderAndWines = ordersService.findWines(orderId);
         List<Car> cars = new ArrayList<Car>();
         for (int i = 0; i < orderAndWines.size(); i++) {
@@ -123,9 +126,9 @@ public class OrdersController {
     @RequestMapping("/updateOrders.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/updateOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50&Adresss_id=1
-    public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, String userPhone, HttpServletResponse response) {
+    public String insertOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, int orderId, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei, Adress_id, userPhone);
+        int result = ordersService.updateOrders(OrderPay, OrderAllMoney, OrderTicket, OrderText, OrderScore, OrderYunfei, Adress_id, orderId);
         if (result == 0) {
             return "false";
         } else {
@@ -137,13 +140,16 @@ public class OrdersController {
     @RequestMapping("/insertOrder.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertOrders.do?OrderPay=在线支付&OrderAllMoney=1000&OrderWineId=1001&UserId=1&OrderTicket=不需要发票&OrderText=老板你好帅&OrderScore=10&OrderYunfei=50
-    public String insertOrder(String userPhone, HttpServletResponse response) {
+    public int insertOrder(Orders orders, HttpServletResponse response, HttpServletRequest request, HttpSession session) {
         FastJson_Ali.toJson(response);
-        int result = ordersService.insertOrder(userPhone);
+        int result = ordersService.insertOrder(orders);
+        int orderId = orders.getOrderId();
+        request.setAttribute("orderId", orderId);
+        session.setAttribute("orderId1", orderId);
         if (result == 0) {
-            return "false";
+            return 0;
         } else {
-            return "true";
+            return orderId;
         }
     }
 
@@ -178,9 +184,9 @@ public class OrdersController {
     //显示总价格
     @RequestMapping("/findAllMoney.do")
     @ResponseBody
-    public double findAllMoney(String userPhone, HttpServletResponse response) {
+    public double findAllMoney(int orderId, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        Orders orders = ordersService.findAllMoney(userPhone);
+        Orders orders = ordersService.findAllMoney(orderId);
         double moneys = orders.getOrderAllMoney();
         return moneys;
     }
@@ -189,10 +195,10 @@ public class OrdersController {
     @RequestMapping("/insertWine.do")
     @ResponseBody
 //    http://10.80.13.161:8080/orders/insertWine.do?order_id=1&wine_id=1001
-    public String insertWine(String userPhone, String wineId, HttpServletResponse response) {
+    public String insertWine(String userPhone, String wineId, int orderId, HttpServletResponse response) {
         FastJson_Ali.toJson(response);
-        Orders order = ordersService.weiZhifu(userPhone);
-        int orderId = order.getOrderId();
+//        Orders order = ordersService.weiZhifu(userPhone);
+//        int orderId = order.getOrderId();
         String[] wineArr = wineId.split("\\-");
         int result = 0;
         for (int i = 0; i < wineArr.length; i++) {

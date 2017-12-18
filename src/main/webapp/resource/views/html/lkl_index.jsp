@@ -1078,7 +1078,7 @@
         success: function (data) {
             for (j in data) {
                 $("<li class='side-item'><a class='sidenav-list_one'>"
-                    + "<img style='width=12px;height=20px' class='iconTu' src='<%=basePath%>/resource/views/img/bzimg/xiao"
+                    + "<img style='width=12px;height=20px;position:relative;top:3px' class='iconTu' src='<%=basePath%>/resource/views/img/bzimg/xiao"
                     + j + ".png' alt=''>"
                     + data[j].shopName + "</a><a class='sidenav-list_two sange"
                     + j + "' style='display:block;' href='#'></a><div class='children-nav'>"

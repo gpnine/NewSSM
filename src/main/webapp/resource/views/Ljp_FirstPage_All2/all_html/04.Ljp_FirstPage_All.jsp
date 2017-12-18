@@ -299,9 +299,9 @@
             //生成产地1
             for (var i = 0; i < b_adressArr0.length; i++) {
                 if (i < 13) {
-                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".lis_one"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_adressArr0[i] + "' class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".lis_one"));
                 } else {
-                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".display_two"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_adressArr0[i] + "' class=\"li_a\">" + b_adressArr0[i] + "</a></li>").prependTo($(".display_two"));
                 }
             }
 
@@ -314,7 +314,7 @@
                 b_scentArr.push(b_scent);
             }
             for (var i = 0; i < b_scentArr.length; i++) {
-                $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_scentArr[i] + "</a></li>").appendTo($(".lis_xx"));
+                $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_scentArr[i] + "' class=\"li_a\">" + b_scentArr[i] + "</a></li>").appendTo($(".lis_xx"));
 
             }
 
@@ -328,9 +328,9 @@
             //生成产地1
             for (var i = 0; i < b_adressArr1.length; i++) {
                 if (i < 13) {
-                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".lis_two"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_adressArr1[i] + "' class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".lis_two"));
                 } else {
-                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".display_yang"));
+                    $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_adressArr1[i] + "' class=\"li_a\">" + b_adressArr1[i] + "</a></li>").prependTo($(".display_yang"));
                 }
             }
 
@@ -343,7 +343,7 @@
                 b_yangjiuArr.push(b_scent);
             }
             for (var i = 0; i < b_yangjiuArr.length; i++) {
-                $("<li class=\"chandi1\"><a class=\"li_a\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "'>" + b_yangjiuArr[i] + "</a></li>").appendTo($(".lis_zl"));
+                $("<li class=\"chandi1\"><a class=\"li_a\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_yangjiuArr[i] + "'>" + b_yangjiuArr[i] + "</a></li>").appendTo($(".lis_zl"));
             }
 
 
@@ -355,7 +355,7 @@
             }
             //生成产地1
             for (var i = 0; i < b_adressArr2.length; i++) {
-                $("<li class=\"chandi1\"><a class=\"li_a\" href=\"\">" + b_adressArr2[i] + "</a></li>").prependTo($(".lis_three"));
+                $("<li class=\"chandi1\"><a class=\"li_a\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_adressArr2[i] + "'>" + b_adressArr2[i] + "</a></li>").prependTo($(".lis_three"));
             }
 
 
@@ -367,7 +367,7 @@
                 b_shiyong0Arr.push(b_shiyong);
             }
             for (var i = 0; i < b_shiyong0Arr.length; i++) {
-                $("<li class=\"chandi1\"><a href=\"\" class=\"li_a\">" + b_shiyong0Arr[i] + "</a></li>").appendTo($(".lis_sy"));
+                $("<li class=\"chandi1\"><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_shiyong0Arr[i] + "' class=\"li_a\">" + b_shiyong0Arr[i] + "</a></li>").appendTo($(".lis_sy"));
             }
 
             //白酒的度数
@@ -380,9 +380,9 @@
             //生成度数
             for (var i = 0; i < b_degreeArr.length; i++) {
                 if (i < 10) {
-                    $("<li><span><a href=\"\" class=\"li_a\">" + b_degreeArr[i] + "%Vol.</span></a></li>").prependTo($(".lis_du"));
+                    $("<li><span><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_degreeArr[i] + "%Vol.</span></a></li>").prependTo($(".lis_du"));
                 } else {
-                    $("<li><span><a href=\"\" class=\"li_a\">" + b_degreeArr[i] + "%Vol.</span></a></li>").prependTo($(".display_three"));
+                    $("<li><span><a href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_degreeArr[i] + "' class=\"li_a\">" + b_degreeArr[i] + "%Vol.</span></a></li>").prependTo($(".display_three"));
                 }
             }
 
@@ -395,7 +395,7 @@
                 b_yangjiuArr1.push(b_scent);
             }
             for (var i = 0; i < b_yangjiuArr1.length; i++) {
-                $("<li class=\"chandi1\"><a class=\"li_a\" href=\"\">" + b_yangjiuArr1[i] + "</a></li>").appendTo($(".lis_yjzl"));
+                $("<li class=\"chandi1\"><a class=\"li_a\" href='<%=basePath%>/resource/views/Ljp_FirstPage_search/mt_html/04.Ljp_FirstPage_All.jsp?likeName=" + b_yangjiuArr1[i] + "'>" + b_yangjiuArr1[i] + "</a></li>").appendTo($(".lis_yjzl"));
             }
 
 

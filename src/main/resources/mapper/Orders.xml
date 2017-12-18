@@ -47,8 +47,8 @@
     <select id="findAdressId" parameterType="Integer" resultMap="OrdersResult">
         select Adress_id from zhongjiu_order WHERE OrderId = #{OrderId};
     </select>
-    <select id="findAllMoney" parameterType="string" resultMap="OrdersResult">
-        select OrderAllMoney from zhongjiu_order WHERE UserPhone = #{UserPhone} and ShifouZhifu = 0;
+    <select id="findAllMoney" parameterType="Integer" resultMap="OrdersResult">
+        select OrderAllMoney from zhongjiu_order WHERE OrderId = #{OrderId};
     </select>
     <update id="ShifouZhifu">
         update zhongjiu_order set ShifouZhifu = 1 where UserPhone = #{UserPhone};
@@ -63,9 +63,9 @@
         select * from zhongjiu_order where UserPhone = #{UserPhone} and ShifouZhifu = 1;
 	</select>
     <update id="updateOrders" parameterType="Orders">
-        update  zhongjiu_order set OrderPay=#{OrderPay},OrderAllMoney=#{OrderAllMoney},UserPhone=#{UserPhone},OrderTicket=#{OrderTicket},OrderText=#{OrderText},OrderScore=#{OrderScore},OrderYunfei=#{OrderYunfei},Adress_id=#{Adress_id} where UserPhone=#{UserPhone} and ShifouZhifu = 0;
+        update  zhongjiu_order set OrderPay=#{OrderPay},OrderAllMoney=#{OrderAllMoney},UserPhone=#{UserPhone},OrderTicket=#{OrderTicket},OrderText=#{OrderText},OrderScore=#{OrderScore},OrderYunfei=#{OrderYunfei},Adress_id=#{Adress_id} where OrderId = #{OrderId};
     </update>
-    <insert id="insertOrder" parameterType="string" keyProperty="OrderId" useGeneratedKeys="true">
+    <insert id="insertOrder" parameterType="Orders" keyProperty="OrderId" useGeneratedKeys="true">
         insert into zhongjiu_order (UserPhone,ShifouZhifu) values (#{UserPhone},0);
     </insert>
 

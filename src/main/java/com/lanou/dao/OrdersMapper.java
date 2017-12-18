@@ -14,7 +14,7 @@ public interface OrdersMapper {
 
     public Orders findAdressId(Integer order_id);
 
-    public Orders findAllMoney(String userPhone);
+    public Orders findAllMoney(Integer orderId);
 
     public WuliuAdress findByxId(Integer xId);
 
@@ -40,7 +40,8 @@ public interface OrdersMapper {
     //提交订单
     public int updateOrders(Orders orders);
 
-    public int insertOrder(String userPhone);
+    //    插入未提交的订单
+    public int insertOrder(Orders orders);
 
     //插入订单中的商品
     public int insertWine(OrderAndWine orderAndWine);

@@ -149,6 +149,7 @@
                             userPhone: ${user1.userPhone},
                         },
                         success: function (data) {
+                            console.log(data)
                             var arrss = [];
                             var wid = [];
                             $(".caozuogou_list_caozuo_quanxuan_danpin:checked").each(function (index, el) {
@@ -160,6 +161,7 @@
                                 async:false,
                                 method: "get",
                                 data: {
+                                    orderId:data,
                                     userPhone: ${user1.userPhone},
                                     wineId: wid
                                 },

@@ -20,7 +20,8 @@
 </div>
 <div class="content">
     <div class="jindu pr">
-        <a class="pa jindu_pa_a" href="<%=basePath%>/resource/views/html/lkl_index.jsp"><img src="<%=basePath%>/resource/views/zhifu/img/download.png"/></a>
+        <a class="pa jindu_pa_a" href="<%=basePath%>/resource/views/html/lkl_index.jsp"><img
+                src="<%=basePath%>/resource/views/zhifu/img/download.png"/></a>
         <div class="pa jindu_pa_img">
             <img class="" src="<%=basePath%>/resource/views/zhifu/img/step1.png"/>
             <div class="progress_zhifu">
@@ -63,7 +64,9 @@
         </div>
     </div>
     <div style="top:10px;position: relative;">
-        <a href="<%=basePath%>/resource/views/zhifu/html/querenzhifu.jsp"><button class="xiayibu">下一步</button></a>
+        <a href="<%=basePath%>/resource/views/zhifu/html/querenzhifu.jsp">
+            <button class="xiayibu">下一步</button>
+        </a>
     </div>
 </div>
 <div id="ss">
@@ -91,7 +94,7 @@
         type: "get",
         async: true,
         data: {
-            userPhone: ${user1.userPhone}
+            orderId:${orderId1}
         },
         success: function (data) {
             $(".totalprice").html(data)

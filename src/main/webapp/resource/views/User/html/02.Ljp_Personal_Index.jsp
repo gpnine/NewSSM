@@ -55,7 +55,7 @@
     </div>
 </div>
 <!-- 底部 -->
-<footer>
+<footer styke="margin-top: 150px;">
 </footer>
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>

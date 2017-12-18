@@ -14,7 +14,7 @@ public interface OrdersService {
 
     public WuliuAdress findByxId(Integer xId);
 
-    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, String UserPhone);
+    public int updateOrders(String OrderPay, double OrderAllMoney, String OrderTicket, String OrderText, int OrderScore, double OrderYunfei, int Adress_id, int OrderId);
 
     public Orders findAdressId(int order_id);
 
@@ -22,13 +22,13 @@ public interface OrdersService {
 
     public List<Orders> yiZhifu(String userPhone);
 
-    public Orders findAllMoney(String userPhone);
+    public Orders findAllMoney(int order_id);
 
     public int ShifouZhifu(String userPhone);
 
     public int UpdateAdress(String ShouhuoName, String ShouhuoAdress, String XiangxiAdress, String ShouhuoPhone, Integer xId);
 
-    public int insertOrder(String userPhone);
+    public int insertOrder(Orders orders);
 
     public int insertAdress(String ShouhuoName, String ShouhuoAdress, String XiangxiAdress, String ShouhuoPhone, String userPhone);
 

@@ -191,7 +191,6 @@
         </div>
 
     </div>
-
 </div>
 </body>
 <script src="<%=basePath%>/resource/views/Ljp_Shopcar_Check/html/jquery-3.2.1.min.js"></script>
@@ -199,11 +198,13 @@
 <script>
     //获取购物车选购的商品
     //
+
     $.ajax({
         type: "get",
         url: "<%=basePath%>/orders/findWines.do",
         data: {
-            userPhone: ${user1.userPhone}
+            userPhone: ${user1.userPhone},
+            orderId:${orderId1}
         },
         success: function (data) {
             for (var i = 0; i < data.length; i++) {
@@ -552,7 +553,8 @@
                 OrderScore: $(".jifen").html(),
                 OrderYunfei: $(".yunfei").html(),
                 Adress_id: $(".xuanze:checked").val(),
-                userPhone: ${user1.userPhone}
+                userPhone: ${user1.userPhone},
+                orderId:${orderId1}
             },
             success: function (data) {
                 if (data) {
