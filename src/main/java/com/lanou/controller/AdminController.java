@@ -81,7 +81,7 @@ public class AdminController {
 
     @RequestMapping(value = "/addBanner.do")
     public String addBanner(HttpSession session,MultipartFile myFile,String bannerSrc ) {
-        File files = new File("resource/views/img/Banner_img/"+bannerSrc);
+        File files = new File("/Users/lanou/Desktop/banner/"+bannerSrc);
         try {
             FileUtils.copyInputStreamToFile(myFile.getInputStream(),files);
         } catch (IOException e) {
